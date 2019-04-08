@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:orientation="vertical" 
+    android:layout_width="match_parent" 
+    android:layout_height="match_parent"
+    android:id="@+id/InfoFragmentRL">
+    
+    <TextView
+        android:id="@+id/InfoFragmentTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/material_blue_grey_800"
+        android:textAlignment="textStart"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        android:textSize="8pt"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pretium libero. Pellentesque eget ante scelerisque lorem ultricies finibus euismod nec purus. Sed vitae odio ac erat tempus blandit a venenatis nunc. Duis molestie, enim id sollicitudin semper, nulla nisi cursus nisi, id iaculis ex nunc a metus. Etiam varius ullamcorper neque vitae dignissim. Suspendisse ex orci, molestie et ornare lobortis, bibendum et lacus. Sed eu mi sagittis nibh ornare porta finibus eget diam. Cras tincidunt ac sem a malesuada. Curabitur sagittis velit enim, id fringilla libero pharetra eget. Aenean varius purus ex, vel rutrum quam cursus sit amet."/>
+</RelativeLayout>

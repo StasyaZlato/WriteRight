@@ -1,0 +1,9 @@
+/Users/nastya_iva/Projects/WR/ProjectAndFiles/bin/Debug/netstandard2.0/ProjectAndFiles.deps.json
+/Users/nastya_iva/Projects/WR/ProjectAndFiles/bin/Debug/netstandard2.0/ProjectAndFiles.dll
+/Users/nastya_iva/Projects/WR/ProjectAndFiles/bin/Debug/netstandard2.0/ProjectAndFiles.pdb
+/Users/nastya_iva/Projects/WR/ProjectAndFiles/obj/Debug/netstandard2.0/ProjectAndFiles.csproj.CoreCompileInputs.cache
+/Users/nastya_iva/Projects/WR/ProjectAndFiles/obj/Debug/netstandard2.0/ProjectAndFiles.AssemblyInfoInputs.cache
+/Users/nastya_iva/Projects/WR/ProjectAndFiles/obj/Debug/netstandard2.0/ProjectAndFiles.AssemblyInfo.cs
+/Users/nastya_iva/Projects/WR/ProjectAndFiles/obj/Debug/netstandard2.0/ProjectAndFiles.dll
+/Users/nastya_iva/Projects/WR/ProjectAndFiles/obj/Debug/netstandard2.0/ProjectAndFiles.pdb
+/Users/nastya_iva/Projects/WR/ProjectAndFiles/obj/Debug/netstandard2.0/ProjectAndFiles.csprojAssemblyReference.cache

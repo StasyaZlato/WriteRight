@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WR", "WR\WR.csproj", "{6BEBADEA-CCD5-45BE-B01C-0EF57A1CA7BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectAndFiles", "ProjectAndFiles\ProjectAndFiles.csproj", "{76879566-13FB-4664-86C9-4FC154FEA655}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BEBADEA-CCD5-45BE-B01C-0EF57A1CA7BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BEBADEA-CCD5-45BE-B01C-0EF57A1CA7BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BEBADEA-CCD5-45BE-B01C-0EF57A1CA7BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BEBADEA-CCD5-45BE-B01C-0EF57A1CA7BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76879566-13FB-4664-86C9-4FC154FEA655}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76879566-13FB-4664-86C9-4FC154FEA655}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76879566-13FB-4664-86C9-4FC154FEA655}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76879566-13FB-4664-86C9-4FC154FEA655}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
