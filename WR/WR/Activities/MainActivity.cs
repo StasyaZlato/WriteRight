@@ -7,7 +7,7 @@ using Android.Support.V4.Widget;
 using Android.Views;
 using Android.Content;
 using System.Collections.Generic;
-using ProjectsAndFiles;
+using ProjectStructure;
 using System;
 using SupportFragment = Android.Support.V4.App.Fragment;
 
@@ -18,8 +18,6 @@ namespace WR
     public class MainActivity : AppCompatActivity
     {
         SupportToolbar toolbar;
-        List<string> leftMenuItems = new List<string>();
-        MenuListViewAdapter leftMenyItemsAdapter;
         ListView leftMenu;
         MyActionBarDrawerToggle drawerToggle;
         DrawerLayout drawerLayout;
@@ -29,8 +27,10 @@ namespace WR
         OpenExistingProjectFragment fragOpen;
         InfoFragment fragInfo;
         HelloFragment fragHello;
+        OpenedProjectFragment fragOpened;
         //Stack<SupportFragment> stackOfFragments = new Stack<SupportFragment>();
 
+        public event EventHandler<ProjectEventArgs> OnOpenCreatedProject;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -50,11 +50,6 @@ namespace WR
             fragHello = new HelloFragment();
             fragCreate = new CreateProjectFragment();
 
-            leftMenuItems.AddRange(new string[] { "Создать новый проект",
-                "Открыть существующий проект", "Информация" });
-            leftMenyItemsAdapter = new MenuListViewAdapter(this, leftMenuItems);
-            leftMenu.Adapter = leftMenyItemsAdapter;
-
             SetSupportActionBar(toolbar);
 
             drawerLayout.OpenDrawer(leftMenu);
@@ -70,9 +65,12 @@ namespace WR
                 fragInfo, "InfoFragment");
             transaction.Add(Resource.Id.mainScreenFragmentsContainer,
                 fragHello, "HelloFragment");
+            //transaction.Add(Resource.Id.mainScreenFragmentsContainer,
+                //fragOpened, "OpenedFragment");
             transaction.Hide(fragInfo);
             transaction.Hide(fragOpen);
             transaction.Hide(fragCreate);
+            //transaction.Hide(fragOpened);
             transaction.Commit();
 
             currentFragment = fragHello;
@@ -88,6 +86,18 @@ namespace WR
             leftMenu.ItemClick += LeftMenu_ItemClick;
 
             drawerLayout.DrawerClosed += DrawerLayout_DrawerClosed;
+            fragCreate.ProjectIsCreated += FragCreate_ProjectIsCreated;
+        }
+
+        private void FragCreate_ProjectIsCreated(object sender, ProjectEventArgs e)
+        {
+            Project project = e.project; 
+            fragOpened = new OpenedProjectFragment();
+            var transaction = SupportFragmentManager.BeginTransaction();
+            transaction.Replace(Resource.Id.mainScreenFragmentsContainer, fragOpened);
+            transaction.Commit();
+            OnOpenCreatedProject(this, new ProjectEventArgs(project));
+
         }
 
         private void ShowFragment(SupportFragment fragment)

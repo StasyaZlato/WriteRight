@@ -40,6 +40,7 @@ public final class R {
     }
     public static final class array {
         public static int Genres=0x7f0f0000;
+        public static int LeftMenuItems=0x7f0f0002;
         public static int Theme=0x7f0f0001;
     }
     public static final class attr {
@@ -4357,6 +4358,7 @@ containing a value of this type.
         public static int design_textinput_caption_translate_y=0x7f080094;
         public static int disabled_alpha_material_dark=0x7f080054;
         public static int disabled_alpha_material_light=0x7f080055;
+        public static int fab_margin=0x7f0800db;
         public static int fastscroll_default_thickness=0x7f080000;
         public static int fastscroll_margin=0x7f080001;
         public static int fastscroll_minimum_range=0x7f080002;
@@ -4433,6 +4435,11 @@ containing a value of this type.
         public static int notification_subtext_size=0x7f0800d8;
         public static int notification_top_pad=0x7f0800d9;
         public static int notification_top_pad_large_text=0x7f0800da;
+        public static int standard_100=0x7f0800df;
+        public static int standard_12=0x7f0800dc;
+        public static int standard_145=0x7f0800e0;
+        public static int standard_23=0x7f0800dd;
+        public static int standard_55=0x7f0800de;
         public static int subtitle_corner_radius=0x7f080065;
         public static int subtitle_outline_width=0x7f080066;
         public static int subtitle_shadow_offset=0x7f080067;
@@ -4613,12 +4620,15 @@ containing a value of this type.
         public static int actions=0x7f0900d2;
         public static int activity_chooser_view_content=0x7f09006c;
         public static int add=0x7f09002e;
+        public static int addFileActionButton=0x7f0900d9;
+        public static int addSectionActionButton=0x7f0900da;
         public static int alertTitle=0x7f09007f;
         public static int all=0x7f090064;
         public static int always=0x7f09003f;
         public static int async=0x7f090065;
         public static int auto=0x7f09004d;
         public static int beginning=0x7f090036;
+        public static int bg_fabMenu=0x7f0900d8;
         public static int blocking=0x7f090066;
         public static int bottom=0x7f090044;
         public static int buttonPanel=0x7f090072;
@@ -4679,11 +4689,11 @@ containing a value of this type.
         public static int line1=0x7f09001c;
         public static int line3=0x7f09001d;
         public static int listMode=0x7f090024;
-        public static int listOfSections=0x7f0900d7;
         public static int list_item=0x7f090070;
         public static int main=0x7f0900bc;
+        public static int mainActionBtnAddSth=0x7f0900db;
         public static int mainScreenFragmentsContainer=0x7f0900bf;
-        public static int masked=0x7f0900d9;
+        public static int masked=0x7f0900dd;
         public static int media_actions=0x7f0900c8;
         public static int message=0x7f09009c;
         public static int middle=0x7f090038;
@@ -4762,6 +4772,7 @@ containing a value of this type.
         public static int textView2=0x7f0900a1;
         public static int textView3=0x7f0900a3;
         public static int textView4=0x7f0900a5;
+        public static int textViewFAB=0x7f0900d7;
         public static int textViewForMenuList=0x7f0900c1;
         public static int text_input_password_toggle=0x7f0900b7;
         public static int textinput_counter=0x7f090018;
@@ -4785,7 +4796,7 @@ containing a value of this type.
         public static int up=0x7f090009;
         public static int useLogo=0x7f09002d;
         public static int view_offset_helper=0x7f09001b;
-        public static int visible=0x7f0900d8;
+        public static int visible=0x7f0900dc;
         public static int withText=0x7f090043;
         public static int wrap_content=0x7f090035;
     }

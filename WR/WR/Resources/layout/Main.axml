@@ -32,7 +32,8 @@
             android:choiceMode="singleChoice"
             android:divider="#005662"
             android:dividerHeight="2dp"
-            android:background="#00838f" />
+            android:background="#00838f"
+            android:entries="@array/LeftMenuItems"/>
     </android.support.v4.widget.DrawerLayout>
         
         

@@ -1,19 +1,25 @@
-﻿<Properties StartupConfiguration="{6BEBADEA-CCD5-45BE-B01C-0EF57A1CA7BB}|Default">
-  <MonoDevelop.Ide.Workbench>
+﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{6BEBADEA-CCD5-45BE-B01C-0EF57A1CA7BB}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WR Status">
+    <Files>
+      <File FileName="WR/Fragments/OpenedProjectFragment.cs" Line="53" Column="41" />
+      <File FileName="WR/Activities/MainActivity.cs" Line="86" Column="21" />
+      <File FileName="WR/EventArgs/ProjectEventArgs.cs" Line="13" Column="1" />
+      <File FileName="WR Status" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Option id="ShowAllFiles" value="True" />
-          <Node name="WR" expanded="True">
+          <Node name="WR" expanded="True" selected="True">
             <Node name="ProjectAndFiles" expanded="True" />
+            <Node name="ProjectStructure" expanded="True" />
             <Node name="WR" expanded="True">
               <Node name="Activities" expanded="True" />
+              <Node name="Custom Views" expanded="True" />
+              <Node name="EventArgs" expanded="True" />
               <Node name="Fragments" expanded="True" />
               <Node name="Resources" expanded="True">
                 <Node name="drawable" expanded="True" />
-                <Node name="layout" expanded="True">
-                  <Node name="ProjectOpenedFragment.axml" selected="True" />
-                </Node>
+                <Node name="layout" expanded="True" />
                 <Node name="values" expanded="True" />
               </Node>
             </Node>

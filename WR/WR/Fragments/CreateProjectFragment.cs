@@ -6,13 +6,15 @@ using Android.Support.V4.Widget;
 using Android.Views;
 using Android.Content;
 using System.Collections.Generic;
-using ProjectsAndFiles;
+using ProjectStructure;
 using System;
 
 namespace WR
 {
+    
     public class CreateProjectFragment : Android.Support.V4.App.Fragment
     {
+        public event EventHandler<ProjectEventArgs> ProjectIsCreated;
 
         EditText nameOfProjectInput;
         Spinner genreChoice, themeChoice;
@@ -22,6 +24,7 @@ namespace WR
         LinearLayout mainLinearLayout, checkBoxLayout;
         CheckBox checkBoxText, checkBoxDraft, checkBoxInfo;
         Button acceptBtn;
+        Project project;
 
         string nameOfProject, genre, theme;
         bool textSection, draftSection, infoSection;
@@ -152,7 +155,7 @@ namespace WR
                 noSectionAlert.SetPositiveButton(Resource.String.alertOkBtn, (senderAlert, args) =>
                 {
                     textSection = true;
-                    Project project = new Project(nameOfProject, genre, theme, textSection, draftSection, infoSection);
+                    project = new Project(nameOfProject, genre, theme, textSection, draftSection, infoSection);
 
                     Android.Support.V7.App.AlertDialog.Builder alert = new Android.Support.V7.App.AlertDialog.Builder(
                             new ContextThemeWrapper(this.Activity, Resource.Style.Theme_AppCompat_Light));
@@ -168,7 +171,7 @@ namespace WR
             }
             else
             {
-                Project project = new Project(nameOfProject, genre, theme, textSection, draftSection, infoSection);
+                project = new Project(nameOfProject, genre, theme, textSection, draftSection, infoSection);
 
                 Android.Support.V7.App.AlertDialog.Builder alert = new Android.Support.V7.App.AlertDialog.Builder(
                         new ContextThemeWrapper(this.Activity, Resource.Style.Theme_AppCompat_Light));
@@ -177,6 +180,8 @@ namespace WR
                 alert.SetNeutralButton(Resource.String.alertNeutralBTN, (senderAlert1, args1) => { });
                 dialog = alert.Create();
                 dialog.Show();
+
+                ProjectIsCreated(this, new ProjectEventArgs(project));
             }
         }
 

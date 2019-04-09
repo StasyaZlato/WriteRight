@@ -1,23 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+    <android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/CreateProjectFragmentRL"
-    android:splitMotionEvents="false"
-    android:background="#ffffffff">
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <TextView
+        android:id="@+id/textViewFAB"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/FormLayout"
-        android:splitMotionEvents="false"
-        android:layout_alignParentTop="true">
-        <ExpandableListView
-            android:id="@+id/listOfSections"
-            android:theme="@android:style/Theme.Material.Light"
-            android:entries="@array/Genres"
-            android:choiceMode="singleChoice">
-        </ExpandableListView>
-    </LinearLayout>
-</RelativeLayout>
+        android:text="the very clever page of project"
+        android:textSize="24sp"/>
+    <View
+        android:id="@+id/bg_fabMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#48000000"
+        android:alpha="0"
+        android:visibility="gone"/>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addFileActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/standard_23"
+        android:visibility="gone"
+        android:rotation="90"
+        app:fabSize="mini"        
+        app:srcCompat="@drawable/file_plus"
+        android:background="#c41c00"/>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addSectionActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/standard_23"
+        app:fabSize="mini"        
+        android:visibility="gone"
+        android:rotation="90"
+        app:srcCompat="@drawable/folder_plus_outline"
+        android:background="#ff5722"/>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/mainActionBtnAddSth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/plus"
+        android:background="#ff5722"/>
+    </android.support.design.widget.CoordinatorLayout>

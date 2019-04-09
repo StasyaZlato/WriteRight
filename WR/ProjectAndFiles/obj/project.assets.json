@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/nastya_iva/Projects/WR/ProjectAndFiles/ProjectAndFiles.csproj",
+      "projectUniqueName": "/Users/nastya_iva/CourseWork/WriteRight/WR/ProjectAndFiles/ProjectAndFiles.csproj",
       "projectName": "ProjectAndFiles",
-      "projectPath": "/Users/nastya_iva/Projects/WR/ProjectAndFiles/ProjectAndFiles.csproj",
+      "projectPath": "/Users/nastya_iva/CourseWork/WriteRight/WR/ProjectAndFiles/ProjectAndFiles.csproj",
       "packagesPath": "/Users/nastya_iva/.nuget/packages/",
-      "outputPath": "/Users/nastya_iva/Projects/WR/ProjectAndFiles/obj/",
+      "outputPath": "/Users/nastya_iva/CourseWork/WriteRight/WR/ProjectAndFiles/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

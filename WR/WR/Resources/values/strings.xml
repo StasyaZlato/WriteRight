@@ -32,5 +32,10 @@
         <item>Фанфик</item>
         <item>Фэнтези</item>
     </string-array>
+    <string-array name="LeftMenuItems">
+        <item>Создать новый проект</item>
+        <item>Открыть существующий проект</item>
+        <item>Информация</item>
+    </string-array>
     <color name="my_spinner_text_color">#263238</color>
 </resources>

@@ -25,6 +25,7 @@ int animator mtrl_fab_show_motion_spec 0x7f060007
 int animator mtrl_fab_transformation_sheet_collapse_spec 0x7f060008
 int animator mtrl_fab_transformation_sheet_expand_spec 0x7f060009
 int array Genres 0x7f0f0000
+int array LeftMenuItems 0x7f0f0002
 int array Theme 0x7f0f0001
 int attr actionBarDivider 0x7f010062
 int attr actionBarItemBackground 0x7f010063
@@ -767,6 +768,7 @@ int dimen design_tab_text_size_2line 0x7f080093
 int dimen design_textinput_caption_translate_y 0x7f080094
 int dimen disabled_alpha_material_dark 0x7f080054
 int dimen disabled_alpha_material_light 0x7f080055
+int dimen fab_margin 0x7f0800db
 int dimen fastscroll_default_thickness 0x7f080000
 int dimen fastscroll_margin 0x7f080001
 int dimen fastscroll_minimum_range 0x7f080002
@@ -843,6 +845,11 @@ int dimen notification_small_icon_size_as_large 0x7f0800d7
 int dimen notification_subtext_size 0x7f0800d8
 int dimen notification_top_pad 0x7f0800d9
 int dimen notification_top_pad_large_text 0x7f0800da
+int dimen standard_100 0x7f0800df
+int dimen standard_12 0x7f0800dc
+int dimen standard_145 0x7f0800e0
+int dimen standard_23 0x7f0800dd
+int dimen standard_55 0x7f0800de
 int dimen subtitle_corner_radius 0x7f080065
 int dimen subtitle_outline_width 0x7f080066
 int dimen subtitle_shadow_offset 0x7f080067
@@ -1019,12 +1026,15 @@ int id action_text 0x7f0900c4
 int id actions 0x7f0900d2
 int id activity_chooser_view_content 0x7f09006c
 int id add 0x7f09002e
+int id addFileActionButton 0x7f0900d9
+int id addSectionActionButton 0x7f0900da
 int id alertTitle 0x7f09007f
 int id all 0x7f090064
 int id always 0x7f09003f
 int id async 0x7f090065
 int id auto 0x7f09004d
 int id beginning 0x7f090036
+int id bg_fabMenu 0x7f0900d8
 int id blocking 0x7f090066
 int id bottom 0x7f090044
 int id buttonPanel 0x7f090072
@@ -1085,11 +1095,11 @@ int id left 0x7f090054
 int id line1 0x7f09001c
 int id line3 0x7f09001d
 int id listMode 0x7f090024
-int id listOfSections 0x7f0900d7
 int id list_item 0x7f090070
 int id main 0x7f0900bc
+int id mainActionBtnAddSth 0x7f0900db
 int id mainScreenFragmentsContainer 0x7f0900bf
-int id masked 0x7f0900d9
+int id masked 0x7f0900dd
 int id media_actions 0x7f0900c8
 int id message 0x7f09009c
 int id middle 0x7f090038
@@ -1168,6 +1178,7 @@ int id textView1 0x7f09009f
 int id textView2 0x7f0900a1
 int id textView3 0x7f0900a3
 int id textView4 0x7f0900a5
+int id textViewFAB 0x7f0900d7
 int id textViewForMenuList 0x7f0900c1
 int id text_input_password_toggle 0x7f0900b7
 int id textinput_counter 0x7f090018
@@ -1191,7 +1202,7 @@ int id unlabeled 0x7f090050
 int id up 0x7f090009
 int id useLogo 0x7f09002d
 int id view_offset_helper 0x7f09001b
-int id visible 0x7f0900d8
+int id visible 0x7f0900dc
 int id withText 0x7f090043
 int id wrap_content 0x7f090035
 int integer abc_config_activityDefaultDur 0x7f0e0000

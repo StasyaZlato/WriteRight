@@ -40,6 +40,7 @@ public final class R {
     }
     public static final class array {
         public static final int Genres=0x7f0f0000;
+        public static final int LeftMenuItems=0x7f0f0002;
         public static final int Theme=0x7f0f0001;
     }
     public static final class attr {
@@ -4357,6 +4358,7 @@ containing a value of this type.
         public static final int design_textinput_caption_translate_y=0x7f080094;
         public static final int disabled_alpha_material_dark=0x7f080054;
         public static final int disabled_alpha_material_light=0x7f080055;
+        public static final int fab_margin=0x7f0800db;
         public static final int fastscroll_default_thickness=0x7f080000;
         public static final int fastscroll_margin=0x7f080001;
         public static final int fastscroll_minimum_range=0x7f080002;
@@ -4433,6 +4435,11 @@ containing a value of this type.
         public static final int notification_subtext_size=0x7f0800d8;
         public static final int notification_top_pad=0x7f0800d9;
         public static final int notification_top_pad_large_text=0x7f0800da;
+        public static final int standard_100=0x7f0800df;
+        public static final int standard_12=0x7f0800dc;
+        public static final int standard_145=0x7f0800e0;
+        public static final int standard_23=0x7f0800dd;
+        public static final int standard_55=0x7f0800de;
         public static final int subtitle_corner_radius=0x7f080065;
         public static final int subtitle_outline_width=0x7f080066;
         public static final int subtitle_shadow_offset=0x7f080067;
@@ -4613,12 +4620,15 @@ containing a value of this type.
         public static final int actions=0x7f0900d2;
         public static final int activity_chooser_view_content=0x7f09006c;
         public static final int add=0x7f09002e;
+        public static final int addFileActionButton=0x7f0900d9;
+        public static final int addSectionActionButton=0x7f0900da;
         public static final int alertTitle=0x7f09007f;
         public static final int all=0x7f090064;
         public static final int always=0x7f09003f;
         public static final int async=0x7f090065;
         public static final int auto=0x7f09004d;
         public static final int beginning=0x7f090036;
+        public static final int bg_fabMenu=0x7f0900d8;
         public static final int blocking=0x7f090066;
         public static final int bottom=0x7f090044;
         public static final int buttonPanel=0x7f090072;
@@ -4679,11 +4689,11 @@ containing a value of this type.
         public static final int line1=0x7f09001c;
         public static final int line3=0x7f09001d;
         public static final int listMode=0x7f090024;
-        public static final int listOfSections=0x7f0900d7;
         public static final int list_item=0x7f090070;
         public static final int main=0x7f0900bc;
+        public static final int mainActionBtnAddSth=0x7f0900db;
         public static final int mainScreenFragmentsContainer=0x7f0900bf;
-        public static final int masked=0x7f0900d9;
+        public static final int masked=0x7f0900dd;
         public static final int media_actions=0x7f0900c8;
         public static final int message=0x7f09009c;
         public static final int middle=0x7f090038;
@@ -4762,6 +4772,7 @@ containing a value of this type.
         public static final int textView2=0x7f0900a1;
         public static final int textView3=0x7f0900a3;
         public static final int textView4=0x7f0900a5;
+        public static final int textViewFAB=0x7f0900d7;
         public static final int textViewForMenuList=0x7f0900c1;
         public static final int text_input_password_toggle=0x7f0900b7;
         public static final int textinput_counter=0x7f090018;
@@ -4785,7 +4796,7 @@ containing a value of this type.
         public static final int up=0x7f090009;
         public static final int useLogo=0x7f09002d;
         public static final int view_offset_helper=0x7f09001b;
-        public static final int visible=0x7f0900d8;
+        public static final int visible=0x7f0900dc;
         public static final int withText=0x7f090043;
         public static final int wrap_content=0x7f090035;
     }

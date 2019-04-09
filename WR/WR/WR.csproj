@@ -151,13 +151,15 @@
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MyActionBarDrawerToggle.cs" />
-    <Compile Include="MenuListViewAdapter.cs" />
     <Compile Include="Fragments\CreateProjectFragment.cs" />
     <Compile Include="Fragments\HelloFragment.cs" />
     <Compile Include="Activities\MainActivity.cs" />
     <Compile Include="Fragments\OpenExistingProjectFragment.cs" />
     <Compile Include="Fragments\InfoFragment.cs" />
+    <Compile Include="Fragments\OpenedProjectFragment.cs" />
+    <Compile Include="EventArgs\ProjectEventArgs.cs" />
+    <Compile Include="Custom Views\MenuListViewAdapter.cs" />
+    <Compile Include="Custom Views\MyActionBarDrawerToggle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -183,17 +185,19 @@
     <AndroidResource Include="Resources\drawable\plus.xml" />
     <AndroidResource Include="Resources\drawable\file_plus.xml" />
     <AndroidResource Include="Resources\drawable\folder_plus_outline.xml" />
+    <AndroidResource Include="Resources\values\dimens.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
     <Folder Include="Fragments\" />
     <Folder Include="Activities\" />
-    <Folder Include="exceptions\" />
+    <Folder Include="EventArgs\" />
+    <Folder Include="Custom Views\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ProjectAndFiles\ProjectAndFiles.csproj">
-      <Project>{76879566-13FB-4664-86C9-4FC154FEA655}</Project>
-      <Name>ProjectAndFiles</Name>
+    <ProjectReference Include="..\projectStructure\projectStructure.csproj">
+      <Project>{5266E871-4D1D-4575-9D1B-25A54B36F150}</Project>
+      <Name>ProjectStructure</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
