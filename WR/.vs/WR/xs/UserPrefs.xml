@@ -1,9 +1,12 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{6BEBADEA-CCD5-45BE-B01C-0EF57A1CA7BB}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="WR Status">
     <Files>
-      <File FileName="WR/Fragments/OpenedProjectFragment.cs" Line="53" Column="41" />
-      <File FileName="WR/Activities/MainActivity.cs" Line="86" Column="21" />
+      <File FileName="WR/Fragments/OpenedProjectFragment.cs" Line="26" Column="25" />
+      <File FileName="WR/Activities/MainActivity.cs" Line="102" Column="1" />
       <File FileName="WR/EventArgs/ProjectEventArgs.cs" Line="13" Column="1" />
+      <File FileName="WR/Fragments/CreateProjectFragment.cs" Line="186" Column="1" />
+      <File FileName="WR/Fragments/HelloFragment.cs" Line="18" Column="1" />
+      <File FileName="WR/Custom Views/MyActionBarDrawerToggle.cs" Line="31" Column="1" />
       <File FileName="WR Status" />
     </Files>
     <Pads>
@@ -11,7 +14,6 @@
         <State name="__root__">
           <Node name="WR" expanded="True" selected="True">
             <Node name="ProjectAndFiles" expanded="True" />
-            <Node name="ProjectStructure" expanded="True" />
             <Node name="WR" expanded="True">
               <Node name="Activities" expanded="True" />
               <Node name="Custom Views" expanded="True" />
@@ -32,7 +34,9 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.WR AndroidDesignerPreferredTheme="Theme.AppCompat" AndroidDesignerPreferredDevice="Nexus 5X" PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/nastya_iva/CourseWork/WriteRight/WR/WR/Fragments/OpenedProjectFragment.cs" relfile="WR/Fragments/OpenedProjectFragment.cs" line="154" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

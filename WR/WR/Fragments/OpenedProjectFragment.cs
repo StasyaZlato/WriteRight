@@ -27,7 +27,10 @@ namespace WR
 
         public override void OnCreate(Bundle savedInstanceState)
         {
+
             base.OnCreate(savedInstanceState);
+            //((MainActivity)Activity).OnOpenCreatedProject += Handle_OnOpenCreatedProject;
+
 
         }
 
@@ -48,7 +51,6 @@ namespace WR
             fabAddFolder.Click += FabAddFolder_Click;
             fabMenu.Click += (sender, e) => CloseFabMenu();
 
-            ((MainActivity)Activity).OnOpenCreatedProject += Handle_OnOpenCreatedProject;
 
             fabText.Text = project.Name;
             return view;
@@ -147,7 +149,7 @@ namespace WR
             }
         }
 
-        void Handle_OnOpenCreatedProject(object sender, ProjectEventArgs e)
+        public void Handle_OnOpenCreatedProject(object sender, ProjectEventArgs e)
         {
             project = e.project;
         }

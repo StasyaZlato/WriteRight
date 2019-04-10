@@ -93,10 +93,11 @@ namespace WR
         {
             Project project = e.project; 
             fragOpened = new OpenedProjectFragment();
+            OnOpenCreatedProject += fragOpened.Handle_OnOpenCreatedProject;
             var transaction = SupportFragmentManager.BeginTransaction();
             transaction.Replace(Resource.Id.mainScreenFragmentsContainer, fragOpened);
             transaction.Commit();
-            OnOpenCreatedProject(this, new ProjectEventArgs(project));
+            OnOpenCreatedProject?.Invoke(this, new ProjectEventArgs(project));
 
         }
 
