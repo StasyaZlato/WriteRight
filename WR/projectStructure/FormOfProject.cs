@@ -2,7 +2,8 @@
 
 namespace ProjectStructure
 {
-    public class FormOfProject
+    [Serializable]
+    public class FormOfProject : FileOfProject
     {
         public FormOfProject()
         {

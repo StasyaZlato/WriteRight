@@ -1,4 +1,4 @@
-ProjectAndFiles
+projectStructure
 System.Runtime
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Core.Runtime
@@ -35,5 +35,3 @@ Xamarin.Android.Support.v7.RecyclerView
 Xamarin.Android.Support.Vector.Drawable
 Xamarin.Android.Support.VersionedParcelable
 Xamarin.Android.Support.ViewPager
-netstandard
-projectStructure

@@ -5,6 +5,8 @@
         <item name="colorPrimaryDark">#005662</item>
         <item name="colorAccent">#ff5722</item>
         <item name="drawerArrowStyle">@style/MyDrawerArrowStyle</item>
+        <item name="android:splitMotionEvents">false</item>
+
 <!--        <item name="android:spinnerDropDownItemStyle">@style/mySpinnerItemStyle</item>-->
     </style>
     

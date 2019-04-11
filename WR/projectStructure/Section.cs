@@ -1,19 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using Android.OS;
+using System.Xml.Serialization;
 
 namespace ProjectStructure
 {
-
+    [Serializable]
+    [XmlInclude(typeof(Project))]
     public class Section 
     {
+        [XmlElement("Text", typeof(TextProject))]
+        [XmlElement("Draft", typeof(DraftProject))]
+        [XmlElement("Forms", typeof(FormProject))]
         public List<Section> ChildSections = new List<Section>();
+
+        [XmlElement("Form", typeof(FormOfProject))]
         public List<FileOfProject> files = new List<FileOfProject>();
 
         public string Name { get; set; }
         public string Path { get; set; }
 
         public DateTime Created { get; set; }
+
+        //для сериализации
+        public Section() { }
 
         //конструктор для корневого каталога
         public Section(string name)

@@ -1,4 +1,7 @@
-resources;/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/lp/38/jl/res/values/strings.xml
+ImageView;obj/Debug/res/layout/listviewfoldersrow.xml
+RelativeLayout;obj/Debug/res/layout/listviewfoldersrow.xml
+resources;/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/lp/0/jl/res/values/strings.xml
 resources;obj/Debug/res/values/strings.xml
-string;/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/lp/38/jl/res/values/strings.xml
+string;/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/lp/0/jl/res/values/strings.xml
 string;obj/Debug/res/values/strings.xml
+TextView;obj/Debug/res/layout/listviewfoldersrow.xml

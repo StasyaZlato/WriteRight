@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,6 +23,7 @@ namespace WR
         View fabMenu;
         TextView fabText;
         Project project;
+        ListView foldersListView;
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -44,6 +44,10 @@ namespace WR
             fabAddFolder = view.FindViewById<FloatingActionButton>(Resource.Id.addSectionActionButton);
             fabMenu = view.FindViewById<View>(Resource.Id.bg_fabMenu);
             fabText = view.FindViewById<TextView>(Resource.Id.textViewFAB);
+            foldersListView = view.FindViewById<ListView>(Resource.Id.listOfFoldersMain);
+
+            foldersListView.ItemClick += OnItemClicked;
+            foldersListView.Adapter = new CustomViews.FoldersListAdapter(project.ChildSections);
 
 
             fabMain.Click += FabMain_Click;
@@ -54,6 +58,11 @@ namespace WR
 
             fabText.Text = project.Name;
             return view;
+        }
+
+        private void OnItemClicked(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            return;
         }
 
         void FabMain_Click(object sender, EventArgs e)
@@ -153,7 +162,6 @@ namespace WR
         {
             project = e.project;
         }
-
     }
 
 }

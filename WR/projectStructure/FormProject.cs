@@ -2,6 +2,7 @@
 
 namespace ProjectStructure
 {
+    [Serializable]
     public class FormProject : Section
     {
         public FormProject(string name) : base(name) { }

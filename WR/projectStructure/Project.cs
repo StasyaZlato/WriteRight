@@ -3,10 +3,13 @@
 
 namespace ProjectStructure
 {
+    [Serializable]
     public class Project : Section
     {
         public string Genre { get; set; }
         public string Theme { get; set; }
+
+        public Project() { }
 
         public Project(string name) : base(name)
         {

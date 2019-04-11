@@ -10,8 +10,10 @@ using System.Collections.Generic;
 using ProjectStructure;
 using System;
 using SupportFragment = Android.Support.V4.App.Fragment;
+using System.Xml.Serialization;
+using System.IO;
 
-namespace WR
+namespace WR.Activities
 {
     [Activity(Label = "WriteRight", MainLauncher = true, Icon = "@mipmap/icon",
         Theme = "@style/MainTheme", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
@@ -22,15 +24,12 @@ namespace WR
         MyActionBarDrawerToggle drawerToggle;
         DrawerLayout drawerLayout;
         int currentTitleOfActionBar = Resource.String.closeDrawer;
-        SupportFragment currentFragment;
+        public SupportFragment currentFragment;
         CreateProjectFragment fragCreate;
         OpenExistingProjectFragment fragOpen;
         InfoFragment fragInfo;
         HelloFragment fragHello;
-        OpenedProjectFragment fragOpened;
         //Stack<SupportFragment> stackOfFragments = new Stack<SupportFragment>();
-
-        public event EventHandler<ProjectEventArgs> OnOpenCreatedProject;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -65,12 +64,9 @@ namespace WR
                 fragInfo, "InfoFragment");
             transaction.Add(Resource.Id.mainScreenFragmentsContainer,
                 fragHello, "HelloFragment");
-            //transaction.Add(Resource.Id.mainScreenFragmentsContainer,
-                //fragOpened, "OpenedFragment");
             transaction.Hide(fragInfo);
             transaction.Hide(fragOpen);
             transaction.Hide(fragCreate);
-            //transaction.Hide(fragOpened);
             transaction.Commit();
 
             currentFragment = fragHello;
@@ -87,47 +83,47 @@ namespace WR
 
             drawerLayout.DrawerClosed += DrawerLayout_DrawerClosed;
             fragCreate.ProjectIsCreated += FragCreate_ProjectIsCreated;
+
         }
 
         private void FragCreate_ProjectIsCreated(object sender, ProjectEventArgs e)
         {
-            Project project = e.project; 
-            fragOpened = new OpenedProjectFragment();
-            OnOpenCreatedProject += fragOpened.Handle_OnOpenCreatedProject;
-            var transaction = SupportFragmentManager.BeginTransaction();
-            transaction.Replace(Resource.Id.mainScreenFragmentsContainer, fragOpened);
-            transaction.Commit();
-            OnOpenCreatedProject?.Invoke(this, new ProjectEventArgs(project));
+            Project project = e.project;
+            string dir = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData), project.Name);
+
+            if (!Directory.Exists(dir))
+            {
+                Directory.CreateDirectory(dir);
+            }
+
+            var pathToXML = Path.Combine(dir,  $"{project.Name}.xml");
+
+
+            XmlSerializer xml = new XmlSerializer(typeof(Project), new Type[] { typeof(FileOfProject) });
+
+            using (FileStream fs = new FileStream(pathToXML, FileMode.Create))
+            {
+                xml.Serialize(fs, project);
+            }
+
+            Intent intent = new Intent(this, typeof(OpenProjectActivity));
+            intent.PutExtra("xml", pathToXML);
+            intent.PutExtra("project", dir);
+            StartActivity(intent);
+            //PassCreatedProject += Activities.OpenProjectActivity.Handle_OnOpenCreatedProject;
 
         }
 
-        private void ShowFragment(SupportFragment fragment)
+        public void ShowFragment(SupportFragment fragment)
         {
             var transaction = SupportFragmentManager.BeginTransaction();
 
             transaction.Hide(currentFragment);
             transaction.Show(fragment);
-            //transaction.AddToBackStack(null);
             transaction.Commit();
 
-            //stackOfFragments.Push(currentFragment);
             currentFragment = fragment;
         }
-
-
-        //public override void OnBackPressed()
-        //{
-        //    if (SupportFragmentManager.BackStackEntryCount > 0)
-        //    {
-        //        SupportFragmentManager.PopBackStack();
-        //        currentFragment = stackOfFragments.Pop();
-        //    }
-        //    else
-        //    {
-        //        base.OnBackPressed();
-        //    }
-        //}
-
 
         void DrawerLayout_DrawerClosed(object sender, DrawerLayout.DrawerClosedEventArgs e)
         {
@@ -148,14 +144,17 @@ namespace WR
             switch (itemSelected)
             {
                 case 0:
+                    //fragCreate = new CreateProjectFragment();
                     currentTitleOfActionBar = Resource.String.createProject;
                     ShowFragment(fragCreate);
                     break;
                 case 1:
+                    //fragOpen = new OpenExistingProjectFragment();
                     currentTitleOfActionBar = Resource.String.openProject;
                     ShowFragment(fragOpen);
                     break;
                 case 2:
+                    //fragInfo = new InfoFragment();
                     currentTitleOfActionBar = Resource.String.info;
                     ShowFragment(fragInfo);
                     break;

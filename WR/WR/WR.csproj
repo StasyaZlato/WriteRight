@@ -158,8 +158,9 @@
     <Compile Include="Fragments\InfoFragment.cs" />
     <Compile Include="Fragments\OpenedProjectFragment.cs" />
     <Compile Include="EventArgs\ProjectEventArgs.cs" />
-    <Compile Include="Custom Views\MenuListViewAdapter.cs" />
     <Compile Include="Custom Views\MyActionBarDrawerToggle.cs" />
+    <Compile Include="Custom Views\FoldersListAdapter.cs" />
+    <Compile Include="Activities\OpenProjectActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -176,7 +177,6 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
     <AndroidResource Include="Resources\values\style.xml" />
-    <AndroidResource Include="Resources\layout\MenuListView.axml" />
     <AndroidResource Include="Resources\layout\CreateProjectFragment.axml" />
     <AndroidResource Include="Resources\layout\OpenExistingProjectFragment.axml" />
     <AndroidResource Include="Resources\layout\InfoFragment.axml" />
@@ -186,6 +186,10 @@
     <AndroidResource Include="Resources\drawable\file_plus.xml" />
     <AndroidResource Include="Resources\drawable\folder_plus_outline.xml" />
     <AndroidResource Include="Resources\values\dimens.xml" />
+    <AndroidResource Include="Resources\drawable\file_document.xml" />
+    <AndroidResource Include="Resources\drawable\file_table.xml" />
+    <AndroidResource Include="Resources\drawable\folder.xml" />
+    <AndroidResource Include="Resources\layout\ListViewFoldersRow.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
@@ -197,7 +201,11 @@
   <ItemGroup>
     <ProjectReference Include="..\projectStructure\projectStructure.csproj">
       <Project>{5266E871-4D1D-4575-9D1B-25A54B36F150}</Project>
-      <Name>ProjectStructure</Name>
+      <Name>projectStructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\projectStructure\projectStructure.csproj">
+      <Project>{5266E871-4D1D-4575-9D1B-25A54B36F150}</Project>
+      <Name>projectStructure</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
