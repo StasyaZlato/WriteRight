@@ -8,6 +8,7 @@
     <string name="createProject">Создание проекта</string>
     <string name="info">Информация</string>
     <string name="alertCreatingProjectTitle">Ошибка создания проекта</string>
+    <string name="alertCreatingSectionTitle">Ошибка создания директории</string>
     <string name="alertCreatingProjectMsgNoName">Не задано имя проекта</string>
     <string name="alertCreatingProjectMsgNoSections">Не выбран ни один базовый раздел. Будет создан раздел "Текст"</string>
     <string name="alertNeutralBTN">Понятно</string>

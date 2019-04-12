@@ -25,10 +25,10 @@ namespace WR.Activities
         DrawerLayout drawerLayout;
         int currentTitleOfActionBar = Resource.String.closeDrawer;
         public SupportFragment currentFragment;
-        CreateProjectFragment fragCreate;
-        OpenExistingProjectFragment fragOpen;
-        InfoFragment fragInfo;
-        HelloFragment fragHello;
+        Fragments.CreateProjectFragment fragCreate;
+        Fragments.OpenExistingProjectFragment fragOpen;
+        Fragments.InfoFragment fragInfo;
+        Fragments.HelloFragment fragHello;
         //Stack<SupportFragment> stackOfFragments = new Stack<SupportFragment>();
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -44,10 +44,10 @@ namespace WR.Activities
             drawerToggle = new MyActionBarDrawerToggle(this, drawerLayout, Resource.String.openDrawer,
                 Resource.String.closeDrawer);
 
-            fragInfo = new InfoFragment();
-            fragOpen = new OpenExistingProjectFragment();
-            fragHello = new HelloFragment();
-            fragCreate = new CreateProjectFragment();
+            fragInfo = new Fragments.InfoFragment();
+            fragOpen = new Fragments.OpenExistingProjectFragment();
+            fragHello = new Fragments.HelloFragment();
+            fragCreate = new Fragments.CreateProjectFragment();
 
             SetSupportActionBar(toolbar);
 
@@ -89,7 +89,7 @@ namespace WR.Activities
         private void FragCreate_ProjectIsCreated(object sender, ProjectEventArgs e)
         {
             Project project = e.project;
-            string dir = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData), project.Name);
+            string dir = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments), project.Name);
 
             if (!Directory.Exists(dir))
             {

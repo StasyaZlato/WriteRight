@@ -190,6 +190,8 @@
     <AndroidResource Include="Resources\drawable\file_table.xml" />
     <AndroidResource Include="Resources\drawable\folder.xml" />
     <AndroidResource Include="Resources\layout\ListViewFoldersRow.axml" />
+    <AndroidResource Include="Resources\layout\CustomPopUpAddingFolder.axml" />
+    <AndroidResource Include="Resources\drawable\arrow_left_thick.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

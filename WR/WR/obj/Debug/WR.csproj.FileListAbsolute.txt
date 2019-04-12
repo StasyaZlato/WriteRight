@@ -259,6 +259,7 @@
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/res/drawable/file_table.xml
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/res/drawable/folder.xml
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/res/layout/listviewfoldersrow.xml
+/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/res/layout/custompopupaddingfolder.xml
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/R.cs.flag
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/R.txt
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/uploadflags.txt
@@ -373,3 +374,4 @@
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/stamp/_ResolveLibraryProjectImports.stamp
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/stamp/_CompileToDalvik.stamp
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/stamp/_GeneratePackageManagerJava.stamp
+/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/res/drawable/arrow_left_thick.xml

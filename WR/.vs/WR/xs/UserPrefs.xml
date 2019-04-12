@@ -1,27 +1,28 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{6BEBADEA-CCD5-45BE-B01C-0EF57A1CA7BB}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="WR/Fragments/OpenedProjectFragment.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="projectStructure/TextProject.cs">
     <Files>
-      <File FileName="WR/Fragments/OpenedProjectFragment.cs" Line="160" Column="1" />
-      <File FileName="WR/Activities/MainActivity.cs" Line="126" Column="1" />
-      <File FileName="WR/Activities/OpenProjectActivity.cs" Line="44" Column="1" />
-      <File FileName="projectStructure/Project.cs" Line="12" Column="1" />
-      <File FileName="projectStructure/Section.cs" Line="34" Column="1" />
-      <File FileName="projectStructure/TextProject.cs" Line="10" Column="1" />
-      <File FileName="WR/EventArgs/ProjectEventArgs.cs" Line="13" Column="1" />
+      <File FileName="WR/Fragments/OpenedProjectFragment.cs" Line="102" Column="1" />
+      <File FileName="WR/Activities/MainActivity.cs" Line="102" Column="56" />
+      <File FileName="WR/Activities/OpenProjectActivity.cs" Line="58" Column="10" />
+      <File FileName="projectStructure/Section.cs" Line="18" Column="33" />
+      <File FileName="WR/Custom Views/FoldersListAdapter.cs" Line="27" Column="1" />
+      <File FileName="WR/Fragments/CreateProjectFragment.cs" Line="144" Column="31" />
+      <File FileName="projectStructure/Project.cs" Line="37" Column="14" />
+      <File FileName="projectStructure/TextProject.cs" Line="12" Column="41" />
+      <File FileName="projectStructure/DraftProject.cs" Line="13" Column="28" />
+      <File FileName="projectStructure/FormProject.cs" Line="18" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Option id="ShowAllFiles" value="True" />
-          <Node name="WR" expanded="True">
+          <Node name="WR" expanded="True" selected="True">
             <Node name="projectStructure" expanded="True" />
             <Node name="WR" expanded="True">
               <Node name="Activities" expanded="True" />
               <Node name="Custom Views" expanded="True" />
               <Node name="EventArgs" expanded="True" />
-              <Node name="Fragments" expanded="True">
-                <Node name="OpenedProjectFragment.cs" selected="True" />
-              </Node>
+              <Node name="Fragments" expanded="True" />
               <Node name="Properties" expanded="True" />
               <Node name="Resources" expanded="True">
                 <Node name="drawable" expanded="True" />
@@ -32,15 +33,16 @@
           </Node>
         </State>
       </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.WR AndroidDesignerPreferredTheme="Theme.AppCompat.Light" AndroidDesignerPreferredDevice="Nexus 5X" PreferredExecutionTarget="Android.CCMBBCB6C0140541" />
+  <MonoDevelop.Ide.ItemProperties.WR AndroidDesignerPreferredTheme="Theme.AppCompat.Light" AndroidDesignerPreferredDevice="Nexus 6" PreferredExecutionTarget="Android.FANPB700A851" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/nastya_iva/CourseWork/WriteRight/WR/WR/Activities/OpenProjectActivity.cs" relfile="WR/Activities/OpenProjectActivity.cs" line="31" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

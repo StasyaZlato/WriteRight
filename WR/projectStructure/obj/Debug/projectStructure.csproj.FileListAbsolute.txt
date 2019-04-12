@@ -20,3 +20,4 @@
 /Users/nastya_iva/CourseWork/WriteRight/WR/projectStructure/obj/Debug/stamp/_BuildAdditionalResourcesCache.stamp
 /Users/nastya_iva/CourseWork/WriteRight/WR/projectStructure/obj/Debug/stamp/_CleanIntermediateIfNuGetsChange.stamp
 /Users/nastya_iva/CourseWork/WriteRight/WR/projectStructure/obj/Debug/stamp/_ResolveLibraryProjectImports.stamp
+/Users/nastya_iva/CourseWork/WriteRight/WR/projectStructure/obj/Debug/projectStructure.csprojAssemblyReference.cache

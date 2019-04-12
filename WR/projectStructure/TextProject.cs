@@ -8,5 +8,11 @@ namespace ProjectStructure
         public TextProject(string name) : base(name) { }
 
         public TextProject() : base("Текст") { }
+
+        public TextProject(object sender) : base(sender, "Текст") { }
+
+
+        public TextProject(object sender, string name) : base(sender, name) { }
+
     }
 }

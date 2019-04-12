@@ -27,15 +27,15 @@ namespace ProjectStructure
             Theme = theme;
             if (text)
             {
-                ChildSections.Add(new TextProject());
+                ChildSections.Add(new TextProject(this));
             }
             if (draft)
             {
-                ChildSections.Add(new DraftProject());
+                ChildSections.Add(new DraftProject(this));
             }
             if (info)
             {
-                ChildSections.Add(new FormProject());
+                ChildSections.Add(new FormProject(this));
             }
         }
     }

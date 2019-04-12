@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using ProjectStructure;
 using System;
 
-namespace WR
+namespace WR.Fragments
 {
     
     public class CreateProjectFragment : Android.Support.V4.App.Fragment

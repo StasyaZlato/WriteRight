@@ -18,17 +18,19 @@ namespace WR.Activities
     [Activity(Label = "OpenProjectActivity", Theme = "@style/MainTheme", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class OpenProjectActivity : MainActivity
     {
-        OpenedProjectFragment fragOpened;
+        Fragments.OpenedProjectFragment fragOpened;
+        //SupportFragment previousFragment;
         Project project;
         //Project project;
 
         public event EventHandler<ProjectEventArgs> OnProjectCreated;
+        public event EventHandler BackBtnPressed;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
-            fragOpened = new OpenedProjectFragment();
+            fragOpened = new Fragments.OpenedProjectFragment();
 
             string xmlProject = Intent.GetStringExtra("xml");
             GetData(xmlProject);
@@ -42,8 +44,7 @@ namespace WR.Activities
             OnProjectCreated += fragOpened.Handle_OnOpenCreatedProject;
 
             OnProjectCreated?.Invoke(this, new ProjectEventArgs(project));
-
-            // Create your application here
+            
         }
 
         public void GetData(string xml)
@@ -55,5 +56,6 @@ namespace WR.Activities
                 project = (Project)xmlSerializer.Deserialize(fs);
             }
         }
+
     }
 }

@@ -9,5 +9,11 @@ namespace ProjectStructure
         {
         }
         public DraftProject() : base("Черновик") { }
+
+        public DraftProject(object sender) : base(sender, "Черновик") { }
+
+
+        public DraftProject(object sender, string name) : base(sender, name) { }
+
     }
 }
