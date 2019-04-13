@@ -24,7 +24,6 @@ namespace WR.Activities
         //Project project;
 
         public event EventHandler<ProjectEventArgs> OnProjectCreated;
-        public event EventHandler BackBtnPressed;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -35,6 +34,8 @@ namespace WR.Activities
             string xmlProject = Intent.GetStringExtra("xml");
             GetData(xmlProject);
 
+            drawerLayout.CloseDrawer(leftMenu);
+
             var transaction = SupportFragmentManager.BeginTransaction();
             transaction.Replace(Resource.Id.mainScreenFragmentsContainer, fragOpened);
             transaction.Commit();
@@ -44,8 +45,31 @@ namespace WR.Activities
             OnProjectCreated += fragOpened.Handle_OnOpenCreatedProject;
 
             OnProjectCreated?.Invoke(this, new ProjectEventArgs(project));
-            
+            leftMenu.ItemClick -= LeftMenu_ItemClick;
+            leftMenu.ItemClick += LeftMenu_ItemClick1;
+
         }
+
+        void LeftMenu_ItemClick1(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            int itemSelected = e.Position;
+            Intent intent = new Intent(this, typeof(MainActivity));
+            switch (itemSelected)
+            {
+                case 0:
+                    intent.PutExtra("frag", "create");
+                    break;
+                case 1:
+                    intent.PutExtra("frag", "open");
+                    break;
+                case 2:
+                    intent.PutExtra("frag", "info");
+                    break;
+            }
+            StartActivity(intent);
+            drawerLayout.CloseDrawer(leftMenu);
+        }
+
 
         public void GetData(string xml)
         {
@@ -56,6 +80,5 @@ namespace WR.Activities
                 project = (Project)xmlSerializer.Deserialize(fs);
             }
         }
-
     }
 }

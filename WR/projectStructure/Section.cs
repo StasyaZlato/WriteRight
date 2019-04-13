@@ -17,9 +17,6 @@ namespace ProjectStructure
         [XmlElement("Form", typeof(FormOfProject))]
         public List<FileOfProject> files = new List<FileOfProject>();
 
-        [XmlIgnore]
-        public Section parent;
-
         public string Name { get; set; }
         public string Path { get; set; }
 
@@ -31,7 +28,6 @@ namespace ProjectStructure
         //конструктор для корневого каталога
         public Section(string name)
         {
-            parent = null;
             Name = name;
             Path = Name + "\\";
             Created = DateTime.Now;
@@ -40,7 +36,6 @@ namespace ProjectStructure
         //конструктор для остальных каталогов, в качестве Sender родительский каталог
         public Section(object sender, string name)
         {
-            parent = (Section)sender;
             Name = name;
             Path = ((Section)sender).Path + Name + "\\";
             Created = DateTime.Now;

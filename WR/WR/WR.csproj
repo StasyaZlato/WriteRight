@@ -161,6 +161,7 @@
     <Compile Include="Custom Views\MyActionBarDrawerToggle.cs" />
     <Compile Include="Custom Views\FoldersListAdapter.cs" />
     <Compile Include="Activities\OpenProjectActivity.cs" />
+    <Compile Include="Custom Views\ProjectsListAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -192,6 +193,8 @@
     <AndroidResource Include="Resources\layout\ListViewFoldersRow.axml" />
     <AndroidResource Include="Resources\layout\CustomPopUpAddingFolder.axml" />
     <AndroidResource Include="Resources\drawable\arrow_left_thick.xml" />
+    <AndroidResource Include="Resources\layout\ListViewForProjectRows.axml" />
+    <AndroidResource Include="Resources\drawable\undo_variant.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

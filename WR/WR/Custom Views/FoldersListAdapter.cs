@@ -42,7 +42,6 @@ namespace WR.CustomViews
             if (view == null)
             {
                 view = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.ListViewFoldersRow, parent, false);
-                //view.Tag = ViewHolder() { Icon = icon, }
             }
             view.FindViewById<ImageView>(Resource.Id.folderIcon);
             view.FindViewById<TextView>(Resource.Id.nameOfProjectTextView).Text = item.Name;

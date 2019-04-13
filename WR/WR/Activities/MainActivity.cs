@@ -19,10 +19,10 @@ namespace WR.Activities
         Theme = "@style/MainTheme", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class MainActivity : AppCompatActivity
     {
-        SupportToolbar toolbar;
-        ListView leftMenu;
+        public SupportToolbar toolbar;
+        public ListView leftMenu;
         MyActionBarDrawerToggle drawerToggle;
-        DrawerLayout drawerLayout;
+        public DrawerLayout drawerLayout;
         int currentTitleOfActionBar = Resource.String.closeDrawer;
         public SupportFragment currentFragment;
         Fragments.CreateProjectFragment fragCreate;
@@ -32,8 +32,10 @@ namespace WR.Activities
         //Stack<SupportFragment> stackOfFragments = new Stack<SupportFragment>();
 
         protected override void OnCreate(Bundle savedInstanceState)
-        {
+        { 
             base.OnCreate(savedInstanceState);
+
+
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
@@ -70,6 +72,26 @@ namespace WR.Activities
             transaction.Commit();
 
             currentFragment = fragHello;
+
+            string intent = this.Intent.GetStringExtra("frag");
+            if (intent != null)
+            {
+                switch (intent)
+                {
+                    case "open":
+                        ShowFragment(fragOpen);
+                        break;
+                    case "create":
+                        ShowFragment(fragCreate);
+                        break;
+                    case "info":
+                        ShowFragment(fragInfo);
+                        break;
+                    default:
+                        break;
+                }
+                drawerLayout.CloseDrawer(leftMenu);
+            }
 
 #pragma warning disable CS0618 // Type or member is obsolete
             drawerLayout.SetDrawerListener(drawerToggle);
@@ -108,10 +130,7 @@ namespace WR.Activities
 
             Intent intent = new Intent(this, typeof(OpenProjectActivity));
             intent.PutExtra("xml", pathToXML);
-            intent.PutExtra("project", dir);
             StartActivity(intent);
-            //PassCreatedProject += Activities.OpenProjectActivity.Handle_OnOpenCreatedProject;
-
         }
 
         public void ShowFragment(SupportFragment fragment)
@@ -138,23 +157,20 @@ namespace WR.Activities
         }
 
 
-        void LeftMenu_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        public void LeftMenu_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             int itemSelected = e.Position;
             switch (itemSelected)
             {
                 case 0:
-                    //fragCreate = new CreateProjectFragment();
                     currentTitleOfActionBar = Resource.String.createProject;
                     ShowFragment(fragCreate);
                     break;
                 case 1:
-                    //fragOpen = new OpenExistingProjectFragment();
                     currentTitleOfActionBar = Resource.String.openProject;
                     ShowFragment(fragOpen);
                     break;
                 case 2:
-                    //fragInfo = new InfoFragment();
                     currentTitleOfActionBar = Resource.String.info;
                     ShowFragment(fragInfo);
                     break;

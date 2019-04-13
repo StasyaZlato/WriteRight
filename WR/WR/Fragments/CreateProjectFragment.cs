@@ -135,39 +135,16 @@ namespace WR.Fragments
             Dialog dialog;
             if (nameOfProject == null)
             {
-                Android.Support.V7.App.AlertDialog.Builder noNameAlert = new Android.Support.V7.App.AlertDialog.Builder(
-                    new ContextThemeWrapper(this.Activity, Resource.Style.Theme_AppCompat_Light));
-                noNameAlert.SetTitle(Resource.String.alertCreatingProjectTitle);
-                noNameAlert.SetMessage(Resource.String.alertCreatingProjectMsgNoName);
-                noNameAlert.SetNeutralButton(Resource.String.alertNeutralBTN, (senderAlert, args) => { });
-                dialog = noNameAlert.Create();
-                dialog.Show();
+                Toast toast = Toast.MakeText(this.Activity, Resource.String.alertCreatingProjectMsgNoName, ToastLength.Short);
+                toast.Show();
                 return;
             }
 
             if (!(infoSection || textSection || draftSection))
             {
-                Android.Support.V7.App.AlertDialog.Builder noSectionAlert = new Android.Support.V7.App.AlertDialog.Builder(
-                    new ContextThemeWrapper(this.Activity, Resource.Style.Theme_AppCompat_Light));
-                noSectionAlert.SetTitle(Resource.String.alertCreatingProjectTitle);
-                noSectionAlert.SetMessage(Resource.String.alertCreatingProjectMsgNoSections);
-
-                noSectionAlert.SetPositiveButton(Resource.String.alertOkBtn, (senderAlert, args) =>
-                {
-                    textSection = true;
-                    project = new Project(nameOfProject, genre, theme, textSection, draftSection, infoSection);
-
-                    Android.Support.V7.App.AlertDialog.Builder alert = new Android.Support.V7.App.AlertDialog.Builder(
-                            new ContextThemeWrapper(this.Activity, Resource.Style.Theme_AppCompat_Light));
-                    alert.SetTitle("Проект создан!");
-                    alert.SetMessage("Ура");
-                    alert.SetNeutralButton(Resource.String.alertNeutralBTN, (senderAlert1, args1) => { });
-                    dialog = alert.Create();
-                    dialog.Show();
-                });
-                noSectionAlert.SetNegativeButton(Resource.String.alertCancelBtn, (senderAlert, args) => { });
-                dialog = noSectionAlert.Create();
-                dialog.Show();
+                Toast toast = Toast.MakeText(this.Activity, Resource.String.alertCreatingProjectMsgNoSections, ToastLength.Short);
+                toast.Show();
+                return;
             }
             else
             {

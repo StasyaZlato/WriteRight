@@ -1,16 +1,12 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{6BEBADEA-CCD5-45BE-B01C-0EF57A1CA7BB}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="projectStructure/TextProject.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WR Status">
     <Files>
-      <File FileName="WR/Fragments/OpenedProjectFragment.cs" Line="102" Column="1" />
-      <File FileName="WR/Activities/MainActivity.cs" Line="102" Column="56" />
-      <File FileName="WR/Activities/OpenProjectActivity.cs" Line="58" Column="10" />
-      <File FileName="projectStructure/Section.cs" Line="18" Column="33" />
-      <File FileName="WR/Custom Views/FoldersListAdapter.cs" Line="27" Column="1" />
-      <File FileName="WR/Fragments/CreateProjectFragment.cs" Line="144" Column="31" />
-      <File FileName="projectStructure/Project.cs" Line="37" Column="14" />
-      <File FileName="projectStructure/TextProject.cs" Line="12" Column="41" />
-      <File FileName="projectStructure/DraftProject.cs" Line="13" Column="28" />
-      <File FileName="projectStructure/FormProject.cs" Line="18" Column="1" />
+      <File FileName="WR/Activities/OpenProjectActivity.cs" Line="50" Column="1" />
+      <File FileName="WR/Fragments/OpenedProjectFragment.cs" Line="97" Column="35" />
+      <File FileName="WR/Fragments/OpenExistingProjectFragment.cs" Line="52" Column="1" />
+      <File FileName="WR/Activities/MainActivity.cs" Line="129" Column="14" />
+      <File FileName="projectStructure/Section.cs" Line="48" Column="1" />
+      <File FileName="WR Status" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -32,9 +28,6 @@
             </Node>
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

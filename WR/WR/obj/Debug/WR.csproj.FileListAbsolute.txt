@@ -375,3 +375,5 @@
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/stamp/_CompileToDalvik.stamp
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/stamp/_GeneratePackageManagerJava.stamp
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/res/drawable/arrow_left_thick.xml
+/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/res/layout/listviewforprojectrows.xml
+/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/res/drawable/undo_variant.xml

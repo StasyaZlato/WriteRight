@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
+using System.Xml.Serialization;
 
 using Android.App;
 using Android.Content;
@@ -54,6 +56,7 @@ namespace WR.Fragments
         {
             view = inflater.Inflate(Resource.Layout.ProjectOpenedFragment, container, false);
 
+            
 
             fabMain = view.FindViewById<FloatingActionButton>(Resource.Id.mainActionBtnAddSth);
             fabAddFile = view.FindViewById<FloatingActionButton>(Resource.Id.addFileActionButton);
@@ -79,18 +82,35 @@ namespace WR.Fragments
 
             backBtn.Click += BackBtnPressedHandler;
 
+            ((Activities.OpenProjectActivity)this.Activity).SupportActionBar.Title = project.Name;
 
-            fabText.Text = project.Name;
             return view;
         }
 
         void BackBtnPressedHandler(object sender, EventArgs e)
         {
-            if (IsRoot = false || currentSection.parent != null)
+            if (IsRoot == false)
             {
-                currentSection = currentSection.parent;
+                string[] path = currentSection.Path.Split('\\');
+                if (path.Length == 2)
+                {
+                    IsRoot = true;
+                }
+                Section tempSection = project;
+                for (int i = 1; i < path.Length - 2; i++)
+                {
+                    tempSection.ChildSections.ForEach(x =>
+                    {
+                        if (x.Name == path[i])
+                        {
+                            tempSection = x;
+                            return;
+                        }
+                    });
+                }
+                currentSection = tempSection;
+                ((Activities.OpenProjectActivity)this.Activity).SupportActionBar.Title = currentSection.Path;
                 foldersListView.Adapter = new CustomViews.FoldersListAdapter(currentSection.ChildSections);
-                fabText.Text = currentSection.Path;
             }
             else
             {
@@ -104,9 +124,9 @@ namespace WR.Fragments
         void FoldersListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             int id = e.Position;
-            currentSection = project.ChildSections[id];
+            currentSection = currentSection.ChildSections[id];
+            ((Activities.OpenProjectActivity)this.Activity).SupportActionBar.Title = currentSection.Path;
             foldersListView.Adapter = new CustomViews.FoldersListAdapter(currentSection.ChildSections);
-            fabText.Text = currentSection.Path;
             IsRoot = false;
         }
 
@@ -144,7 +164,18 @@ namespace WR.Fragments
             {
                 try
                 {
-                    project.AddSection(nameOfSection.Text, selectedType);
+                    currentSection.AddSection(nameOfSection.Text, selectedType);
+                    string dir = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments), project.Name);
+
+                    var pathToXML = Path.Combine(dir, $"{project.Name}.xml");
+
+                    XmlSerializer xml = new XmlSerializer(typeof(Project), new Type[] { typeof(FileOfProject) });
+
+                    using (FileStream fs = new FileStream(pathToXML, FileMode.Create))
+                    {
+                        xml.Serialize(fs, project);
+                    }
+                    CloseFabMenu();
                     dialog.Dismiss();
                 }
                 catch (IncorrectNameOfSectionException ex)
