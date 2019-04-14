@@ -19,13 +19,13 @@ using ProjectStructure;
 namespace WR.Fragments
 {
     public class OpenedProjectFragment : Android.Support.V4.App.Fragment
-    {   
+    {
         static bool isFabOpened = false;
         FloatingActionButton fabMain, fabAddFile, fabAddFolder;
         View fabMenu;
         TextView fabText;
         ListView foldersListView;
-        Dialog dialog;
+        Dialog dialog, dialog1;
         View view;
 
         ImageButton backBtn;
@@ -42,21 +42,23 @@ namespace WR.Fragments
         Section currentSection;
         public bool IsRoot = true;
 
+        TextView closeBtnRename;
+        EditText renameSection;
+        Button acceptNewName;
+        string getNewName = null;
+        int listPosition;
+
+
+
 
         public override void OnCreate(Bundle savedInstanceState)
         {
-
             base.OnCreate(savedInstanceState);
-            //((MainActivity)Activity).OnOpenCreatedProject += Handle_OnOpenCreatedProject;
-
-
         }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             view = inflater.Inflate(Resource.Layout.ProjectOpenedFragment, container, false);
-
-            
 
             fabMain = view.FindViewById<FloatingActionButton>(Resource.Id.mainActionBtnAddSth);
             fabAddFile = view.FindViewById<FloatingActionButton>(Resource.Id.addFileActionButton);
@@ -68,12 +70,15 @@ namespace WR.Fragments
 
             currentSection = project;
 
+            RegisterForContextMenu(foldersListView);
+
             foldersListView.ItemClick += FoldersListView_ItemClick;
 
             foldersListView.ItemClick += OnItemClicked;
             foldersListView.Adapter = new CustomViews.FoldersListAdapter(currentSection.ChildSections);
 
             dialog = new Dialog(Context);
+            dialog1 = new Dialog(Context);
 
             fabMain.Click += FabMain_Click;
             fabAddFile.Click += FabAddFile_Click;
@@ -85,6 +90,85 @@ namespace WR.Fragments
             ((Activities.OpenProjectActivity)this.Activity).SupportActionBar.Title = project.Name;
 
             return view;
+        }
+
+        public override void OnCreateContextMenu(IContextMenu menu, View v, IContextMenuContextMenuInfo menuInfo)
+        {
+            base.OnCreateContextMenu(menu, v, menuInfo);
+            menu.Add(Resource.String.ContextMenuRename);
+            menu.Add(Resource.String.ContextMenuDelete);
+        }
+
+        public override bool OnContextItemSelected(IMenuItem item)
+        {
+            var info = (AdapterView.AdapterContextMenuInfo)item.MenuInfo;
+            listPosition = info.Position;
+            //int index = item.ItemId;
+            switch (item.ToString())
+            {
+                case "Переименовать":
+                    ShowPopUpRename();
+                    break;
+                case "Удалить":
+                    currentSection.DeleteSection(listPosition);
+                    foldersListView.Adapter = new CustomViews.FoldersListAdapter(currentSection.ChildSections);
+                    CommitChanges();
+                    break;
+                default:
+                    break;
+            }
+            return base.OnContextItemSelected(item);
+        }
+
+        private void ShowPopUpRename()
+        {
+            // the exception appears if the dialog has been created earlier
+            try
+            {
+                dialog1.RequestWindowFeature((int)WindowFeatures.NoTitle);
+            }
+            catch (Android.Util.AndroidRuntimeException) { }
+
+            dialog1.SetContentView(Resource.Layout.CustomPopUpRenameFolder);
+            closeBtnRename = dialog1.FindViewById<TextView>(Resource.Id.TextViewClosePopUpRename);
+            renameSection = dialog1.FindViewById<EditText>(Resource.Id.RenameSectionTE);
+            acceptNewName = dialog1.FindViewById<Button>(Resource.Id.AcceptNewName);
+
+            closeBtnRename.Click += (sender, e) =>
+            {
+                dialog1.Dismiss();
+                CloseFabMenu();
+            };
+
+            acceptNewName.Click += AcceptNewName_Click;
+
+            dialog1.Show();
+        }
+
+        void AcceptNewName_Click(object sender, EventArgs e)
+        {
+            if (renameSection.Text != null)
+            {
+                getNewName = renameSection.Text;
+                currentSection.RenameSection(listPosition, getNewName);
+                foldersListView.Adapter = new CustomViews.FoldersListAdapter(currentSection.ChildSections);
+                dialog1.Dismiss();
+                CommitChanges();
+            }
+        }
+
+        void CommitChanges()
+        {
+            string dir = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments), project.Name);
+
+            var pathToXML = Path.Combine(dir, $"{project.Name}.xml");
+
+            XmlSerializer xml = new XmlSerializer(typeof(Project), new Type[] { typeof(FileOfProject) });
+
+            using (FileStream fs = new FileStream(pathToXML, FileMode.Create))
+            {
+                xml.Serialize(fs, project);
+            }
         }
 
         void BackBtnPressedHandler(object sender, EventArgs e)
@@ -165,27 +249,18 @@ namespace WR.Fragments
                 try
                 {
                     currentSection.AddSection(nameOfSection.Text, selectedType);
-                    string dir = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments), project.Name);
-
-                    var pathToXML = Path.Combine(dir, $"{project.Name}.xml");
-
-                    XmlSerializer xml = new XmlSerializer(typeof(Project), new Type[] { typeof(FileOfProject) });
-
-                    using (FileStream fs = new FileStream(pathToXML, FileMode.Create))
-                    {
-                        xml.Serialize(fs, project);
-                    }
+                    CommitChanges();
                     CloseFabMenu();
                     dialog.Dismiss();
                 }
                 catch (IncorrectNameOfSectionException ex)
                 {
-                    Android.Support.V7.App.AlertDialog.Builder alertBuilder = 
+                    Android.Support.V7.App.AlertDialog.Builder alertBuilder =
                         new Android.Support.V7.App.AlertDialog.Builder(
                             new ContextThemeWrapper(this.Activity, Resource.Style.Theme_AppCompat_Light));
                     alertBuilder.SetTitle(Resource.String.alertCreatingSectionTitle);
                     alertBuilder.SetMessage(ex.Message);
-                    alertBuilder.SetNeutralButton(Resource.String.alertNeutralBTN, (senderAlert, args) => 
+                    alertBuilder.SetNeutralButton(Resource.String.alertNeutralBTN, (senderAlert, args) =>
                     {
                         ShowPopUp();
                     });

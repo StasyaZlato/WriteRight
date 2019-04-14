@@ -112,6 +112,7 @@ class MonoPackageManager_Resources {
 		/* We need to ensure that "WR.dll" comes first in this list. */
 		"WR.dll",
 		"projectStructure.dll",
+		"RichEditor.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Core.Runtime.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",

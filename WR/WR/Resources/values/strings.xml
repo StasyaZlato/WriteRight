@@ -39,4 +39,6 @@
         <item>Информация</item>
     </string-array>
     <color name="my_spinner_text_color">#263238</color>
+    <string name="ContextMenuDelete">Удалить</string>
+    <string name="ContextMenuRename">Переименовать</string>
 </resources>

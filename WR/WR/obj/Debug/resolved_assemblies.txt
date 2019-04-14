@@ -1,11 +1,14 @@
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/WR.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/Java.Interop.dll
+/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/Microsoft.CSharp.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/Mono.Android.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/mscorlib.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/projectStructure.dll
+/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/RichEditor.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/System.Core.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/System.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/System.Xml.dll
+/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/System.Xml.Linq.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/Xamarin.Android.Arch.Core.Common.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/Xamarin.Android.Arch.Core.Runtime.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/Xamarin.Android.Arch.Lifecycle.Common.dll

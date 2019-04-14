@@ -41,6 +41,17 @@ namespace ProjectStructure
             Created = DateTime.Now;
         }
 
+        public void RenameSection(int id, string name)
+        {
+            if (ChildSections.Exists(x => x.Name == name))
+            {
+                throw new IncorrectNameOfSectionException($"Раздел с именем {name} " +
+                    "уже существует в данной директории!");
+            }
+
+            ChildSections[id].Name = name ?? throw new IncorrectNameOfSectionException("Имя не указано");
+        }
+
         public void AddSection(string name, string type)
         {
             if (ChildSections.Exists(x => x.Name == name))

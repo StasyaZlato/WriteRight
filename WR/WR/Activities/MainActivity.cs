@@ -15,8 +15,10 @@ using System.IO;
 
 namespace WR.Activities
 {
-    [Activity(Label = "WriteRight", MainLauncher = true, Icon = "@mipmap/icon",
-        Theme = "@style/MainTheme", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
+    //[Activity(Label = "WriteRight", MainLauncher = true, Icon = "@mipmap/icon",
+    //Theme = "@style/MainTheme", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
+    [Activity(Label = "WriteRight", Icon = "@mipmap/icon",
+    Theme = "@style/MainTheme", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class MainActivity : AppCompatActivity
     {
         public SupportToolbar toolbar;

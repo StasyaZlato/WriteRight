@@ -147,6 +147,13 @@
     <Reference Include="Xamarin.Android.Support.Design">
       <HintPath>..\packages\Xamarin.Android.Support.Design.28.0.0.1\lib\monoandroid90\Xamarin.Android.Support.Design.dll</HintPath>
     </Reference>
+    <Reference Include="RichEditor">
+      <HintPath>..\packages\Karamunting.Android.Wasabeef.RichEditor.1.2.2\lib\monoandroid70\RichEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -162,6 +169,7 @@
     <Compile Include="Custom Views\FoldersListAdapter.cs" />
     <Compile Include="Activities\OpenProjectActivity.cs" />
     <Compile Include="Custom Views\ProjectsListAdapter.cs" />
+    <Compile Include="Activities\EditorActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -195,6 +203,22 @@
     <AndroidResource Include="Resources\drawable\arrow_left_thick.xml" />
     <AndroidResource Include="Resources\layout\ListViewForProjectRows.axml" />
     <AndroidResource Include="Resources\drawable\undo_variant.xml" />
+    <AndroidResource Include="Resources\layout\CustomPopUpRenameFolder.axml" />
+    <AndroidResource Include="Resources\layout\Editor.axml" />
+    <AndroidResource Include="Resources\drawable\format_align_center.xml" />
+    <AndroidResource Include="Resources\drawable\format_align_justify.xml" />
+    <AndroidResource Include="Resources\drawable\format_align_left.xml" />
+    <AndroidResource Include="Resources\drawable\format_bold.xml" />
+    <AndroidResource Include="Resources\drawable\format_color_fill.xml" />
+    <AndroidResource Include="Resources\drawable\format_color_text.xml" />
+    <AndroidResource Include="Resources\drawable\format_header_1.xml" />
+    <AndroidResource Include="Resources\drawable\format_header_2.xml" />
+    <AndroidResource Include="Resources\drawable\format_header_3.xml" />
+    <AndroidResource Include="Resources\drawable\format_italic.xml" />
+    <AndroidResource Include="Resources\drawable\format_underline.xml" />
+    <AndroidResource Include="Resources\drawable\redo.xml" />
+    <AndroidResource Include="Resources\drawable\undo.xml" />
+    <AndroidResource Include="Resources\drawable\format_align_right.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
