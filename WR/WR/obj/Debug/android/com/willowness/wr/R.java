@@ -4920,7 +4920,7 @@ containing a value of this type.
         public static final int design_navigation_menu=0x7f04002a;
         public static final int design_navigation_menu_item=0x7f04002b;
         public static final int design_text_input_password_icon=0x7f04002c;
-        public static final int editor=0x7f04002d;
+        public static final int editorfragment=0x7f04002d;
         public static final int hellofragment=0x7f04002e;
         public static final int infofragment=0x7f04002f;
         public static final int listviewfoldersrow=0x7f040030;
@@ -4954,8 +4954,8 @@ containing a value of this type.
         public static final int icon=0x7f030000;
     }
     public static final class string {
-        public static final int ContextMenuDelete=0x7f0c0044;
-        public static final int ContextMenuRename=0x7f0c0045;
+        public static final int ContextMenuDelete=0x7f0c0045;
+        public static final int ContextMenuRename=0x7f0c0046;
         public static final int abc_action_bar_home_description=0x7f0c0000;
         public static final int abc_action_bar_up_description=0x7f0c0001;
         public static final int abc_action_menu_overflow_description=0x7f0c0002;
@@ -4995,13 +4995,13 @@ containing a value of this type.
         public static final int abc_shareactionprovider_share_with=0x7f0c0018;
         public static final int abc_shareactionprovider_share_with_application=0x7f0c0019;
         public static final int abc_toolbar_collapse_description=0x7f0c001a;
-        public static final int alertCancelBtn=0x7f0c0043;
-        public static final int alertCreatingProjectMsgNoName=0x7f0c003f;
-        public static final int alertCreatingProjectMsgNoSections=0x7f0c0040;
-        public static final int alertCreatingProjectTitle=0x7f0c003d;
-        public static final int alertCreatingSectionTitle=0x7f0c003e;
-        public static final int alertNeutralBTN=0x7f0c0041;
-        public static final int alertOkBtn=0x7f0c0042;
+        public static final int alertCancelBtn=0x7f0c0044;
+        public static final int alertCreatingProjectMsgNoName=0x7f0c0040;
+        public static final int alertCreatingProjectMsgNoSections=0x7f0c0041;
+        public static final int alertCreatingProjectTitle=0x7f0c003e;
+        public static final int alertCreatingSectionTitle=0x7f0c003f;
+        public static final int alertNeutralBTN=0x7f0c0042;
+        public static final int alertOkBtn=0x7f0c0043;
         public static final int app_name=0x7f0c0037;
         public static final int appbar_scrolling_view_behavior=0x7f0c0028;
         public static final int bottom_sheet_behavior=0x7f0c0029;
@@ -5009,11 +5009,12 @@ containing a value of this type.
         public static final int character_counter_pattern=0x7f0c002b;
         public static final int closeDrawer=0x7f0c0039;
         public static final int createProject=0x7f0c003b;
+        public static final int editorTitle=0x7f0c003c;
         public static final int fab_transformation_scrim_behavior=0x7f0c002c;
         public static final int fab_transformation_sheet_behavior=0x7f0c002d;
         public static final int hello=0x7f0c0036;
         public static final int hide_bottom_view_on_scroll_behavior=0x7f0c002e;
-        public static final int info=0x7f0c003c;
+        public static final int info=0x7f0c003d;
         public static final int mtrl_chip_close_icon_content_description=0x7f0c002f;
         public static final int openDrawer=0x7f0c0038;
         public static final int openProject=0x7f0c003a;

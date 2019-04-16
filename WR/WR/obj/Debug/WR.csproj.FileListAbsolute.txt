@@ -376,7 +376,6 @@
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/bin/Debug/RichEditor.dll.mdb
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/bin/Debug/RichEditor.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/bin/Debug/RichEditor.pdb
-/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/res/layout/editor.xml
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/res/drawable/format_align_center.xml
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/res/drawable/format_align_justify.xml
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/res/drawable/format_align_left.xml
@@ -406,3 +405,4 @@
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/System.Runtime.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/stamp/_CompileToDalvik.stamp
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/stamp/_GeneratePackageManagerJava.stamp
+/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/res/layout/editorfragment.xml

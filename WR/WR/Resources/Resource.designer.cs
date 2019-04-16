@@ -5647,7 +5647,7 @@ namespace WR
 			public const int design_text_input_password_icon = 2130968620;
 			
 			// aapt resource value: 0x7f04002d
-			public const int Editor = 2130968621;
+			public const int EditorFragment = 2130968621;
 			
 			// aapt resource value: 0x7f04002e
 			public const int HelloFragment = 2130968622;
@@ -5762,11 +5762,11 @@ namespace WR
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f0c0044
-			public const int ContextMenuDelete = 2131492932;
-			
 			// aapt resource value: 0x7f0c0045
-			public const int ContextMenuRename = 2131492933;
+			public const int ContextMenuDelete = 2131492933;
+			
+			// aapt resource value: 0x7f0c0046
+			public const int ContextMenuRename = 2131492934;
 			
 			// aapt resource value: 0x7f0c0000
 			public const int abc_action_bar_home_description = 2131492864;
@@ -5885,26 +5885,26 @@ namespace WR
 			// aapt resource value: 0x7f0c001a
 			public const int abc_toolbar_collapse_description = 2131492890;
 			
-			// aapt resource value: 0x7f0c0043
-			public const int alertCancelBtn = 2131492931;
-			
-			// aapt resource value: 0x7f0c003f
-			public const int alertCreatingProjectMsgNoName = 2131492927;
+			// aapt resource value: 0x7f0c0044
+			public const int alertCancelBtn = 2131492932;
 			
 			// aapt resource value: 0x7f0c0040
-			public const int alertCreatingProjectMsgNoSections = 2131492928;
-			
-			// aapt resource value: 0x7f0c003d
-			public const int alertCreatingProjectTitle = 2131492925;
-			
-			// aapt resource value: 0x7f0c003e
-			public const int alertCreatingSectionTitle = 2131492926;
+			public const int alertCreatingProjectMsgNoName = 2131492928;
 			
 			// aapt resource value: 0x7f0c0041
-			public const int alertNeutralBTN = 2131492929;
+			public const int alertCreatingProjectMsgNoSections = 2131492929;
+			
+			// aapt resource value: 0x7f0c003e
+			public const int alertCreatingProjectTitle = 2131492926;
+			
+			// aapt resource value: 0x7f0c003f
+			public const int alertCreatingSectionTitle = 2131492927;
 			
 			// aapt resource value: 0x7f0c0042
-			public const int alertOkBtn = 2131492930;
+			public const int alertNeutralBTN = 2131492930;
+			
+			// aapt resource value: 0x7f0c0043
+			public const int alertOkBtn = 2131492931;
 			
 			// aapt resource value: 0x7f0c0037
 			public const int app_name = 2131492919;
@@ -5927,6 +5927,9 @@ namespace WR
 			// aapt resource value: 0x7f0c003b
 			public const int createProject = 2131492923;
 			
+			// aapt resource value: 0x7f0c003c
+			public const int editorTitle = 2131492924;
+			
 			// aapt resource value: 0x7f0c002c
 			public const int fab_transformation_scrim_behavior = 2131492908;
 			
@@ -5939,8 +5942,8 @@ namespace WR
 			// aapt resource value: 0x7f0c002e
 			public const int hide_bottom_view_on_scroll_behavior = 2131492910;
 			
-			// aapt resource value: 0x7f0c003c
-			public const int info = 2131492924;
+			// aapt resource value: 0x7f0c003d
+			public const int info = 2131492925;
 			
 			// aapt resource value: 0x7f0c002f
 			public const int mtrl_chip_close_icon_content_description = 2131492911;

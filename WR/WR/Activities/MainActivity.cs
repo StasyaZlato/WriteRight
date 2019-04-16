@@ -15,9 +15,7 @@ using System.IO;
 
 namespace WR.Activities
 {
-    //[Activity(Label = "WriteRight", MainLauncher = true, Icon = "@mipmap/icon",
-    //Theme = "@style/MainTheme", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
-    [Activity(Label = "WriteRight", Icon = "@mipmap/icon",
+    [Activity(Label = "WriteRight", MainLauncher = true, Icon = "@mipmap/icon",
     Theme = "@style/MainTheme", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class MainActivity : AppCompatActivity
     {
@@ -55,7 +53,7 @@ namespace WR.Activities
 
             SetSupportActionBar(toolbar);
 
-            drawerLayout.OpenDrawer(leftMenu);
+            //drawerLayout.OpenDrawer(leftMenu);
 
             //добавляем фрагмент
             var transaction = SupportFragmentManager.BeginTransaction();
@@ -175,6 +173,10 @@ namespace WR.Activities
                 case 2:
                     currentTitleOfActionBar = Resource.String.info;
                     ShowFragment(fragInfo);
+                    break;
+                case 3:
+                    Intent intent = new Intent(this, typeof(EditorActivity));
+                    StartActivity(intent);
                     break;
             }
             drawerLayout.CloseDrawer(leftMenu);

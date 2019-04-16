@@ -2,7 +2,7 @@ package md586a62184f138a5ae8634749b9c7d427a;
 
 
 public class EditorActivity
-	extends android.support.v7.app.AppCompatActivity
+	extends md586a62184f138a5ae8634749b9c7d427a.MainActivity
 	implements
 		mono.android.IGCUserPeer
 {

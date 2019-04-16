@@ -1,24 +1,22 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{6BEBADEA-CCD5-45BE-B01C-0EF57A1CA7BB}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="WR/Activities/EditorActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WR Status">
     <Files>
-      <File FileName="WR/Fragments/OpenedProjectFragment.cs" Line="48" Column="34" />
-      <File FileName="WR/Fragments/OpenExistingProjectFragment.cs" Line="70" Column="2" />
-      <File FileName="WR/Activities/MainActivity.cs" Line="21" Column="51" />
-      <File FileName="WR/Activities/EditorActivity.cs" Line="40" Column="68" />
+      <File FileName="WR/Activities/MainActivity.cs" Line="54" Column="40" />
+      <File FileName="WR/Activities/OpenProjectActivity.cs" Line="71" Column="28" />
+      <File FileName="WR/Activities/EditorActivity.cs" Line="30" Column="1" />
+      <File FileName="WR/Fragments/EditorFragment.cs" Line="29" Column="1" />
+      <File FileName="WR/Resources/values/strings.xml" Line="9" Column="40" />
       <File FileName="WR Status" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Option id="ShowAllFiles" value="True" />
-          <Node name="WR" expanded="True">
+          <Node name="WR" expanded="True" selected="True">
             <Node name="projectStructure" expanded="True" />
             <Node name="WR" expanded="True">
               <Node name="References" expanded="True" />
-              <Node name="Packages" expanded="True" />
-              <Node name="Activities" expanded="True">
-                <Node name="EditorActivity.cs" selected="True" />
-              </Node>
+              <Node name="Activities" expanded="True" />
               <Node name="Custom Views" expanded="True" />
               <Node name="EventArgs" expanded="True" />
               <Node name="Fragments" expanded="True" />
@@ -36,7 +34,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.WR AndroidDesignerPreferredTheme="Theme.AppCompat.Light" AndroidDesignerPreferredDevice="Nexus 6" PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
+  <MonoDevelop.Ide.ItemProperties.WR AndroidDesignerPreferredTheme="Theme.AppCompat.Light" AndroidDesignerPreferredDevice="Nexus 6" PreferredExecutionTarget="Android.FANPB700A851" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -170,6 +170,7 @@
     <Compile Include="Activities\OpenProjectActivity.cs" />
     <Compile Include="Custom Views\ProjectsListAdapter.cs" />
     <Compile Include="Activities\EditorActivity.cs" />
+    <Compile Include="Fragments\EditorFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -204,7 +205,6 @@
     <AndroidResource Include="Resources\layout\ListViewForProjectRows.axml" />
     <AndroidResource Include="Resources\drawable\undo_variant.xml" />
     <AndroidResource Include="Resources\layout\CustomPopUpRenameFolder.axml" />
-    <AndroidResource Include="Resources\layout\Editor.axml" />
     <AndroidResource Include="Resources\drawable\format_align_center.xml" />
     <AndroidResource Include="Resources\drawable\format_align_justify.xml" />
     <AndroidResource Include="Resources\drawable\format_align_left.xml" />
@@ -219,6 +219,7 @@
     <AndroidResource Include="Resources\drawable\redo.xml" />
     <AndroidResource Include="Resources\drawable\undo.xml" />
     <AndroidResource Include="Resources\drawable\format_align_right.xml" />
+    <AndroidResource Include="Resources\layout\EditorFragment.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

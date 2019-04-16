@@ -6,6 +6,7 @@
     <string name="closeDrawer">WriteRight</string>
     <string name="openProject">Существующие проекты</string>
     <string name="createProject">Создание проекта</string>
+    <string name="editorTitle">Редактор</string>
     <string name="info">Информация</string>
     <string name="alertCreatingProjectTitle">Ошибка создания проекта</string>
     <string name="alertCreatingSectionTitle">Ошибка создания директории</string>
@@ -37,6 +38,7 @@
         <item>Создать новый проект</item>
         <item>Открыть существующий проект</item>
         <item>Информация</item>
+        <item>Редактор (временное)</item>
     </string-array>
     <color name="my_spinner_text_color">#263238</color>
     <string name="ContextMenuDelete">Удалить</string>
