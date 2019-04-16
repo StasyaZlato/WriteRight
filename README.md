@@ -1,3 +1,4 @@
+            SetSupportActionBar(toolbar);
 # WriteRight
 this is my course work at HSE, system engineering, course 1
 
@@ -20,5 +21,8 @@ P.S. язык отображается java, но написано все на c
 Добавлена возможность удалять и переименовывать разделы. (Пока не проекты).
 
 Добавлен текстовый редактор! Использован пакет https://github.com/wasabeef/richeditor-android. В настоящее время редактор открывается в качестве mainActivity при загрузке приложения; завтра сделаю его фрагментом и добавлю к логике приложения. Также необходимо сделать сохранение файлов в нем. Формат, видимо, html :)
+
+## 16.04.2019
+Редактор интегрирован в приложение! На данный момент открывается из бокового меню; на очереди - текстовые файлы
 
 ![alt text](https://github.com/StasyaZlato/WriteRight/blob/master/screens/6LnuRdnZCNk.jpg)
