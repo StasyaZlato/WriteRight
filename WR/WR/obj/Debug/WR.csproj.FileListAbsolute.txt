@@ -406,3 +406,8 @@
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/stamp/_CompileToDalvik.stamp
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/stamp/_GeneratePackageManagerJava.stamp
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/res/layout/editorfragment.xml
+/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/res/drawable/content_save.xml
+/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/res/layout/custompopupaddingfile.xml
+/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/res/drawable/table_plus.xml
+/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/res/layout/textfileslistview.xml
+/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/res/layout/listviewtextfilesrow.xml

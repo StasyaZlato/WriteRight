@@ -113,10 +113,10 @@ namespace WR.Activities
             Project project = e.project;
             string dir = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments), project.Name);
 
-            if (!Directory.Exists(dir))
-            {
-                Directory.CreateDirectory(dir);
-            }
+            //if (!Directory.Exists(dir))
+            //{
+            //    Directory.CreateDirectory(dir);
+            //}
 
             var pathToXML = Path.Combine(dir,  $"{project.Name}.xml");
 

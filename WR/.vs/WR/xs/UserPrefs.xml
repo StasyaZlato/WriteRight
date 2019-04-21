@@ -1,23 +1,30 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{6BEBADEA-CCD5-45BE-B01C-0EF57A1CA7BB}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="WR/Activities/EditorActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WR Status">
     <Files>
-      <File FileName="WR/Activities/MainActivity.cs" Line="54" Column="40" />
-      <File FileName="WR/Activities/OpenProjectActivity.cs" Line="71" Column="28" />
-      <File FileName="WR/Activities/EditorActivity.cs" Line="30" Column="1" />
-      <File FileName="WR/Fragments/EditorFragment.cs" Line="29" Column="1" />
-      <File FileName="WR/Resources/values/strings.xml" Line="9" Column="40" />
+      <File FileName="WR/Custom Views/TextFilesListAdapter.cs" Line="47" Column="65" />
+      <File FileName="WR/Fragments/OpenedProjectFragment.cs" Line="117" Column="35" />
+      <File FileName="WR/Activities/EditorActivity.cs" Line="30" Column="13" />
+      <File FileName="WR/Fragments/EditorFragment.cs" Line="54" Column="15" />
+      <File FileName="WR/Fragments/CreateProjectFragment.cs" Line="158" Column="64" />
+      <File FileName="WR/Activities/OpenProjectActivity.cs" Line="45" Column="45" />
+      <File FileName="WR/Activities/MainActivity.cs" Line="121" Column="30" />
+      <File FileName="WR Status" />
+      <File FileName="projectStructure/FileOfProject.cs" Line="36" Column="1" NotebookId="1" />
+      <File FileName="projectStructure/Section.cs" Line="88" Column="19" NotebookId="1" />
+      <File FileName="projectStructure/FormProject.cs" Line="9" Column="1" NotebookId="1" />
+      <File FileName="projectStructure/TextFile.cs" Line="32" Column="1" NotebookId="1" />
+      <File FileName="projectStructure/FormFile.cs" Line="27" Column="1" NotebookId="1" />
+      <File FileName="projectStructure/Project.cs" Line="51" Column="15" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Option id="ShowAllFiles" value="True" />
-          <Node name="WR" expanded="True">
+          <Node name="WR" expanded="True" selected="True">
             <Node name="projectStructure" expanded="True" />
             <Node name="WR" expanded="True">
               <Node name="References" expanded="True" />
-              <Node name="Activities" expanded="True">
-                <Node name="EditorActivity.cs" selected="True" />
-              </Node>
+              <Node name="Activities" expanded="True" />
               <Node name="Custom Views" expanded="True" />
               <Node name="EventArgs" expanded="True" />
               <Node name="Fragments" expanded="True" />

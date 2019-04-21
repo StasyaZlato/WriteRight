@@ -14,7 +14,8 @@ namespace ProjectStructure
         [XmlElement("Forms", typeof(FormProject))]
         public List<Section> ChildSections = new List<Section>();
 
-        [XmlElement("Form", typeof(FormOfProject))]
+        [XmlElement("FormFile", typeof(FormFile))]
+        [XmlElement("TextFile", typeof(TextFile))]
         public List<FileOfProject> files = new List<FileOfProject>();
 
         public string Name { get; set; }
@@ -57,7 +58,7 @@ namespace ProjectStructure
             if (ChildSections.Exists(x => x.Name == name))
             {
                 throw new IncorrectNameOfSectionException($"Раздел с именем {name} " +
-                    "уже существует в данной директории!");
+                    "уже существует в данном разделе!");
             }
             if (type == "Форма")
             {
@@ -67,7 +68,6 @@ namespace ProjectStructure
             {
                 ChildSections.Add(new TextProject(this, name));
             }
-
         }
 
         public void DeleteSection(int id)
@@ -75,14 +75,29 @@ namespace ProjectStructure
             ChildSections.RemoveAt(id);
         }
 
-        public void AddFile(string name)
+        public void AddFile(string name, int num, string type)
         {
+            if (files.Exists(x => x.Name == name))
+            {
+                throw new IncorrectNameOfFileException($"Файл {name} уже существует в данном разделе");
+            }
 
+            if (type == "form")
+            {
+                FormFile f = new FormFile(name, num) { PathInProject = Path + name };
+                files.Add(f);
+            }
+            else
+            {
+                TextFile t = new TextFile(name, num) { PathInProject = Path + name };
+                files.Add(t);
+                t.SaveToFile();
+            }
         }
 
-        public void DeleteFile()
+        public void DeleteFile(int id)
         {
-
+            files.RemoveAt(id);
         }
     }
 }

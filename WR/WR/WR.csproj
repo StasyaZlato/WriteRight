@@ -171,6 +171,7 @@
     <Compile Include="Custom Views\ProjectsListAdapter.cs" />
     <Compile Include="Activities\EditorActivity.cs" />
     <Compile Include="Fragments\EditorFragment.cs" />
+    <Compile Include="Custom Views\TextFilesListAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -220,6 +221,11 @@
     <AndroidResource Include="Resources\drawable\undo.xml" />
     <AndroidResource Include="Resources\drawable\format_align_right.xml" />
     <AndroidResource Include="Resources\layout\EditorFragment.axml" />
+    <AndroidResource Include="Resources\drawable\content_save.xml" />
+    <AndroidResource Include="Resources\layout\CustomPopUpAddingFile.axml" />
+    <AndroidResource Include="Resources\drawable\table_plus.xml" />
+    <AndroidResource Include="Resources\layout\TextFilesListView.axml" />
+    <AndroidResource Include="Resources\layout\ListViewTextFilesRow.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

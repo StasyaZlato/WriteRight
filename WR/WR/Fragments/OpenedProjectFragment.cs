@@ -24,7 +24,7 @@ namespace WR.Fragments
         FloatingActionButton fabMain, fabAddFile, fabAddFolder;
         View fabMenu;
         TextView fabText;
-        ListView foldersListView;
+        ListView foldersListView, filesListView;
         Dialog dialog, dialog1;
         View view;
 
@@ -48,6 +48,11 @@ namespace WR.Fragments
         string getNewName = null;
         int listPosition;
 
+        Button acceptNewFile;
+
+        string dir;
+
+        string htmlText;
 
 
 
@@ -66,16 +71,21 @@ namespace WR.Fragments
             fabMenu = view.FindViewById<View>(Resource.Id.bg_fabMenu);
             fabText = view.FindViewById<TextView>(Resource.Id.textViewFAB);
             foldersListView = view.FindViewById<ListView>(Resource.Id.listOfFoldersMain);
+            filesListView = view.FindViewById<ListView>(Resource.Id.listOfFilesMain);
             backBtn = view.FindViewById<ImageButton>(Resource.Id.backButtonNavigation);
+
+            dir = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments), project.Name);
 
             currentSection = project;
 
             RegisterForContextMenu(foldersListView);
 
             foldersListView.ItemClick += FoldersListView_ItemClick;
-
-            foldersListView.ItemClick += OnItemClicked;
+            //foldersListView.ItemClick += OnItemClicked;
             foldersListView.Adapter = new CustomViews.FoldersListAdapter(currentSection.ChildSections);
+
+            filesListView.ItemClick += FilesListView_ItemClick;
+            filesListView.Adapter = new CustomViews.FilesListAdapter(currentSection.files);
 
             dialog = new Dialog(Context);
             dialog1 = new Dialog(Context);
@@ -91,6 +101,22 @@ namespace WR.Fragments
 
             return view;
         }
+
+        void FilesListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            int id = e.Position;
+            string fullpath = Path.Combine(dir, currentSection.files[id].NameOfFile);
+            using (FileStream fs = new FileStream(fullpath, FileMode.Open))
+            using (StreamReader sr = new StreamReader(fs))
+            {
+                htmlText = sr.ReadToEnd();
+            }
+
+            Intent intent = new Intent(this.Activity, typeof(Activities.EditorActivity));
+            intent.PutExtra("htmlText", htmlText);
+            StartActivity(intent);
+        }
+
 
         public override void OnCreateContextMenu(IContextMenu menu, View v, IContextMenuContextMenuInfo menuInfo)
         {
@@ -120,32 +146,8 @@ namespace WR.Fragments
             return base.OnContextItemSelected(item);
         }
 
-        private void ShowPopUpRename()
-        {
-            // the exception appears if the dialog has been created earlier
-            try
-            {
-                dialog1.RequestWindowFeature((int)WindowFeatures.NoTitle);
-            }
-            catch (Android.Util.AndroidRuntimeException) { }
 
-            dialog1.SetContentView(Resource.Layout.CustomPopUpRenameFolder);
-            closeBtnRename = dialog1.FindViewById<TextView>(Resource.Id.TextViewClosePopUpRename);
-            renameSection = dialog1.FindViewById<EditText>(Resource.Id.RenameSectionTE);
-            acceptNewName = dialog1.FindViewById<Button>(Resource.Id.AcceptNewName);
-
-            closeBtnRename.Click += (sender, e) =>
-            {
-                dialog1.Dismiss();
-                CloseFabMenu();
-            };
-
-            acceptNewName.Click += AcceptNewName_Click;
-
-            dialog1.Show();
-        }
-
-        void AcceptNewName_Click(object sender, EventArgs e)
+        private void AcceptNewName_Click(object sender, EventArgs e)
         {
             if (renameSection.Text != null)
             {
@@ -157,9 +159,8 @@ namespace WR.Fragments
             }
         }
 
-        void CommitChanges()
+        private void CommitChanges()
         {
-            string dir = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments), project.Name);
 
             var pathToXML = Path.Combine(dir, $"{project.Name}.xml");
 
@@ -171,7 +172,7 @@ namespace WR.Fragments
             }
         }
 
-        void BackBtnPressedHandler(object sender, EventArgs e)
+        private void BackBtnPressedHandler(object sender, EventArgs e)
         {
             if (IsRoot == false)
             {
@@ -205,7 +206,7 @@ namespace WR.Fragments
 
         }
 
-        void FoldersListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        private void FoldersListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             int id = e.Position;
             currentSection = currentSection.ChildSections[id];
@@ -215,7 +216,7 @@ namespace WR.Fragments
         }
 
 
-        private void ShowPopUp()
+        private void ShowPopUpFolder()
         {
             // the exception appears if the dialog has been created earlier
             try
@@ -241,7 +242,87 @@ namespace WR.Fragments
             dialog.Show();
         }
 
-        void AcceptNewFolder_Click(object sender, EventArgs e)
+        private void ShowPopUpFile()
+        {
+            // the exception appears if the dialog has been created earlier
+            try
+            {
+                dialog.RequestWindowFeature((int)WindowFeatures.NoTitle);
+            }
+            catch (Android.Util.AndroidRuntimeException) { }
+
+            dialog.SetContentView(Resource.Layout.CustomPopUpAddingFile);
+            closeBtn = dialog.FindViewById<TextView>(Resource.Id.TextViewClosePopUpNewFile);
+            nameOfSection = dialog.FindViewById<EditText>(Resource.Id.EditTextNameOfNewFile);
+            acceptNewFile = dialog.FindViewById<Button>(Resource.Id.AcceptNewFileBtn);
+
+            closeBtn.Click += (sender, e) =>
+            {
+                dialog.Dismiss();
+                CloseFabMenu();
+            };
+
+            acceptNewFile.Click += AcceptNewFile_Click;
+
+            dialog.Show();
+        }
+
+        private void ShowPopUpRename()
+        {
+            // the exception appears if the dialog has been created earlier
+            try
+            {
+                dialog1.RequestWindowFeature((int)WindowFeatures.NoTitle);
+            }
+            catch (Android.Util.AndroidRuntimeException) { }
+
+            dialog1.SetContentView(Resource.Layout.CustomPopUpRenameFolder);
+            closeBtnRename = dialog1.FindViewById<TextView>(Resource.Id.TextViewClosePopUpRename);
+            renameSection = dialog1.FindViewById<EditText>(Resource.Id.RenameSectionTE);
+            acceptNewName = dialog1.FindViewById<Button>(Resource.Id.AcceptNewName);
+
+            closeBtnRename.Click += (sender, e) =>
+            {
+                dialog1.Dismiss();
+                CloseFabMenu();
+            };
+
+            acceptNewName.Click += AcceptNewName_Click;
+
+            dialog1.Show();
+        }
+
+        private void AcceptNewFile_Click(object sender, EventArgs e)
+        {
+            if (nameOfSection.Text != null)
+            {
+                try
+                {
+                    currentSection.AddFile(nameOfSection.Text, project.CurrentFile, "text");
+                    CommitChanges();
+                    CloseFabMenu();
+                    dialog.Dismiss();
+                }
+                catch (IncorrectNameOfFileException ex)
+                {
+                    //Android.Support.V7.App.AlertDialog.Builder alertBuilder =
+                    //    new Android.Support.V7.App.AlertDialog.Builder(
+                    //        new ContextThemeWrapper(this.Activity, Resource.Style.Theme_AppCompat_Light));
+                    //alertBuilder.SetTitle(Resource.String.alertCreatingSectionTitle);
+                    //alertBuilder.SetMessage(ex.Message);
+                    //alertBuilder.SetNeutralButton(Resource.String.alertNeutralBTN, (senderAlert, args) =>
+                    //{
+                    //    ShowPopUpFolder();
+                    //});
+                    //Dialog dialogError = alertBuilder.Create();
+                    //dialogError.Show();
+                    Toast toast = Toast.MakeText(this.Context, 
+                        Resource.String.alertCreatingFileTitleMsg, ToastLength.Short);
+                }
+            }
+        }
+
+        private void AcceptNewFolder_Click(object sender, EventArgs e)
         {
             string selectedType = GetValueFromRadioGroup();
             if (nameOfSection.Text != null)
@@ -255,17 +336,19 @@ namespace WR.Fragments
                 }
                 catch (IncorrectNameOfSectionException ex)
                 {
-                    Android.Support.V7.App.AlertDialog.Builder alertBuilder =
-                        new Android.Support.V7.App.AlertDialog.Builder(
-                            new ContextThemeWrapper(this.Activity, Resource.Style.Theme_AppCompat_Light));
-                    alertBuilder.SetTitle(Resource.String.alertCreatingSectionTitle);
-                    alertBuilder.SetMessage(ex.Message);
-                    alertBuilder.SetNeutralButton(Resource.String.alertNeutralBTN, (senderAlert, args) =>
-                    {
-                        ShowPopUp();
-                    });
-                    Dialog dialogError = alertBuilder.Create();
-                    dialogError.Show();
+                    //Android.Support.V7.App.AlertDialog.Builder alertBuilder =
+                    //    new Android.Support.V7.App.AlertDialog.Builder(
+                    //        new ContextThemeWrapper(this.Activity, Resource.Style.Theme_AppCompat_Light));
+                    //alertBuilder.SetTitle(Resource.String.alertCreatingSectionTitle);
+                    //alertBuilder.SetMessage(ex.Message);
+                    //alertBuilder.SetNeutralButton(Resource.String.alertNeutralBTN, (senderAlert, args) =>
+                    //{
+                    //    ShowPopUpFolder();
+                    //});
+                    //Dialog dialogError = alertBuilder.Create();
+                    //dialogError.Show();
+                    Toast toast = Toast.MakeText(this.Context,
+                        Resource.String.alertCreatingFolderTitleMsg, ToastLength.Short);
                 }
             }
         }
@@ -275,12 +358,7 @@ namespace WR.Fragments
             return dialog.FindViewById<RadioButton>(formOrFileRG.CheckedRadioButtonId).Text;
         }
 
-        private void OnItemClicked(object sender, AdapterView.ItemClickEventArgs e)
-        {
-            return;
-        }
-
-        void FabMain_Click(object sender, EventArgs e)
+        private void FabMain_Click(object sender, EventArgs e)
         {
             if (!isFabOpened)
             {
@@ -292,7 +370,7 @@ namespace WR.Fragments
             }
         }
 
-        void ShowFabMenu()
+        private void ShowFabMenu()
         {
             isFabOpened = true;
             fabAddFile.Visibility = ViewStates.Visible;
@@ -310,7 +388,7 @@ namespace WR.Fragments
                 .Rotation(0f);
         }
 
-        void CloseFabMenu()
+        private void CloseFabMenu()
         {
             isFabOpened = false;
 
@@ -330,14 +408,14 @@ namespace WR.Fragments
                 fabAddFile, fabAddFolder));
         }
 
-        void FabAddFile_Click(object sender, EventArgs e)
+        private void FabAddFile_Click(object sender, EventArgs e)
         {
-            fabText.Text = "Файл добавлен";
+            ShowPopUpFile();
         }
 
         void FabAddFolder_Click(object sender, EventArgs e)
         {
-            ShowPopUp();
+            ShowPopUpFolder();
         }
 
         private class FabAnimatorListener : Java.Lang.Object, Animator.IAnimatorListener

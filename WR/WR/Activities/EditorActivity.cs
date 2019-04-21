@@ -21,13 +21,13 @@ namespace WR.Activities
     public class EditorActivity : MainActivity
     {
         Fragments.EditorFragment editor;
-        FileOfProject file;
+        //FileOfProject file;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             editor = new Fragments.EditorFragment();
-
+            
             var transaction = SupportFragmentManager.BeginTransaction();
             transaction.Replace(Resource.Id.mainScreenFragmentsContainer, editor);
             transaction.Commit();

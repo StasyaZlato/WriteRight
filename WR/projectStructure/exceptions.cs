@@ -15,4 +15,17 @@ namespace ProjectStructure
         protected IncorrectNameOfSectionException(System.Runtime.Serialization.SerializationInfo info,
             System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }
+
+    [System.Serializable]
+    public class IncorrectNameOfFileException : Exception
+    {
+        public IncorrectNameOfFileException() { }
+
+        public IncorrectNameOfFileException(string message) : base(message) { }
+
+        public IncorrectNameOfFileException(string message, Exception inner) : base(message, inner) { }
+
+        protected IncorrectNameOfFileException(System.Runtime.Serialization.SerializationInfo info,
+            System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    }
 }

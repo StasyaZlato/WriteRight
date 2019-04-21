@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using ProjectStructure;
 using System;
 using Jp.Wasabeef;
+using System.IO;
 
 
 namespace WR.Fragments
@@ -17,6 +18,10 @@ namespace WR.Fragments
     public class EditorFragment : Android.Support.V4.App.Fragment
     {
         RichEditor editor;
+
+        FileStream fs;
+        string path, text;
+
 
         //ImageButton undo, bold, italic, underline, heading1, heading2, heading3,
         //    alignLeft, alignRight, alignCenter;
@@ -39,9 +44,19 @@ namespace WR.Fragments
             editor.SetEditorFontSize(14);
             editor.SetPadding(10, 10, 10, 10);
 
+            text = this.Activity.Intent.GetStringExtra("htmlText");
+            if (text != null)
+            {
+                editor.SetHtml(text);
+            }
+
+
+            //fs = new FileStream(path, FileMode.OpenOrCreate);
+
+
             editor.SetOnTextChangeListener(new RichEditor.OnTextChangeListener((obj) =>
             {
-
+                text = editor.GetHtml();
             }));
 
             view.FindViewById<ImageButton>(Resource.Id.action_undo).Click += (sender, e) =>

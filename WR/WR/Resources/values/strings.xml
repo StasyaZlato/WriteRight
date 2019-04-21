@@ -10,6 +10,11 @@
     <string name="info">Информация</string>
     <string name="alertCreatingProjectTitle">Ошибка создания проекта</string>
     <string name="alertCreatingSectionTitle">Ошибка создания директории</string>
+    <string name="alertCreatingFileTitle">Ошибка создания файла</string>
+    
+    <string name="alertCreatingFileTitleMsg">Файл с таким именем уже существует!</string>
+    <string name="alertCreatingFolderTitleMsg">Раздел с таким именем уже существует!</string>
+
     <string name="alertCreatingProjectMsgNoName">Не задано имя проекта</string>
     <string name="alertCreatingProjectMsgNoSections">Не выбран ни один базовый раздел</string>
     <string name="alertNeutralBTN">Понятно</string>

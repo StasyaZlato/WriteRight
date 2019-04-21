@@ -51,9 +51,10 @@
     <Compile Include="DraftProject.cs" />
     <Compile Include="Exceptions.cs" />
     <Compile Include="FileOfProject.cs" />
-    <Compile Include="FormOfProject.cs" />
+    <Compile Include="FormFile.cs" />
     <Compile Include="FormProject.cs" />
     <Compile Include="TextProject.cs" />
+    <Compile Include="TextFile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

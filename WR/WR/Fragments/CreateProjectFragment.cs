@@ -8,6 +8,7 @@ using Android.Content;
 using System.Collections.Generic;
 using ProjectStructure;
 using System;
+using System.IO;
 
 namespace WR.Fragments
 {
@@ -148,6 +149,12 @@ namespace WR.Fragments
             }
             else
             {
+                string dir = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments), nameOfProject);
+
+                if (!Directory.Exists(dir))
+                {
+                    Directory.CreateDirectory(dir);
+                }
                 project = new Project(nameOfProject, genre, theme, textSection, draftSection, infoSection);
 
                 Android.Support.V7.App.AlertDialog.Builder alert = new Android.Support.V7.App.AlertDialog.Builder(
