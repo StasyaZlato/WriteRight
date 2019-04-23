@@ -21,11 +21,15 @@ namespace WR.Activities
     public class EditorActivity : MainActivity
     {
         Fragments.EditorFragment editor;
-        //FileOfProject file;
+        public ImageButton saveBtn;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+
+            FindViewById<RelativeLayout>(Resource.Id.SaveBtnRL).Visibility = ViewStates.Visible;
+            saveBtn = FindViewById<ImageButton>(Resource.Id.SaveBtn);
+
             editor = new Fragments.EditorFragment();
             
             var transaction = SupportFragmentManager.BeginTransaction();
@@ -36,9 +40,15 @@ namespace WR.Activities
 
             leftMenu.ItemClick -= LeftMenu_ItemClick;
             leftMenu.ItemClick += LeftMenu_ItemClick1;
+            //saveBtn.Click += SaveBtn_Click;
 
             SupportActionBar.SetTitle(Resource.String.editorTitle);
         }
+
+        //void SaveBtn_Click(object sender, EventArgs e)
+        //{
+        //}
+
 
         private void LeftMenu_ItemClick1(object sender, AdapterView.ItemClickEventArgs e)
         {

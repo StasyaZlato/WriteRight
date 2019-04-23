@@ -19,7 +19,6 @@ namespace WR.Fragments
     {
         RichEditor editor;
 
-        FileStream fs;
         string path, text;
 
 
@@ -44,15 +43,20 @@ namespace WR.Fragments
             editor.SetEditorFontSize(14);
             editor.SetPadding(10, 10, 10, 10);
 
-            text = this.Activity.Intent.GetStringExtra("htmlText");
+            ((Activities.EditorActivity)this.Activity).saveBtn.Click += SaveBtn_Click;
+
+            path = this.Activity.Intent.GetStringExtra("path");
+
+            using (FileStream fs = new FileStream(path, FileMode.Open))
+            using (StreamReader sr = new StreamReader(fs))
+            {
+                text = sr.ReadToEnd();
+            }
+
             if (text != null)
             {
                 editor.SetHtml(text);
             }
-
-
-            //fs = new FileStream(path, FileMode.OpenOrCreate);
-
 
             editor.SetOnTextChangeListener(new RichEditor.OnTextChangeListener((obj) =>
             {
@@ -110,6 +114,19 @@ namespace WR.Fragments
             };
 
             return view;
+        }
+
+        void SaveBtn_Click(object sender, EventArgs e)
+        {
+            text = editor.GetHtml();
+
+            using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
+            using (StreamWriter sw = new StreamWriter(fs))
+            {
+                sw.Write(text);
+            }
+
+            Toast toast = Toast.MakeText(this.Activity, "Сохранено!", ToastLength.Short);
         }
 
     }

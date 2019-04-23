@@ -1,2 +1,11 @@
+android.support.v4.widget.DrawerLayout;obj/Debug/res/layout/main.xml
+android.support.v7.widget.Toolbar;obj/Debug/res/layout/main.xml
+FrameLayout;obj/Debug/res/layout/main.xml
+ImageButton;obj/Debug/res/layout/main.xml
+LinearLayout;obj/Debug/res/layout/main.xml
+ListView;obj/Debug/res/layout/main.xml
+path;obj/Debug/res/drawable/content_save.xml
+RelativeLayout;obj/Debug/res/layout/main.xml
 resources;obj/Debug/res/values/strings.xml
 string;obj/Debug/res/values/strings.xml
+vector;obj/Debug/res/drawable/content_save.xml

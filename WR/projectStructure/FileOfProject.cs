@@ -29,7 +29,5 @@ namespace ProjectStructure
             Name = name;
             NameOfFile = $"{num}.xml";
         }
-
-
     }
 }

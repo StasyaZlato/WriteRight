@@ -95,6 +95,11 @@ namespace ProjectStructure
             }
         }
 
+        public void AddFile(FileOfProject file)
+        {
+            files.Add(file);
+        }
+
         public void DeleteFile(int id)
         {
             files.RemoveAt(id);

@@ -13,7 +13,22 @@
         android:minHeight="?attr/actionBarSize"
         android:background="#005662"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
+        <RelativeLayout
+            android:id="@+id/SaveBtnRL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+            <ImageButton
+                android:id="@+id/SaveBtn"
+                android:background="#005662"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/content_save"/>
+            </RelativeLayout>
+        
+    </android.support.v7.widget.Toolbar>
     <android.support.v4.widget.DrawerLayout
         android:id="@+id/MainDrawer"
         android:layout_width="match_parent"

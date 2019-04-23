@@ -33,7 +33,7 @@ namespace WR.Fragments
 
         //elements of dialog
         TextView closeBtn;
-        EditText nameOfSection;
+        EditText nameOfSection, nameOfFile;
         RadioGroup formOrFileRG;
         Button acceptNewFolder;
 
@@ -81,7 +81,6 @@ namespace WR.Fragments
             RegisterForContextMenu(foldersListView);
 
             foldersListView.ItemClick += FoldersListView_ItemClick;
-            //foldersListView.ItemClick += OnItemClicked;
             foldersListView.Adapter = new CustomViews.FoldersListAdapter(currentSection.ChildSections);
 
             filesListView.ItemClick += FilesListView_ItemClick;
@@ -106,14 +105,15 @@ namespace WR.Fragments
         {
             int id = e.Position;
             string fullpath = Path.Combine(dir, currentSection.files[id].NameOfFile);
-            using (FileStream fs = new FileStream(fullpath, FileMode.Open))
-            using (StreamReader sr = new StreamReader(fs))
-            {
-                htmlText = sr.ReadToEnd();
-            }
+            //using (FileStream fs = new FileStream(fullpath, FileMode.Open))
+            //using (StreamReader sr = new StreamReader(fs))
+            //{
+            //    htmlText = sr.ReadToEnd();
+            //}
 
             Intent intent = new Intent(this.Activity, typeof(Activities.EditorActivity));
-            intent.PutExtra("htmlText", htmlText);
+            //intent.PutExtra("htmlText", htmlText);
+            intent.PutExtra("path", fullpath);
             StartActivity(intent);
         }
 
@@ -196,6 +196,7 @@ namespace WR.Fragments
                 currentSection = tempSection;
                 ((Activities.OpenProjectActivity)this.Activity).SupportActionBar.Title = currentSection.Path;
                 foldersListView.Adapter = new CustomViews.FoldersListAdapter(currentSection.ChildSections);
+                filesListView.Adapter = new CustomViews.FilesListAdapter(currentSection.files);
             }
             else
             {
@@ -212,6 +213,8 @@ namespace WR.Fragments
             currentSection = currentSection.ChildSections[id];
             ((Activities.OpenProjectActivity)this.Activity).SupportActionBar.Title = currentSection.Path;
             foldersListView.Adapter = new CustomViews.FoldersListAdapter(currentSection.ChildSections);
+            filesListView.Adapter = new CustomViews.FilesListAdapter(currentSection.files);
+
             IsRoot = false;
         }
 
@@ -253,7 +256,7 @@ namespace WR.Fragments
 
             dialog.SetContentView(Resource.Layout.CustomPopUpAddingFile);
             closeBtn = dialog.FindViewById<TextView>(Resource.Id.TextViewClosePopUpNewFile);
-            nameOfSection = dialog.FindViewById<EditText>(Resource.Id.EditTextNameOfNewFile);
+            nameOfFile = dialog.FindViewById<EditText>(Resource.Id.EditTextNameOfNewFile);
             acceptNewFile = dialog.FindViewById<Button>(Resource.Id.AcceptNewFileBtn);
 
             closeBtn.Click += (sender, e) =>
@@ -294,11 +297,19 @@ namespace WR.Fragments
 
         private void AcceptNewFile_Click(object sender, EventArgs e)
         {
-            if (nameOfSection.Text != null)
+            if (nameOfFile.Text != null)
             {
                 try
                 {
-                    currentSection.AddFile(nameOfSection.Text, project.CurrentFile, "text");
+                    string pathToFile = System.IO.Path.Combine(
+                        System.IO.Path.Combine(
+                            System.Environment.GetFolderPath(
+                                System.Environment.SpecialFolder.MyDocuments), 
+                            project.Name), 
+                        $"{project.CurrentFile}.xml");
+
+                    TextFile file = new TextFile(nameOfFile.Text, pathToFile,project.CurrentFile++);
+                    currentSection.AddFile(file);
                     CommitChanges();
                     CloseFabMenu();
                     dialog.Dismiss();
