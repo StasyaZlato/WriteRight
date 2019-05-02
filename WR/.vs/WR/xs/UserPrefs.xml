@@ -1,37 +1,29 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{6BEBADEA-CCD5-45BE-B01C-0EF57A1CA7BB}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="WR Status">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WR/Custom Views/FormFieldsListAdapter.cs">
     <Files>
-      <File FileName="WR/Activities/EditorActivity.cs" Line="38" Column="38" />
-      <File FileName="WR/Activities/MainActivity.cs" Line="65" Column="52" />
-      <File FileName="WR/Fragments/EditorFragment.cs" Line="129" Column="90" />
-      <File FileName="WR/Fragments/OpenedProjectFragment.cs" Line="112" Column="16" />
-      <File FileName="WR Status" />
-      <File FileName="projectStructure/FileOfProject.cs" Line="24" Column="22" NotebookId="1" />
-      <File FileName="projectStructure/Section.cs" Line="100" Column="29" NotebookId="1" />
-      <File FileName="projectStructure/FormProject.cs" Line="9" Column="1" NotebookId="1" />
-      <File FileName="projectStructure/TextFile.cs" Line="32" Column="1" NotebookId="1" />
-      <File FileName="projectStructure/FormFile.cs" Line="27" Column="1" NotebookId="1" />
-      <File FileName="projectStructure/Project.cs" Line="30" Column="143" NotebookId="1" />
+      <File FileName="WR/Fragments/FormEditorFragment.cs" Line="98" Column="28" />
+      <File FileName="WR/Custom Views/FormFieldsRemovingListViewAdapter.cs" Line="18" Column="25" />
+      <File FileName="WR/Custom Views/FormFieldsListAdapter.cs" Line="45" Column="40" />
+      <File FileName="WR/EventArgs/FormListViewEventArgs.cs" Line="8" Column="16" />
+      <File FileName="Source Not Available" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Option id="ShowAllFiles" value="True" />
-          <Node name="WR" expanded="True" selected="True">
-            <Node name="projectStructure" expanded="True">
-              <Node name="Resources" expanded="True" />
-            </Node>
+          <Node name="WR" expanded="True">
+            <Node name="projectStructure" expanded="True" />
             <Node name="WR" expanded="True">
-              <Node name="References" expanded="True" />
-              <Node name="Activities" expanded="True" />
-              <Node name="Custom Views" expanded="True" />
+              <Node name="Assets" expanded="True" />
+              <Node name="Custom Views" expanded="True">
+                <Node name="FormFieldsListAdapter.cs" selected="True" />
+              </Node>
               <Node name="EventArgs" expanded="True" />
               <Node name="Fragments" expanded="True" />
               <Node name="Properties" expanded="True" />
               <Node name="Resources" expanded="True">
                 <Node name="drawable" expanded="True" />
                 <Node name="layout" expanded="True" />
-                <Node name="values" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -41,7 +33,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.WR AndroidDesignerPreferredTheme="Theme.AppCompat.Light" AndroidDesignerPreferredDevice="Nexus 6" PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
+  <MonoDevelop.Ide.ItemProperties.WR AndroidDesignerPreferredTheme="Theme.AppCompat.Light" AndroidDesignerPreferredDevice="Nexus 6" PreferredExecutionTarget="Android.SelectDevice" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

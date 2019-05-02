@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/formFieldIconRed"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:padding="5dp"
+        android:src="@drawable/gamepad_circle_red"
+        android:clickable="false"
+        android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/nameOfFieldForRemove"
+            android:text="Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/material_blue_grey_900"
+            android:textSize="20dp"
+            android:gravity="left"
+            android:clickable="false"
+            android:layout_toRightOf="@id/formFieldIconRed"
+            android:background="@android:color/transparent"
+            android:hint="Введите название поля"
+            android:textColorHint="@color/material_grey_600"/>
+        
+    <TextView
+        android:id="@+id/FieldInfoForRemove"
+        android:hint="не указано"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/nameOfFieldForRemove"
+        android:textColor="@color/material_blue_grey_900"
+        android:textSize="18dp"
+        android:visibility="visible"
+        android:shadowColor="#ff005662"
+        android:textColorHint="@color/material_grey_600"
+        android:layout_below="@id/nameOfFieldForRemove"
+        android:theme="@android:style/Theme.Material.Light"/>
+    <ImageView
+        android:id="@+id/formFieldRemoveIcon"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:padding="5dp"
+        android:src="@drawable/close"
+        android:clickable="false"
+        android:layout_alignParentRight="true"/>
+</RelativeLayout>

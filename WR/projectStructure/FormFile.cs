@@ -1,16 +1,20 @@
 ﻿using System;
 using System.IO;
+using System.Xml;
 
 namespace ProjectStructure
 {
     [Serializable]
     public class FormFile : FileOfProject
     {
-        public FormFile()
+        public FormFile() : base()
         {
         }
 
-        public FormFile(string name, string path, int num) : base(name, path, num) { }
+        public FormFile(int i)
+        {
+
+        }
 
         public FormFile(string name, int num) : base(name, num) { }
 

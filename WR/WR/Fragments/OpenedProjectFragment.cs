@@ -52,9 +52,6 @@ namespace WR.Fragments
 
         string dir;
 
-        string htmlText;
-
-
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -462,7 +459,7 @@ namespace WR.Fragments
             }
         }
 
-        public void Handle_OnOpenCreatedProject(object sender, ProjectEventArgs e)
+        public void Handle_OnOpenCreatedProject(object sender, CustomEventArgs.ProjectEventArgs e)
         {
             project = e.project;
         }

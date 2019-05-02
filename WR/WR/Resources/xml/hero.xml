@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<form type="template" name="hero">
+    <field name="Имя"/>
+    <field name="Возраст"/>
+    <field name="Пол"/>
+    <field name="Цвет глаз"/>
+    <field name="Цвет волос"/>
+    <field name="Особые приметы"/>
+    <field name="Любит"/>
+    <field name="Не любит"/>
+</form>

@@ -127,6 +127,7 @@ namespace WR.Fragments
             }
 
             Toast toast = Toast.MakeText(this.Activity, "Сохранено!", ToastLength.Short);
+            toast.Show();
         }
 
     }

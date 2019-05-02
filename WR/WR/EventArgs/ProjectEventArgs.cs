@@ -1,7 +1,7 @@
 ﻿using System;
 using ProjectStructure;
 
-namespace WR
+namespace WR.CustomEventArgs
 {
     public class ProjectEventArgs : EventArgs
     {

@@ -15,7 +15,7 @@ namespace WR.Fragments
     
     public class CreateProjectFragment : Android.Support.V4.App.Fragment
     {
-        public event EventHandler<ProjectEventArgs> ProjectIsCreated;
+        public event EventHandler<CustomEventArgs.ProjectEventArgs> ProjectIsCreated;
 
         EditText nameOfProjectInput;
         Spinner genreChoice, themeChoice;
@@ -157,15 +157,17 @@ namespace WR.Fragments
                 }
                 project = new Project(nameOfProject, genre, theme, textSection, draftSection, infoSection);
 
-                Android.Support.V7.App.AlertDialog.Builder alert = new Android.Support.V7.App.AlertDialog.Builder(
-                        new ContextThemeWrapper(this.Activity, Resource.Style.Theme_AppCompat_Light));
-                alert.SetTitle("Проект создан!");
-                alert.SetMessage("Ура");
-                alert.SetNeutralButton(Resource.String.alertNeutralBTN, (senderAlert1, args1) => { });
-                dialog = alert.Create();
-                dialog.Show();
+                //Android.Support.V7.App.AlertDialog.Builder alert = new Android.Support.V7.App.AlertDialog.Builder(
+                //        new ContextThemeWrapper(this.Activity, Resource.Style.Theme_AppCompat_Light));
+                //alert.SetTitle("Проект создан!");
+                //alert.SetMessage("Ура");
+                //alert.SetNeutralButton(Resource.String.alertNeutralBTN, (senderAlert1, args1) => { });
+                //dialog = alert.Create();
+                //dialog.Show();
+                Toast toast = Toast.MakeText(this.Activity, "Проект создан!", ToastLength.Short);
+                toast.Show();
 
-                ProjectIsCreated(this, new ProjectEventArgs(project));
+                ProjectIsCreated(this, new CustomEventArgs.ProjectEventArgs(project));
             }
         }
 

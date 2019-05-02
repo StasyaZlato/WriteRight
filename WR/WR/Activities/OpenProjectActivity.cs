@@ -23,7 +23,7 @@ namespace WR.Activities
         Project project;
         //Project project;
 
-        public event EventHandler<ProjectEventArgs> OnProjectCreated;
+        public event EventHandler<CustomEventArgs.ProjectEventArgs> OnProjectCreated;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -44,7 +44,7 @@ namespace WR.Activities
 
             OnProjectCreated += fragOpened.Handle_OnOpenCreatedProject;
 
-            OnProjectCreated?.Invoke(this, new ProjectEventArgs(project));
+            OnProjectCreated?.Invoke(this, new CustomEventArgs.ProjectEventArgs(project));
             leftMenu.ItemClick -= LeftMenu_ItemClick;
             leftMenu.ItemClick += LeftMenu_ItemClick1;
 

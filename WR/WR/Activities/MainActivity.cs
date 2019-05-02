@@ -108,7 +108,7 @@ namespace WR.Activities
 
         }
 
-        private void FragCreate_ProjectIsCreated(object sender, ProjectEventArgs e)
+        private void FragCreate_ProjectIsCreated(object sender, CustomEventArgs.ProjectEventArgs e)
         {
             Project project = e.project;
             string dir = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments), project.Name);
@@ -175,7 +175,7 @@ namespace WR.Activities
                     ShowFragment(fragInfo);
                     break;
                 case 3:
-                    Intent intent = new Intent(this, typeof(EditorActivity));
+                    Intent intent = new Intent(this, typeof(FormEditorActivity));
                     StartActivity(intent);
                     break;
             }
