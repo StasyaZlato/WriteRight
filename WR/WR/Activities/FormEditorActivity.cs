@@ -28,15 +28,49 @@ namespace WR.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            saveBtn = FindViewById<ImageButton>(Resource.Id.SaveBtn);
+
             FindViewById<RelativeLayout>(Resource.Id.SaveBtnRL).Visibility = ViewStates.Visible;
+            saveBtn = FindViewById<ImageButton>(Resource.Id.SaveBtn);
+
             formEditor = new Fragments.FormEditorFragment();
+
             var transaction = SupportFragmentManager.BeginTransaction();
             transaction.Replace(Resource.Id.mainScreenFragmentsContainer, formEditor);
             transaction.Commit();
+
             currentFragment = formEditor;
-            ShowFragment(formEditor);
+
+            leftMenu.ItemClick -= LeftMenu_ItemClick;
+            leftMenu.ItemClick += LeftMenu_ItemClick1;
         }
+
+        void LeftMenu_ItemClick1(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            int itemSelected = e.Position;
+            Intent intent = new Intent(this, typeof(MainActivity));
+            switch (itemSelected)
+            {
+                case 0:
+                    intent.PutExtra("frag", "create");
+                    break;
+                case 1:
+                    intent.PutExtra("frag", "open");
+                    break;
+                case 2:
+                    intent.PutExtra("frag", "info");
+                    break;
+            }
+            StartActivity(intent);
+            drawerLayout.CloseDrawer(leftMenu);
+        }
+
+        public override void OnBackPressed()
+        {
+            formEditor.form.SaveToFile();
+            base.OnBackPressed();
+        }
+
     }
+
 }
 

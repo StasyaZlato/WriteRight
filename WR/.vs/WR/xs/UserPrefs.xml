@@ -1,11 +1,9 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{6BEBADEA-CCD5-45BE-B01C-0EF57A1CA7BB}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="WR/Custom Views/FormFieldsListAdapter.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WR/Fragments/FormEditorFragment.cs">
     <Files>
-      <File FileName="WR/Fragments/FormEditorFragment.cs" Line="98" Column="28" />
-      <File FileName="WR/Custom Views/FormFieldsRemovingListViewAdapter.cs" Line="18" Column="25" />
-      <File FileName="WR/Custom Views/FormFieldsListAdapter.cs" Line="45" Column="40" />
-      <File FileName="WR/EventArgs/FormListViewEventArgs.cs" Line="8" Column="16" />
-      <File FileName="Source Not Available" />
+      <File FileName="WR/Fragments/FormEditorFragment.cs" Line="138" Column="14" />
+      <File FileName="WR/Fragments/OpenedProjectFragment.cs" Line="307" Column="31" />
+      <File FileName="projectStructure/FormFile.cs" Line="55" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,16 +12,18 @@
           <Node name="WR" expanded="True">
             <Node name="projectStructure" expanded="True" />
             <Node name="WR" expanded="True">
+              <Node name="Activities" expanded="True" />
               <Node name="Assets" expanded="True" />
-              <Node name="Custom Views" expanded="True">
-                <Node name="FormFieldsListAdapter.cs" selected="True" />
-              </Node>
+              <Node name="Custom Views" expanded="True" />
               <Node name="EventArgs" expanded="True" />
-              <Node name="Fragments" expanded="True" />
+              <Node name="Fragments" expanded="True">
+                <Node name="FormEditorFragment.cs" selected="True" />
+              </Node>
               <Node name="Properties" expanded="True" />
               <Node name="Resources" expanded="True">
                 <Node name="drawable" expanded="True" />
                 <Node name="layout" expanded="True" />
+                <Node name="values" expanded="True" />
               </Node>
             </Node>
           </Node>

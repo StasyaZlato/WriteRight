@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/PopUpLinearLayout"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/material_grey_50">
+	<LinearLayout
+		android:orientation="horizontal"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/TabBarPopUpLinearLayout"
+		android:background="#005662">
+		<TextView
+			android:layout_width="249.7dp"
+			android:layout_height="match_parent"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:id="@+id/templatesTV"
+			android:text="Выбор шаблона"
+			android:padding="10dp"
+			android:background="#005662"
+			android:textColor="#ffffffff"/>
+		<ImageButton
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:id="@+id/closePopUp"
+			android:padding="10dp"
+			android:layout_gravity="end"
+			android:src="@drawable/close_white"
+			android:background="#005662"/>
+	</LinearLayout>
+    <ListView
+        android:id="@+id/listViewTemplates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/templates"
+        android:theme="@android:style/Theme.Material.Light"/>
+</LinearLayout>

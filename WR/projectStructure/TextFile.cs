@@ -26,9 +26,6 @@ namespace ProjectStructure
 
         public void SaveToFile()
         {
-            //string path = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments), project.Name);
-
-            //using (FileStream fs = new FileStream(PathToFile, FileMode.OpenOrCreate))
             using (StreamWriter sw = new StreamWriter(PathToFile, false))
             {
                 sw.Write(HtmlText);

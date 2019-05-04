@@ -43,7 +43,15 @@ namespace WR.CustomViews
             {
                 view = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.ListViewTextFilesRow, parent, false);
             }
-            view.FindViewById<ImageView>(Resource.Id.textFileIcon);
+            ImageView img = view.FindViewById<ImageView>(Resource.Id.textFileIcon);
+            if (item is FormFile)
+            {
+                img.SetImageResource(Resource.Drawable.file_table);
+            }
+            else
+            {
+                img.SetImageResource(Resource.Drawable.file_document);
+            }
             view.FindViewById<TextView>(Resource.Id.textFileName).Text = item.Name;
             return view;
         }

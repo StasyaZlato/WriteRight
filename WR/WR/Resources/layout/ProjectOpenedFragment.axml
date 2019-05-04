@@ -50,6 +50,17 @@
             android:alpha="0"
             android:visibility="gone"/>
         <android.support.design.widget.FloatingActionButton
+            android:id="@+id/addFormActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/standard_23"
+            android:visibility="gone"
+            android:rotation="90"
+            app:fabSize="mini"        
+            app:srcCompat="@drawable/table_plus"
+            android:background="#c41c00"/>
+        <android.support.design.widget.FloatingActionButton
             android:id="@+id/addFileActionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

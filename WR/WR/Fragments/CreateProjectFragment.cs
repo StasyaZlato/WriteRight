@@ -133,7 +133,6 @@ namespace WR.Fragments
 
         void AcceptBtn_Click(object sender, EventArgs e)
         {
-            Dialog dialog;
             if (nameOfProject == null)
             {
                 Toast toast = Toast.MakeText(this.Activity, Resource.String.alertCreatingProjectMsgNoName, ToastLength.Short);
@@ -157,13 +156,6 @@ namespace WR.Fragments
                 }
                 project = new Project(nameOfProject, genre, theme, textSection, draftSection, infoSection);
 
-                //Android.Support.V7.App.AlertDialog.Builder alert = new Android.Support.V7.App.AlertDialog.Builder(
-                //        new ContextThemeWrapper(this.Activity, Resource.Style.Theme_AppCompat_Light));
-                //alert.SetTitle("Проект создан!");
-                //alert.SetMessage("Ура");
-                //alert.SetNeutralButton(Resource.String.alertNeutralBTN, (senderAlert1, args1) => { });
-                //dialog = alert.Create();
-                //dialog.Show();
                 Toast toast = Toast.MakeText(this.Activity, "Проект создан!", ToastLength.Short);
                 toast.Show();
 

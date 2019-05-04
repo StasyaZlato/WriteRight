@@ -12,6 +12,7 @@ using Jp.Wasabeef;
 using System.IO;
 using Android.Support.Design.Widget;
 using System.Xml.Linq;
+using Newtonsoft.Json;
 
 namespace WR.Fragments
 {
@@ -20,9 +21,13 @@ namespace WR.Fragments
     {
         ListView listOfFields, listForRemoving;
         FloatingActionButton fabAddField, fabRemoveFile;
-        List<string[]> fieldsOfForm = new List<string[]>();
+        //List<string[]> fieldsOfForm = new List<string[]>();
         CustomViews.FormFieldsListAdapter adapter;
         CustomViews.FormFieldsRemovingListAdapter adapterRemoving;
+        TextView templateTV;
+        Dialog dialog;
+
+        public FormFile form;
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -33,21 +38,23 @@ namespace WR.Fragments
         {
             View view = inflater.Inflate(Resource.Layout.FormEditorFragment, container, false);
 
-            var reader = Resources.GetXml(Resource.Xml.hero);
-            XDocument doc = XDocument.Load(reader);
-            foreach (var field in doc.Element("form").Elements("field"))
-            {
-                string name = field.Attribute("name").Value;
-                fieldsOfForm.Add(new string[2] { name, string.Empty });
-            }
+            form = JsonConvert.DeserializeObject<FormFile>(this.Activity.Intent.GetStringExtra("form"));
+
+            form.ReadFromFile();
 
             listOfFields = view.FindViewById<ListView>(Resource.Id.listOfFields);
             listForRemoving = view.FindViewById<ListView>(Resource.Id.listOfFieldsRemove);
             fabAddField = view.FindViewById<FloatingActionButton>(Resource.Id.mainActionBtnAddField);
             fabRemoveFile = view.FindViewById<FloatingActionButton>(Resource.Id.mainActionBtnRemoveField);
+            templateTV = view.FindViewById<TextView>(Resource.Id.OpenTemplateTV);
 
-            adapter = new CustomViews.FormFieldsListAdapter(this.Activity, fieldsOfForm);
-            adapterRemoving = new CustomViews.FormFieldsRemovingListAdapter(this.Activity, fieldsOfForm);
+            if (form.fields.Count > 0)
+            {
+                templateTV.Visibility = ViewStates.Gone;
+            }
+
+            adapter = new CustomViews.FormFieldsListAdapter(this.Activity, form.fields);
+            adapterRemoving = new CustomViews.FormFieldsRemovingListAdapter(this.Activity, form.fields);
 
             listOfFields.Adapter = adapter;
             listForRemoving.Adapter = adapterRemoving;
@@ -57,31 +64,78 @@ namespace WR.Fragments
 
             listForRemoving.ItemClick += ListForRemoving_ItemClick;
 
-            //adapter.CollectionChanged += (sender, e) =>
-            //{
-            //    fieldsOfForm = e.collection;
-            //    adapter = new CustomViews.FormFieldsListAdapter(this.Activity, fieldsOfForm);
-            //    adapterRemoving = new CustomViews.FormFieldsRemovingListAdapter(this.Activity, fieldsOfForm);
+            ((Activities.FormEditorActivity)this.Activity).saveBtn.Click += SaveBtn_Click;
 
-            //    listOfFields.Adapter = adapter;
-            //    listForRemoving.Adapter = adapterRemoving;
-            //};
-
-           
+            templateTV.Click += TemplateTV_Click;
 
             return view;
         }
 
+        void TemplateTV_Click(object sender, EventArgs e)
+        {
+            ShowPopUpTemplates();
+        }
+
+        private void ShowPopUpTemplates()
+        {
+            dialog = new Dialog(this.Activity);
+            // the exception appears if the dialog has been created earlier
+            try
+            {
+                dialog.RequestWindowFeature((int)WindowFeatures.NoTitle);
+            }
+            catch (Android.Util.AndroidRuntimeException) { }
+
+            dialog.SetContentView(Resource.Layout.CustomPopUpTemplates);
+            ImageButton closeBtn = dialog.FindViewById<ImageButton>(Resource.Id.closePopUp);
+            ListView templates = dialog.FindViewById<ListView>(Resource.Id.listViewTemplates);
+
+            closeBtn.Click += (sender, e) =>
+            {
+                dialog.Dismiss();
+            };
+
+            templates.ItemClick += Templates_ItemClick; ;
+
+            dialog.Show();
+        }
+
+        void Templates_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            switch (e.Position)
+            {
+                case 0:
+                    var reader = Resources.GetXml(Resource.Xml.hero);
+                    XDocument doc = XDocument.Load(reader);
+                    foreach (var field in doc.Element("form").Elements("field"))
+                    {
+                        string name = field.Attribute("name").Value;
+                        form.fields.Add(new string[2] { name, string.Empty });
+                    }
+                    listOfFields.Adapter = new CustomViews.FormFieldsListAdapter(this.Activity, form.fields);
+                    form.SaveToFile();
+                    dialog.Dismiss();
+                    templateTV.Visibility = ViewStates.Gone;
+                    break;
+            }
+        }
+
+
         void ListForRemoving_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             int position = e.Position;
-            fieldsOfForm.RemoveAt(position);
+            form.fields.RemoveAt(position);
 
-            adapter = new CustomViews.FormFieldsListAdapter(this.Activity, fieldsOfForm);
-            adapterRemoving = new CustomViews.FormFieldsRemovingListAdapter(this.Activity, fieldsOfForm);
+            adapter = new CustomViews.FormFieldsListAdapter(this.Activity, form.fields);
+            adapterRemoving = new CustomViews.FormFieldsRemovingListAdapter(this.Activity, form.fields);
 
             listOfFields.Adapter = adapter;
             listForRemoving.Adapter = adapterRemoving;
+
+            if (form.fields.Count == 0)
+            {
+                templateTV.Visibility = ViewStates.Visible;
+            }
         }
 
 
@@ -89,9 +143,9 @@ namespace WR.Fragments
         {
             if (adapter.changed)
             {
-                fieldsOfForm = adapter.fields;
-                adapter = new CustomViews.FormFieldsListAdapter(this.Activity, fieldsOfForm);
-                adapterRemoving = new CustomViews.FormFieldsRemovingListAdapter(this.Activity, fieldsOfForm);
+                form.fields = adapter.fields;
+                adapter = new CustomViews.FormFieldsListAdapter(this.Activity, form.fields);
+                adapterRemoving = new CustomViews.FormFieldsRemovingListAdapter(this.Activity, form.fields);
 
                 listOfFields.Adapter = adapter;
                 listForRemoving.Adapter = adapterRemoving;
@@ -121,17 +175,20 @@ namespace WR.Fragments
 
         void FabAddField_Click(object sender, EventArgs e)
         {
-            fieldsOfForm.Add(new string[2]);
-            adapter = new CustomViews.FormFieldsListAdapter(this.Activity, fieldsOfForm);
+            form.fields.Add(new string[2]);
+            adapter = new CustomViews.FormFieldsListAdapter(this.Activity, form.fields);
             listOfFields.Adapter = adapter;
+            if (form.fields.Count > 0)
+            {
+                templateTV.Visibility = ViewStates.Gone;
+            }
         }
 
 
         void SaveBtn_Click(object sender, EventArgs e)
         {
-
+            form.SaveToFile();
+            Toast.MakeText(this.Activity, "Файл сохранен", ToastLength.Short).Show();
         }
-
     }
-
 }

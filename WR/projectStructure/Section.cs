@@ -12,6 +12,7 @@ namespace ProjectStructure
         [XmlElement("Text", typeof(TextProject))]
         [XmlElement("Draft", typeof(DraftProject))]
         [XmlElement("Forms", typeof(FormProject))]
+        [XmlElement("Section", typeof(Section))]
         public List<Section> ChildSections = new List<Section>();
 
         [XmlElement("FormFile", typeof(FormFile))]
@@ -50,26 +51,21 @@ namespace ProjectStructure
                     "уже существует в данной директории!");
             }
 
-            ChildSections[id].Name = name ?? throw new IncorrectNameOfSectionException("Имя не указано");
+            ChildSections[id].Name = string.IsNullOrEmpty(name) ? throw new IncorrectNameOfFileException("Имя не указано") : name;
         }
 
-        public void AddSection(string name, string type)
+        public void AddSection(string name)
         {
             if (ChildSections.Exists(x => x.Name == name))
             {
                 throw new IncorrectNameOfSectionException($"Раздел с именем {name} " +
                     "уже существует в данном разделе!");
             }
-            if (type == "Форма")
-            {
-                ChildSections.Add(new FormProject(this, name));
-            }
-            else
-            {
-                ChildSections.Add(new TextProject(this, name));
-            }
-        }
 
+                ChildSections.Add(new Section(this, name));
+
+        }
+        
         public void DeleteSection(int id)
         {
             ChildSections.RemoveAt(id);
@@ -97,7 +93,22 @@ namespace ProjectStructure
 
         public void AddFile(FileOfProject file)
         {
+            if (files.Exists(x => x.Name == file.Name))
+            {
+                throw new IncorrectNameOfFileException($"Файл {file.Name} уже существует в данном разделе");
+            }
             files.Add(file);
+        }
+
+        public void RenameFile(int id, string newName)
+        {
+            if (files.Exists(x => x.Name == newName))
+            {
+                throw new IncorrectNameOfFileException($"Файл с именем {newName} " +
+                    "уже существует в данной директории!");
+            }
+
+            files[id].Name = string.IsNullOrEmpty(newName) ? throw new IncorrectNameOfFileException("Имя не указано") : newName;
         }
 
         public void DeleteFile(int id)

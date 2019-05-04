@@ -34,8 +34,6 @@ namespace WR.Activities
             string xmlProject = Intent.GetStringExtra("xml");
             GetData(xmlProject);
 
-            //drawerLayout.CloseDrawer(leftMenu);
-
             var transaction = SupportFragmentManager.BeginTransaction();
             transaction.Replace(Resource.Id.mainScreenFragmentsContainer, fragOpened);
             transaction.Commit();
@@ -65,10 +63,6 @@ namespace WR.Activities
                 case 2:
                     intent.PutExtra("frag", "info");
                     break;
-                case 3:
-                    Intent intentEditor = new Intent(this, typeof(EditorActivity));
-                    StartActivity(intentEditor);
-                    return;
             }
             StartActivity(intent);
             drawerLayout.CloseDrawer(leftMenu);

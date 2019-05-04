@@ -155,6 +155,9 @@
     <Reference Include="mscorlib" />
     <Reference Include="System.Runtime" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -241,6 +244,8 @@
     <AndroidResource Include="Resources\drawable\close.xml" />
     <AndroidResource Include="Resources\layout\ListViewRemovingFieldRow.axml" />
     <AndroidResource Include="Resources\drawable\check.xml" />
+    <AndroidResource Include="Resources\layout\CustomPopUpTemplates.axml" />
+    <AndroidResource Include="Resources\drawable\close_white.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

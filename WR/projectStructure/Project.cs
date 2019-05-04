@@ -19,10 +19,9 @@ namespace ProjectStructure
         {
             Genre = "Роман";
             Theme = "Повседневность";
-            ChildSections.Add(new TextProject());
-            ChildSections.Add(new DraftProject());
-            ChildSections.Add(new FormProject());
-
+            ChildSections.Add(new Section("Информация"));
+            ChildSections.Add(new Section("Текст"));
+            ChildSections.Add(new Section("Черновик"));
         }
 
         public Project(string name, string genre, string theme, bool text, bool draft, bool info) : base(name)
@@ -34,15 +33,15 @@ namespace ProjectStructure
             Theme = theme;
             if (text)
             {
-                ChildSections.Add(new TextProject(this));
+                ChildSections.Add(new Section(this, "Текст"));
             }
             if (draft)
             {
-                ChildSections.Add(new DraftProject(this));
+                ChildSections.Add(new Section(this, "Черновик"));
             }
             if (info)
             {
-                ChildSections.Add(new FormProject(this));
+                ChildSections.Add(new Section(this, "Информация"));
             }
 
             TextFile synopsis = new TextFile("Синопсис",PathToFile, 0)

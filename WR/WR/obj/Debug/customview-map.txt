@@ -20,6 +20,7 @@ field;obj/Debug/res/xml/hero.xml
 form;obj/Debug/res/xml/hero.xml
 FrameLayout;obj/Debug/res/layout/main.xml
 HorizontalScrollView;obj/Debug/res/layout/editorfragment.xml
+ImageButton;obj/Debug/res/layout/custompopuptemplates.xml
 ImageButton;obj/Debug/res/layout/editorfragment.xml
 ImageButton;obj/Debug/res/layout/main.xml
 ImageButton;obj/Debug/res/layout/projectopenedfragment.xml
@@ -36,17 +37,23 @@ LinearLayout;obj/Debug/res/layout/createprojectfragment.xml
 LinearLayout;obj/Debug/res/layout/custompopupaddingfile.xml
 LinearLayout;obj/Debug/res/layout/custompopupaddingfolder.xml
 LinearLayout;obj/Debug/res/layout/custompopuprenamefolder.xml
+LinearLayout;obj/Debug/res/layout/custompopupsavefile.xml
+LinearLayout;obj/Debug/res/layout/custompopuptemplates.xml
 LinearLayout;obj/Debug/res/layout/editorfragment.xml
 LinearLayout;obj/Debug/res/layout/formeditorfragment.xml
 LinearLayout;obj/Debug/res/layout/main.xml
 LinearLayout;obj/Debug/res/layout/projectopenedfragment.xml
+LinearLayout;obj/Debug/res/layout/templates_list.xml
+ListView;obj/Debug/res/layout/custompopuptemplates.xml
 ListView;obj/Debug/res/layout/formeditorfragment.xml
 ListView;obj/Debug/res/layout/main.xml
 ListView;obj/Debug/res/layout/openexistingprojectfragment.xml
 ListView;obj/Debug/res/layout/projectopenedfragment.xml
 path;obj/Debug/res/drawable/arrow_left_thick.xml
 path;obj/Debug/res/drawable/check.xml
+path;obj/Debug/res/drawable/close (copy).xml
 path;obj/Debug/res/drawable/close.xml
+path;obj/Debug/res/drawable/close_white.xml
 path;obj/Debug/res/drawable/content_save.xml
 path;obj/Debug/res/drawable/delete.xml
 path;obj/Debug/res/drawable/file_document.xml
@@ -73,8 +80,6 @@ path;obj/Debug/res/drawable/redo.xml
 path;obj/Debug/res/drawable/table_plus.xml
 path;obj/Debug/res/drawable/undo.xml
 path;obj/Debug/res/drawable/undo_variant.xml
-RadioButton;obj/Debug/res/layout/custompopupaddingfolder.xml
-RadioGroup;obj/Debug/res/layout/custompopupaddingfolder.xml
 RelativeLayout;obj/Debug/res/layout/createprojectfragment.xml
 RelativeLayout;obj/Debug/res/layout/formfieldslistviewrow.xml
 RelativeLayout;obj/Debug/res/layout/hellofragment.xml
@@ -86,12 +91,12 @@ RelativeLayout;obj/Debug/res/layout/listviewtextfilesrow.xml
 RelativeLayout;obj/Debug/res/layout/main.xml
 RelativeLayout;obj/Debug/res/layout/openexistingprojectfragment.xml
 RelativeLayout;obj/Debug/res/layout/textfileslistview.xml
-resources;/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/lp/0/jl/res/values/strings.xml
+resources;/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/lp/1/jl/res/values/strings.xml
 resources;obj/Debug/res/values/dimens.xml
 resources;obj/Debug/res/values/strings.xml
 resources;obj/Debug/res/values/style.xml
 Spinner;obj/Debug/res/layout/createprojectfragment.xml
-string;/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/lp/0/jl/res/values/strings.xml
+string;/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/lp/1/jl/res/values/strings.xml
 string;obj/Debug/res/values/strings.xml
 string-array;obj/Debug/res/values/strings.xml
 style;obj/Debug/res/values/style.xml
@@ -99,7 +104,9 @@ TextView;obj/Debug/res/layout/createprojectfragment.xml
 TextView;obj/Debug/res/layout/custompopupaddingfile.xml
 TextView;obj/Debug/res/layout/custompopupaddingfolder.xml
 TextView;obj/Debug/res/layout/custompopuprenamefolder.xml
+TextView;obj/Debug/res/layout/custompopuptemplates.xml
 TextView;obj/Debug/res/layout/editorfragment.xml
+TextView;obj/Debug/res/layout/formeditorfragment.xml
 TextView;obj/Debug/res/layout/hellofragment.xml
 TextView;obj/Debug/res/layout/infofragment.xml
 TextView;obj/Debug/res/layout/listviewfoldersrow.xml
@@ -110,7 +117,9 @@ TextView;obj/Debug/res/layout/projectopenedfragment.xml
 TextView;obj/Debug/res/layout/textfileslistview.xml
 vector;obj/Debug/res/drawable/arrow_left_thick.xml
 vector;obj/Debug/res/drawable/check.xml
+vector;obj/Debug/res/drawable/close (copy).xml
 vector;obj/Debug/res/drawable/close.xml
+vector;obj/Debug/res/drawable/close_white.xml
 vector;obj/Debug/res/drawable/content_save.xml
 vector;obj/Debug/res/drawable/delete.xml
 vector;obj/Debug/res/drawable/file_document.xml
@@ -137,5 +146,4 @@ vector;obj/Debug/res/drawable/redo.xml
 vector;obj/Debug/res/drawable/table_plus.xml
 vector;obj/Debug/res/drawable/undo.xml
 vector;obj/Debug/res/drawable/undo_variant.xml
-View;obj/Debug/res/layout/formeditorfragment.xml
 View;obj/Debug/res/layout/projectopenedfragment.xml

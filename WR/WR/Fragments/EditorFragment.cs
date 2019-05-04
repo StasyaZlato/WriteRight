@@ -22,15 +22,6 @@ namespace WR.Fragments
         string path, text;
 
 
-        //ImageButton undo, bold, italic, underline, heading1, heading2, heading3,
-        //    alignLeft, alignRight, alignCenter;
-
-        //Android.Graphics.Color bcolorOfBtnChosen = new Android.Graphics.Color(255, 67, 0);
-        //Android.Graphics.Color fcolorOfBtnChosen = new Android.Graphics.Color(255, 255, 255);
-
-        //Android.Graphics.Color bcolorOfBtn = new Android.Graphics.Color(250, 250, 250);
-        //Android.Graphics.Color fcolorOfBtn = new Android.Graphics.Color(0, 0, 0);
-
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -118,6 +109,14 @@ namespace WR.Fragments
 
         void SaveBtn_Click(object sender, EventArgs e)
         {
+            SaveText();
+
+            Toast toast = Toast.MakeText(this.Activity, "Сохранено!", ToastLength.Short);
+            toast.Show();
+        }
+
+        public void SaveText()
+        {
             text = editor.GetHtml();
 
             using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
@@ -126,8 +125,6 @@ namespace WR.Fragments
                 sw.Write(text);
             }
 
-            Toast toast = Toast.MakeText(this.Activity, "Сохранено!", ToastLength.Short);
-            toast.Show();
         }
 
     }

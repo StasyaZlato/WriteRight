@@ -40,15 +40,9 @@ namespace WR.Activities
 
             leftMenu.ItemClick -= LeftMenu_ItemClick;
             leftMenu.ItemClick += LeftMenu_ItemClick1;
-            //saveBtn.Click += SaveBtn_Click;
 
             SupportActionBar.SetTitle(Resource.String.editorTitle);
         }
-
-        //void SaveBtn_Click(object sender, EventArgs e)
-        //{
-        //}
-
 
         private void LeftMenu_ItemClick1(object sender, AdapterView.ItemClickEventArgs e)
         {
@@ -70,6 +64,12 @@ namespace WR.Activities
             }
             StartActivity(intent);
             drawerLayout.CloseDrawer(leftMenu);
+        }
+
+        public override void OnBackPressed()
+        {
+            editor.SaveText();
+            base.OnBackPressed();
         }
     }
 }

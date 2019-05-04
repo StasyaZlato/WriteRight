@@ -46,6 +46,12 @@
         <item>Редактор (временное)</item>
     </string-array>
     <color name="my_spinner_text_color">#263238</color>
-    <string name="ContextMenuDelete">Удалить</string>
-    <string name="ContextMenuRename">Переименовать</string>
+    <string name="ContextMenuDelete">Удалить раздел</string>
+    <string name="ContextMenuRename">Переименовать раздел</string>
+    <string name="ContextMenuDeleteFile">Удалить файл</string>
+    <string name="ContextMenuRenameFile">Переименовать файл</string>
+    
+    <string-array name="templates">
+        <item>Персонаж</item>
+    </string-array>
 </resources>

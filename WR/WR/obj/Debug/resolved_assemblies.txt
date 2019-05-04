@@ -3,6 +3,7 @@
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/Microsoft.CSharp.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/Mono.Android.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/mscorlib.dll
+/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/Newtonsoft.Json.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/projectStructure.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/RichEditor.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/System.Core.dll
@@ -47,4 +48,12 @@
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/System.Net.Http.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/System.Runtime.Serialization.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/System.ServiceModel.Internals.dll
+/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/netstandard.dll
+/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/System.Data.dll
+/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/System.Numerics.dll
+/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/System.Transactions.dll
+/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/System.IO.Compression.dll
+/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/System.IO.Compression.FileSystem.dll
+/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/System.ComponentModel.Composition.dll
+/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/System.Web.Services.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/Mono.Security.dll
