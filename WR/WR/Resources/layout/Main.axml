@@ -17,15 +17,23 @@
         <RelativeLayout
             android:id="@+id/SaveBtnRL"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone">
+            android:layout_height="wrap_content">
             <ImageButton
                 android:id="@+id/SaveBtn"
                 android:background="#005662"
                 android:layout_alignParentEnd="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/content_save"/>
+                android:src="@drawable/content_save"
+                android:visibility="gone"/>
+            <ImageButton
+                android:id="@+id/ExportBtn"
+                android:background="#005662"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/export"
+                android:visibility="gone"/>
             </RelativeLayout>
         
     </android.support.v7.widget.Toolbar>

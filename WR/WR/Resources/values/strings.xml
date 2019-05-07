@@ -54,4 +54,10 @@
     <string-array name="templates">
         <item>Персонаж</item>
     </string-array>
+    
+    <string-array name="formats">
+        <item>fb2</item>
+        <item>pdf</item>
+        <item>doc</item>
+    </string-array>
 </resources>

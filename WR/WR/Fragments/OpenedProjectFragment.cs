@@ -382,6 +382,7 @@ namespace WR.Fragments
                     {
                         file = new FormFile(nameOfFile.Text, pathToFile, project.CurrentFile++);
                     }
+                    file.PathInProject = currentSection.Path + nameOfFile.Text;
                     currentSection.AddFile(file);
                     CommitChanges();
                     dialog.Dismiss();

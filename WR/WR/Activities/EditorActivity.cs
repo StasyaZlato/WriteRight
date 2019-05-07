@@ -27,8 +27,8 @@ namespace WR.Activities
         {
             base.OnCreate(savedInstanceState);
 
-            FindViewById<RelativeLayout>(Resource.Id.SaveBtnRL).Visibility = ViewStates.Visible;
             saveBtn = FindViewById<ImageButton>(Resource.Id.SaveBtn);
+            saveBtn.Visibility = ViewStates.Visible;
 
             editor = new Fragments.EditorFragment();
             

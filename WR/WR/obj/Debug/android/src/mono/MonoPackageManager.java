@@ -111,6 +111,7 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "WR.dll" comes first in this list. */
 		"WR.dll",
+		"Converters.dll",
 		"Newtonsoft.Json.dll",
 		"projectStructure.dll",
 		"RichEditor.dll",

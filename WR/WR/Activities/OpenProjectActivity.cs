@@ -22,6 +22,9 @@ namespace WR.Activities
         //SupportFragment previousFragment;
         Project project;
         //Project project;
+        public ImageButton exportBtn;
+        string xmlProjectPath;
+
 
         public event EventHandler<CustomEventArgs.ProjectEventArgs> OnProjectCreated;
 
@@ -31,8 +34,8 @@ namespace WR.Activities
 
             fragOpened = new Fragments.OpenedProjectFragment();
 
-            string xmlProject = Intent.GetStringExtra("xml");
-            GetData(xmlProject);
+            xmlProjectPath = Intent.GetStringExtra("xml");
+            GetData(xmlProjectPath);
 
             var transaction = SupportFragmentManager.BeginTransaction();
             transaction.Replace(Resource.Id.mainScreenFragmentsContainer, fragOpened);
@@ -40,12 +43,24 @@ namespace WR.Activities
             currentFragment = fragOpened;
             ShowFragment(fragOpened);
 
+            exportBtn = FindViewById<ImageButton>(Resource.Id.ExportBtn);
+            exportBtn.Visibility = ViewStates.Visible;
+
+            exportBtn.Click += ExportBtn_Click;
+
             OnProjectCreated += fragOpened.Handle_OnOpenCreatedProject;
 
             OnProjectCreated?.Invoke(this, new CustomEventArgs.ProjectEventArgs(project));
             leftMenu.ItemClick -= LeftMenu_ItemClick;
             leftMenu.ItemClick += LeftMenu_ItemClick1;
 
+        }
+
+        void ExportBtn_Click(object sender, EventArgs e)
+        {
+            Intent intent = new Intent(this, typeof(ExportActivity));
+            intent.PutExtra("path", xmlProjectPath);
+            StartActivity(intent);
         }
 
         void LeftMenu_ItemClick1(object sender, AdapterView.ItemClickEventArgs e)

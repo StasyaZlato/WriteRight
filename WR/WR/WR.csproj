@@ -158,6 +158,8 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -181,6 +183,9 @@
     <Compile Include="Fragments\FormEditorFragment.cs" />
     <Compile Include="EventArgs\FormListViewEventArgs.cs" />
     <Compile Include="Custom Views\FormFieldsRemovingListViewAdapter.cs" />
+    <Compile Include="Activities\ExportActivity.cs" />
+    <Compile Include="Fragments\ExportFragment.cs" />
+    <Compile Include="Custom Views\FilesToExportListAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -246,6 +251,11 @@
     <AndroidResource Include="Resources\drawable\check.xml" />
     <AndroidResource Include="Resources\layout\CustomPopUpTemplates.axml" />
     <AndroidResource Include="Resources\drawable\close_white.xml" />
+    <AndroidResource Include="Resources\drawable\export.xml" />
+    <AndroidResource Include="Resources\layout\ExportFragment.axml" />
+    <AndroidResource Include="Resources\layout\ListViewFilesToExportRow.axml" />
+    <AndroidResource Include="Resources\drawable\check_box_outline.xml" />
+    <AndroidResource Include="Resources\drawable\checkbox_blank_outline.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
@@ -263,6 +273,10 @@
     <ProjectReference Include="..\projectStructure\projectStructure.csproj">
       <Project>{5266E871-4D1D-4575-9D1B-25A54B36F150}</Project>
       <Name>projectStructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Converters\Converters.csproj">
+      <Project>{0601FCB7-F9D3-433B-8EBB-D08355E5DF30}</Project>
+      <Name>Converters</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

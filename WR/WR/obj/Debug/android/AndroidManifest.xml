@@ -15,6 +15,7 @@
     <activity android:label="OpenProjectActivity" android:screenOrientation="portrait" android:theme="@style/MainTheme" android:name="md586a62184f138a5ae8634749b9c7d427a.OpenProjectActivity" />
     <activity android:icon="@mipmap/icon" android:label="Editor" android:screenOrientation="portrait" android:theme="@style/MainTheme" android:name="md586a62184f138a5ae8634749b9c7d427a.EditorActivity" />
     <activity android:icon="@mipmap/icon" android:label="Editor" android:screenOrientation="portrait" android:theme="@style/MainTheme" android:name="md586a62184f138a5ae8634749b9c7d427a.FormEditorActivity" />
+    <activity android:icon="@mipmap/icon" android:label="Export" android:screenOrientation="portrait" android:theme="@style/MainTheme" android:name="md586a62184f138a5ae8634749b9c7d427a.ExportActivity" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="1999999999" android:authorities="com.willowness.wr.mono.MonoRuntimeProvider.__mono_init__" />
     <!--suppress ExportedReceiver-->
     <receiver android:name="mono.android.Seppuku">

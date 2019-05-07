@@ -26,6 +26,1512 @@ namespace WR
 		
 		public static void UpdateIdValues()
 		{
+			global::Converters.Resource.Animation.abc_fade_in = global::WR.Resource.Animation.abc_fade_in;
+			global::Converters.Resource.Animation.abc_fade_out = global::WR.Resource.Animation.abc_fade_out;
+			global::Converters.Resource.Animation.abc_grow_fade_in_from_bottom = global::WR.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::Converters.Resource.Animation.abc_popup_enter = global::WR.Resource.Animation.abc_popup_enter;
+			global::Converters.Resource.Animation.abc_popup_exit = global::WR.Resource.Animation.abc_popup_exit;
+			global::Converters.Resource.Animation.abc_shrink_fade_out_from_bottom = global::WR.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::Converters.Resource.Animation.abc_slide_in_bottom = global::WR.Resource.Animation.abc_slide_in_bottom;
+			global::Converters.Resource.Animation.abc_slide_in_top = global::WR.Resource.Animation.abc_slide_in_top;
+			global::Converters.Resource.Animation.abc_slide_out_bottom = global::WR.Resource.Animation.abc_slide_out_bottom;
+			global::Converters.Resource.Animation.abc_slide_out_top = global::WR.Resource.Animation.abc_slide_out_top;
+			global::Converters.Resource.Attribute.actionBarDivider = global::WR.Resource.Attribute.actionBarDivider;
+			global::Converters.Resource.Attribute.actionBarItemBackground = global::WR.Resource.Attribute.actionBarItemBackground;
+			global::Converters.Resource.Attribute.actionBarPopupTheme = global::WR.Resource.Attribute.actionBarPopupTheme;
+			global::Converters.Resource.Attribute.actionBarSize = global::WR.Resource.Attribute.actionBarSize;
+			global::Converters.Resource.Attribute.actionBarSplitStyle = global::WR.Resource.Attribute.actionBarSplitStyle;
+			global::Converters.Resource.Attribute.actionBarStyle = global::WR.Resource.Attribute.actionBarStyle;
+			global::Converters.Resource.Attribute.actionBarTabBarStyle = global::WR.Resource.Attribute.actionBarTabBarStyle;
+			global::Converters.Resource.Attribute.actionBarTabStyle = global::WR.Resource.Attribute.actionBarTabStyle;
+			global::Converters.Resource.Attribute.actionBarTabTextStyle = global::WR.Resource.Attribute.actionBarTabTextStyle;
+			global::Converters.Resource.Attribute.actionBarTheme = global::WR.Resource.Attribute.actionBarTheme;
+			global::Converters.Resource.Attribute.actionBarWidgetTheme = global::WR.Resource.Attribute.actionBarWidgetTheme;
+			global::Converters.Resource.Attribute.actionButtonStyle = global::WR.Resource.Attribute.actionButtonStyle;
+			global::Converters.Resource.Attribute.actionDropDownStyle = global::WR.Resource.Attribute.actionDropDownStyle;
+			global::Converters.Resource.Attribute.actionLayout = global::WR.Resource.Attribute.actionLayout;
+			global::Converters.Resource.Attribute.actionMenuTextAppearance = global::WR.Resource.Attribute.actionMenuTextAppearance;
+			global::Converters.Resource.Attribute.actionMenuTextColor = global::WR.Resource.Attribute.actionMenuTextColor;
+			global::Converters.Resource.Attribute.actionModeBackground = global::WR.Resource.Attribute.actionModeBackground;
+			global::Converters.Resource.Attribute.actionModeCloseButtonStyle = global::WR.Resource.Attribute.actionModeCloseButtonStyle;
+			global::Converters.Resource.Attribute.actionModeCloseDrawable = global::WR.Resource.Attribute.actionModeCloseDrawable;
+			global::Converters.Resource.Attribute.actionModeCopyDrawable = global::WR.Resource.Attribute.actionModeCopyDrawable;
+			global::Converters.Resource.Attribute.actionModeCutDrawable = global::WR.Resource.Attribute.actionModeCutDrawable;
+			global::Converters.Resource.Attribute.actionModeFindDrawable = global::WR.Resource.Attribute.actionModeFindDrawable;
+			global::Converters.Resource.Attribute.actionModePasteDrawable = global::WR.Resource.Attribute.actionModePasteDrawable;
+			global::Converters.Resource.Attribute.actionModePopupWindowStyle = global::WR.Resource.Attribute.actionModePopupWindowStyle;
+			global::Converters.Resource.Attribute.actionModeSelectAllDrawable = global::WR.Resource.Attribute.actionModeSelectAllDrawable;
+			global::Converters.Resource.Attribute.actionModeShareDrawable = global::WR.Resource.Attribute.actionModeShareDrawable;
+			global::Converters.Resource.Attribute.actionModeSplitBackground = global::WR.Resource.Attribute.actionModeSplitBackground;
+			global::Converters.Resource.Attribute.actionModeStyle = global::WR.Resource.Attribute.actionModeStyle;
+			global::Converters.Resource.Attribute.actionModeWebSearchDrawable = global::WR.Resource.Attribute.actionModeWebSearchDrawable;
+			global::Converters.Resource.Attribute.actionOverflowButtonStyle = global::WR.Resource.Attribute.actionOverflowButtonStyle;
+			global::Converters.Resource.Attribute.actionOverflowMenuStyle = global::WR.Resource.Attribute.actionOverflowMenuStyle;
+			global::Converters.Resource.Attribute.actionProviderClass = global::WR.Resource.Attribute.actionProviderClass;
+			global::Converters.Resource.Attribute.actionViewClass = global::WR.Resource.Attribute.actionViewClass;
+			global::Converters.Resource.Attribute.activityChooserViewStyle = global::WR.Resource.Attribute.activityChooserViewStyle;
+			global::Converters.Resource.Attribute.alertDialogButtonGroupStyle = global::WR.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::Converters.Resource.Attribute.alertDialogCenterButtons = global::WR.Resource.Attribute.alertDialogCenterButtons;
+			global::Converters.Resource.Attribute.alertDialogStyle = global::WR.Resource.Attribute.alertDialogStyle;
+			global::Converters.Resource.Attribute.alertDialogTheme = global::WR.Resource.Attribute.alertDialogTheme;
+			global::Converters.Resource.Attribute.allowStacking = global::WR.Resource.Attribute.allowStacking;
+			global::Converters.Resource.Attribute.alpha = global::WR.Resource.Attribute.alpha;
+			global::Converters.Resource.Attribute.alphabeticModifiers = global::WR.Resource.Attribute.alphabeticModifiers;
+			global::Converters.Resource.Attribute.arrowHeadLength = global::WR.Resource.Attribute.arrowHeadLength;
+			global::Converters.Resource.Attribute.arrowShaftLength = global::WR.Resource.Attribute.arrowShaftLength;
+			global::Converters.Resource.Attribute.autoCompleteTextViewStyle = global::WR.Resource.Attribute.autoCompleteTextViewStyle;
+			global::Converters.Resource.Attribute.autoSizeMaxTextSize = global::WR.Resource.Attribute.autoSizeMaxTextSize;
+			global::Converters.Resource.Attribute.autoSizeMinTextSize = global::WR.Resource.Attribute.autoSizeMinTextSize;
+			global::Converters.Resource.Attribute.autoSizePresetSizes = global::WR.Resource.Attribute.autoSizePresetSizes;
+			global::Converters.Resource.Attribute.autoSizeStepGranularity = global::WR.Resource.Attribute.autoSizeStepGranularity;
+			global::Converters.Resource.Attribute.autoSizeTextType = global::WR.Resource.Attribute.autoSizeTextType;
+			global::Converters.Resource.Attribute.background = global::WR.Resource.Attribute.background;
+			global::Converters.Resource.Attribute.backgroundSplit = global::WR.Resource.Attribute.backgroundSplit;
+			global::Converters.Resource.Attribute.backgroundStacked = global::WR.Resource.Attribute.backgroundStacked;
+			global::Converters.Resource.Attribute.backgroundTint = global::WR.Resource.Attribute.backgroundTint;
+			global::Converters.Resource.Attribute.backgroundTintMode = global::WR.Resource.Attribute.backgroundTintMode;
+			global::Converters.Resource.Attribute.barLength = global::WR.Resource.Attribute.barLength;
+			global::Converters.Resource.Attribute.borderlessButtonStyle = global::WR.Resource.Attribute.borderlessButtonStyle;
+			global::Converters.Resource.Attribute.buttonBarButtonStyle = global::WR.Resource.Attribute.buttonBarButtonStyle;
+			global::Converters.Resource.Attribute.buttonBarNegativeButtonStyle = global::WR.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::Converters.Resource.Attribute.buttonBarNeutralButtonStyle = global::WR.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::Converters.Resource.Attribute.buttonBarPositiveButtonStyle = global::WR.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::Converters.Resource.Attribute.buttonBarStyle = global::WR.Resource.Attribute.buttonBarStyle;
+			global::Converters.Resource.Attribute.buttonGravity = global::WR.Resource.Attribute.buttonGravity;
+			global::Converters.Resource.Attribute.buttonPanelSideLayout = global::WR.Resource.Attribute.buttonPanelSideLayout;
+			global::Converters.Resource.Attribute.buttonStyle = global::WR.Resource.Attribute.buttonStyle;
+			global::Converters.Resource.Attribute.buttonStyleSmall = global::WR.Resource.Attribute.buttonStyleSmall;
+			global::Converters.Resource.Attribute.buttonTint = global::WR.Resource.Attribute.buttonTint;
+			global::Converters.Resource.Attribute.buttonTintMode = global::WR.Resource.Attribute.buttonTintMode;
+			global::Converters.Resource.Attribute.checkboxStyle = global::WR.Resource.Attribute.checkboxStyle;
+			global::Converters.Resource.Attribute.checkedTextViewStyle = global::WR.Resource.Attribute.checkedTextViewStyle;
+			global::Converters.Resource.Attribute.closeIcon = global::WR.Resource.Attribute.closeIcon;
+			global::Converters.Resource.Attribute.closeItemLayout = global::WR.Resource.Attribute.closeItemLayout;
+			global::Converters.Resource.Attribute.collapseContentDescription = global::WR.Resource.Attribute.collapseContentDescription;
+			global::Converters.Resource.Attribute.collapseIcon = global::WR.Resource.Attribute.collapseIcon;
+			global::Converters.Resource.Attribute.color = global::WR.Resource.Attribute.color;
+			global::Converters.Resource.Attribute.colorAccent = global::WR.Resource.Attribute.colorAccent;
+			global::Converters.Resource.Attribute.colorBackgroundFloating = global::WR.Resource.Attribute.colorBackgroundFloating;
+			global::Converters.Resource.Attribute.colorButtonNormal = global::WR.Resource.Attribute.colorButtonNormal;
+			global::Converters.Resource.Attribute.colorControlActivated = global::WR.Resource.Attribute.colorControlActivated;
+			global::Converters.Resource.Attribute.colorControlHighlight = global::WR.Resource.Attribute.colorControlHighlight;
+			global::Converters.Resource.Attribute.colorControlNormal = global::WR.Resource.Attribute.colorControlNormal;
+			global::Converters.Resource.Attribute.colorError = global::WR.Resource.Attribute.colorError;
+			global::Converters.Resource.Attribute.colorPrimary = global::WR.Resource.Attribute.colorPrimary;
+			global::Converters.Resource.Attribute.colorPrimaryDark = global::WR.Resource.Attribute.colorPrimaryDark;
+			global::Converters.Resource.Attribute.colorSwitchThumbNormal = global::WR.Resource.Attribute.colorSwitchThumbNormal;
+			global::Converters.Resource.Attribute.commitIcon = global::WR.Resource.Attribute.commitIcon;
+			global::Converters.Resource.Attribute.contentDescription = global::WR.Resource.Attribute.contentDescription;
+			global::Converters.Resource.Attribute.contentInsetEnd = global::WR.Resource.Attribute.contentInsetEnd;
+			global::Converters.Resource.Attribute.contentInsetEndWithActions = global::WR.Resource.Attribute.contentInsetEndWithActions;
+			global::Converters.Resource.Attribute.contentInsetLeft = global::WR.Resource.Attribute.contentInsetLeft;
+			global::Converters.Resource.Attribute.contentInsetRight = global::WR.Resource.Attribute.contentInsetRight;
+			global::Converters.Resource.Attribute.contentInsetStart = global::WR.Resource.Attribute.contentInsetStart;
+			global::Converters.Resource.Attribute.contentInsetStartWithNavigation = global::WR.Resource.Attribute.contentInsetStartWithNavigation;
+			global::Converters.Resource.Attribute.controlBackground = global::WR.Resource.Attribute.controlBackground;
+			global::Converters.Resource.Attribute.customNavigationLayout = global::WR.Resource.Attribute.customNavigationLayout;
+			global::Converters.Resource.Attribute.defaultQueryHint = global::WR.Resource.Attribute.defaultQueryHint;
+			global::Converters.Resource.Attribute.dialogPreferredPadding = global::WR.Resource.Attribute.dialogPreferredPadding;
+			global::Converters.Resource.Attribute.dialogTheme = global::WR.Resource.Attribute.dialogTheme;
+			global::Converters.Resource.Attribute.displayOptions = global::WR.Resource.Attribute.displayOptions;
+			global::Converters.Resource.Attribute.divider = global::WR.Resource.Attribute.divider;
+			global::Converters.Resource.Attribute.dividerHorizontal = global::WR.Resource.Attribute.dividerHorizontal;
+			global::Converters.Resource.Attribute.dividerPadding = global::WR.Resource.Attribute.dividerPadding;
+			global::Converters.Resource.Attribute.dividerVertical = global::WR.Resource.Attribute.dividerVertical;
+			global::Converters.Resource.Attribute.drawableSize = global::WR.Resource.Attribute.drawableSize;
+			global::Converters.Resource.Attribute.drawerArrowStyle = global::WR.Resource.Attribute.drawerArrowStyle;
+			global::Converters.Resource.Attribute.dropDownListViewStyle = global::WR.Resource.Attribute.dropDownListViewStyle;
+			global::Converters.Resource.Attribute.dropdownListPreferredItemHeight = global::WR.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::Converters.Resource.Attribute.editTextBackground = global::WR.Resource.Attribute.editTextBackground;
+			global::Converters.Resource.Attribute.editTextColor = global::WR.Resource.Attribute.editTextColor;
+			global::Converters.Resource.Attribute.editTextStyle = global::WR.Resource.Attribute.editTextStyle;
+			global::Converters.Resource.Attribute.elevation = global::WR.Resource.Attribute.elevation;
+			global::Converters.Resource.Attribute.expandActivityOverflowButtonDrawable = global::WR.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::Converters.Resource.Attribute.font = global::WR.Resource.Attribute.font;
+			global::Converters.Resource.Attribute.fontFamily = global::WR.Resource.Attribute.fontFamily;
+			global::Converters.Resource.Attribute.fontProviderAuthority = global::WR.Resource.Attribute.fontProviderAuthority;
+			global::Converters.Resource.Attribute.fontProviderCerts = global::WR.Resource.Attribute.fontProviderCerts;
+			global::Converters.Resource.Attribute.fontProviderFetchStrategy = global::WR.Resource.Attribute.fontProviderFetchStrategy;
+			global::Converters.Resource.Attribute.fontProviderFetchTimeout = global::WR.Resource.Attribute.fontProviderFetchTimeout;
+			global::Converters.Resource.Attribute.fontProviderPackage = global::WR.Resource.Attribute.fontProviderPackage;
+			global::Converters.Resource.Attribute.fontProviderQuery = global::WR.Resource.Attribute.fontProviderQuery;
+			global::Converters.Resource.Attribute.fontStyle = global::WR.Resource.Attribute.fontStyle;
+			global::Converters.Resource.Attribute.fontWeight = global::WR.Resource.Attribute.fontWeight;
+			global::Converters.Resource.Attribute.gapBetweenBars = global::WR.Resource.Attribute.gapBetweenBars;
+			global::Converters.Resource.Attribute.goIcon = global::WR.Resource.Attribute.goIcon;
+			global::Converters.Resource.Attribute.height = global::WR.Resource.Attribute.height;
+			global::Converters.Resource.Attribute.hideOnContentScroll = global::WR.Resource.Attribute.hideOnContentScroll;
+			global::Converters.Resource.Attribute.homeAsUpIndicator = global::WR.Resource.Attribute.homeAsUpIndicator;
+			global::Converters.Resource.Attribute.homeLayout = global::WR.Resource.Attribute.homeLayout;
+			global::Converters.Resource.Attribute.icon = global::WR.Resource.Attribute.icon;
+			global::Converters.Resource.Attribute.iconTint = global::WR.Resource.Attribute.iconTint;
+			global::Converters.Resource.Attribute.iconTintMode = global::WR.Resource.Attribute.iconTintMode;
+			global::Converters.Resource.Attribute.iconifiedByDefault = global::WR.Resource.Attribute.iconifiedByDefault;
+			global::Converters.Resource.Attribute.imageButtonStyle = global::WR.Resource.Attribute.imageButtonStyle;
+			global::Converters.Resource.Attribute.indeterminateProgressStyle = global::WR.Resource.Attribute.indeterminateProgressStyle;
+			global::Converters.Resource.Attribute.initialActivityCount = global::WR.Resource.Attribute.initialActivityCount;
+			global::Converters.Resource.Attribute.isLightTheme = global::WR.Resource.Attribute.isLightTheme;
+			global::Converters.Resource.Attribute.itemPadding = global::WR.Resource.Attribute.itemPadding;
+			global::Converters.Resource.Attribute.layout = global::WR.Resource.Attribute.layout;
+			global::Converters.Resource.Attribute.listChoiceBackgroundIndicator = global::WR.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::Converters.Resource.Attribute.listDividerAlertDialog = global::WR.Resource.Attribute.listDividerAlertDialog;
+			global::Converters.Resource.Attribute.listItemLayout = global::WR.Resource.Attribute.listItemLayout;
+			global::Converters.Resource.Attribute.listLayout = global::WR.Resource.Attribute.listLayout;
+			global::Converters.Resource.Attribute.listMenuViewStyle = global::WR.Resource.Attribute.listMenuViewStyle;
+			global::Converters.Resource.Attribute.listPopupWindowStyle = global::WR.Resource.Attribute.listPopupWindowStyle;
+			global::Converters.Resource.Attribute.listPreferredItemHeight = global::WR.Resource.Attribute.listPreferredItemHeight;
+			global::Converters.Resource.Attribute.listPreferredItemHeightLarge = global::WR.Resource.Attribute.listPreferredItemHeightLarge;
+			global::Converters.Resource.Attribute.listPreferredItemHeightSmall = global::WR.Resource.Attribute.listPreferredItemHeightSmall;
+			global::Converters.Resource.Attribute.listPreferredItemPaddingLeft = global::WR.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::Converters.Resource.Attribute.listPreferredItemPaddingRight = global::WR.Resource.Attribute.listPreferredItemPaddingRight;
+			global::Converters.Resource.Attribute.logo = global::WR.Resource.Attribute.logo;
+			global::Converters.Resource.Attribute.logoDescription = global::WR.Resource.Attribute.logoDescription;
+			global::Converters.Resource.Attribute.maxButtonHeight = global::WR.Resource.Attribute.maxButtonHeight;
+			global::Converters.Resource.Attribute.measureWithLargestChild = global::WR.Resource.Attribute.measureWithLargestChild;
+			global::Converters.Resource.Attribute.multiChoiceItemLayout = global::WR.Resource.Attribute.multiChoiceItemLayout;
+			global::Converters.Resource.Attribute.navigationContentDescription = global::WR.Resource.Attribute.navigationContentDescription;
+			global::Converters.Resource.Attribute.navigationIcon = global::WR.Resource.Attribute.navigationIcon;
+			global::Converters.Resource.Attribute.navigationMode = global::WR.Resource.Attribute.navigationMode;
+			global::Converters.Resource.Attribute.numericModifiers = global::WR.Resource.Attribute.numericModifiers;
+			global::Converters.Resource.Attribute.overlapAnchor = global::WR.Resource.Attribute.overlapAnchor;
+			global::Converters.Resource.Attribute.paddingBottomNoButtons = global::WR.Resource.Attribute.paddingBottomNoButtons;
+			global::Converters.Resource.Attribute.paddingEnd = global::WR.Resource.Attribute.paddingEnd;
+			global::Converters.Resource.Attribute.paddingStart = global::WR.Resource.Attribute.paddingStart;
+			global::Converters.Resource.Attribute.paddingTopNoTitle = global::WR.Resource.Attribute.paddingTopNoTitle;
+			global::Converters.Resource.Attribute.panelBackground = global::WR.Resource.Attribute.panelBackground;
+			global::Converters.Resource.Attribute.panelMenuListTheme = global::WR.Resource.Attribute.panelMenuListTheme;
+			global::Converters.Resource.Attribute.panelMenuListWidth = global::WR.Resource.Attribute.panelMenuListWidth;
+			global::Converters.Resource.Attribute.popupMenuStyle = global::WR.Resource.Attribute.popupMenuStyle;
+			global::Converters.Resource.Attribute.popupTheme = global::WR.Resource.Attribute.popupTheme;
+			global::Converters.Resource.Attribute.popupWindowStyle = global::WR.Resource.Attribute.popupWindowStyle;
+			global::Converters.Resource.Attribute.preserveIconSpacing = global::WR.Resource.Attribute.preserveIconSpacing;
+			global::Converters.Resource.Attribute.progressBarPadding = global::WR.Resource.Attribute.progressBarPadding;
+			global::Converters.Resource.Attribute.progressBarStyle = global::WR.Resource.Attribute.progressBarStyle;
+			global::Converters.Resource.Attribute.queryBackground = global::WR.Resource.Attribute.queryBackground;
+			global::Converters.Resource.Attribute.queryHint = global::WR.Resource.Attribute.queryHint;
+			global::Converters.Resource.Attribute.radioButtonStyle = global::WR.Resource.Attribute.radioButtonStyle;
+			global::Converters.Resource.Attribute.ratingBarStyle = global::WR.Resource.Attribute.ratingBarStyle;
+			global::Converters.Resource.Attribute.ratingBarStyleIndicator = global::WR.Resource.Attribute.ratingBarStyleIndicator;
+			global::Converters.Resource.Attribute.ratingBarStyleSmall = global::WR.Resource.Attribute.ratingBarStyleSmall;
+			global::Converters.Resource.Attribute.searchHintIcon = global::WR.Resource.Attribute.searchHintIcon;
+			global::Converters.Resource.Attribute.searchIcon = global::WR.Resource.Attribute.searchIcon;
+			global::Converters.Resource.Attribute.searchViewStyle = global::WR.Resource.Attribute.searchViewStyle;
+			global::Converters.Resource.Attribute.seekBarStyle = global::WR.Resource.Attribute.seekBarStyle;
+			global::Converters.Resource.Attribute.selectableItemBackground = global::WR.Resource.Attribute.selectableItemBackground;
+			global::Converters.Resource.Attribute.selectableItemBackgroundBorderless = global::WR.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::Converters.Resource.Attribute.showAsAction = global::WR.Resource.Attribute.showAsAction;
+			global::Converters.Resource.Attribute.showDividers = global::WR.Resource.Attribute.showDividers;
+			global::Converters.Resource.Attribute.showText = global::WR.Resource.Attribute.showText;
+			global::Converters.Resource.Attribute.showTitle = global::WR.Resource.Attribute.showTitle;
+			global::Converters.Resource.Attribute.singleChoiceItemLayout = global::WR.Resource.Attribute.singleChoiceItemLayout;
+			global::Converters.Resource.Attribute.spinBars = global::WR.Resource.Attribute.spinBars;
+			global::Converters.Resource.Attribute.spinnerDropDownItemStyle = global::WR.Resource.Attribute.spinnerDropDownItemStyle;
+			global::Converters.Resource.Attribute.spinnerStyle = global::WR.Resource.Attribute.spinnerStyle;
+			global::Converters.Resource.Attribute.splitTrack = global::WR.Resource.Attribute.splitTrack;
+			global::Converters.Resource.Attribute.srcCompat = global::WR.Resource.Attribute.srcCompat;
+			global::Converters.Resource.Attribute.state_above_anchor = global::WR.Resource.Attribute.state_above_anchor;
+			global::Converters.Resource.Attribute.subMenuArrow = global::WR.Resource.Attribute.subMenuArrow;
+			global::Converters.Resource.Attribute.submitBackground = global::WR.Resource.Attribute.submitBackground;
+			global::Converters.Resource.Attribute.subtitle = global::WR.Resource.Attribute.subtitle;
+			global::Converters.Resource.Attribute.subtitleTextAppearance = global::WR.Resource.Attribute.subtitleTextAppearance;
+			global::Converters.Resource.Attribute.subtitleTextColor = global::WR.Resource.Attribute.subtitleTextColor;
+			global::Converters.Resource.Attribute.subtitleTextStyle = global::WR.Resource.Attribute.subtitleTextStyle;
+			global::Converters.Resource.Attribute.suggestionRowLayout = global::WR.Resource.Attribute.suggestionRowLayout;
+			global::Converters.Resource.Attribute.switchMinWidth = global::WR.Resource.Attribute.switchMinWidth;
+			global::Converters.Resource.Attribute.switchPadding = global::WR.Resource.Attribute.switchPadding;
+			global::Converters.Resource.Attribute.switchStyle = global::WR.Resource.Attribute.switchStyle;
+			global::Converters.Resource.Attribute.switchTextAppearance = global::WR.Resource.Attribute.switchTextAppearance;
+			global::Converters.Resource.Attribute.textAllCaps = global::WR.Resource.Attribute.textAllCaps;
+			global::Converters.Resource.Attribute.textAppearanceLargePopupMenu = global::WR.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::Converters.Resource.Attribute.textAppearanceListItem = global::WR.Resource.Attribute.textAppearanceListItem;
+			global::Converters.Resource.Attribute.textAppearanceListItemSecondary = global::WR.Resource.Attribute.textAppearanceListItemSecondary;
+			global::Converters.Resource.Attribute.textAppearanceListItemSmall = global::WR.Resource.Attribute.textAppearanceListItemSmall;
+			global::Converters.Resource.Attribute.textAppearancePopupMenuHeader = global::WR.Resource.Attribute.textAppearancePopupMenuHeader;
+			global::Converters.Resource.Attribute.textAppearanceSearchResultSubtitle = global::WR.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::Converters.Resource.Attribute.textAppearanceSearchResultTitle = global::WR.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::Converters.Resource.Attribute.textAppearanceSmallPopupMenu = global::WR.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::Converters.Resource.Attribute.textColorAlertDialogListItem = global::WR.Resource.Attribute.textColorAlertDialogListItem;
+			global::Converters.Resource.Attribute.textColorSearchUrl = global::WR.Resource.Attribute.textColorSearchUrl;
+			global::Converters.Resource.Attribute.theme = global::WR.Resource.Attribute.theme;
+			global::Converters.Resource.Attribute.thickness = global::WR.Resource.Attribute.thickness;
+			global::Converters.Resource.Attribute.thumbTextPadding = global::WR.Resource.Attribute.thumbTextPadding;
+			global::Converters.Resource.Attribute.thumbTint = global::WR.Resource.Attribute.thumbTint;
+			global::Converters.Resource.Attribute.thumbTintMode = global::WR.Resource.Attribute.thumbTintMode;
+			global::Converters.Resource.Attribute.tickMark = global::WR.Resource.Attribute.tickMark;
+			global::Converters.Resource.Attribute.tickMarkTint = global::WR.Resource.Attribute.tickMarkTint;
+			global::Converters.Resource.Attribute.tickMarkTintMode = global::WR.Resource.Attribute.tickMarkTintMode;
+			global::Converters.Resource.Attribute.tint = global::WR.Resource.Attribute.tint;
+			global::Converters.Resource.Attribute.tintMode = global::WR.Resource.Attribute.tintMode;
+			global::Converters.Resource.Attribute.title = global::WR.Resource.Attribute.title;
+			global::Converters.Resource.Attribute.titleMargin = global::WR.Resource.Attribute.titleMargin;
+			global::Converters.Resource.Attribute.titleMarginBottom = global::WR.Resource.Attribute.titleMarginBottom;
+			global::Converters.Resource.Attribute.titleMarginEnd = global::WR.Resource.Attribute.titleMarginEnd;
+			global::Converters.Resource.Attribute.titleMarginStart = global::WR.Resource.Attribute.titleMarginStart;
+			global::Converters.Resource.Attribute.titleMarginTop = global::WR.Resource.Attribute.titleMarginTop;
+			global::Converters.Resource.Attribute.titleMargins = global::WR.Resource.Attribute.titleMargins;
+			global::Converters.Resource.Attribute.titleTextAppearance = global::WR.Resource.Attribute.titleTextAppearance;
+			global::Converters.Resource.Attribute.titleTextColor = global::WR.Resource.Attribute.titleTextColor;
+			global::Converters.Resource.Attribute.titleTextStyle = global::WR.Resource.Attribute.titleTextStyle;
+			global::Converters.Resource.Attribute.toolbarNavigationButtonStyle = global::WR.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::Converters.Resource.Attribute.toolbarStyle = global::WR.Resource.Attribute.toolbarStyle;
+			global::Converters.Resource.Attribute.tooltipForegroundColor = global::WR.Resource.Attribute.tooltipForegroundColor;
+			global::Converters.Resource.Attribute.tooltipFrameBackground = global::WR.Resource.Attribute.tooltipFrameBackground;
+			global::Converters.Resource.Attribute.tooltipText = global::WR.Resource.Attribute.tooltipText;
+			global::Converters.Resource.Attribute.track = global::WR.Resource.Attribute.track;
+			global::Converters.Resource.Attribute.trackTint = global::WR.Resource.Attribute.trackTint;
+			global::Converters.Resource.Attribute.trackTintMode = global::WR.Resource.Attribute.trackTintMode;
+			global::Converters.Resource.Attribute.voiceIcon = global::WR.Resource.Attribute.voiceIcon;
+			global::Converters.Resource.Attribute.windowActionBar = global::WR.Resource.Attribute.windowActionBar;
+			global::Converters.Resource.Attribute.windowActionBarOverlay = global::WR.Resource.Attribute.windowActionBarOverlay;
+			global::Converters.Resource.Attribute.windowActionModeOverlay = global::WR.Resource.Attribute.windowActionModeOverlay;
+			global::Converters.Resource.Attribute.windowFixedHeightMajor = global::WR.Resource.Attribute.windowFixedHeightMajor;
+			global::Converters.Resource.Attribute.windowFixedHeightMinor = global::WR.Resource.Attribute.windowFixedHeightMinor;
+			global::Converters.Resource.Attribute.windowFixedWidthMajor = global::WR.Resource.Attribute.windowFixedWidthMajor;
+			global::Converters.Resource.Attribute.windowFixedWidthMinor = global::WR.Resource.Attribute.windowFixedWidthMinor;
+			global::Converters.Resource.Attribute.windowMinWidthMajor = global::WR.Resource.Attribute.windowMinWidthMajor;
+			global::Converters.Resource.Attribute.windowMinWidthMinor = global::WR.Resource.Attribute.windowMinWidthMinor;
+			global::Converters.Resource.Attribute.windowNoTitle = global::WR.Resource.Attribute.windowNoTitle;
+			global::Converters.Resource.Boolean.abc_action_bar_embed_tabs = global::WR.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::Converters.Resource.Boolean.abc_allow_stacked_button_bar = global::WR.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::Converters.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::WR.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::Converters.Resource.Color.abc_background_cache_hint_selector_material_dark = global::WR.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::Converters.Resource.Color.abc_background_cache_hint_selector_material_light = global::WR.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::Converters.Resource.Color.abc_btn_colored_borderless_text_material = global::WR.Resource.Color.abc_btn_colored_borderless_text_material;
+			global::Converters.Resource.Color.abc_btn_colored_text_material = global::WR.Resource.Color.abc_btn_colored_text_material;
+			global::Converters.Resource.Color.abc_color_highlight_material = global::WR.Resource.Color.abc_color_highlight_material;
+			global::Converters.Resource.Color.abc_hint_foreground_material_dark = global::WR.Resource.Color.abc_hint_foreground_material_dark;
+			global::Converters.Resource.Color.abc_hint_foreground_material_light = global::WR.Resource.Color.abc_hint_foreground_material_light;
+			global::Converters.Resource.Color.abc_input_method_navigation_guard = global::WR.Resource.Color.abc_input_method_navigation_guard;
+			global::Converters.Resource.Color.abc_primary_text_disable_only_material_dark = global::WR.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::Converters.Resource.Color.abc_primary_text_disable_only_material_light = global::WR.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::Converters.Resource.Color.abc_primary_text_material_dark = global::WR.Resource.Color.abc_primary_text_material_dark;
+			global::Converters.Resource.Color.abc_primary_text_material_light = global::WR.Resource.Color.abc_primary_text_material_light;
+			global::Converters.Resource.Color.abc_search_url_text = global::WR.Resource.Color.abc_search_url_text;
+			global::Converters.Resource.Color.abc_search_url_text_normal = global::WR.Resource.Color.abc_search_url_text_normal;
+			global::Converters.Resource.Color.abc_search_url_text_pressed = global::WR.Resource.Color.abc_search_url_text_pressed;
+			global::Converters.Resource.Color.abc_search_url_text_selected = global::WR.Resource.Color.abc_search_url_text_selected;
+			global::Converters.Resource.Color.abc_secondary_text_material_dark = global::WR.Resource.Color.abc_secondary_text_material_dark;
+			global::Converters.Resource.Color.abc_secondary_text_material_light = global::WR.Resource.Color.abc_secondary_text_material_light;
+			global::Converters.Resource.Color.abc_tint_btn_checkable = global::WR.Resource.Color.abc_tint_btn_checkable;
+			global::Converters.Resource.Color.abc_tint_default = global::WR.Resource.Color.abc_tint_default;
+			global::Converters.Resource.Color.abc_tint_edittext = global::WR.Resource.Color.abc_tint_edittext;
+			global::Converters.Resource.Color.abc_tint_seek_thumb = global::WR.Resource.Color.abc_tint_seek_thumb;
+			global::Converters.Resource.Color.abc_tint_spinner = global::WR.Resource.Color.abc_tint_spinner;
+			global::Converters.Resource.Color.abc_tint_switch_track = global::WR.Resource.Color.abc_tint_switch_track;
+			global::Converters.Resource.Color.accent_material_dark = global::WR.Resource.Color.accent_material_dark;
+			global::Converters.Resource.Color.accent_material_light = global::WR.Resource.Color.accent_material_light;
+			global::Converters.Resource.Color.background_floating_material_dark = global::WR.Resource.Color.background_floating_material_dark;
+			global::Converters.Resource.Color.background_floating_material_light = global::WR.Resource.Color.background_floating_material_light;
+			global::Converters.Resource.Color.background_material_dark = global::WR.Resource.Color.background_material_dark;
+			global::Converters.Resource.Color.background_material_light = global::WR.Resource.Color.background_material_light;
+			global::Converters.Resource.Color.bright_foreground_disabled_material_dark = global::WR.Resource.Color.bright_foreground_disabled_material_dark;
+			global::Converters.Resource.Color.bright_foreground_disabled_material_light = global::WR.Resource.Color.bright_foreground_disabled_material_light;
+			global::Converters.Resource.Color.bright_foreground_inverse_material_dark = global::WR.Resource.Color.bright_foreground_inverse_material_dark;
+			global::Converters.Resource.Color.bright_foreground_inverse_material_light = global::WR.Resource.Color.bright_foreground_inverse_material_light;
+			global::Converters.Resource.Color.bright_foreground_material_dark = global::WR.Resource.Color.bright_foreground_material_dark;
+			global::Converters.Resource.Color.bright_foreground_material_light = global::WR.Resource.Color.bright_foreground_material_light;
+			global::Converters.Resource.Color.button_material_dark = global::WR.Resource.Color.button_material_dark;
+			global::Converters.Resource.Color.button_material_light = global::WR.Resource.Color.button_material_light;
+			global::Converters.Resource.Color.dim_foreground_disabled_material_dark = global::WR.Resource.Color.dim_foreground_disabled_material_dark;
+			global::Converters.Resource.Color.dim_foreground_disabled_material_light = global::WR.Resource.Color.dim_foreground_disabled_material_light;
+			global::Converters.Resource.Color.dim_foreground_material_dark = global::WR.Resource.Color.dim_foreground_material_dark;
+			global::Converters.Resource.Color.dim_foreground_material_light = global::WR.Resource.Color.dim_foreground_material_light;
+			global::Converters.Resource.Color.foreground_material_dark = global::WR.Resource.Color.foreground_material_dark;
+			global::Converters.Resource.Color.foreground_material_light = global::WR.Resource.Color.foreground_material_light;
+			global::Converters.Resource.Color.highlighted_text_material_dark = global::WR.Resource.Color.highlighted_text_material_dark;
+			global::Converters.Resource.Color.highlighted_text_material_light = global::WR.Resource.Color.highlighted_text_material_light;
+			global::Converters.Resource.Color.material_blue_grey_800 = global::WR.Resource.Color.material_blue_grey_800;
+			global::Converters.Resource.Color.material_blue_grey_900 = global::WR.Resource.Color.material_blue_grey_900;
+			global::Converters.Resource.Color.material_blue_grey_950 = global::WR.Resource.Color.material_blue_grey_950;
+			global::Converters.Resource.Color.material_deep_teal_200 = global::WR.Resource.Color.material_deep_teal_200;
+			global::Converters.Resource.Color.material_deep_teal_500 = global::WR.Resource.Color.material_deep_teal_500;
+			global::Converters.Resource.Color.material_grey_100 = global::WR.Resource.Color.material_grey_100;
+			global::Converters.Resource.Color.material_grey_300 = global::WR.Resource.Color.material_grey_300;
+			global::Converters.Resource.Color.material_grey_50 = global::WR.Resource.Color.material_grey_50;
+			global::Converters.Resource.Color.material_grey_600 = global::WR.Resource.Color.material_grey_600;
+			global::Converters.Resource.Color.material_grey_800 = global::WR.Resource.Color.material_grey_800;
+			global::Converters.Resource.Color.material_grey_850 = global::WR.Resource.Color.material_grey_850;
+			global::Converters.Resource.Color.material_grey_900 = global::WR.Resource.Color.material_grey_900;
+			global::Converters.Resource.Color.notification_action_color_filter = global::WR.Resource.Color.notification_action_color_filter;
+			global::Converters.Resource.Color.notification_icon_bg_color = global::WR.Resource.Color.notification_icon_bg_color;
+			global::Converters.Resource.Color.notification_material_background_media_default_color = global::WR.Resource.Color.notification_material_background_media_default_color;
+			global::Converters.Resource.Color.primary_dark_material_dark = global::WR.Resource.Color.primary_dark_material_dark;
+			global::Converters.Resource.Color.primary_dark_material_light = global::WR.Resource.Color.primary_dark_material_light;
+			global::Converters.Resource.Color.primary_material_dark = global::WR.Resource.Color.primary_material_dark;
+			global::Converters.Resource.Color.primary_material_light = global::WR.Resource.Color.primary_material_light;
+			global::Converters.Resource.Color.primary_text_default_material_dark = global::WR.Resource.Color.primary_text_default_material_dark;
+			global::Converters.Resource.Color.primary_text_default_material_light = global::WR.Resource.Color.primary_text_default_material_light;
+			global::Converters.Resource.Color.primary_text_disabled_material_dark = global::WR.Resource.Color.primary_text_disabled_material_dark;
+			global::Converters.Resource.Color.primary_text_disabled_material_light = global::WR.Resource.Color.primary_text_disabled_material_light;
+			global::Converters.Resource.Color.ripple_material_dark = global::WR.Resource.Color.ripple_material_dark;
+			global::Converters.Resource.Color.ripple_material_light = global::WR.Resource.Color.ripple_material_light;
+			global::Converters.Resource.Color.secondary_text_default_material_dark = global::WR.Resource.Color.secondary_text_default_material_dark;
+			global::Converters.Resource.Color.secondary_text_default_material_light = global::WR.Resource.Color.secondary_text_default_material_light;
+			global::Converters.Resource.Color.secondary_text_disabled_material_dark = global::WR.Resource.Color.secondary_text_disabled_material_dark;
+			global::Converters.Resource.Color.secondary_text_disabled_material_light = global::WR.Resource.Color.secondary_text_disabled_material_light;
+			global::Converters.Resource.Color.switch_thumb_disabled_material_dark = global::WR.Resource.Color.switch_thumb_disabled_material_dark;
+			global::Converters.Resource.Color.switch_thumb_disabled_material_light = global::WR.Resource.Color.switch_thumb_disabled_material_light;
+			global::Converters.Resource.Color.switch_thumb_material_dark = global::WR.Resource.Color.switch_thumb_material_dark;
+			global::Converters.Resource.Color.switch_thumb_material_light = global::WR.Resource.Color.switch_thumb_material_light;
+			global::Converters.Resource.Color.switch_thumb_normal_material_dark = global::WR.Resource.Color.switch_thumb_normal_material_dark;
+			global::Converters.Resource.Color.switch_thumb_normal_material_light = global::WR.Resource.Color.switch_thumb_normal_material_light;
+			global::Converters.Resource.Color.tooltip_background_dark = global::WR.Resource.Color.tooltip_background_dark;
+			global::Converters.Resource.Color.tooltip_background_light = global::WR.Resource.Color.tooltip_background_light;
+			global::Converters.Resource.Dimension.abc_action_bar_content_inset_material = global::WR.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::Converters.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::WR.Resource.Dimension.abc_action_bar_content_inset_with_nav;
+			global::Converters.Resource.Dimension.abc_action_bar_default_height_material = global::WR.Resource.Dimension.abc_action_bar_default_height_material;
+			global::Converters.Resource.Dimension.abc_action_bar_default_padding_end_material = global::WR.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::Converters.Resource.Dimension.abc_action_bar_default_padding_start_material = global::WR.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::Converters.Resource.Dimension.abc_action_bar_elevation_material = global::WR.Resource.Dimension.abc_action_bar_elevation_material;
+			global::Converters.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::WR.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::Converters.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::WR.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::Converters.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::WR.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::Converters.Resource.Dimension.abc_action_bar_stacked_max_height = global::WR.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::Converters.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::WR.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::Converters.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::WR.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::Converters.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::WR.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::Converters.Resource.Dimension.abc_action_button_min_height_material = global::WR.Resource.Dimension.abc_action_button_min_height_material;
+			global::Converters.Resource.Dimension.abc_action_button_min_width_material = global::WR.Resource.Dimension.abc_action_button_min_width_material;
+			global::Converters.Resource.Dimension.abc_action_button_min_width_overflow_material = global::WR.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::Converters.Resource.Dimension.abc_alert_dialog_button_bar_height = global::WR.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::Converters.Resource.Dimension.abc_button_inset_horizontal_material = global::WR.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::Converters.Resource.Dimension.abc_button_inset_vertical_material = global::WR.Resource.Dimension.abc_button_inset_vertical_material;
+			global::Converters.Resource.Dimension.abc_button_padding_horizontal_material = global::WR.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::Converters.Resource.Dimension.abc_button_padding_vertical_material = global::WR.Resource.Dimension.abc_button_padding_vertical_material;
+			global::Converters.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::WR.Resource.Dimension.abc_cascading_menus_min_smallest_width;
+			global::Converters.Resource.Dimension.abc_config_prefDialogWidth = global::WR.Resource.Dimension.abc_config_prefDialogWidth;
+			global::Converters.Resource.Dimension.abc_control_corner_material = global::WR.Resource.Dimension.abc_control_corner_material;
+			global::Converters.Resource.Dimension.abc_control_inset_material = global::WR.Resource.Dimension.abc_control_inset_material;
+			global::Converters.Resource.Dimension.abc_control_padding_material = global::WR.Resource.Dimension.abc_control_padding_material;
+			global::Converters.Resource.Dimension.abc_dialog_fixed_height_major = global::WR.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::Converters.Resource.Dimension.abc_dialog_fixed_height_minor = global::WR.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::Converters.Resource.Dimension.abc_dialog_fixed_width_major = global::WR.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::Converters.Resource.Dimension.abc_dialog_fixed_width_minor = global::WR.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::Converters.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::WR.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
+			global::Converters.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::WR.Resource.Dimension.abc_dialog_list_padding_top_no_title;
+			global::Converters.Resource.Dimension.abc_dialog_min_width_major = global::WR.Resource.Dimension.abc_dialog_min_width_major;
+			global::Converters.Resource.Dimension.abc_dialog_min_width_minor = global::WR.Resource.Dimension.abc_dialog_min_width_minor;
+			global::Converters.Resource.Dimension.abc_dialog_padding_material = global::WR.Resource.Dimension.abc_dialog_padding_material;
+			global::Converters.Resource.Dimension.abc_dialog_padding_top_material = global::WR.Resource.Dimension.abc_dialog_padding_top_material;
+			global::Converters.Resource.Dimension.abc_dialog_title_divider_material = global::WR.Resource.Dimension.abc_dialog_title_divider_material;
+			global::Converters.Resource.Dimension.abc_disabled_alpha_material_dark = global::WR.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::Converters.Resource.Dimension.abc_disabled_alpha_material_light = global::WR.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::Converters.Resource.Dimension.abc_dropdownitem_icon_width = global::WR.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::Converters.Resource.Dimension.abc_dropdownitem_text_padding_left = global::WR.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::Converters.Resource.Dimension.abc_dropdownitem_text_padding_right = global::WR.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::Converters.Resource.Dimension.abc_edit_text_inset_bottom_material = global::WR.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::Converters.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::WR.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::Converters.Resource.Dimension.abc_edit_text_inset_top_material = global::WR.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::Converters.Resource.Dimension.abc_floating_window_z = global::WR.Resource.Dimension.abc_floating_window_z;
+			global::Converters.Resource.Dimension.abc_list_item_padding_horizontal_material = global::WR.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::Converters.Resource.Dimension.abc_panel_menu_list_width = global::WR.Resource.Dimension.abc_panel_menu_list_width;
+			global::Converters.Resource.Dimension.abc_progress_bar_height_material = global::WR.Resource.Dimension.abc_progress_bar_height_material;
+			global::Converters.Resource.Dimension.abc_search_view_preferred_height = global::WR.Resource.Dimension.abc_search_view_preferred_height;
+			global::Converters.Resource.Dimension.abc_search_view_preferred_width = global::WR.Resource.Dimension.abc_search_view_preferred_width;
+			global::Converters.Resource.Dimension.abc_seekbar_track_background_height_material = global::WR.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::Converters.Resource.Dimension.abc_seekbar_track_progress_height_material = global::WR.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::Converters.Resource.Dimension.abc_select_dialog_padding_start_material = global::WR.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::Converters.Resource.Dimension.abc_switch_padding = global::WR.Resource.Dimension.abc_switch_padding;
+			global::Converters.Resource.Dimension.abc_text_size_body_1_material = global::WR.Resource.Dimension.abc_text_size_body_1_material;
+			global::Converters.Resource.Dimension.abc_text_size_body_2_material = global::WR.Resource.Dimension.abc_text_size_body_2_material;
+			global::Converters.Resource.Dimension.abc_text_size_button_material = global::WR.Resource.Dimension.abc_text_size_button_material;
+			global::Converters.Resource.Dimension.abc_text_size_caption_material = global::WR.Resource.Dimension.abc_text_size_caption_material;
+			global::Converters.Resource.Dimension.abc_text_size_display_1_material = global::WR.Resource.Dimension.abc_text_size_display_1_material;
+			global::Converters.Resource.Dimension.abc_text_size_display_2_material = global::WR.Resource.Dimension.abc_text_size_display_2_material;
+			global::Converters.Resource.Dimension.abc_text_size_display_3_material = global::WR.Resource.Dimension.abc_text_size_display_3_material;
+			global::Converters.Resource.Dimension.abc_text_size_display_4_material = global::WR.Resource.Dimension.abc_text_size_display_4_material;
+			global::Converters.Resource.Dimension.abc_text_size_headline_material = global::WR.Resource.Dimension.abc_text_size_headline_material;
+			global::Converters.Resource.Dimension.abc_text_size_large_material = global::WR.Resource.Dimension.abc_text_size_large_material;
+			global::Converters.Resource.Dimension.abc_text_size_medium_material = global::WR.Resource.Dimension.abc_text_size_medium_material;
+			global::Converters.Resource.Dimension.abc_text_size_menu_header_material = global::WR.Resource.Dimension.abc_text_size_menu_header_material;
+			global::Converters.Resource.Dimension.abc_text_size_menu_material = global::WR.Resource.Dimension.abc_text_size_menu_material;
+			global::Converters.Resource.Dimension.abc_text_size_small_material = global::WR.Resource.Dimension.abc_text_size_small_material;
+			global::Converters.Resource.Dimension.abc_text_size_subhead_material = global::WR.Resource.Dimension.abc_text_size_subhead_material;
+			global::Converters.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::WR.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::Converters.Resource.Dimension.abc_text_size_title_material = global::WR.Resource.Dimension.abc_text_size_title_material;
+			global::Converters.Resource.Dimension.abc_text_size_title_material_toolbar = global::WR.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::Converters.Resource.Dimension.compat_button_inset_horizontal_material = global::WR.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::Converters.Resource.Dimension.compat_button_inset_vertical_material = global::WR.Resource.Dimension.compat_button_inset_vertical_material;
+			global::Converters.Resource.Dimension.compat_button_padding_horizontal_material = global::WR.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::Converters.Resource.Dimension.compat_button_padding_vertical_material = global::WR.Resource.Dimension.compat_button_padding_vertical_material;
+			global::Converters.Resource.Dimension.compat_control_corner_material = global::WR.Resource.Dimension.compat_control_corner_material;
+			global::Converters.Resource.Dimension.disabled_alpha_material_dark = global::WR.Resource.Dimension.disabled_alpha_material_dark;
+			global::Converters.Resource.Dimension.disabled_alpha_material_light = global::WR.Resource.Dimension.disabled_alpha_material_light;
+			global::Converters.Resource.Dimension.highlight_alpha_material_colored = global::WR.Resource.Dimension.highlight_alpha_material_colored;
+			global::Converters.Resource.Dimension.highlight_alpha_material_dark = global::WR.Resource.Dimension.highlight_alpha_material_dark;
+			global::Converters.Resource.Dimension.highlight_alpha_material_light = global::WR.Resource.Dimension.highlight_alpha_material_light;
+			global::Converters.Resource.Dimension.hint_alpha_material_dark = global::WR.Resource.Dimension.hint_alpha_material_dark;
+			global::Converters.Resource.Dimension.hint_alpha_material_light = global::WR.Resource.Dimension.hint_alpha_material_light;
+			global::Converters.Resource.Dimension.hint_pressed_alpha_material_dark = global::WR.Resource.Dimension.hint_pressed_alpha_material_dark;
+			global::Converters.Resource.Dimension.hint_pressed_alpha_material_light = global::WR.Resource.Dimension.hint_pressed_alpha_material_light;
+			global::Converters.Resource.Dimension.notification_action_icon_size = global::WR.Resource.Dimension.notification_action_icon_size;
+			global::Converters.Resource.Dimension.notification_action_text_size = global::WR.Resource.Dimension.notification_action_text_size;
+			global::Converters.Resource.Dimension.notification_big_circle_margin = global::WR.Resource.Dimension.notification_big_circle_margin;
+			global::Converters.Resource.Dimension.notification_content_margin_start = global::WR.Resource.Dimension.notification_content_margin_start;
+			global::Converters.Resource.Dimension.notification_large_icon_height = global::WR.Resource.Dimension.notification_large_icon_height;
+			global::Converters.Resource.Dimension.notification_large_icon_width = global::WR.Resource.Dimension.notification_large_icon_width;
+			global::Converters.Resource.Dimension.notification_main_column_padding_top = global::WR.Resource.Dimension.notification_main_column_padding_top;
+			global::Converters.Resource.Dimension.notification_media_narrow_margin = global::WR.Resource.Dimension.notification_media_narrow_margin;
+			global::Converters.Resource.Dimension.notification_right_icon_size = global::WR.Resource.Dimension.notification_right_icon_size;
+			global::Converters.Resource.Dimension.notification_right_side_padding_top = global::WR.Resource.Dimension.notification_right_side_padding_top;
+			global::Converters.Resource.Dimension.notification_small_icon_background_padding = global::WR.Resource.Dimension.notification_small_icon_background_padding;
+			global::Converters.Resource.Dimension.notification_small_icon_size_as_large = global::WR.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Converters.Resource.Dimension.notification_subtext_size = global::WR.Resource.Dimension.notification_subtext_size;
+			global::Converters.Resource.Dimension.notification_top_pad = global::WR.Resource.Dimension.notification_top_pad;
+			global::Converters.Resource.Dimension.notification_top_pad_large_text = global::WR.Resource.Dimension.notification_top_pad_large_text;
+			global::Converters.Resource.Dimension.tooltip_corner_radius = global::WR.Resource.Dimension.tooltip_corner_radius;
+			global::Converters.Resource.Dimension.tooltip_horizontal_padding = global::WR.Resource.Dimension.tooltip_horizontal_padding;
+			global::Converters.Resource.Dimension.tooltip_margin = global::WR.Resource.Dimension.tooltip_margin;
+			global::Converters.Resource.Dimension.tooltip_precise_anchor_extra_offset = global::WR.Resource.Dimension.tooltip_precise_anchor_extra_offset;
+			global::Converters.Resource.Dimension.tooltip_precise_anchor_threshold = global::WR.Resource.Dimension.tooltip_precise_anchor_threshold;
+			global::Converters.Resource.Dimension.tooltip_vertical_padding = global::WR.Resource.Dimension.tooltip_vertical_padding;
+			global::Converters.Resource.Dimension.tooltip_y_offset_non_touch = global::WR.Resource.Dimension.tooltip_y_offset_non_touch;
+			global::Converters.Resource.Dimension.tooltip_y_offset_touch = global::WR.Resource.Dimension.tooltip_y_offset_touch;
+			global::Converters.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::WR.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::Converters.Resource.Drawable.abc_action_bar_item_background_material = global::WR.Resource.Drawable.abc_action_bar_item_background_material;
+			global::Converters.Resource.Drawable.abc_btn_borderless_material = global::WR.Resource.Drawable.abc_btn_borderless_material;
+			global::Converters.Resource.Drawable.abc_btn_check_material = global::WR.Resource.Drawable.abc_btn_check_material;
+			global::Converters.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::WR.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::Converters.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::WR.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::Converters.Resource.Drawable.abc_btn_colored_material = global::WR.Resource.Drawable.abc_btn_colored_material;
+			global::Converters.Resource.Drawable.abc_btn_default_mtrl_shape = global::WR.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::Converters.Resource.Drawable.abc_btn_radio_material = global::WR.Resource.Drawable.abc_btn_radio_material;
+			global::Converters.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::WR.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::Converters.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::WR.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::Converters.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::WR.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::Converters.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::WR.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::Converters.Resource.Drawable.abc_cab_background_internal_bg = global::WR.Resource.Drawable.abc_cab_background_internal_bg;
+			global::Converters.Resource.Drawable.abc_cab_background_top_material = global::WR.Resource.Drawable.abc_cab_background_top_material;
+			global::Converters.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::WR.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::Converters.Resource.Drawable.abc_control_background_material = global::WR.Resource.Drawable.abc_control_background_material;
+			global::Converters.Resource.Drawable.abc_dialog_material_background = global::WR.Resource.Drawable.abc_dialog_material_background;
+			global::Converters.Resource.Drawable.abc_edit_text_material = global::WR.Resource.Drawable.abc_edit_text_material;
+			global::Converters.Resource.Drawable.abc_ic_ab_back_material = global::WR.Resource.Drawable.abc_ic_ab_back_material;
+			global::Converters.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::WR.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
+			global::Converters.Resource.Drawable.abc_ic_clear_material = global::WR.Resource.Drawable.abc_ic_clear_material;
+			global::Converters.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::WR.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::Converters.Resource.Drawable.abc_ic_go_search_api_material = global::WR.Resource.Drawable.abc_ic_go_search_api_material;
+			global::Converters.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::WR.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::Converters.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::WR.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::Converters.Resource.Drawable.abc_ic_menu_overflow_material = global::WR.Resource.Drawable.abc_ic_menu_overflow_material;
+			global::Converters.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::WR.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::Converters.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::WR.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::Converters.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::WR.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::Converters.Resource.Drawable.abc_ic_search_api_material = global::WR.Resource.Drawable.abc_ic_search_api_material;
+			global::Converters.Resource.Drawable.abc_ic_star_black_16dp = global::WR.Resource.Drawable.abc_ic_star_black_16dp;
+			global::Converters.Resource.Drawable.abc_ic_star_black_36dp = global::WR.Resource.Drawable.abc_ic_star_black_36dp;
+			global::Converters.Resource.Drawable.abc_ic_star_black_48dp = global::WR.Resource.Drawable.abc_ic_star_black_48dp;
+			global::Converters.Resource.Drawable.abc_ic_star_half_black_16dp = global::WR.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::Converters.Resource.Drawable.abc_ic_star_half_black_36dp = global::WR.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::Converters.Resource.Drawable.abc_ic_star_half_black_48dp = global::WR.Resource.Drawable.abc_ic_star_half_black_48dp;
+			global::Converters.Resource.Drawable.abc_ic_voice_search_api_material = global::WR.Resource.Drawable.abc_ic_voice_search_api_material;
+			global::Converters.Resource.Drawable.abc_item_background_holo_dark = global::WR.Resource.Drawable.abc_item_background_holo_dark;
+			global::Converters.Resource.Drawable.abc_item_background_holo_light = global::WR.Resource.Drawable.abc_item_background_holo_light;
+			global::Converters.Resource.Drawable.abc_list_divider_mtrl_alpha = global::WR.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::Converters.Resource.Drawable.abc_list_focused_holo = global::WR.Resource.Drawable.abc_list_focused_holo;
+			global::Converters.Resource.Drawable.abc_list_longpressed_holo = global::WR.Resource.Drawable.abc_list_longpressed_holo;
+			global::Converters.Resource.Drawable.abc_list_pressed_holo_dark = global::WR.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::Converters.Resource.Drawable.abc_list_pressed_holo_light = global::WR.Resource.Drawable.abc_list_pressed_holo_light;
+			global::Converters.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::WR.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::Converters.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::WR.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::Converters.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::WR.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::Converters.Resource.Drawable.abc_list_selector_disabled_holo_light = global::WR.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::Converters.Resource.Drawable.abc_list_selector_holo_dark = global::WR.Resource.Drawable.abc_list_selector_holo_dark;
+			global::Converters.Resource.Drawable.abc_list_selector_holo_light = global::WR.Resource.Drawable.abc_list_selector_holo_light;
+			global::Converters.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::WR.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::Converters.Resource.Drawable.abc_popup_background_mtrl_mult = global::WR.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::Converters.Resource.Drawable.abc_ratingbar_indicator_material = global::WR.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::Converters.Resource.Drawable.abc_ratingbar_material = global::WR.Resource.Drawable.abc_ratingbar_material;
+			global::Converters.Resource.Drawable.abc_ratingbar_small_material = global::WR.Resource.Drawable.abc_ratingbar_small_material;
+			global::Converters.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::WR.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::Converters.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::WR.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::Converters.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::WR.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::Converters.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::WR.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::Converters.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::WR.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::Converters.Resource.Drawable.abc_seekbar_thumb_material = global::WR.Resource.Drawable.abc_seekbar_thumb_material;
+			global::Converters.Resource.Drawable.abc_seekbar_tick_mark_material = global::WR.Resource.Drawable.abc_seekbar_tick_mark_material;
+			global::Converters.Resource.Drawable.abc_seekbar_track_material = global::WR.Resource.Drawable.abc_seekbar_track_material;
+			global::Converters.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::WR.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::Converters.Resource.Drawable.abc_spinner_textfield_background_material = global::WR.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::Converters.Resource.Drawable.abc_switch_thumb_material = global::WR.Resource.Drawable.abc_switch_thumb_material;
+			global::Converters.Resource.Drawable.abc_switch_track_mtrl_alpha = global::WR.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::Converters.Resource.Drawable.abc_tab_indicator_material = global::WR.Resource.Drawable.abc_tab_indicator_material;
+			global::Converters.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::WR.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::Converters.Resource.Drawable.abc_text_cursor_material = global::WR.Resource.Drawable.abc_text_cursor_material;
+			global::Converters.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::WR.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
+			global::Converters.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::WR.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
+			global::Converters.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::WR.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
+			global::Converters.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::WR.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
+			global::Converters.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::WR.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
+			global::Converters.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::WR.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
+			global::Converters.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::WR.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::Converters.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::WR.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::Converters.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::WR.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::Converters.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::WR.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::Converters.Resource.Drawable.abc_textfield_search_material = global::WR.Resource.Drawable.abc_textfield_search_material;
+			global::Converters.Resource.Drawable.abc_vector_test = global::WR.Resource.Drawable.abc_vector_test;
+			global::Converters.Resource.Drawable.notification_action_background = global::WR.Resource.Drawable.notification_action_background;
+			global::Converters.Resource.Drawable.notification_bg = global::WR.Resource.Drawable.notification_bg;
+			global::Converters.Resource.Drawable.notification_bg_low = global::WR.Resource.Drawable.notification_bg_low;
+			global::Converters.Resource.Drawable.notification_bg_low_normal = global::WR.Resource.Drawable.notification_bg_low_normal;
+			global::Converters.Resource.Drawable.notification_bg_low_pressed = global::WR.Resource.Drawable.notification_bg_low_pressed;
+			global::Converters.Resource.Drawable.notification_bg_normal = global::WR.Resource.Drawable.notification_bg_normal;
+			global::Converters.Resource.Drawable.notification_bg_normal_pressed = global::WR.Resource.Drawable.notification_bg_normal_pressed;
+			global::Converters.Resource.Drawable.notification_icon_background = global::WR.Resource.Drawable.notification_icon_background;
+			global::Converters.Resource.Drawable.notification_template_icon_bg = global::WR.Resource.Drawable.notification_template_icon_bg;
+			global::Converters.Resource.Drawable.notification_template_icon_low_bg = global::WR.Resource.Drawable.notification_template_icon_low_bg;
+			global::Converters.Resource.Drawable.notification_tile_bg = global::WR.Resource.Drawable.notification_tile_bg;
+			global::Converters.Resource.Drawable.notify_panel_notification_icon_bg = global::WR.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Converters.Resource.Drawable.tooltip_frame_dark = global::WR.Resource.Drawable.tooltip_frame_dark;
+			global::Converters.Resource.Drawable.tooltip_frame_light = global::WR.Resource.Drawable.tooltip_frame_light;
+			global::Converters.Resource.Id.ALT = global::WR.Resource.Id.ALT;
+			global::Converters.Resource.Id.CTRL = global::WR.Resource.Id.CTRL;
+			global::Converters.Resource.Id.FUNCTION = global::WR.Resource.Id.FUNCTION;
+			global::Converters.Resource.Id.META = global::WR.Resource.Id.META;
+			global::Converters.Resource.Id.SHIFT = global::WR.Resource.Id.SHIFT;
+			global::Converters.Resource.Id.SYM = global::WR.Resource.Id.SYM;
+			global::Converters.Resource.Id.action0 = global::WR.Resource.Id.action0;
+			global::Converters.Resource.Id.action_bar = global::WR.Resource.Id.action_bar;
+			global::Converters.Resource.Id.action_bar_activity_content = global::WR.Resource.Id.action_bar_activity_content;
+			global::Converters.Resource.Id.action_bar_container = global::WR.Resource.Id.action_bar_container;
+			global::Converters.Resource.Id.action_bar_root = global::WR.Resource.Id.action_bar_root;
+			global::Converters.Resource.Id.action_bar_spinner = global::WR.Resource.Id.action_bar_spinner;
+			global::Converters.Resource.Id.action_bar_subtitle = global::WR.Resource.Id.action_bar_subtitle;
+			global::Converters.Resource.Id.action_bar_title = global::WR.Resource.Id.action_bar_title;
+			global::Converters.Resource.Id.action_container = global::WR.Resource.Id.action_container;
+			global::Converters.Resource.Id.action_context_bar = global::WR.Resource.Id.action_context_bar;
+			global::Converters.Resource.Id.action_divider = global::WR.Resource.Id.action_divider;
+			global::Converters.Resource.Id.action_image = global::WR.Resource.Id.action_image;
+			global::Converters.Resource.Id.action_menu_divider = global::WR.Resource.Id.action_menu_divider;
+			global::Converters.Resource.Id.action_menu_presenter = global::WR.Resource.Id.action_menu_presenter;
+			global::Converters.Resource.Id.action_mode_bar = global::WR.Resource.Id.action_mode_bar;
+			global::Converters.Resource.Id.action_mode_bar_stub = global::WR.Resource.Id.action_mode_bar_stub;
+			global::Converters.Resource.Id.action_mode_close_button = global::WR.Resource.Id.action_mode_close_button;
+			global::Converters.Resource.Id.action_text = global::WR.Resource.Id.action_text;
+			global::Converters.Resource.Id.actions = global::WR.Resource.Id.actions;
+			global::Converters.Resource.Id.activity_chooser_view_content = global::WR.Resource.Id.activity_chooser_view_content;
+			global::Converters.Resource.Id.add = global::WR.Resource.Id.add;
+			global::Converters.Resource.Id.alertTitle = global::WR.Resource.Id.alertTitle;
+			global::Converters.Resource.Id.always = global::WR.Resource.Id.always;
+			global::Converters.Resource.Id.async = global::WR.Resource.Id.async;
+			global::Converters.Resource.Id.beginning = global::WR.Resource.Id.beginning;
+			global::Converters.Resource.Id.blocking = global::WR.Resource.Id.blocking;
+			global::Converters.Resource.Id.bottom = global::WR.Resource.Id.bottom;
+			global::Converters.Resource.Id.buttonPanel = global::WR.Resource.Id.buttonPanel;
+			global::Converters.Resource.Id.cancel_action = global::WR.Resource.Id.cancel_action;
+			global::Converters.Resource.Id.checkbox = global::WR.Resource.Id.checkbox;
+			global::Converters.Resource.Id.chronometer = global::WR.Resource.Id.chronometer;
+			global::Converters.Resource.Id.collapseActionView = global::WR.Resource.Id.collapseActionView;
+			global::Converters.Resource.Id.contentPanel = global::WR.Resource.Id.contentPanel;
+			global::Converters.Resource.Id.custom = global::WR.Resource.Id.custom;
+			global::Converters.Resource.Id.customPanel = global::WR.Resource.Id.customPanel;
+			global::Converters.Resource.Id.decor_content_parent = global::WR.Resource.Id.decor_content_parent;
+			global::Converters.Resource.Id.default_activity_button = global::WR.Resource.Id.default_activity_button;
+			global::Converters.Resource.Id.disableHome = global::WR.Resource.Id.disableHome;
+			global::Converters.Resource.Id.edit_query = global::WR.Resource.Id.edit_query;
+			global::Converters.Resource.Id.end = global::WR.Resource.Id.end;
+			global::Converters.Resource.Id.end_padder = global::WR.Resource.Id.end_padder;
+			global::Converters.Resource.Id.expand_activities_button = global::WR.Resource.Id.expand_activities_button;
+			global::Converters.Resource.Id.expanded_menu = global::WR.Resource.Id.expanded_menu;
+			global::Converters.Resource.Id.forever = global::WR.Resource.Id.forever;
+			global::Converters.Resource.Id.home = global::WR.Resource.Id.home;
+			global::Converters.Resource.Id.homeAsUp = global::WR.Resource.Id.homeAsUp;
+			global::Converters.Resource.Id.icon = global::WR.Resource.Id.icon;
+			global::Converters.Resource.Id.icon_group = global::WR.Resource.Id.icon_group;
+			global::Converters.Resource.Id.ifRoom = global::WR.Resource.Id.ifRoom;
+			global::Converters.Resource.Id.image = global::WR.Resource.Id.image;
+			global::Converters.Resource.Id.info = global::WR.Resource.Id.info;
+			global::Converters.Resource.Id.italic = global::WR.Resource.Id.italic;
+			global::Converters.Resource.Id.line1 = global::WR.Resource.Id.line1;
+			global::Converters.Resource.Id.line3 = global::WR.Resource.Id.line3;
+			global::Converters.Resource.Id.listMode = global::WR.Resource.Id.listMode;
+			global::Converters.Resource.Id.list_item = global::WR.Resource.Id.list_item;
+			global::Converters.Resource.Id.media_actions = global::WR.Resource.Id.media_actions;
+			global::Converters.Resource.Id.message = global::WR.Resource.Id.message;
+			global::Converters.Resource.Id.middle = global::WR.Resource.Id.middle;
+			global::Converters.Resource.Id.multiply = global::WR.Resource.Id.multiply;
+			global::Converters.Resource.Id.never = global::WR.Resource.Id.never;
+			global::Converters.Resource.Id.none = global::WR.Resource.Id.none;
+			global::Converters.Resource.Id.normal = global::WR.Resource.Id.normal;
+			global::Converters.Resource.Id.notification_background = global::WR.Resource.Id.notification_background;
+			global::Converters.Resource.Id.notification_main_column = global::WR.Resource.Id.notification_main_column;
+			global::Converters.Resource.Id.notification_main_column_container = global::WR.Resource.Id.notification_main_column_container;
+			global::Converters.Resource.Id.parentPanel = global::WR.Resource.Id.parentPanel;
+			global::Converters.Resource.Id.progress_circular = global::WR.Resource.Id.progress_circular;
+			global::Converters.Resource.Id.progress_horizontal = global::WR.Resource.Id.progress_horizontal;
+			global::Converters.Resource.Id.radio = global::WR.Resource.Id.radio;
+			global::Converters.Resource.Id.right_icon = global::WR.Resource.Id.right_icon;
+			global::Converters.Resource.Id.right_side = global::WR.Resource.Id.right_side;
+			global::Converters.Resource.Id.screen = global::WR.Resource.Id.screen;
+			global::Converters.Resource.Id.scrollIndicatorDown = global::WR.Resource.Id.scrollIndicatorDown;
+			global::Converters.Resource.Id.scrollIndicatorUp = global::WR.Resource.Id.scrollIndicatorUp;
+			global::Converters.Resource.Id.scrollView = global::WR.Resource.Id.scrollView;
+			global::Converters.Resource.Id.search_badge = global::WR.Resource.Id.search_badge;
+			global::Converters.Resource.Id.search_bar = global::WR.Resource.Id.search_bar;
+			global::Converters.Resource.Id.search_button = global::WR.Resource.Id.search_button;
+			global::Converters.Resource.Id.search_close_btn = global::WR.Resource.Id.search_close_btn;
+			global::Converters.Resource.Id.search_edit_frame = global::WR.Resource.Id.search_edit_frame;
+			global::Converters.Resource.Id.search_go_btn = global::WR.Resource.Id.search_go_btn;
+			global::Converters.Resource.Id.search_mag_icon = global::WR.Resource.Id.search_mag_icon;
+			global::Converters.Resource.Id.search_plate = global::WR.Resource.Id.search_plate;
+			global::Converters.Resource.Id.search_src_text = global::WR.Resource.Id.search_src_text;
+			global::Converters.Resource.Id.search_voice_btn = global::WR.Resource.Id.search_voice_btn;
+			global::Converters.Resource.Id.select_dialog_listview = global::WR.Resource.Id.select_dialog_listview;
+			global::Converters.Resource.Id.shortcut = global::WR.Resource.Id.shortcut;
+			global::Converters.Resource.Id.showCustom = global::WR.Resource.Id.showCustom;
+			global::Converters.Resource.Id.showHome = global::WR.Resource.Id.showHome;
+			global::Converters.Resource.Id.showTitle = global::WR.Resource.Id.showTitle;
+			global::Converters.Resource.Id.spacer = global::WR.Resource.Id.spacer;
+			global::Converters.Resource.Id.split_action_bar = global::WR.Resource.Id.split_action_bar;
+			global::Converters.Resource.Id.src_atop = global::WR.Resource.Id.src_atop;
+			global::Converters.Resource.Id.src_in = global::WR.Resource.Id.src_in;
+			global::Converters.Resource.Id.src_over = global::WR.Resource.Id.src_over;
+			global::Converters.Resource.Id.status_bar_latest_event_content = global::WR.Resource.Id.status_bar_latest_event_content;
+			global::Converters.Resource.Id.submenuarrow = global::WR.Resource.Id.submenuarrow;
+			global::Converters.Resource.Id.submit_area = global::WR.Resource.Id.submit_area;
+			global::Converters.Resource.Id.tabMode = global::WR.Resource.Id.tabMode;
+			global::Converters.Resource.Id.tag_transition_group = global::WR.Resource.Id.tag_transition_group;
+			global::Converters.Resource.Id.text = global::WR.Resource.Id.text;
+			global::Converters.Resource.Id.text2 = global::WR.Resource.Id.text2;
+			global::Converters.Resource.Id.textSpacerNoButtons = global::WR.Resource.Id.textSpacerNoButtons;
+			global::Converters.Resource.Id.textSpacerNoTitle = global::WR.Resource.Id.textSpacerNoTitle;
+			global::Converters.Resource.Id.time = global::WR.Resource.Id.time;
+			global::Converters.Resource.Id.title = global::WR.Resource.Id.title;
+			global::Converters.Resource.Id.titleDividerNoCustom = global::WR.Resource.Id.titleDividerNoCustom;
+			global::Converters.Resource.Id.title_template = global::WR.Resource.Id.title_template;
+			global::Converters.Resource.Id.top = global::WR.Resource.Id.top;
+			global::Converters.Resource.Id.topPanel = global::WR.Resource.Id.topPanel;
+			global::Converters.Resource.Id.uniform = global::WR.Resource.Id.uniform;
+			global::Converters.Resource.Id.up = global::WR.Resource.Id.up;
+			global::Converters.Resource.Id.useLogo = global::WR.Resource.Id.useLogo;
+			global::Converters.Resource.Id.withText = global::WR.Resource.Id.withText;
+			global::Converters.Resource.Id.wrap_content = global::WR.Resource.Id.wrap_content;
+			global::Converters.Resource.Integer.abc_config_activityDefaultDur = global::WR.Resource.Integer.abc_config_activityDefaultDur;
+			global::Converters.Resource.Integer.abc_config_activityShortDur = global::WR.Resource.Integer.abc_config_activityShortDur;
+			global::Converters.Resource.Integer.cancel_button_image_alpha = global::WR.Resource.Integer.cancel_button_image_alpha;
+			global::Converters.Resource.Integer.config_tooltipAnimTime = global::WR.Resource.Integer.config_tooltipAnimTime;
+			global::Converters.Resource.Integer.status_bar_notification_info_maxnum = global::WR.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Converters.Resource.Layout.abc_action_bar_title_item = global::WR.Resource.Layout.abc_action_bar_title_item;
+			global::Converters.Resource.Layout.abc_action_bar_up_container = global::WR.Resource.Layout.abc_action_bar_up_container;
+			global::Converters.Resource.Layout.abc_action_menu_item_layout = global::WR.Resource.Layout.abc_action_menu_item_layout;
+			global::Converters.Resource.Layout.abc_action_menu_layout = global::WR.Resource.Layout.abc_action_menu_layout;
+			global::Converters.Resource.Layout.abc_action_mode_bar = global::WR.Resource.Layout.abc_action_mode_bar;
+			global::Converters.Resource.Layout.abc_action_mode_close_item_material = global::WR.Resource.Layout.abc_action_mode_close_item_material;
+			global::Converters.Resource.Layout.abc_activity_chooser_view = global::WR.Resource.Layout.abc_activity_chooser_view;
+			global::Converters.Resource.Layout.abc_activity_chooser_view_list_item = global::WR.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::Converters.Resource.Layout.abc_alert_dialog_button_bar_material = global::WR.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::Converters.Resource.Layout.abc_alert_dialog_material = global::WR.Resource.Layout.abc_alert_dialog_material;
+			global::Converters.Resource.Layout.abc_alert_dialog_title_material = global::WR.Resource.Layout.abc_alert_dialog_title_material;
+			global::Converters.Resource.Layout.abc_dialog_title_material = global::WR.Resource.Layout.abc_dialog_title_material;
+			global::Converters.Resource.Layout.abc_expanded_menu_layout = global::WR.Resource.Layout.abc_expanded_menu_layout;
+			global::Converters.Resource.Layout.abc_list_menu_item_checkbox = global::WR.Resource.Layout.abc_list_menu_item_checkbox;
+			global::Converters.Resource.Layout.abc_list_menu_item_icon = global::WR.Resource.Layout.abc_list_menu_item_icon;
+			global::Converters.Resource.Layout.abc_list_menu_item_layout = global::WR.Resource.Layout.abc_list_menu_item_layout;
+			global::Converters.Resource.Layout.abc_list_menu_item_radio = global::WR.Resource.Layout.abc_list_menu_item_radio;
+			global::Converters.Resource.Layout.abc_popup_menu_header_item_layout = global::WR.Resource.Layout.abc_popup_menu_header_item_layout;
+			global::Converters.Resource.Layout.abc_popup_menu_item_layout = global::WR.Resource.Layout.abc_popup_menu_item_layout;
+			global::Converters.Resource.Layout.abc_screen_content_include = global::WR.Resource.Layout.abc_screen_content_include;
+			global::Converters.Resource.Layout.abc_screen_simple = global::WR.Resource.Layout.abc_screen_simple;
+			global::Converters.Resource.Layout.abc_screen_simple_overlay_action_mode = global::WR.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::Converters.Resource.Layout.abc_screen_toolbar = global::WR.Resource.Layout.abc_screen_toolbar;
+			global::Converters.Resource.Layout.abc_search_dropdown_item_icons_2line = global::WR.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::Converters.Resource.Layout.abc_search_view = global::WR.Resource.Layout.abc_search_view;
+			global::Converters.Resource.Layout.abc_select_dialog_material = global::WR.Resource.Layout.abc_select_dialog_material;
+			global::Converters.Resource.Layout.notification_action = global::WR.Resource.Layout.notification_action;
+			global::Converters.Resource.Layout.notification_action_tombstone = global::WR.Resource.Layout.notification_action_tombstone;
+			global::Converters.Resource.Layout.notification_media_action = global::WR.Resource.Layout.notification_media_action;
+			global::Converters.Resource.Layout.notification_media_cancel_action = global::WR.Resource.Layout.notification_media_cancel_action;
+			global::Converters.Resource.Layout.notification_template_big_media = global::WR.Resource.Layout.notification_template_big_media;
+			global::Converters.Resource.Layout.notification_template_big_media_custom = global::WR.Resource.Layout.notification_template_big_media_custom;
+			global::Converters.Resource.Layout.notification_template_big_media_narrow = global::WR.Resource.Layout.notification_template_big_media_narrow;
+			global::Converters.Resource.Layout.notification_template_big_media_narrow_custom = global::WR.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::Converters.Resource.Layout.notification_template_custom_big = global::WR.Resource.Layout.notification_template_custom_big;
+			global::Converters.Resource.Layout.notification_template_icon_group = global::WR.Resource.Layout.notification_template_icon_group;
+			global::Converters.Resource.Layout.notification_template_lines_media = global::WR.Resource.Layout.notification_template_lines_media;
+			global::Converters.Resource.Layout.notification_template_media = global::WR.Resource.Layout.notification_template_media;
+			global::Converters.Resource.Layout.notification_template_media_custom = global::WR.Resource.Layout.notification_template_media_custom;
+			global::Converters.Resource.Layout.notification_template_part_chronometer = global::WR.Resource.Layout.notification_template_part_chronometer;
+			global::Converters.Resource.Layout.notification_template_part_time = global::WR.Resource.Layout.notification_template_part_time;
+			global::Converters.Resource.Layout.select_dialog_item_material = global::WR.Resource.Layout.select_dialog_item_material;
+			global::Converters.Resource.Layout.select_dialog_multichoice_material = global::WR.Resource.Layout.select_dialog_multichoice_material;
+			global::Converters.Resource.Layout.select_dialog_singlechoice_material = global::WR.Resource.Layout.select_dialog_singlechoice_material;
+			global::Converters.Resource.Layout.support_simple_spinner_dropdown_item = global::WR.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::Converters.Resource.String.abc_action_bar_home_description = global::WR.Resource.String.abc_action_bar_home_description;
+			global::Converters.Resource.String.abc_action_bar_up_description = global::WR.Resource.String.abc_action_bar_up_description;
+			global::Converters.Resource.String.abc_action_menu_overflow_description = global::WR.Resource.String.abc_action_menu_overflow_description;
+			global::Converters.Resource.String.abc_action_mode_done = global::WR.Resource.String.abc_action_mode_done;
+			global::Converters.Resource.String.abc_activity_chooser_view_see_all = global::WR.Resource.String.abc_activity_chooser_view_see_all;
+			global::Converters.Resource.String.abc_activitychooserview_choose_application = global::WR.Resource.String.abc_activitychooserview_choose_application;
+			global::Converters.Resource.String.abc_capital_off = global::WR.Resource.String.abc_capital_off;
+			global::Converters.Resource.String.abc_capital_on = global::WR.Resource.String.abc_capital_on;
+			global::Converters.Resource.String.abc_font_family_body_1_material = global::WR.Resource.String.abc_font_family_body_1_material;
+			global::Converters.Resource.String.abc_font_family_body_2_material = global::WR.Resource.String.abc_font_family_body_2_material;
+			global::Converters.Resource.String.abc_font_family_button_material = global::WR.Resource.String.abc_font_family_button_material;
+			global::Converters.Resource.String.abc_font_family_caption_material = global::WR.Resource.String.abc_font_family_caption_material;
+			global::Converters.Resource.String.abc_font_family_display_1_material = global::WR.Resource.String.abc_font_family_display_1_material;
+			global::Converters.Resource.String.abc_font_family_display_2_material = global::WR.Resource.String.abc_font_family_display_2_material;
+			global::Converters.Resource.String.abc_font_family_display_3_material = global::WR.Resource.String.abc_font_family_display_3_material;
+			global::Converters.Resource.String.abc_font_family_display_4_material = global::WR.Resource.String.abc_font_family_display_4_material;
+			global::Converters.Resource.String.abc_font_family_headline_material = global::WR.Resource.String.abc_font_family_headline_material;
+			global::Converters.Resource.String.abc_font_family_menu_material = global::WR.Resource.String.abc_font_family_menu_material;
+			global::Converters.Resource.String.abc_font_family_subhead_material = global::WR.Resource.String.abc_font_family_subhead_material;
+			global::Converters.Resource.String.abc_font_family_title_material = global::WR.Resource.String.abc_font_family_title_material;
+			global::Converters.Resource.String.abc_search_hint = global::WR.Resource.String.abc_search_hint;
+			global::Converters.Resource.String.abc_searchview_description_clear = global::WR.Resource.String.abc_searchview_description_clear;
+			global::Converters.Resource.String.abc_searchview_description_query = global::WR.Resource.String.abc_searchview_description_query;
+			global::Converters.Resource.String.abc_searchview_description_search = global::WR.Resource.String.abc_searchview_description_search;
+			global::Converters.Resource.String.abc_searchview_description_submit = global::WR.Resource.String.abc_searchview_description_submit;
+			global::Converters.Resource.String.abc_searchview_description_voice = global::WR.Resource.String.abc_searchview_description_voice;
+			global::Converters.Resource.String.abc_shareactionprovider_share_with = global::WR.Resource.String.abc_shareactionprovider_share_with;
+			global::Converters.Resource.String.abc_shareactionprovider_share_with_application = global::WR.Resource.String.abc_shareactionprovider_share_with_application;
+			global::Converters.Resource.String.abc_toolbar_collapse_description = global::WR.Resource.String.abc_toolbar_collapse_description;
+			global::Converters.Resource.String.app_name = global::WR.Resource.String.app_name;
+			global::Converters.Resource.String.hello = global::WR.Resource.String.hello;
+			global::Converters.Resource.String.search_menu_title = global::WR.Resource.String.search_menu_title;
+			global::Converters.Resource.String.status_bar_notification_info_overflow = global::WR.Resource.String.status_bar_notification_info_overflow;
+			global::Converters.Resource.Style.AlertDialog_AppCompat = global::WR.Resource.Style.AlertDialog_AppCompat;
+			global::Converters.Resource.Style.AlertDialog_AppCompat_Light = global::WR.Resource.Style.AlertDialog_AppCompat_Light;
+			global::Converters.Resource.Style.Animation_AppCompat_Dialog = global::WR.Resource.Style.Animation_AppCompat_Dialog;
+			global::Converters.Resource.Style.Animation_AppCompat_DropDownUp = global::WR.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::Converters.Resource.Style.Animation_AppCompat_Tooltip = global::WR.Resource.Style.Animation_AppCompat_Tooltip;
+			global::Converters.Resource.Style.Base_AlertDialog_AppCompat = global::WR.Resource.Style.Base_AlertDialog_AppCompat;
+			global::Converters.Resource.Style.Base_AlertDialog_AppCompat_Light = global::WR.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::Converters.Resource.Style.Base_Animation_AppCompat_Dialog = global::WR.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::Converters.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::WR.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::Converters.Resource.Style.Base_Animation_AppCompat_Tooltip = global::WR.Resource.Style.Base_Animation_AppCompat_Tooltip;
+			global::Converters.Resource.Style.Base_DialogWindowTitle_AppCompat = global::WR.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::Converters.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::WR.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat = global::WR.Resource.Style.Base_TextAppearance_AppCompat;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Button = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Large = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::WR.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::WR.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::WR.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Small = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Title = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Tooltip = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Tooltip;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::Converters.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::WR.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Converters.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::WR.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Converters.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::WR.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Converters.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::WR.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Converters.Resource.Style.Base_Theme_AppCompat = global::WR.Resource.Style.Base_Theme_AppCompat;
+			global::Converters.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::WR.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::Converters.Resource.Style.Base_Theme_AppCompat_Dialog = global::WR.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::Converters.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::WR.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::Converters.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::WR.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::Converters.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::WR.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::Converters.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::WR.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::Converters.Resource.Style.Base_Theme_AppCompat_Light = global::WR.Resource.Style.Base_Theme_AppCompat_Light;
+			global::Converters.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::WR.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::Converters.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::WR.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::Converters.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::WR.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::Converters.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::WR.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::Converters.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::WR.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Converters.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::WR.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::Converters.Resource.Style.Base_ThemeOverlay_AppCompat = global::WR.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::Converters.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::WR.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::Converters.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::WR.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::Converters.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::WR.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Converters.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::WR.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
+			global::Converters.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::WR.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
+			global::Converters.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::WR.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::Converters.Resource.Style.Base_V21_Theme_AppCompat = global::WR.Resource.Style.Base_V21_Theme_AppCompat;
+			global::Converters.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::WR.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::Converters.Resource.Style.Base_V21_Theme_AppCompat_Light = global::WR.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::Converters.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::WR.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::Converters.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::WR.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::Converters.Resource.Style.Base_V22_Theme_AppCompat = global::WR.Resource.Style.Base_V22_Theme_AppCompat;
+			global::Converters.Resource.Style.Base_V22_Theme_AppCompat_Light = global::WR.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::Converters.Resource.Style.Base_V23_Theme_AppCompat = global::WR.Resource.Style.Base_V23_Theme_AppCompat;
+			global::Converters.Resource.Style.Base_V23_Theme_AppCompat_Light = global::WR.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::Converters.Resource.Style.Base_V26_Theme_AppCompat = global::WR.Resource.Style.Base_V26_Theme_AppCompat;
+			global::Converters.Resource.Style.Base_V26_Theme_AppCompat_Light = global::WR.Resource.Style.Base_V26_Theme_AppCompat_Light;
+			global::Converters.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::WR.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
+			global::Converters.Resource.Style.Base_V7_Theme_AppCompat = global::WR.Resource.Style.Base_V7_Theme_AppCompat;
+			global::Converters.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::WR.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::Converters.Resource.Style.Base_V7_Theme_AppCompat_Light = global::WR.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::Converters.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::WR.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::Converters.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::WR.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
+			global::Converters.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::WR.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::Converters.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::WR.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::Converters.Resource.Style.Base_V7_Widget_AppCompat_Toolbar = global::WR.Resource.Style.Base_V7_Widget_AppCompat_Toolbar;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_ActionBar = global::WR.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::WR.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::WR.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::WR.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::WR.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_ActionButton = global::WR.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::WR.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::WR.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_ActionMode = global::WR.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::WR.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::WR.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_Button = global::WR.Resource.Style.Base_Widget_AppCompat_Button;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::WR.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::WR.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::WR.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::WR.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_Button_Small = global::WR.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::WR.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::WR.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::WR.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::WR.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::WR.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::WR.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::WR.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::WR.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_EditText = global::WR.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_ImageButton = global::WR.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::WR.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::WR.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::WR.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::WR.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::WR.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::WR.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::WR.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::WR.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::WR.Resource.Style.Base_Widget_AppCompat_ListMenuView;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::WR.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_ListView = global::WR.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::WR.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::WR.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::WR.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::WR.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::WR.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::WR.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::WR.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_RatingBar = global::WR.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::WR.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::WR.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_SearchView = global::WR.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::WR.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_SeekBar = global::WR.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::WR.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_Spinner = global::WR.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::WR.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::WR.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_Toolbar = global::WR.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::Converters.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::WR.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Converters.Resource.Style.Platform_AppCompat = global::WR.Resource.Style.Platform_AppCompat;
+			global::Converters.Resource.Style.Platform_AppCompat_Light = global::WR.Resource.Style.Platform_AppCompat_Light;
+			global::Converters.Resource.Style.Platform_ThemeOverlay_AppCompat = global::WR.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::Converters.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::WR.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::Converters.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::WR.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::Converters.Resource.Style.Platform_V21_AppCompat = global::WR.Resource.Style.Platform_V21_AppCompat;
+			global::Converters.Resource.Style.Platform_V21_AppCompat_Light = global::WR.Resource.Style.Platform_V21_AppCompat_Light;
+			global::Converters.Resource.Style.Platform_V25_AppCompat = global::WR.Resource.Style.Platform_V25_AppCompat;
+			global::Converters.Resource.Style.Platform_V25_AppCompat_Light = global::WR.Resource.Style.Platform_V25_AppCompat_Light;
+			global::Converters.Resource.Style.Platform_Widget_AppCompat_Spinner = global::WR.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::Converters.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::WR.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::Converters.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::WR.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::Converters.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::WR.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::Converters.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::WR.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::Converters.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::WR.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::Converters.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::WR.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::Converters.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::WR.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::Converters.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::WR.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::Converters.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::WR.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::Converters.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::WR.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::Converters.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::WR.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::Converters.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::WR.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::Converters.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::WR.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::Converters.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::WR.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::Converters.Resource.Style.TextAppearance_AppCompat = global::WR.Resource.Style.TextAppearance_AppCompat;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Body1 = global::WR.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Body2 = global::WR.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Button = global::WR.Resource.Style.TextAppearance_AppCompat_Button;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Caption = global::WR.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Display1 = global::WR.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Display2 = global::WR.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Display3 = global::WR.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Display4 = global::WR.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Headline = global::WR.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Inverse = global::WR.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Large = global::WR.Resource.Style.TextAppearance_AppCompat_Large;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::WR.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::WR.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::WR.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::WR.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::WR.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Medium = global::WR.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::WR.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Menu = global::WR.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::WR.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::WR.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Small = global::WR.Resource.Style.TextAppearance_AppCompat_Small;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::WR.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Subhead = global::WR.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::WR.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Title = global::WR.Resource.Style.TextAppearance_AppCompat_Title;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::WR.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Tooltip = global::WR.Resource.Style.TextAppearance_AppCompat_Tooltip;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::WR.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::WR.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::WR.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::WR.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::WR.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::WR.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::WR.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::WR.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::WR.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::WR.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::WR.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::WR.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::WR.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::WR.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::WR.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::WR.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::WR.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::WR.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::Converters.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::WR.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Converters.Resource.Style.TextAppearance_Compat_Notification = global::WR.Resource.Style.TextAppearance_Compat_Notification;
+			global::Converters.Resource.Style.TextAppearance_Compat_Notification_Info = global::WR.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::Converters.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::WR.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
+			global::Converters.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::WR.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::Converters.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::WR.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
+			global::Converters.Resource.Style.TextAppearance_Compat_Notification_Media = global::WR.Resource.Style.TextAppearance_Compat_Notification_Media;
+			global::Converters.Resource.Style.TextAppearance_Compat_Notification_Time = global::WR.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::Converters.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::WR.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
+			global::Converters.Resource.Style.TextAppearance_Compat_Notification_Title = global::WR.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::Converters.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::WR.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
+			global::Converters.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::WR.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Converters.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::WR.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Converters.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::WR.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Converters.Resource.Style.Theme_AppCompat = global::WR.Resource.Style.Theme_AppCompat;
+			global::Converters.Resource.Style.Theme_AppCompat_CompactMenu = global::WR.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::Converters.Resource.Style.Theme_AppCompat_DayNight = global::WR.Resource.Style.Theme_AppCompat_DayNight;
+			global::Converters.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::WR.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::Converters.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::WR.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::Converters.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::WR.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::Converters.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::WR.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::Converters.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::WR.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::Converters.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::WR.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::Converters.Resource.Style.Theme_AppCompat_Dialog = global::WR.Resource.Style.Theme_AppCompat_Dialog;
+			global::Converters.Resource.Style.Theme_AppCompat_Dialog_Alert = global::WR.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::Converters.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::WR.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::Converters.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::WR.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::Converters.Resource.Style.Theme_AppCompat_Light = global::WR.Resource.Style.Theme_AppCompat_Light;
+			global::Converters.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::WR.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::Converters.Resource.Style.Theme_AppCompat_Light_Dialog = global::WR.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::Converters.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::WR.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::Converters.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::WR.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Converters.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::WR.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::Converters.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::WR.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::Converters.Resource.Style.Theme_AppCompat_NoActionBar = global::WR.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::Converters.Resource.Style.ThemeOverlay_AppCompat = global::WR.Resource.Style.ThemeOverlay_AppCompat;
+			global::Converters.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::WR.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::Converters.Resource.Style.ThemeOverlay_AppCompat_Dark = global::WR.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::Converters.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::WR.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Converters.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::WR.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::Converters.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::WR.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::Converters.Resource.Style.ThemeOverlay_AppCompat_Light = global::WR.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::Converters.Resource.Style.Widget_AppCompat_ActionBar = global::WR.Resource.Style.Widget_AppCompat_ActionBar;
+			global::Converters.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::WR.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::Converters.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::WR.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::Converters.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::WR.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::Converters.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::WR.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::Converters.Resource.Style.Widget_AppCompat_ActionButton = global::WR.Resource.Style.Widget_AppCompat_ActionButton;
+			global::Converters.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::WR.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::Converters.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::WR.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::Converters.Resource.Style.Widget_AppCompat_ActionMode = global::WR.Resource.Style.Widget_AppCompat_ActionMode;
+			global::Converters.Resource.Style.Widget_AppCompat_ActivityChooserView = global::WR.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::Converters.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::WR.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::Converters.Resource.Style.Widget_AppCompat_Button = global::WR.Resource.Style.Widget_AppCompat_Button;
+			global::Converters.Resource.Style.Widget_AppCompat_Button_Borderless = global::WR.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::Converters.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::WR.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::Converters.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::WR.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Converters.Resource.Style.Widget_AppCompat_Button_Colored = global::WR.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::Converters.Resource.Style.Widget_AppCompat_Button_Small = global::WR.Resource.Style.Widget_AppCompat_Button_Small;
+			global::Converters.Resource.Style.Widget_AppCompat_ButtonBar = global::WR.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::Converters.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::WR.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Converters.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::WR.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::Converters.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::WR.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::Converters.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::WR.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::Converters.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::WR.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::Converters.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::WR.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::Converters.Resource.Style.Widget_AppCompat_EditText = global::WR.Resource.Style.Widget_AppCompat_EditText;
+			global::Converters.Resource.Style.Widget_AppCompat_ImageButton = global::WR.Resource.Style.Widget_AppCompat_ImageButton;
+			global::Converters.Resource.Style.Widget_AppCompat_Light_ActionBar = global::WR.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::Converters.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::WR.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::Converters.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::WR.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::Converters.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::WR.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Converters.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::WR.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::Converters.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::WR.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::Converters.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::WR.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Converters.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::WR.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::Converters.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::WR.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::Converters.Resource.Style.Widget_AppCompat_Light_ActionButton = global::WR.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::Converters.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::WR.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::Converters.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::WR.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::Converters.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::WR.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::Converters.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::WR.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::Converters.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::WR.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::Converters.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::WR.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::Converters.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::WR.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::Converters.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::WR.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::Converters.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::WR.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::Converters.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::WR.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Converters.Resource.Style.Widget_AppCompat_Light_SearchView = global::WR.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::Converters.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::WR.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::Converters.Resource.Style.Widget_AppCompat_ListMenuView = global::WR.Resource.Style.Widget_AppCompat_ListMenuView;
+			global::Converters.Resource.Style.Widget_AppCompat_ListPopupWindow = global::WR.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::Converters.Resource.Style.Widget_AppCompat_ListView = global::WR.Resource.Style.Widget_AppCompat_ListView;
+			global::Converters.Resource.Style.Widget_AppCompat_ListView_DropDown = global::WR.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::Converters.Resource.Style.Widget_AppCompat_ListView_Menu = global::WR.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::Converters.Resource.Style.Widget_AppCompat_PopupMenu = global::WR.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::Converters.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::WR.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::Converters.Resource.Style.Widget_AppCompat_PopupWindow = global::WR.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::Converters.Resource.Style.Widget_AppCompat_ProgressBar = global::WR.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::Converters.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::WR.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::Converters.Resource.Style.Widget_AppCompat_RatingBar = global::WR.Resource.Style.Widget_AppCompat_RatingBar;
+			global::Converters.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::WR.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::Converters.Resource.Style.Widget_AppCompat_RatingBar_Small = global::WR.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::Converters.Resource.Style.Widget_AppCompat_SearchView = global::WR.Resource.Style.Widget_AppCompat_SearchView;
+			global::Converters.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::WR.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::Converters.Resource.Style.Widget_AppCompat_SeekBar = global::WR.Resource.Style.Widget_AppCompat_SeekBar;
+			global::Converters.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::WR.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
+			global::Converters.Resource.Style.Widget_AppCompat_Spinner = global::WR.Resource.Style.Widget_AppCompat_Spinner;
+			global::Converters.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::WR.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::Converters.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::WR.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::Converters.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::WR.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::Converters.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::WR.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::Converters.Resource.Style.Widget_AppCompat_Toolbar = global::WR.Resource.Style.Widget_AppCompat_Toolbar;
+			global::Converters.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::WR.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Converters.Resource.Style.Widget_Compat_NotificationActionContainer = global::WR.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::Converters.Resource.Style.Widget_Compat_NotificationActionText = global::WR.Resource.Style.Widget_Compat_NotificationActionText;
+			global::Converters.Resource.Styleable.ActionBar = global::WR.Resource.Styleable.ActionBar;
+			global::Converters.Resource.Styleable.ActionBar_background = global::WR.Resource.Styleable.ActionBar_background;
+			global::Converters.Resource.Styleable.ActionBar_backgroundSplit = global::WR.Resource.Styleable.ActionBar_backgroundSplit;
+			global::Converters.Resource.Styleable.ActionBar_backgroundStacked = global::WR.Resource.Styleable.ActionBar_backgroundStacked;
+			global::Converters.Resource.Styleable.ActionBar_contentInsetEnd = global::WR.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::Converters.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::WR.Resource.Styleable.ActionBar_contentInsetEndWithActions;
+			global::Converters.Resource.Styleable.ActionBar_contentInsetLeft = global::WR.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::Converters.Resource.Styleable.ActionBar_contentInsetRight = global::WR.Resource.Styleable.ActionBar_contentInsetRight;
+			global::Converters.Resource.Styleable.ActionBar_contentInsetStart = global::WR.Resource.Styleable.ActionBar_contentInsetStart;
+			global::Converters.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::WR.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
+			global::Converters.Resource.Styleable.ActionBar_customNavigationLayout = global::WR.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::Converters.Resource.Styleable.ActionBar_displayOptions = global::WR.Resource.Styleable.ActionBar_displayOptions;
+			global::Converters.Resource.Styleable.ActionBar_divider = global::WR.Resource.Styleable.ActionBar_divider;
+			global::Converters.Resource.Styleable.ActionBar_elevation = global::WR.Resource.Styleable.ActionBar_elevation;
+			global::Converters.Resource.Styleable.ActionBar_height = global::WR.Resource.Styleable.ActionBar_height;
+			global::Converters.Resource.Styleable.ActionBar_hideOnContentScroll = global::WR.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::Converters.Resource.Styleable.ActionBar_homeAsUpIndicator = global::WR.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::Converters.Resource.Styleable.ActionBar_homeLayout = global::WR.Resource.Styleable.ActionBar_homeLayout;
+			global::Converters.Resource.Styleable.ActionBar_icon = global::WR.Resource.Styleable.ActionBar_icon;
+			global::Converters.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::WR.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::Converters.Resource.Styleable.ActionBar_itemPadding = global::WR.Resource.Styleable.ActionBar_itemPadding;
+			global::Converters.Resource.Styleable.ActionBar_logo = global::WR.Resource.Styleable.ActionBar_logo;
+			global::Converters.Resource.Styleable.ActionBar_navigationMode = global::WR.Resource.Styleable.ActionBar_navigationMode;
+			global::Converters.Resource.Styleable.ActionBar_popupTheme = global::WR.Resource.Styleable.ActionBar_popupTheme;
+			global::Converters.Resource.Styleable.ActionBar_progressBarPadding = global::WR.Resource.Styleable.ActionBar_progressBarPadding;
+			global::Converters.Resource.Styleable.ActionBar_progressBarStyle = global::WR.Resource.Styleable.ActionBar_progressBarStyle;
+			global::Converters.Resource.Styleable.ActionBar_subtitle = global::WR.Resource.Styleable.ActionBar_subtitle;
+			global::Converters.Resource.Styleable.ActionBar_subtitleTextStyle = global::WR.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::Converters.Resource.Styleable.ActionBar_title = global::WR.Resource.Styleable.ActionBar_title;
+			global::Converters.Resource.Styleable.ActionBar_titleTextStyle = global::WR.Resource.Styleable.ActionBar_titleTextStyle;
+			global::Converters.Resource.Styleable.ActionBarLayout = global::WR.Resource.Styleable.ActionBarLayout;
+			global::Converters.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::WR.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::Converters.Resource.Styleable.ActionMenuItemView = global::WR.Resource.Styleable.ActionMenuItemView;
+			global::Converters.Resource.Styleable.ActionMenuItemView_android_minWidth = global::WR.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::Converters.Resource.Styleable.ActionMenuView = global::WR.Resource.Styleable.ActionMenuView;
+			global::Converters.Resource.Styleable.ActionMode = global::WR.Resource.Styleable.ActionMode;
+			global::Converters.Resource.Styleable.ActionMode_background = global::WR.Resource.Styleable.ActionMode_background;
+			global::Converters.Resource.Styleable.ActionMode_backgroundSplit = global::WR.Resource.Styleable.ActionMode_backgroundSplit;
+			global::Converters.Resource.Styleable.ActionMode_closeItemLayout = global::WR.Resource.Styleable.ActionMode_closeItemLayout;
+			global::Converters.Resource.Styleable.ActionMode_height = global::WR.Resource.Styleable.ActionMode_height;
+			global::Converters.Resource.Styleable.ActionMode_subtitleTextStyle = global::WR.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::Converters.Resource.Styleable.ActionMode_titleTextStyle = global::WR.Resource.Styleable.ActionMode_titleTextStyle;
+			global::Converters.Resource.Styleable.ActivityChooserView = global::WR.Resource.Styleable.ActivityChooserView;
+			global::Converters.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::WR.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::Converters.Resource.Styleable.ActivityChooserView_initialActivityCount = global::WR.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::Converters.Resource.Styleable.AlertDialog = global::WR.Resource.Styleable.AlertDialog;
+			global::Converters.Resource.Styleable.AlertDialog_android_layout = global::WR.Resource.Styleable.AlertDialog_android_layout;
+			global::Converters.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::WR.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::Converters.Resource.Styleable.AlertDialog_listItemLayout = global::WR.Resource.Styleable.AlertDialog_listItemLayout;
+			global::Converters.Resource.Styleable.AlertDialog_listLayout = global::WR.Resource.Styleable.AlertDialog_listLayout;
+			global::Converters.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::WR.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::Converters.Resource.Styleable.AlertDialog_showTitle = global::WR.Resource.Styleable.AlertDialog_showTitle;
+			global::Converters.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::WR.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::Converters.Resource.Styleable.AppCompatImageView = global::WR.Resource.Styleable.AppCompatImageView;
+			global::Converters.Resource.Styleable.AppCompatImageView_android_src = global::WR.Resource.Styleable.AppCompatImageView_android_src;
+			global::Converters.Resource.Styleable.AppCompatImageView_srcCompat = global::WR.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::Converters.Resource.Styleable.AppCompatImageView_tint = global::WR.Resource.Styleable.AppCompatImageView_tint;
+			global::Converters.Resource.Styleable.AppCompatImageView_tintMode = global::WR.Resource.Styleable.AppCompatImageView_tintMode;
+			global::Converters.Resource.Styleable.AppCompatSeekBar = global::WR.Resource.Styleable.AppCompatSeekBar;
+			global::Converters.Resource.Styleable.AppCompatSeekBar_android_thumb = global::WR.Resource.Styleable.AppCompatSeekBar_android_thumb;
+			global::Converters.Resource.Styleable.AppCompatSeekBar_tickMark = global::WR.Resource.Styleable.AppCompatSeekBar_tickMark;
+			global::Converters.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::WR.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
+			global::Converters.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::WR.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
+			global::Converters.Resource.Styleable.AppCompatTextHelper = global::WR.Resource.Styleable.AppCompatTextHelper;
+			global::Converters.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::WR.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
+			global::Converters.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::WR.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
+			global::Converters.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::WR.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
+			global::Converters.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::WR.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
+			global::Converters.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::WR.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
+			global::Converters.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::WR.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
+			global::Converters.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::WR.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
+			global::Converters.Resource.Styleable.AppCompatTextView = global::WR.Resource.Styleable.AppCompatTextView;
+			global::Converters.Resource.Styleable.AppCompatTextView_android_textAppearance = global::WR.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::Converters.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize = global::WR.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize;
+			global::Converters.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize = global::WR.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize;
+			global::Converters.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::WR.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
+			global::Converters.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::WR.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
+			global::Converters.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::WR.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::Converters.Resource.Styleable.AppCompatTextView_fontFamily = global::WR.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::Converters.Resource.Styleable.AppCompatTextView_textAllCaps = global::WR.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::Converters.Resource.Styleable.AppCompatTheme = global::WR.Resource.Styleable.AppCompatTheme;
+			global::Converters.Resource.Styleable.AppCompatTheme_actionBarDivider = global::WR.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::Converters.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::WR.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::Converters.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::WR.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::Converters.Resource.Styleable.AppCompatTheme_actionBarSize = global::WR.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::Converters.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::WR.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_actionBarStyle = global::WR.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::WR.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::WR.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::WR.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_actionBarTheme = global::WR.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::Converters.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::WR.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::Converters.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::WR.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::WR.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::WR.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::Converters.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::WR.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::Converters.Resource.Styleable.AppCompatTheme_actionModeBackground = global::WR.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::Converters.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::WR.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::WR.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::Converters.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::WR.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::Converters.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::WR.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::Converters.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::WR.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::Converters.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::WR.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::Converters.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::WR.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::WR.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::Converters.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::WR.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::Converters.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::WR.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::Converters.Resource.Styleable.AppCompatTheme_actionModeStyle = global::WR.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::WR.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::Converters.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::WR.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::WR.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::WR.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::WR.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::WR.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::Converters.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::WR.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::WR.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::Converters.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::WR.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::WR.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::Converters.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::WR.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::WR.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::WR.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::WR.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::WR.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::WR.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::WR.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_buttonStyle = global::WR.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::WR.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::Converters.Resource.Styleable.AppCompatTheme_checkboxStyle = global::WR.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::WR.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_colorAccent = global::WR.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::Converters.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::WR.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
+			global::Converters.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::WR.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::Converters.Resource.Styleable.AppCompatTheme_colorControlActivated = global::WR.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::Converters.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::WR.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::Converters.Resource.Styleable.AppCompatTheme_colorControlNormal = global::WR.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::Converters.Resource.Styleable.AppCompatTheme_colorError = global::WR.Resource.Styleable.AppCompatTheme_colorError;
+			global::Converters.Resource.Styleable.AppCompatTheme_colorPrimary = global::WR.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::Converters.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::WR.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::Converters.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::WR.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::Converters.Resource.Styleable.AppCompatTheme_controlBackground = global::WR.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::Converters.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::WR.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::Converters.Resource.Styleable.AppCompatTheme_dialogTheme = global::WR.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::Converters.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::WR.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::Converters.Resource.Styleable.AppCompatTheme_dividerVertical = global::WR.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::Converters.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::WR.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::WR.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::Converters.Resource.Styleable.AppCompatTheme_editTextBackground = global::WR.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::Converters.Resource.Styleable.AppCompatTheme_editTextColor = global::WR.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::Converters.Resource.Styleable.AppCompatTheme_editTextStyle = global::WR.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::WR.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::Converters.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::WR.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::WR.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::Converters.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::WR.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::Converters.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::WR.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::WR.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::WR.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::Converters.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::WR.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::Converters.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::WR.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::Converters.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::WR.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::Converters.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::WR.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::Converters.Resource.Styleable.AppCompatTheme_panelBackground = global::WR.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::Converters.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::WR.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::Converters.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::WR.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::Converters.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::WR.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::WR.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::WR.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::WR.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::WR.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::Converters.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::WR.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::Converters.Resource.Styleable.AppCompatTheme_searchViewStyle = global::WR.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_seekBarStyle = global::WR.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::WR.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::Converters.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::WR.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::Converters.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::WR.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_spinnerStyle = global::WR.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_switchStyle = global::WR.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::WR.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::Converters.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::WR.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::Converters.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::WR.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
+			global::Converters.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::WR.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::Converters.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::WR.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
+			global::Converters.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::WR.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::Converters.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::WR.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::Converters.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::WR.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::Converters.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::WR.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::Converters.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::WR.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::Converters.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::WR.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_toolbarStyle = global::WR.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::Converters.Resource.Styleable.AppCompatTheme_tooltipForegroundColor = global::WR.Resource.Styleable.AppCompatTheme_tooltipForegroundColor;
+			global::Converters.Resource.Styleable.AppCompatTheme_tooltipFrameBackground = global::WR.Resource.Styleable.AppCompatTheme_tooltipFrameBackground;
+			global::Converters.Resource.Styleable.AppCompatTheme_windowActionBar = global::WR.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::Converters.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::WR.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::Converters.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::WR.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::Converters.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::WR.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::Converters.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::WR.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::Converters.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::WR.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::Converters.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::WR.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::Converters.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::WR.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::Converters.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::WR.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::Converters.Resource.Styleable.AppCompatTheme_windowNoTitle = global::WR.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::Converters.Resource.Styleable.ButtonBarLayout = global::WR.Resource.Styleable.ButtonBarLayout;
+			global::Converters.Resource.Styleable.ButtonBarLayout_allowStacking = global::WR.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::Converters.Resource.Styleable.ColorStateListItem = global::WR.Resource.Styleable.ColorStateListItem;
+			global::Converters.Resource.Styleable.ColorStateListItem_alpha = global::WR.Resource.Styleable.ColorStateListItem_alpha;
+			global::Converters.Resource.Styleable.ColorStateListItem_android_alpha = global::WR.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::Converters.Resource.Styleable.ColorStateListItem_android_color = global::WR.Resource.Styleable.ColorStateListItem_android_color;
+			global::Converters.Resource.Styleable.CompoundButton = global::WR.Resource.Styleable.CompoundButton;
+			global::Converters.Resource.Styleable.CompoundButton_android_button = global::WR.Resource.Styleable.CompoundButton_android_button;
+			global::Converters.Resource.Styleable.CompoundButton_buttonTint = global::WR.Resource.Styleable.CompoundButton_buttonTint;
+			global::Converters.Resource.Styleable.CompoundButton_buttonTintMode = global::WR.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::Converters.Resource.Styleable.DrawerArrowToggle = global::WR.Resource.Styleable.DrawerArrowToggle;
+			global::Converters.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::WR.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::Converters.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::WR.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::Converters.Resource.Styleable.DrawerArrowToggle_barLength = global::WR.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::Converters.Resource.Styleable.DrawerArrowToggle_color = global::WR.Resource.Styleable.DrawerArrowToggle_color;
+			global::Converters.Resource.Styleable.DrawerArrowToggle_drawableSize = global::WR.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::Converters.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::WR.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::Converters.Resource.Styleable.DrawerArrowToggle_spinBars = global::WR.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::Converters.Resource.Styleable.DrawerArrowToggle_thickness = global::WR.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::Converters.Resource.Styleable.FontFamily = global::WR.Resource.Styleable.FontFamily;
+			global::Converters.Resource.Styleable.FontFamily_fontProviderAuthority = global::WR.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Converters.Resource.Styleable.FontFamily_fontProviderCerts = global::WR.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Converters.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::WR.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Converters.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::WR.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Converters.Resource.Styleable.FontFamily_fontProviderPackage = global::WR.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Converters.Resource.Styleable.FontFamily_fontProviderQuery = global::WR.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::Converters.Resource.Styleable.FontFamilyFont = global::WR.Resource.Styleable.FontFamilyFont;
+			global::Converters.Resource.Styleable.FontFamilyFont_android_font = global::WR.Resource.Styleable.FontFamilyFont_android_font;
+			global::Converters.Resource.Styleable.FontFamilyFont_android_fontStyle = global::WR.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::Converters.Resource.Styleable.FontFamilyFont_android_fontWeight = global::WR.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::Converters.Resource.Styleable.FontFamilyFont_font = global::WR.Resource.Styleable.FontFamilyFont_font;
+			global::Converters.Resource.Styleable.FontFamilyFont_fontStyle = global::WR.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::Converters.Resource.Styleable.FontFamilyFont_fontWeight = global::WR.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::Converters.Resource.Styleable.LinearLayoutCompat = global::WR.Resource.Styleable.LinearLayoutCompat;
+			global::Converters.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::WR.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::Converters.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::WR.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::Converters.Resource.Styleable.LinearLayoutCompat_android_gravity = global::WR.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::Converters.Resource.Styleable.LinearLayoutCompat_android_orientation = global::WR.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::Converters.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::WR.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::Converters.Resource.Styleable.LinearLayoutCompat_divider = global::WR.Resource.Styleable.LinearLayoutCompat_divider;
+			global::Converters.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::WR.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::Converters.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::WR.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::Converters.Resource.Styleable.LinearLayoutCompat_showDividers = global::WR.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::Converters.Resource.Styleable.LinearLayoutCompat_Layout = global::WR.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::Converters.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::WR.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::Converters.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::WR.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::Converters.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::WR.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::Converters.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::WR.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::Converters.Resource.Styleable.ListPopupWindow = global::WR.Resource.Styleable.ListPopupWindow;
+			global::Converters.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::WR.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::Converters.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::WR.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::Converters.Resource.Styleable.MenuGroup = global::WR.Resource.Styleable.MenuGroup;
+			global::Converters.Resource.Styleable.MenuGroup_android_checkableBehavior = global::WR.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::Converters.Resource.Styleable.MenuGroup_android_enabled = global::WR.Resource.Styleable.MenuGroup_android_enabled;
+			global::Converters.Resource.Styleable.MenuGroup_android_id = global::WR.Resource.Styleable.MenuGroup_android_id;
+			global::Converters.Resource.Styleable.MenuGroup_android_menuCategory = global::WR.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::Converters.Resource.Styleable.MenuGroup_android_orderInCategory = global::WR.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::Converters.Resource.Styleable.MenuGroup_android_visible = global::WR.Resource.Styleable.MenuGroup_android_visible;
+			global::Converters.Resource.Styleable.MenuItem = global::WR.Resource.Styleable.MenuItem;
+			global::Converters.Resource.Styleable.MenuItem_actionLayout = global::WR.Resource.Styleable.MenuItem_actionLayout;
+			global::Converters.Resource.Styleable.MenuItem_actionProviderClass = global::WR.Resource.Styleable.MenuItem_actionProviderClass;
+			global::Converters.Resource.Styleable.MenuItem_actionViewClass = global::WR.Resource.Styleable.MenuItem_actionViewClass;
+			global::Converters.Resource.Styleable.MenuItem_alphabeticModifiers = global::WR.Resource.Styleable.MenuItem_alphabeticModifiers;
+			global::Converters.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::WR.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::Converters.Resource.Styleable.MenuItem_android_checkable = global::WR.Resource.Styleable.MenuItem_android_checkable;
+			global::Converters.Resource.Styleable.MenuItem_android_checked = global::WR.Resource.Styleable.MenuItem_android_checked;
+			global::Converters.Resource.Styleable.MenuItem_android_enabled = global::WR.Resource.Styleable.MenuItem_android_enabled;
+			global::Converters.Resource.Styleable.MenuItem_android_icon = global::WR.Resource.Styleable.MenuItem_android_icon;
+			global::Converters.Resource.Styleable.MenuItem_android_id = global::WR.Resource.Styleable.MenuItem_android_id;
+			global::Converters.Resource.Styleable.MenuItem_android_menuCategory = global::WR.Resource.Styleable.MenuItem_android_menuCategory;
+			global::Converters.Resource.Styleable.MenuItem_android_numericShortcut = global::WR.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::Converters.Resource.Styleable.MenuItem_android_onClick = global::WR.Resource.Styleable.MenuItem_android_onClick;
+			global::Converters.Resource.Styleable.MenuItem_android_orderInCategory = global::WR.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::Converters.Resource.Styleable.MenuItem_android_title = global::WR.Resource.Styleable.MenuItem_android_title;
+			global::Converters.Resource.Styleable.MenuItem_android_titleCondensed = global::WR.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::Converters.Resource.Styleable.MenuItem_android_visible = global::WR.Resource.Styleable.MenuItem_android_visible;
+			global::Converters.Resource.Styleable.MenuItem_contentDescription = global::WR.Resource.Styleable.MenuItem_contentDescription;
+			global::Converters.Resource.Styleable.MenuItem_iconTint = global::WR.Resource.Styleable.MenuItem_iconTint;
+			global::Converters.Resource.Styleable.MenuItem_iconTintMode = global::WR.Resource.Styleable.MenuItem_iconTintMode;
+			global::Converters.Resource.Styleable.MenuItem_numericModifiers = global::WR.Resource.Styleable.MenuItem_numericModifiers;
+			global::Converters.Resource.Styleable.MenuItem_showAsAction = global::WR.Resource.Styleable.MenuItem_showAsAction;
+			global::Converters.Resource.Styleable.MenuItem_tooltipText = global::WR.Resource.Styleable.MenuItem_tooltipText;
+			global::Converters.Resource.Styleable.MenuView = global::WR.Resource.Styleable.MenuView;
+			global::Converters.Resource.Styleable.MenuView_android_headerBackground = global::WR.Resource.Styleable.MenuView_android_headerBackground;
+			global::Converters.Resource.Styleable.MenuView_android_horizontalDivider = global::WR.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::Converters.Resource.Styleable.MenuView_android_itemBackground = global::WR.Resource.Styleable.MenuView_android_itemBackground;
+			global::Converters.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::WR.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::Converters.Resource.Styleable.MenuView_android_itemTextAppearance = global::WR.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::Converters.Resource.Styleable.MenuView_android_verticalDivider = global::WR.Resource.Styleable.MenuView_android_verticalDivider;
+			global::Converters.Resource.Styleable.MenuView_android_windowAnimationStyle = global::WR.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::Converters.Resource.Styleable.MenuView_preserveIconSpacing = global::WR.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::Converters.Resource.Styleable.MenuView_subMenuArrow = global::WR.Resource.Styleable.MenuView_subMenuArrow;
+			global::Converters.Resource.Styleable.PopupWindow = global::WR.Resource.Styleable.PopupWindow;
+			global::Converters.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::WR.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
+			global::Converters.Resource.Styleable.PopupWindow_android_popupBackground = global::WR.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::Converters.Resource.Styleable.PopupWindow_overlapAnchor = global::WR.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::Converters.Resource.Styleable.PopupWindowBackgroundState = global::WR.Resource.Styleable.PopupWindowBackgroundState;
+			global::Converters.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::WR.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::Converters.Resource.Styleable.RecycleListView = global::WR.Resource.Styleable.RecycleListView;
+			global::Converters.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::WR.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
+			global::Converters.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::WR.Resource.Styleable.RecycleListView_paddingTopNoTitle;
+			global::Converters.Resource.Styleable.SearchView = global::WR.Resource.Styleable.SearchView;
+			global::Converters.Resource.Styleable.SearchView_android_focusable = global::WR.Resource.Styleable.SearchView_android_focusable;
+			global::Converters.Resource.Styleable.SearchView_android_imeOptions = global::WR.Resource.Styleable.SearchView_android_imeOptions;
+			global::Converters.Resource.Styleable.SearchView_android_inputType = global::WR.Resource.Styleable.SearchView_android_inputType;
+			global::Converters.Resource.Styleable.SearchView_android_maxWidth = global::WR.Resource.Styleable.SearchView_android_maxWidth;
+			global::Converters.Resource.Styleable.SearchView_closeIcon = global::WR.Resource.Styleable.SearchView_closeIcon;
+			global::Converters.Resource.Styleable.SearchView_commitIcon = global::WR.Resource.Styleable.SearchView_commitIcon;
+			global::Converters.Resource.Styleable.SearchView_defaultQueryHint = global::WR.Resource.Styleable.SearchView_defaultQueryHint;
+			global::Converters.Resource.Styleable.SearchView_goIcon = global::WR.Resource.Styleable.SearchView_goIcon;
+			global::Converters.Resource.Styleable.SearchView_iconifiedByDefault = global::WR.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::Converters.Resource.Styleable.SearchView_layout = global::WR.Resource.Styleable.SearchView_layout;
+			global::Converters.Resource.Styleable.SearchView_queryBackground = global::WR.Resource.Styleable.SearchView_queryBackground;
+			global::Converters.Resource.Styleable.SearchView_queryHint = global::WR.Resource.Styleable.SearchView_queryHint;
+			global::Converters.Resource.Styleable.SearchView_searchHintIcon = global::WR.Resource.Styleable.SearchView_searchHintIcon;
+			global::Converters.Resource.Styleable.SearchView_searchIcon = global::WR.Resource.Styleable.SearchView_searchIcon;
+			global::Converters.Resource.Styleable.SearchView_submitBackground = global::WR.Resource.Styleable.SearchView_submitBackground;
+			global::Converters.Resource.Styleable.SearchView_suggestionRowLayout = global::WR.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::Converters.Resource.Styleable.SearchView_voiceIcon = global::WR.Resource.Styleable.SearchView_voiceIcon;
+			global::Converters.Resource.Styleable.Spinner = global::WR.Resource.Styleable.Spinner;
+			global::Converters.Resource.Styleable.Spinner_android_dropDownWidth = global::WR.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::Converters.Resource.Styleable.Spinner_android_entries = global::WR.Resource.Styleable.Spinner_android_entries;
+			global::Converters.Resource.Styleable.Spinner_android_popupBackground = global::WR.Resource.Styleable.Spinner_android_popupBackground;
+			global::Converters.Resource.Styleable.Spinner_android_prompt = global::WR.Resource.Styleable.Spinner_android_prompt;
+			global::Converters.Resource.Styleable.Spinner_popupTheme = global::WR.Resource.Styleable.Spinner_popupTheme;
+			global::Converters.Resource.Styleable.SwitchCompat = global::WR.Resource.Styleable.SwitchCompat;
+			global::Converters.Resource.Styleable.SwitchCompat_android_textOff = global::WR.Resource.Styleable.SwitchCompat_android_textOff;
+			global::Converters.Resource.Styleable.SwitchCompat_android_textOn = global::WR.Resource.Styleable.SwitchCompat_android_textOn;
+			global::Converters.Resource.Styleable.SwitchCompat_android_thumb = global::WR.Resource.Styleable.SwitchCompat_android_thumb;
+			global::Converters.Resource.Styleable.SwitchCompat_showText = global::WR.Resource.Styleable.SwitchCompat_showText;
+			global::Converters.Resource.Styleable.SwitchCompat_splitTrack = global::WR.Resource.Styleable.SwitchCompat_splitTrack;
+			global::Converters.Resource.Styleable.SwitchCompat_switchMinWidth = global::WR.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::Converters.Resource.Styleable.SwitchCompat_switchPadding = global::WR.Resource.Styleable.SwitchCompat_switchPadding;
+			global::Converters.Resource.Styleable.SwitchCompat_switchTextAppearance = global::WR.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::Converters.Resource.Styleable.SwitchCompat_thumbTextPadding = global::WR.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::Converters.Resource.Styleable.SwitchCompat_thumbTint = global::WR.Resource.Styleable.SwitchCompat_thumbTint;
+			global::Converters.Resource.Styleable.SwitchCompat_thumbTintMode = global::WR.Resource.Styleable.SwitchCompat_thumbTintMode;
+			global::Converters.Resource.Styleable.SwitchCompat_track = global::WR.Resource.Styleable.SwitchCompat_track;
+			global::Converters.Resource.Styleable.SwitchCompat_trackTint = global::WR.Resource.Styleable.SwitchCompat_trackTint;
+			global::Converters.Resource.Styleable.SwitchCompat_trackTintMode = global::WR.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::Converters.Resource.Styleable.TextAppearance = global::WR.Resource.Styleable.TextAppearance;
+			global::Converters.Resource.Styleable.TextAppearance_android_fontFamily = global::WR.Resource.Styleable.TextAppearance_android_fontFamily;
+			global::Converters.Resource.Styleable.TextAppearance_android_shadowColor = global::WR.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::Converters.Resource.Styleable.TextAppearance_android_shadowDx = global::WR.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::Converters.Resource.Styleable.TextAppearance_android_shadowDy = global::WR.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::Converters.Resource.Styleable.TextAppearance_android_shadowRadius = global::WR.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::Converters.Resource.Styleable.TextAppearance_android_textColor = global::WR.Resource.Styleable.TextAppearance_android_textColor;
+			global::Converters.Resource.Styleable.TextAppearance_android_textColorHint = global::WR.Resource.Styleable.TextAppearance_android_textColorHint;
+			global::Converters.Resource.Styleable.TextAppearance_android_textColorLink = global::WR.Resource.Styleable.TextAppearance_android_textColorLink;
+			global::Converters.Resource.Styleable.TextAppearance_android_textSize = global::WR.Resource.Styleable.TextAppearance_android_textSize;
+			global::Converters.Resource.Styleable.TextAppearance_android_textStyle = global::WR.Resource.Styleable.TextAppearance_android_textStyle;
+			global::Converters.Resource.Styleable.TextAppearance_android_typeface = global::WR.Resource.Styleable.TextAppearance_android_typeface;
+			global::Converters.Resource.Styleable.TextAppearance_fontFamily = global::WR.Resource.Styleable.TextAppearance_fontFamily;
+			global::Converters.Resource.Styleable.TextAppearance_textAllCaps = global::WR.Resource.Styleable.TextAppearance_textAllCaps;
+			global::Converters.Resource.Styleable.Toolbar = global::WR.Resource.Styleable.Toolbar;
+			global::Converters.Resource.Styleable.Toolbar_android_gravity = global::WR.Resource.Styleable.Toolbar_android_gravity;
+			global::Converters.Resource.Styleable.Toolbar_android_minHeight = global::WR.Resource.Styleable.Toolbar_android_minHeight;
+			global::Converters.Resource.Styleable.Toolbar_buttonGravity = global::WR.Resource.Styleable.Toolbar_buttonGravity;
+			global::Converters.Resource.Styleable.Toolbar_collapseContentDescription = global::WR.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::Converters.Resource.Styleable.Toolbar_collapseIcon = global::WR.Resource.Styleable.Toolbar_collapseIcon;
+			global::Converters.Resource.Styleable.Toolbar_contentInsetEnd = global::WR.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::Converters.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::WR.Resource.Styleable.Toolbar_contentInsetEndWithActions;
+			global::Converters.Resource.Styleable.Toolbar_contentInsetLeft = global::WR.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::Converters.Resource.Styleable.Toolbar_contentInsetRight = global::WR.Resource.Styleable.Toolbar_contentInsetRight;
+			global::Converters.Resource.Styleable.Toolbar_contentInsetStart = global::WR.Resource.Styleable.Toolbar_contentInsetStart;
+			global::Converters.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::WR.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
+			global::Converters.Resource.Styleable.Toolbar_logo = global::WR.Resource.Styleable.Toolbar_logo;
+			global::Converters.Resource.Styleable.Toolbar_logoDescription = global::WR.Resource.Styleable.Toolbar_logoDescription;
+			global::Converters.Resource.Styleable.Toolbar_maxButtonHeight = global::WR.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::Converters.Resource.Styleable.Toolbar_navigationContentDescription = global::WR.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::Converters.Resource.Styleable.Toolbar_navigationIcon = global::WR.Resource.Styleable.Toolbar_navigationIcon;
+			global::Converters.Resource.Styleable.Toolbar_popupTheme = global::WR.Resource.Styleable.Toolbar_popupTheme;
+			global::Converters.Resource.Styleable.Toolbar_subtitle = global::WR.Resource.Styleable.Toolbar_subtitle;
+			global::Converters.Resource.Styleable.Toolbar_subtitleTextAppearance = global::WR.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::Converters.Resource.Styleable.Toolbar_subtitleTextColor = global::WR.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::Converters.Resource.Styleable.Toolbar_title = global::WR.Resource.Styleable.Toolbar_title;
+			global::Converters.Resource.Styleable.Toolbar_titleMargin = global::WR.Resource.Styleable.Toolbar_titleMargin;
+			global::Converters.Resource.Styleable.Toolbar_titleMarginBottom = global::WR.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::Converters.Resource.Styleable.Toolbar_titleMarginEnd = global::WR.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::Converters.Resource.Styleable.Toolbar_titleMarginStart = global::WR.Resource.Styleable.Toolbar_titleMarginStart;
+			global::Converters.Resource.Styleable.Toolbar_titleMarginTop = global::WR.Resource.Styleable.Toolbar_titleMarginTop;
+			global::Converters.Resource.Styleable.Toolbar_titleMargins = global::WR.Resource.Styleable.Toolbar_titleMargins;
+			global::Converters.Resource.Styleable.Toolbar_titleTextAppearance = global::WR.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::Converters.Resource.Styleable.Toolbar_titleTextColor = global::WR.Resource.Styleable.Toolbar_titleTextColor;
+			global::Converters.Resource.Styleable.View = global::WR.Resource.Styleable.View;
+			global::Converters.Resource.Styleable.View_android_focusable = global::WR.Resource.Styleable.View_android_focusable;
+			global::Converters.Resource.Styleable.View_android_theme = global::WR.Resource.Styleable.View_android_theme;
+			global::Converters.Resource.Styleable.View_paddingEnd = global::WR.Resource.Styleable.View_paddingEnd;
+			global::Converters.Resource.Styleable.View_paddingStart = global::WR.Resource.Styleable.View_paddingStart;
+			global::Converters.Resource.Styleable.View_theme = global::WR.Resource.Styleable.View_theme;
+			global::Converters.Resource.Styleable.ViewBackgroundHelper = global::WR.Resource.Styleable.ViewBackgroundHelper;
+			global::Converters.Resource.Styleable.ViewBackgroundHelper_android_background = global::WR.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::Converters.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::WR.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::Converters.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::WR.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::Converters.Resource.Styleable.ViewStubCompat = global::WR.Resource.Styleable.ViewStubCompat;
+			global::Converters.Resource.Styleable.ViewStubCompat_android_id = global::WR.Resource.Styleable.ViewStubCompat_android_id;
+			global::Converters.Resource.Styleable.ViewStubCompat_android_inflatedId = global::WR.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::Converters.Resource.Styleable.ViewStubCompat_android_layout = global::WR.Resource.Styleable.ViewStubCompat_android_layout;
 			global::projectStructure.Resource.Animation.abc_fade_in = global::WR.Resource.Animation.abc_fade_in;
 			global::projectStructure.Resource.Animation.abc_fade_out = global::WR.Resource.Animation.abc_fade_out;
 			global::projectStructure.Resource.Animation.abc_grow_fade_in_from_bottom = global::WR.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -1649,6 +3155,9 @@ namespace WR
 			
 			// aapt resource value: 0x7f100001
 			public const int Theme = 2131755009;
+			
+			// aapt resource value: 0x7f100004
+			public const int formats = 2131755012;
 			
 			// aapt resource value: 0x7f100003
 			public const int templates = 2131755011;
@@ -4481,191 +5990,200 @@ namespace WR
 			// aapt resource value: 0x7f020055
 			public const int avd_hide_password = 2130837589;
 			
-			// aapt resource value: 0x7f02008e
-			public const int avd_hide_password_1 = 2130837646;
+			// aapt resource value: 0x7f020091
+			public const int avd_hide_password_1 = 2130837649;
 			
-			// aapt resource value: 0x7f02008f
-			public const int avd_hide_password_2 = 2130837647;
+			// aapt resource value: 0x7f020092
+			public const int avd_hide_password_2 = 2130837650;
 			
-			// aapt resource value: 0x7f020090
-			public const int avd_hide_password_3 = 2130837648;
+			// aapt resource value: 0x7f020093
+			public const int avd_hide_password_3 = 2130837651;
 			
 			// aapt resource value: 0x7f020056
 			public const int avd_show_password = 2130837590;
 			
-			// aapt resource value: 0x7f020091
-			public const int avd_show_password_1 = 2130837649;
+			// aapt resource value: 0x7f020094
+			public const int avd_show_password_1 = 2130837652;
 			
-			// aapt resource value: 0x7f020092
-			public const int avd_show_password_2 = 2130837650;
+			// aapt resource value: 0x7f020095
+			public const int avd_show_password_2 = 2130837653;
 			
-			// aapt resource value: 0x7f020093
-			public const int avd_show_password_3 = 2130837651;
+			// aapt resource value: 0x7f020096
+			public const int avd_show_password_3 = 2130837654;
 			
 			// aapt resource value: 0x7f020057
 			public const int check = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public const int close = 2130837592;
+			public const int check_box_outline = 2130837592;
 			
 			// aapt resource value: 0x7f020059
-			public const int close_white = 2130837593;
+			public const int checkbox_blank_outline = 2130837593;
 			
 			// aapt resource value: 0x7f02005a
-			public const int content_save = 2130837594;
+			public const int close = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public const int delete = 2130837595;
+			public const int close_white = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public const int design_bottom_navigation_item_background = 2130837596;
+			public const int content_save = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int design_fab_background = 2130837597;
+			public const int delete = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int design_ic_visibility = 2130837598;
+			public const int design_bottom_navigation_item_background = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public const int design_ic_visibility_off = 2130837599;
+			public const int design_fab_background = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public const int design_password_eye = 2130837600;
+			public const int design_ic_visibility = 2130837600;
 			
 			// aapt resource value: 0x7f020061
-			public const int design_snackbar_background = 2130837601;
+			public const int design_ic_visibility_off = 2130837601;
 			
 			// aapt resource value: 0x7f020062
-			public const int file_document = 2130837602;
+			public const int design_password_eye = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int file_plus = 2130837603;
+			public const int design_snackbar_background = 2130837603;
 			
 			// aapt resource value: 0x7f020064
-			public const int file_table = 2130837604;
+			public const int export = 2130837604;
 			
 			// aapt resource value: 0x7f020065
-			public const int folder = 2130837605;
+			public const int file_document = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public const int folder_plus_outline = 2130837606;
+			public const int file_plus = 2130837606;
 			
 			// aapt resource value: 0x7f020067
-			public const int format_align_center = 2130837607;
+			public const int file_table = 2130837607;
 			
 			// aapt resource value: 0x7f020068
-			public const int format_align_justify = 2130837608;
+			public const int folder = 2130837608;
 			
 			// aapt resource value: 0x7f020069
-			public const int format_align_left = 2130837609;
+			public const int folder_plus_outline = 2130837609;
 			
 			// aapt resource value: 0x7f02006a
-			public const int format_align_right = 2130837610;
+			public const int format_align_center = 2130837610;
 			
 			// aapt resource value: 0x7f02006b
-			public const int format_bold = 2130837611;
+			public const int format_align_justify = 2130837611;
 			
 			// aapt resource value: 0x7f02006c
-			public const int format_color_fill = 2130837612;
+			public const int format_align_left = 2130837612;
 			
 			// aapt resource value: 0x7f02006d
-			public const int format_color_text = 2130837613;
+			public const int format_align_right = 2130837613;
 			
 			// aapt resource value: 0x7f02006e
-			public const int format_header_1 = 2130837614;
+			public const int format_bold = 2130837614;
 			
 			// aapt resource value: 0x7f02006f
-			public const int format_header_2 = 2130837615;
+			public const int format_color_fill = 2130837615;
 			
 			// aapt resource value: 0x7f020070
-			public const int format_header_3 = 2130837616;
+			public const int format_color_text = 2130837616;
 			
 			// aapt resource value: 0x7f020071
-			public const int format_italic = 2130837617;
+			public const int format_header_1 = 2130837617;
 			
 			// aapt resource value: 0x7f020072
-			public const int format_underline = 2130837618;
+			public const int format_header_2 = 2130837618;
 			
 			// aapt resource value: 0x7f020073
-			public const int gamepad_circle = 2130837619;
+			public const int format_header_3 = 2130837619;
 			
 			// aapt resource value: 0x7f020074
-			public const int gamepad_circle_red = 2130837620;
+			public const int format_italic = 2130837620;
 			
 			// aapt resource value: 0x7f020075
-			public const int ic_mtrl_chip_checked_black = 2130837621;
+			public const int format_underline = 2130837621;
 			
 			// aapt resource value: 0x7f020076
-			public const int ic_mtrl_chip_checked_circle = 2130837622;
+			public const int gamepad_circle = 2130837622;
 			
 			// aapt resource value: 0x7f020077
-			public const int ic_mtrl_chip_close_circle = 2130837623;
+			public const int gamepad_circle_red = 2130837623;
 			
 			// aapt resource value: 0x7f020078
-			public const int mtrl_snackbar_background = 2130837624;
+			public const int ic_mtrl_chip_checked_black = 2130837624;
 			
 			// aapt resource value: 0x7f020079
-			public const int mtrl_tabs_default_indicator = 2130837625;
+			public const int ic_mtrl_chip_checked_circle = 2130837625;
 			
 			// aapt resource value: 0x7f02007a
-			public const int navigation_empty_icon = 2130837626;
+			public const int ic_mtrl_chip_close_circle = 2130837626;
 			
 			// aapt resource value: 0x7f02007b
-			public const int notification_action_background = 2130837627;
+			public const int mtrl_snackbar_background = 2130837627;
 			
 			// aapt resource value: 0x7f02007c
-			public const int notification_bg = 2130837628;
+			public const int mtrl_tabs_default_indicator = 2130837628;
 			
 			// aapt resource value: 0x7f02007d
-			public const int notification_bg_low = 2130837629;
+			public const int navigation_empty_icon = 2130837629;
 			
 			// aapt resource value: 0x7f02007e
-			public const int notification_bg_low_normal = 2130837630;
+			public const int notification_action_background = 2130837630;
 			
 			// aapt resource value: 0x7f02007f
-			public const int notification_bg_low_pressed = 2130837631;
+			public const int notification_bg = 2130837631;
 			
 			// aapt resource value: 0x7f020080
-			public const int notification_bg_normal = 2130837632;
+			public const int notification_bg_low = 2130837632;
 			
 			// aapt resource value: 0x7f020081
-			public const int notification_bg_normal_pressed = 2130837633;
+			public const int notification_bg_low_normal = 2130837633;
 			
 			// aapt resource value: 0x7f020082
-			public const int notification_icon_background = 2130837634;
-			
-			// aapt resource value: 0x7f02008c
-			public const int notification_template_icon_bg = 2130837644;
-			
-			// aapt resource value: 0x7f02008d
-			public const int notification_template_icon_low_bg = 2130837645;
+			public const int notification_bg_low_pressed = 2130837634;
 			
 			// aapt resource value: 0x7f020083
-			public const int notification_tile_bg = 2130837635;
+			public const int notification_bg_normal = 2130837635;
 			
 			// aapt resource value: 0x7f020084
-			public const int notify_panel_notification_icon_bg = 2130837636;
+			public const int notification_bg_normal_pressed = 2130837636;
 			
 			// aapt resource value: 0x7f020085
-			public const int plus = 2130837637;
+			public const int notification_icon_background = 2130837637;
+			
+			// aapt resource value: 0x7f02008f
+			public const int notification_template_icon_bg = 2130837647;
+			
+			// aapt resource value: 0x7f020090
+			public const int notification_template_icon_low_bg = 2130837648;
 			
 			// aapt resource value: 0x7f020086
-			public const int redo = 2130837638;
+			public const int notification_tile_bg = 2130837638;
 			
 			// aapt resource value: 0x7f020087
-			public const int table_plus = 2130837639;
+			public const int notify_panel_notification_icon_bg = 2130837639;
 			
 			// aapt resource value: 0x7f020088
-			public const int tooltip_frame_dark = 2130837640;
+			public const int plus = 2130837640;
 			
 			// aapt resource value: 0x7f020089
-			public const int tooltip_frame_light = 2130837641;
+			public const int redo = 2130837641;
 			
 			// aapt resource value: 0x7f02008a
-			public const int undo = 2130837642;
+			public const int table_plus = 2130837642;
 			
 			// aapt resource value: 0x7f02008b
-			public const int undo_variant = 2130837643;
+			public const int tooltip_frame_dark = 2130837643;
+			
+			// aapt resource value: 0x7f02008c
+			public const int tooltip_frame_light = 2130837644;
+			
+			// aapt resource value: 0x7f02008d
+			public const int undo = 2130837645;
+			
+			// aapt resource value: 0x7f02008e
+			public const int undo_variant = 2130837646;
 			
 			static Drawable()
 			{
@@ -4701,17 +6219,20 @@ namespace WR
 			// aapt resource value: 0x7f0a003a
 			public const int CTRL = 2131361850;
 			
+			// aapt resource value: 0x7f0a00ec
+			public const int CheckBoxFileForExport = 2131362028;
+			
 			// aapt resource value: 0x7f0a00a6
 			public const int CheckBoxesLayout = 2131361958;
 			
 			// aapt resource value: 0x7f0a009d
 			public const int CreateProjectFragmentRL = 2131361949;
 			
-			// aapt resource value: 0x7f0a00e6
-			public const int DateCreation = 2131362022;
+			// aapt resource value: 0x7f0a00ef
+			public const int DateCreation = 2131362031;
 			
-			// aapt resource value: 0x7f0a0116
-			public const int DateCreationFile = 2131362070;
+			// aapt resource value: 0x7f0a0120
+			public const int DateCreationFile = 2131362080;
 			
 			// aapt resource value: 0x7f0a00b0
 			public const int EditTextNameOfNewFile = 2131361968;
@@ -4719,17 +6240,20 @@ namespace WR
 			// aapt resource value: 0x7f0a00b6
 			public const int EditTextNameOfNewFolder = 2131361974;
 			
+			// aapt resource value: 0x7f0a00fb
+			public const int ExportBtn = 2131362043;
+			
 			// aapt resource value: 0x7f0a003b
 			public const int FUNCTION = 2131361851;
 			
-			// aapt resource value: 0x7f0a00df
-			public const int FieldInfoET = 2131362015;
+			// aapt resource value: 0x7f0a00e5
+			public const int FieldInfoET = 2131362021;
 			
-			// aapt resource value: 0x7f0a00ea
-			public const int FieldInfoForRemove = 2131362026;
+			// aapt resource value: 0x7f0a00f3
+			public const int FieldInfoForRemove = 2131362035;
 			
-			// aapt resource value: 0x7f0a00d7
-			public const int FormEditorLL = 2131362007;
+			// aapt resource value: 0x7f0a00dd
+			public const int FormEditorLL = 2131362013;
 			
 			// aapt resource value: 0x7f0a009e
 			public const int FormLayout = 2131361950;
@@ -4737,35 +6261,35 @@ namespace WR
 			// aapt resource value: 0x7f0a00a2
 			public const int GenreOfProjectChoice = 2131361954;
 			
-			// aapt resource value: 0x7f0a00e0
-			public const int HelloFragmentRL = 2131362016;
+			// aapt resource value: 0x7f0a00e6
+			public const int HelloFragmentRL = 2131362022;
 			
-			// aapt resource value: 0x7f0a00e1
-			public const int HelloFragmentTV = 2131362017;
+			// aapt resource value: 0x7f0a00e7
+			public const int HelloFragmentTV = 2131362023;
 			
-			// aapt resource value: 0x7f0a00e2
-			public const int InfoFragmentRL = 2131362018;
+			// aapt resource value: 0x7f0a00e8
+			public const int InfoFragmentRL = 2131362024;
 			
-			// aapt resource value: 0x7f0a00e3
-			public const int InfoFragmentTV = 2131362019;
+			// aapt resource value: 0x7f0a00e9
+			public const int InfoFragmentTV = 2131362025;
 			
-			// aapt resource value: 0x7f0a00f4
-			public const int LeftMenyListItems = 2131362036;
+			// aapt resource value: 0x7f0a00fe
+			public const int LeftMenyListItems = 2131362046;
 			
 			// aapt resource value: 0x7f0a003c
 			public const int META = 2131361852;
 			
-			// aapt resource value: 0x7f0a00f2
-			public const int MainDrawer = 2131362034;
+			// aapt resource value: 0x7f0a00fc
+			public const int MainDrawer = 2131362044;
 			
 			// aapt resource value: 0x7f0a00a0
 			public const int NameOfProjectInput = 2131361952;
 			
-			// aapt resource value: 0x7f0a0108
-			public const int OpenExistingProjectFragmentRL = 2131362056;
+			// aapt resource value: 0x7f0a0112
+			public const int OpenExistingProjectFragmentRL = 2131362066;
 			
-			// aapt resource value: 0x7f0a00da
-			public const int OpenTemplateTV = 2131362010;
+			// aapt resource value: 0x7f0a00e0
+			public const int OpenTemplateTV = 2131362016;
 			
 			// aapt resource value: 0x7f0a00b2
 			public const int PopUpLinearLayout = 2131361970;
@@ -4782,11 +6306,11 @@ namespace WR
 			// aapt resource value: 0x7f0a003e
 			public const int SYM = 2131361854;
 			
-			// aapt resource value: 0x7f0a00f1
-			public const int SaveBtn = 2131362033;
+			// aapt resource value: 0x7f0a00fa
+			public const int SaveBtn = 2131362042;
 			
-			// aapt resource value: 0x7f0a00f0
-			public const int SaveBtnRL = 2131362032;
+			// aapt resource value: 0x7f0a00f9
+			public const int SaveBtnRL = 2131362041;
 			
 			// aapt resource value: 0x7f0a00b3
 			public const int TabBarPopUpLinearLayout = 2131361971;
@@ -4815,8 +6339,11 @@ namespace WR
 			// aapt resource value: 0x7f0a00a4
 			public const int ThemeOfProjectChoice = 2131361956;
 			
-			// aapt resource value: 0x7f0a00f8
-			public const int action0 = 2131362040;
+			// aapt resource value: 0x7f0a00db
+			public const int acceptExportDataBtn = 2131362011;
+			
+			// aapt resource value: 0x7f0a0102
+			public const int action0 = 2131362050;
 			
 			// aapt resource value: 0x7f0a00d3
 			public const int action_align_center = 2131362003;
@@ -4851,14 +6378,14 @@ namespace WR
 			// aapt resource value: 0x7f0a00cc
 			public const int action_bold = 2131361996;
 			
-			// aapt resource value: 0x7f0a00f5
-			public const int action_container = 2131362037;
+			// aapt resource value: 0x7f0a00ff
+			public const int action_container = 2131362047;
 			
 			// aapt resource value: 0x7f0a008e
 			public const int action_context_bar = 2131361934;
 			
-			// aapt resource value: 0x7f0a00fc
-			public const int action_divider = 2131362044;
+			// aapt resource value: 0x7f0a0106
+			public const int action_divider = 2131362054;
 			
 			// aapt resource value: 0x7f0a00cf
 			public const int action_heading1 = 2131361999;
@@ -4869,8 +6396,8 @@ namespace WR
 			// aapt resource value: 0x7f0a00d1
 			public const int action_heading3 = 2131362001;
 			
-			// aapt resource value: 0x7f0a00f6
-			public const int action_image = 2131362038;
+			// aapt resource value: 0x7f0a0100
+			public const int action_image = 2131362048;
 			
 			// aapt resource value: 0x7f0a00cd
 			public const int action_italic = 2131361997;
@@ -4890,8 +6417,8 @@ namespace WR
 			// aapt resource value: 0x7f0a006b
 			public const int action_mode_close_button = 2131361899;
 			
-			// aapt resource value: 0x7f0a00f7
-			public const int action_text = 2131362039;
+			// aapt resource value: 0x7f0a0101
+			public const int action_text = 2131362049;
 			
 			// aapt resource value: 0x7f0a00ce
 			public const int action_underline = 2131361998;
@@ -4899,8 +6426,8 @@ namespace WR
 			// aapt resource value: 0x7f0a00cb
 			public const int action_undo = 2131361995;
 			
-			// aapt resource value: 0x7f0a0105
-			public const int actions = 2131362053;
+			// aapt resource value: 0x7f0a010f
+			public const int actions = 2131362063;
 			
 			// aapt resource value: 0x7f0a006c
 			public const int activity_chooser_view_content = 2131361900;
@@ -4908,14 +6435,14 @@ namespace WR
 			// aapt resource value: 0x7f0a002e
 			public const int add = 2131361838;
 			
-			// aapt resource value: 0x7f0a0112
-			public const int addFileActionButton = 2131362066;
+			// aapt resource value: 0x7f0a011c
+			public const int addFileActionButton = 2131362076;
 			
-			// aapt resource value: 0x7f0a0111
-			public const int addFormActionButton = 2131362065;
+			// aapt resource value: 0x7f0a011b
+			public const int addFormActionButton = 2131362075;
 			
-			// aapt resource value: 0x7f0a0113
-			public const int addSectionActionButton = 2131362067;
+			// aapt resource value: 0x7f0a011d
+			public const int addSectionActionButton = 2131362077;
 			
 			// aapt resource value: 0x7f0a007f
 			public const int alertTitle = 2131361919;
@@ -4932,14 +6459,14 @@ namespace WR
 			// aapt resource value: 0x7f0a004d
 			public const int auto = 2131361869;
 			
-			// aapt resource value: 0x7f0a010c
-			public const int backButtonNavigation = 2131362060;
+			// aapt resource value: 0x7f0a0116
+			public const int backButtonNavigation = 2131362070;
 			
 			// aapt resource value: 0x7f0a0036
 			public const int beginning = 2131361846;
 			
-			// aapt resource value: 0x7f0a0110
-			public const int bg_fabMenu = 2131362064;
+			// aapt resource value: 0x7f0a011a
+			public const int bg_fabMenu = 2131362074;
 			
 			// aapt resource value: 0x7f0a0066
 			public const int blocking = 2131361894;
@@ -4950,8 +6477,8 @@ namespace WR
 			// aapt resource value: 0x7f0a0072
 			public const int buttonPanel = 2131361906;
 			
-			// aapt resource value: 0x7f0a00f9
-			public const int cancel_action = 2131362041;
+			// aapt resource value: 0x7f0a0103
+			public const int cancel_action = 2131362051;
 			
 			// aapt resource value: 0x7f0a004c
 			public const int center = 2131361868;
@@ -4974,8 +6501,8 @@ namespace WR
 			// aapt resource value: 0x7f0a0086
 			public const int checkbox = 2131361926;
 			
-			// aapt resource value: 0x7f0a0101
-			public const int chronometer = 2131362049;
+			// aapt resource value: 0x7f0a010b
+			public const int chronometer = 2131362059;
 			
 			// aapt resource value: 0x7f0a0061
 			public const int clip_horizontal = 2131361889;
@@ -5037,8 +6564,8 @@ namespace WR
 			// aapt resource value: 0x7f0a0037
 			public const int end = 2131361847;
 			
-			// aapt resource value: 0x7f0a0107
-			public const int end_padder = 2131362055;
+			// aapt resource value: 0x7f0a0111
+			public const int end_padder = 2131362065;
 			
 			// aapt resource value: 0x7f0a0046
 			public const int enterAlways = 2131361862;
@@ -5055,6 +6582,15 @@ namespace WR
 			// aapt resource value: 0x7f0a0085
 			public const int expanded_menu = 2131361925;
 			
+			// aapt resource value: 0x7f0a00ea
+			public const int fileIcon = 2131362026;
+			
+			// aapt resource value: 0x7f0a00da
+			public const int filesForExportListView = 2131362010;
+			
+			// aapt resource value: 0x7f0a00d9
+			public const int filesForExportTV = 2131362009;
+			
 			// aapt resource value: 0x7f0a005e
 			public const int fill = 2131361886;
 			
@@ -5070,20 +6606,26 @@ namespace WR
 			// aapt resource value: 0x7f0a005c
 			public const int @fixed = 2131361884;
 			
-			// aapt resource value: 0x7f0a00e4
-			public const int folderIcon = 2131362020;
+			// aapt resource value: 0x7f0a00ed
+			public const int folderIcon = 2131362029;
 			
 			// aapt resource value: 0x7f0a0067
 			public const int forever = 2131361895;
 			
-			// aapt resource value: 0x7f0a00dd
-			public const int formFieldIcon = 2131362013;
+			// aapt resource value: 0x7f0a00e3
+			public const int formFieldIcon = 2131362019;
 			
-			// aapt resource value: 0x7f0a00e8
-			public const int formFieldIconRed = 2131362024;
+			// aapt resource value: 0x7f0a00f1
+			public const int formFieldIconRed = 2131362033;
 			
-			// aapt resource value: 0x7f0a00eb
-			public const int formFieldRemoveIcon = 2131362027;
+			// aapt resource value: 0x7f0a00f4
+			public const int formFieldRemoveIcon = 2131362036;
+			
+			// aapt resource value: 0x7f0a00d8
+			public const int formatSpinner = 2131362008;
+			
+			// aapt resource value: 0x7f0a00d7
+			public const int formatTV = 2131362007;
 			
 			// aapt resource value: 0x7f0a000a
 			public const int ghost_view = 2131361802;
@@ -5100,8 +6642,8 @@ namespace WR
 			// aapt resource value: 0x7f0a0071
 			public const int icon = 2131361905;
 			
-			// aapt resource value: 0x7f0a0106
-			public const int icon_group = 2131362054;
+			// aapt resource value: 0x7f0a0110
+			public const int icon_group = 2131362064;
 			
 			// aapt resource value: 0x7f0a0041
 			public const int ifRoom = 2131361857;
@@ -5109,8 +6651,8 @@ namespace WR
 			// aapt resource value: 0x7f0a006e
 			public const int image = 2131361902;
 			
-			// aapt resource value: 0x7f0a0102
-			public const int info = 2131362050;
+			// aapt resource value: 0x7f0a010c
+			public const int info = 2131362060;
 			
 			// aapt resource value: 0x7f0a0068
 			public const int italic = 2131361896;
@@ -5133,26 +6675,26 @@ namespace WR
 			// aapt resource value: 0x7f0a001d
 			public const int line3 = 2131361821;
 			
-			// aapt resource value: 0x7f0a010a
-			public const int linearLayoutOpenedProject = 2131362058;
+			// aapt resource value: 0x7f0a0114
+			public const int linearLayoutOpenedProject = 2131362068;
 			
 			// aapt resource value: 0x7f0a0024
 			public const int listMode = 2131361828;
 			
-			// aapt resource value: 0x7f0a00d8
-			public const int listOfFields = 2131362008;
+			// aapt resource value: 0x7f0a00de
+			public const int listOfFields = 2131362014;
 			
-			// aapt resource value: 0x7f0a00d9
-			public const int listOfFieldsRemove = 2131362009;
+			// aapt resource value: 0x7f0a00df
+			public const int listOfFieldsRemove = 2131362015;
 			
-			// aapt resource value: 0x7f0a010f
-			public const int listOfFilesMain = 2131362063;
+			// aapt resource value: 0x7f0a0119
+			public const int listOfFilesMain = 2131362073;
 			
-			// aapt resource value: 0x7f0a010e
-			public const int listOfFoldersMain = 2131362062;
+			// aapt resource value: 0x7f0a0118
+			public const int listOfFoldersMain = 2131362072;
 			
-			// aapt resource value: 0x7f0a0109
-			public const int listViewProjects = 2131362057;
+			// aapt resource value: 0x7f0a0113
+			public const int listViewProjects = 2131362067;
 			
 			// aapt resource value: 0x7f0a00be
 			public const int listViewTemplates = 2131361982;
@@ -5160,29 +6702,29 @@ namespace WR
 			// aapt resource value: 0x7f0a0070
 			public const int list_item = 2131361904;
 			
-			// aapt resource value: 0x7f0a00ee
-			public const int main = 2131362030;
+			// aapt resource value: 0x7f0a00f7
+			public const int main = 2131362039;
 			
-			// aapt resource value: 0x7f0a00db
-			public const int mainActionBtnAddField = 2131362011;
+			// aapt resource value: 0x7f0a00e1
+			public const int mainActionBtnAddField = 2131362017;
 			
-			// aapt resource value: 0x7f0a0114
-			public const int mainActionBtnAddSth = 2131362068;
+			// aapt resource value: 0x7f0a011e
+			public const int mainActionBtnAddSth = 2131362078;
 			
-			// aapt resource value: 0x7f0a00dc
-			public const int mainActionBtnRemoveField = 2131362012;
+			// aapt resource value: 0x7f0a00e2
+			public const int mainActionBtnRemoveField = 2131362018;
 			
-			// aapt resource value: 0x7f0a00f3
-			public const int mainScreenFragmentsContainer = 2131362035;
+			// aapt resource value: 0x7f0a00fd
+			public const int mainScreenFragmentsContainer = 2131362045;
 			
-			// aapt resource value: 0x7f0a0118
-			public const int masked = 2131362072;
+			// aapt resource value: 0x7f0a0122
+			public const int masked = 2131362082;
 			
-			// aapt resource value: 0x7f0a00fb
-			public const int media_actions = 2131362043;
+			// aapt resource value: 0x7f0a0105
+			public const int media_actions = 2131362053;
 			
-			// aapt resource value: 0x7f0a010b
-			public const int menuWithBackBtnLL = 2131362059;
+			// aapt resource value: 0x7f0a0115
+			public const int menuWithBackBtnLL = 2131362069;
 			
 			// aapt resource value: 0x7f0a009c
 			public const int message = 2131361948;
@@ -5202,20 +6744,23 @@ namespace WR
 			// aapt resource value: 0x7f0a002f
 			public const int multiply = 2131361839;
 			
-			// aapt resource value: 0x7f0a00e9
-			public const int nameOfFieldForRemove = 2131362025;
+			// aapt resource value: 0x7f0a00f2
+			public const int nameOfFieldForRemove = 2131362034;
 			
-			// aapt resource value: 0x7f0a00de
-			public const int nameOfFieldTV = 2131362014;
+			// aapt resource value: 0x7f0a00e4
+			public const int nameOfFieldTV = 2131362020;
 			
-			// aapt resource value: 0x7f0a00e7
-			public const int nameOfProjectTV = 2131362023;
+			// aapt resource value: 0x7f0a00eb
+			public const int nameOfFileForExport = 2131362027;
 			
-			// aapt resource value: 0x7f0a00e5
-			public const int nameOfProjectTextView = 2131362021;
+			// aapt resource value: 0x7f0a00f0
+			public const int nameOfProjectTV = 2131362032;
 			
-			// aapt resource value: 0x7f0a0115
-			public const int nameOfTextFile = 2131362069;
+			// aapt resource value: 0x7f0a00ee
+			public const int nameOfProjectTextView = 2131362030;
+			
+			// aapt resource value: 0x7f0a011f
+			public const int nameOfTextFile = 2131362079;
 			
 			// aapt resource value: 0x7f0a00c5
 			public const int navigation_header_container = 2131361989;
@@ -5229,14 +6774,14 @@ namespace WR
 			// aapt resource value: 0x7f0a0025
 			public const int normal = 2131361829;
 			
-			// aapt resource value: 0x7f0a0104
-			public const int notification_background = 2131362052;
+			// aapt resource value: 0x7f0a010e
+			public const int notification_background = 2131362062;
 			
-			// aapt resource value: 0x7f0a00fe
-			public const int notification_main_column = 2131362046;
+			// aapt resource value: 0x7f0a0108
+			public const int notification_main_column = 2131362056;
 			
-			// aapt resource value: 0x7f0a00fd
-			public const int notification_main_column_container = 2131362045;
+			// aapt resource value: 0x7f0a0107
+			public const int notification_main_column_container = 2131362055;
 			
 			// aapt resource value: 0x7f0a0060
 			public const int outline = 2131361888;
@@ -5271,11 +6816,11 @@ namespace WR
 			// aapt resource value: 0x7f0a0055
 			public const int right = 2131361877;
 			
-			// aapt resource value: 0x7f0a0103
-			public const int right_icon = 2131362051;
+			// aapt resource value: 0x7f0a010d
+			public const int right_icon = 2131362061;
 			
-			// aapt resource value: 0x7f0a00ff
-			public const int right_side = 2131362047;
+			// aapt resource value: 0x7f0a0109
+			public const int right_side = 2131362057;
 			
 			// aapt resource value: 0x7f0a000c
 			public const int save_image_matrix = 2131361804;
@@ -5385,8 +6930,8 @@ namespace WR
 			// aapt resource value: 0x7f0a0056
 			public const int start = 2131361878;
 			
-			// aapt resource value: 0x7f0a00fa
-			public const int status_bar_latest_event_content = 2131362042;
+			// aapt resource value: 0x7f0a0104
+			public const int status_bar_latest_event_content = 2131362052;
 			
 			// aapt resource value: 0x7f0a005b
 			public const int stretch = 2131361883;
@@ -5412,17 +6957,20 @@ namespace WR
 			// aapt resource value: 0x7f0a00bc
 			public const int templatesTV = 2131361980;
 			
+			// aapt resource value: 0x7f0a00dc
+			public const int testLV = 2131362012;
+			
 			// aapt resource value: 0x7f0a0021
 			public const int text = 2131361825;
 			
 			// aapt resource value: 0x7f0a0022
 			public const int text2 = 2131361826;
 			
-			// aapt resource value: 0x7f0a00ec
-			public const int textFileIcon = 2131362028;
+			// aapt resource value: 0x7f0a00f5
+			public const int textFileIcon = 2131362037;
 			
-			// aapt resource value: 0x7f0a00ed
-			public const int textFileName = 2131362029;
+			// aapt resource value: 0x7f0a00f6
+			public const int textFileName = 2131362038;
 			
 			// aapt resource value: 0x7f0a0079
 			public const int textSpacerNoButtons = 2131361913;
@@ -5445,8 +6993,8 @@ namespace WR
 			// aapt resource value: 0x7f0a00a5
 			public const int textView4 = 2131361957;
 			
-			// aapt resource value: 0x7f0a010d
-			public const int textViewFAB = 2131362061;
+			// aapt resource value: 0x7f0a0117
+			public const int textViewFAB = 2131362071;
 			
 			// aapt resource value: 0x7f0a00ca
 			public const int text_input_password_toggle = 2131361994;
@@ -5460,8 +7008,8 @@ namespace WR
 			// aapt resource value: 0x7f0a001a
 			public const int textinput_helper_text = 2131361818;
 			
-			// aapt resource value: 0x7f0a0100
-			public const int time = 2131362048;
+			// aapt resource value: 0x7f0a010a
+			public const int time = 2131362058;
 			
 			// aapt resource value: 0x7f0a0023
 			public const int title = 2131361827;
@@ -5472,8 +7020,8 @@ namespace WR
 			// aapt resource value: 0x7f0a007e
 			public const int title_template = 2131361918;
 			
-			// aapt resource value: 0x7f0a00ef
-			public const int toolbarMain = 2131362031;
+			// aapt resource value: 0x7f0a00f8
+			public const int toolbarMain = 2131362040;
 			
 			// aapt resource value: 0x7f0a0045
 			public const int top = 2131361861;
@@ -5514,8 +7062,8 @@ namespace WR
 			// aapt resource value: 0x7f0a001b
 			public const int view_offset_helper = 2131361819;
 			
-			// aapt resource value: 0x7f0a0117
-			public const int visible = 2131362071;
+			// aapt resource value: 0x7f0a0121
+			public const int visible = 2131362081;
 			
 			// aapt resource value: 0x7f0a0043
 			public const int withText = 2131361859;
@@ -5764,103 +7312,109 @@ namespace WR
 			public const int EditorFragment = 2130968623;
 			
 			// aapt resource value: 0x7f040030
-			public const int FormEditorFragment = 2130968624;
+			public const int ExportFragment = 2130968624;
 			
 			// aapt resource value: 0x7f040031
-			public const int FormFieldsListViewRow = 2130968625;
+			public const int FormEditorFragment = 2130968625;
 			
 			// aapt resource value: 0x7f040032
-			public const int HelloFragment = 2130968626;
+			public const int FormFieldsListViewRow = 2130968626;
 			
 			// aapt resource value: 0x7f040033
-			public const int InfoFragment = 2130968627;
+			public const int HelloFragment = 2130968627;
 			
 			// aapt resource value: 0x7f040034
-			public const int ListViewFoldersRow = 2130968628;
+			public const int InfoFragment = 2130968628;
 			
 			// aapt resource value: 0x7f040035
-			public const int ListViewForProjectRows = 2130968629;
+			public const int ListViewFilesToExportRow = 2130968629;
 			
 			// aapt resource value: 0x7f040036
-			public const int ListViewRemovingFieldRow = 2130968630;
+			public const int ListViewFoldersRow = 2130968630;
 			
 			// aapt resource value: 0x7f040037
-			public const int ListViewTextFilesRow = 2130968631;
+			public const int ListViewForProjectRows = 2130968631;
 			
 			// aapt resource value: 0x7f040038
-			public const int Main = 2130968632;
+			public const int ListViewRemovingFieldRow = 2130968632;
 			
 			// aapt resource value: 0x7f040039
-			public const int mtrl_layout_snackbar = 2130968633;
+			public const int ListViewTextFilesRow = 2130968633;
 			
 			// aapt resource value: 0x7f04003a
-			public const int mtrl_layout_snackbar_include = 2130968634;
+			public const int Main = 2130968634;
 			
 			// aapt resource value: 0x7f04003b
-			public const int notification_action = 2130968635;
+			public const int mtrl_layout_snackbar = 2130968635;
 			
 			// aapt resource value: 0x7f04003c
-			public const int notification_action_tombstone = 2130968636;
+			public const int mtrl_layout_snackbar_include = 2130968636;
 			
 			// aapt resource value: 0x7f04003d
-			public const int notification_media_action = 2130968637;
+			public const int notification_action = 2130968637;
 			
 			// aapt resource value: 0x7f04003e
-			public const int notification_media_cancel_action = 2130968638;
+			public const int notification_action_tombstone = 2130968638;
 			
 			// aapt resource value: 0x7f04003f
-			public const int notification_template_big_media = 2130968639;
+			public const int notification_media_action = 2130968639;
 			
 			// aapt resource value: 0x7f040040
-			public const int notification_template_big_media_custom = 2130968640;
+			public const int notification_media_cancel_action = 2130968640;
 			
 			// aapt resource value: 0x7f040041
-			public const int notification_template_big_media_narrow = 2130968641;
+			public const int notification_template_big_media = 2130968641;
 			
 			// aapt resource value: 0x7f040042
-			public const int notification_template_big_media_narrow_custom = 2130968642;
+			public const int notification_template_big_media_custom = 2130968642;
 			
 			// aapt resource value: 0x7f040043
-			public const int notification_template_custom_big = 2130968643;
+			public const int notification_template_big_media_narrow = 2130968643;
 			
 			// aapt resource value: 0x7f040044
-			public const int notification_template_icon_group = 2130968644;
+			public const int notification_template_big_media_narrow_custom = 2130968644;
 			
 			// aapt resource value: 0x7f040045
-			public const int notification_template_lines_media = 2130968645;
+			public const int notification_template_custom_big = 2130968645;
 			
 			// aapt resource value: 0x7f040046
-			public const int notification_template_media = 2130968646;
+			public const int notification_template_icon_group = 2130968646;
 			
 			// aapt resource value: 0x7f040047
-			public const int notification_template_media_custom = 2130968647;
+			public const int notification_template_lines_media = 2130968647;
 			
 			// aapt resource value: 0x7f040048
-			public const int notification_template_part_chronometer = 2130968648;
+			public const int notification_template_media = 2130968648;
 			
 			// aapt resource value: 0x7f040049
-			public const int notification_template_part_time = 2130968649;
+			public const int notification_template_media_custom = 2130968649;
 			
 			// aapt resource value: 0x7f04004a
-			public const int OpenExistingProjectFragment = 2130968650;
+			public const int notification_template_part_chronometer = 2130968650;
 			
 			// aapt resource value: 0x7f04004b
-			public const int ProjectOpenedFragment = 2130968651;
+			public const int notification_template_part_time = 2130968651;
 			
 			// aapt resource value: 0x7f04004c
-			public const int select_dialog_item_material = 2130968652;
+			public const int OpenExistingProjectFragment = 2130968652;
 			
 			// aapt resource value: 0x7f04004d
-			public const int select_dialog_multichoice_material = 2130968653;
+			public const int ProjectOpenedFragment = 2130968653;
 			
 			// aapt resource value: 0x7f04004e
-			public const int select_dialog_singlechoice_material = 2130968654;
+			public const int select_dialog_item_material = 2130968654;
 			
 			// aapt resource value: 0x7f04004f
-			public const int support_simple_spinner_dropdown_item = 2130968655;
+			public const int select_dialog_multichoice_material = 2130968655;
 			
 			// aapt resource value: 0x7f040050
-			public const int TextFilesListView = 2130968656;
+			public const int select_dialog_singlechoice_material = 2130968656;
+			
+			// aapt resource value: 0x7f040051
+			public const int support_simple_spinner_dropdown_item = 2130968657;
+			
+			// aapt resource value: 0x7f040052
+			public const int TextFilesListView = 2130968658;
 			
 			static Layout()
 			{

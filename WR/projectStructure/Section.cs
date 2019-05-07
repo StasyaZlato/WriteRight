@@ -52,6 +52,7 @@ namespace ProjectStructure
             }
 
             ChildSections[id].Name = string.IsNullOrEmpty(name) ? throw new IncorrectNameOfFileException("Имя не указано") : name;
+            ChildSections[id].Path = this.Path + name + "\\";
         }
 
         public void AddSection(string name)
@@ -62,7 +63,7 @@ namespace ProjectStructure
                     "уже существует в данном разделе!");
             }
 
-                ChildSections.Add(new Section(this, name));
+            ChildSections.Add(new Section(this, name));
 
         }
         
@@ -97,6 +98,7 @@ namespace ProjectStructure
             {
                 throw new IncorrectNameOfFileException($"Файл {file.Name} уже существует в данном разделе");
             }
+            file.PathInProject = this.Path + file.Name;
             files.Add(file);
         }
 
@@ -109,6 +111,7 @@ namespace ProjectStructure
             }
 
             files[id].Name = string.IsNullOrEmpty(newName) ? throw new IncorrectNameOfFileException("Имя не указано") : newName;
+            files[id].PathInProject = this.Path + newName;
         }
 
         public void DeleteFile(int id)
