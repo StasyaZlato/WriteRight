@@ -112,6 +112,7 @@ class MonoPackageManager_Resources {
 		/* We need to ensure that "WR.dll" comes first in this list. */
 		"WR.dll",
 		"Converters.dll",
+		"iTextSharpLGPL-MonoForAndroid.dll",
 		"Newtonsoft.Json.dll",
 		"projectStructure.dll",
 		"RichEditor.dll",
@@ -150,6 +151,7 @@ class MonoPackageManager_Resources {
 		"Xamarin.Android.Support.Vector.Drawable.dll",
 		"Xamarin.Android.Support.VersionedParcelable.dll",
 		"Xamarin.Android.Support.ViewPager.dll",
+		"XamiTextSharpLGPL.Droid.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};

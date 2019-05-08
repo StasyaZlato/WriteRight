@@ -16,6 +16,10 @@ using System.IO;
 using ProjectStructure;
 using Converters;
 
+using iTextSharp;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+
 namespace WR.Fragments
 {
     public class ExportFragment : Android.Support.V4.App.Fragment
@@ -70,6 +74,20 @@ namespace WR.Fragments
                     break;
                 case 1:
                     // format = "pdf";
+                    string dir = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData), "times.ttf");
+
+                    if (!File.Exists(dir))
+                    {
+                        var input = Resources.Assets.Open("times.ttf");
+                        FileStream fs = new FileStream(dir, FileMode.Create);
+                        input.CopyTo(fs);
+                        fs.Close();
+                        input.Close();
+                    }
+
+                    BaseFont font = BaseFont.CreateFont(dir, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                    ConverterToPdf converterPDF = new ConverterToPdf(project, checkedFiles, font);
+                    Toast.MakeText(this.Context, "Сохранено в корневом каталоге", ToastLength.Short).Show();
                     break;
                 case 2:
                     // format = "doc";
@@ -100,8 +118,8 @@ namespace WR.Fragments
                 checkedFiles.Remove(files[e.Position]);
             }
 
-            ListView test = view.FindViewById<ListView>(Resource.Id.testLV);
-            test.Adapter = new CustomViews.FilesToExportListAdapter(checkedFiles);
+            ListView chosen = view.FindViewById<ListView>(Resource.Id.testLV);
+            chosen.Adapter = new CustomViews.ChosenFilesListAdapter(checkedFiles);
         }
 
 
@@ -115,7 +133,7 @@ namespace WR.Fragments
             }
         }
 
-        public void GetAllFiles(Section section)
+        public void GetAllFiles(ProjectStructure.Section section)
         {
             if (section.ChildSections.Count > 0)
             {

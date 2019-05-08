@@ -1,3 +1,4 @@
+iTextSharpLGPL-MonoForAndroid
 projectStructure
 System.Runtime
 Xamarin.Android.Arch.Core.Common
@@ -12,3 +13,4 @@ Xamarin.Android.Support.Fragment
 Xamarin.Android.Support.Media.Compat
 Xamarin.Android.Support.v7.AppCompat
 Xamarin.Android.Support.Vector.Drawable
+XamiTextSharpLGPL.Droid

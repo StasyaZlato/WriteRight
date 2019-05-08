@@ -1,4 +1,5 @@
 Converters
+iTextSharpLGPL-MonoForAndroid
 Newtonsoft.Json
 projectStructure
 RichEditor
@@ -38,3 +39,4 @@ Xamarin.Android.Support.v7.RecyclerView
 Xamarin.Android.Support.Vector.Drawable
 Xamarin.Android.Support.VersionedParcelable
 Xamarin.Android.Support.ViewPager
+XamiTextSharpLGPL.Droid

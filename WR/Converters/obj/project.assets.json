@@ -2,6 +2,17 @@
   "version": 3,
   "targets": {
     "MonoAndroid,Version=v8.1": {
+      "Xam.iTextSharpLGPL/0.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/MonoAndroid10/XamiTextSharpLGPL.Droid.dll": {},
+          "lib/MonoAndroid10/iTextSharpLGPL-MonoForAndroid.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/XamiTextSharpLGPL.Droid.dll": {},
+          "lib/MonoAndroid10/iTextSharpLGPL-MonoForAndroid.dll": {}
+        }
+      },
       "Xamarin.Android.Arch.Core.Common/1.1.1.1": {
         "type": "package",
         "dependencies": {
@@ -206,6 +217,22 @@
     }
   },
   "libraries": {
+    "Xam.iTextSharpLGPL/0.1.0": {
+      "sha512": "tjz1Uzfeiu6kqJkWouKDHPc+Sk5wJpBwer574aLQnq5EUXoOfxS+8aqGGPd81fR5cI9dgPWeIw8VmqnYhJRwqA==",
+      "type": "package",
+      "path": "xam.itextsharplgpl/0.1.0",
+      "files": [
+        ".signature.p7s",
+        "lib/MonoAndroid10/XamiTextSharpLGPL.Droid.dll",
+        "lib/MonoAndroid10/iTextSharpLGPL-MonoForAndroid.dll",
+        "lib/MonoTouch10/XamiTextSharpLGPL.iOS.dll",
+        "lib/MonoTouch10/itextsharpios.dll",
+        "lib/Xamarin.iOS10/XamiTextSharpLGPL.iOS.dll",
+        "lib/Xamarin.iOS10/itextsharpios.dll",
+        "xam.itextsharplgpl.0.1.0.nupkg.sha512",
+        "xam.itextsharplgpl.nuspec"
+      ]
+    },
     "Xamarin.Android.Arch.Core.Common/1.1.1.1": {
       "sha512": "3ijpoWgfyNeyUgbhLz4V/xAuizoz3h1Myg8Ioe1sCkl27Vl3lDN9SR30sFDDKcGgqQXJ4gtPOr9POCfvdPc63Q==",
       "type": "package",
@@ -469,6 +496,7 @@
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v8.1": [
+      "Xam.iTextSharpLGPL >= 0.1.0",
       "Xamarin.Android.Support.v7.AppCompat >= 28.0.0.1",
       "projectStructure >= 1.0.0"
     ]
@@ -508,6 +536,10 @@
     "frameworks": {
       "monoandroid81": {
         "dependencies": {
+          "Xam.iTextSharpLGPL": {
+            "target": "Package",
+            "version": "[0.1.0, )"
+          },
           "Xamarin.Android.Support.v7.AppCompat": {
             "target": "Package",
             "version": "[28.0.0.1, )"

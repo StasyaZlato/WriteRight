@@ -30,14 +30,19 @@ namespace ProjectStructure
             NameOfFile = $"{num}.xml";
         }
 
-        public static bool operator ==(FileOfProject file, FileOfProject file2)
-        {
-            return file.PathInProject == file2.PathInProject;
-        }
+        //public static bool operator ==(FileOfProject file, FileOfProject file2)
+        //{
+        //    return file.PathInProject == file2.PathInProject;
+        //}
 
-        public static bool operator !=(FileOfProject file, FileOfProject file2)
-        {
-            return file.PathInProject != file2.PathInProject;
-        }
+        //public static bool operator !=(FileOfProject file, FileOfProject file2)
+        //{
+        //    return file.PathInProject != file2.PathInProject;
+        //}
+
+        //public override bool Equals(object obj)
+        //{
+        //    return this == (FileOfProject)obj;
+        //}
     }
 }

@@ -11,6 +11,7 @@ Button;obj/Debug/res/layout/custompopuprenamefolder.xml
 Button;obj/Debug/res/layout/exportfragment.xml
 CheckBox;obj/Debug/res/layout/createprojectfragment.xml
 color;obj/Debug/res/values/strings.xml
+corners;obj/Debug/res/drawable/rounded_corner.xml
 dimen;obj/Debug/res/values/dimens.xml
 EditText;obj/Debug/res/layout/createprojectfragment.xml
 EditText;obj/Debug/res/layout/custompopupaddingfile.xml
@@ -26,6 +27,7 @@ ImageButton;obj/Debug/res/layout/editorfragment.xml
 ImageButton;obj/Debug/res/layout/main.xml
 ImageButton;obj/Debug/res/layout/projectopenedfragment.xml
 ImageView;obj/Debug/res/layout/formfieldslistviewrow.xml
+ImageView;obj/Debug/res/layout/listviewchosenfilesrow.xml
 ImageView;obj/Debug/res/layout/listviewfilestoexportrow.xml
 ImageView;obj/Debug/res/layout/listviewfoldersrow.xml
 ImageView;obj/Debug/res/layout/listviewforprojectrows.xml
@@ -43,6 +45,7 @@ LinearLayout;obj/Debug/res/layout/custompopuptemplates.xml
 LinearLayout;obj/Debug/res/layout/editorfragment.xml
 LinearLayout;obj/Debug/res/layout/exportfragment.xml
 LinearLayout;obj/Debug/res/layout/formeditorfragment.xml
+LinearLayout;obj/Debug/res/layout/listviewchosenfilesrow.xml
 LinearLayout;obj/Debug/res/layout/main.xml
 LinearLayout;obj/Debug/res/layout/projectopenedfragment.xml
 ListView;obj/Debug/res/layout/custompopuptemplates.xml
@@ -51,6 +54,7 @@ ListView;obj/Debug/res/layout/formeditorfragment.xml
 ListView;obj/Debug/res/layout/main.xml
 ListView;obj/Debug/res/layout/openexistingprojectfragment.xml
 ListView;obj/Debug/res/layout/projectopenedfragment.xml
+padding;obj/Debug/res/drawable/rounded_corner.xml
 path;obj/Debug/res/drawable/arrow_left_thick.xml
 path;obj/Debug/res/drawable/check.xml
 path;obj/Debug/res/drawable/check_box_outline.xml
@@ -88,6 +92,7 @@ RelativeLayout;obj/Debug/res/layout/createprojectfragment.xml
 RelativeLayout;obj/Debug/res/layout/formfieldslistviewrow.xml
 RelativeLayout;obj/Debug/res/layout/hellofragment.xml
 RelativeLayout;obj/Debug/res/layout/infofragment.xml
+RelativeLayout;obj/Debug/res/layout/listviewchosenfilesrow.xml
 RelativeLayout;obj/Debug/res/layout/listviewfilestoexportrow.xml
 RelativeLayout;obj/Debug/res/layout/listviewfoldersrow.xml
 RelativeLayout;obj/Debug/res/layout/listviewforprojectrows.xml
@@ -96,19 +101,25 @@ RelativeLayout;obj/Debug/res/layout/listviewtextfilesrow.xml
 RelativeLayout;obj/Debug/res/layout/main.xml
 RelativeLayout;obj/Debug/res/layout/openexistingprojectfragment.xml
 RelativeLayout;obj/Debug/res/layout/textfileslistview.xml
-resources;/Users/nastya_iva/CourseWork/WriteRight/WR/Converters/obj/Debug/lp/0/jl/res/values/strings.xml
 resources;/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/lp/0/jl/res/values/strings.xml
-resources;/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/lp/2/jl/res/values/strings.xml
+resources;/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/lp/1/jl/res/values/strings.xml
+resources;/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/lp/3/jl/res/values/strings.xml
+resources;/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/lp/41/jl/res/values/strings.xml
 resources;obj/Debug/res/values/dimens.xml
 resources;obj/Debug/res/values/strings.xml
 resources;obj/Debug/res/values/style.xml
+shape;obj/Debug/res/drawable/rounded_corner.xml
+size;obj/Debug/res/drawable/rounded_corner.xml
+solid;obj/Debug/res/drawable/rounded_corner.xml
 Spinner;obj/Debug/res/layout/createprojectfragment.xml
 Spinner;obj/Debug/res/layout/exportfragment.xml
-string;/Users/nastya_iva/CourseWork/WriteRight/WR/Converters/obj/Debug/lp/0/jl/res/values/strings.xml
 string;/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/lp/0/jl/res/values/strings.xml
-string;/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/lp/2/jl/res/values/strings.xml
+string;/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/lp/1/jl/res/values/strings.xml
+string;/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/lp/3/jl/res/values/strings.xml
+string;/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/lp/41/jl/res/values/strings.xml
 string;obj/Debug/res/values/strings.xml
 string-array;obj/Debug/res/values/strings.xml
+stroke;obj/Debug/res/drawable/rounded_corner.xml
 style;obj/Debug/res/values/style.xml
 TextView;obj/Debug/res/layout/createprojectfragment.xml
 TextView;obj/Debug/res/layout/custompopupaddingfile.xml
@@ -120,6 +131,7 @@ TextView;obj/Debug/res/layout/exportfragment.xml
 TextView;obj/Debug/res/layout/formeditorfragment.xml
 TextView;obj/Debug/res/layout/hellofragment.xml
 TextView;obj/Debug/res/layout/infofragment.xml
+TextView;obj/Debug/res/layout/listviewchosenfilesrow.xml
 TextView;obj/Debug/res/layout/listviewfilestoexportrow.xml
 TextView;obj/Debug/res/layout/listviewfoldersrow.xml
 TextView;obj/Debug/res/layout/listviewforprojectrows.xml

@@ -24,15 +24,6 @@
         android:paddingTop="10dp"
         android:layout_toRightOf="@id/fileIcon"
         android:textColor="@color/material_blue_grey_900"/>  
-    <!--<CheckBox
-        android:id="@+id/CheckBoxFileForExport"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_alignParentEnd="true"
-        android:checked="false"
-        android:visibility="visible"
-        android:theme="@android:style/Theme.Material.Light"/>-->
     <ImageView
         android:id="@+id/CheckBoxFileForExport"
         android:layout_width="wrap_content"
