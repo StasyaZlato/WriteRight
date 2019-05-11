@@ -22,7 +22,7 @@ namespace WR.Activities
         //SupportFragment previousFragment;
         Project project;
         //Project project;
-        public ImageButton exportBtn;
+        public ImageButton exportBtn, importBtn;
         string xmlProjectPath;
 
 
@@ -46,14 +46,26 @@ namespace WR.Activities
             exportBtn = FindViewById<ImageButton>(Resource.Id.ExportBtn);
             exportBtn.Visibility = ViewStates.Visible;
 
+            importBtn = FindViewById<ImageButton>(Resource.Id.ImportBtn);
+            importBtn.Visibility = ViewStates.Visible;
+
             exportBtn.Click += ExportBtn_Click;
 
             OnProjectCreated += fragOpened.Handle_OnOpenCreatedProject;
 
             OnProjectCreated?.Invoke(this, new CustomEventArgs.ProjectEventArgs(project));
+
             leftMenu.ItemClick -= LeftMenu_ItemClick;
             leftMenu.ItemClick += LeftMenu_ItemClick1;
 
+            changeUser.Click += ChangeUser_Click;
+        }
+
+        void ChangeUser_Click(object sender, EventArgs e)
+        {
+            Intent intent = new Intent(this, typeof(MainActivity));
+            intent.PutExtra("frag", "userCh");
+            StartActivity(intent);
         }
 
         void ExportBtn_Click(object sender, EventArgs e)
@@ -70,23 +82,26 @@ namespace WR.Activities
             switch (itemSelected)
             {
                 case 0:
-                    intent.PutExtra("frag", "create");
+                    intent.PutExtra("frag", "hello");
                     break;
                 case 1:
-                    intent.PutExtra("frag", "open");
+                    intent.PutExtra("frag", "create");
                     break;
                 case 2:
+                    intent.PutExtra("frag", "open");
+                    break;
+                case 3:
                     intent.PutExtra("frag", "info");
                     break;
             }
             StartActivity(intent);
-            drawerLayout.CloseDrawer(leftMenu);
+            drawerLayout.CloseDrawer(leftDrawer);
         }
 
 
         public void GetData(string xml)
         {
-            XmlSerializer xmlSerializer = new XmlSerializer(typeof(Project), new Type[] { typeof(FileOfProject) });
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(Project), new Type[] { typeof(FileOfProject), typeof(User) });
 
             using (FileStream fs = new FileStream(xml, FileMode.Open))
             {

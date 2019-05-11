@@ -5,12 +5,13 @@ using System.IO;
 using System.Xml.Linq;
 using System.Text.RegularExpressions;
 
+using System.Threading.Tasks;
 
 namespace Converters
 {
     public class ConverterToFB2Book
     {
-        string genre, authorFN, authorLN, title;
+        string genre, authorFN, authorLN;
         Project project;
         List<TextFile> files;
 
@@ -20,25 +21,20 @@ namespace Converters
         {
             this.project = project;
             this.files = files;
-            authorFN = "Nastya";
-            authorLN = "Iva";
-            title = project.Name;
-            genre = project.Theme;
+            authorFN = project.user.FirstName;
+            authorLN = project.user.LastName;
 
-            CreateXml();
-
-            string path = Path.Combine(Android.OS.Environment.ExternalStorageDirectory.AbsolutePath, $"{title}.fb2");
-
-            int i = 1;
-            while (File.Exists(path))
+            if (string.IsNullOrEmpty(project.Theme))
             {
-                string newFileName = $"{title}({i++}).fb2";
-                path = Path.Combine(Android.OS.Environment.ExternalStorageDirectory.AbsolutePath, newFileName);
+                genre = project.Genre;
             }
-            fb2.Save(path);
+            else
+            {
+                genre = project.Theme;
+            }
         }
 
-        public void CreateXml()
+        private void CreateXml()
         {
             XDeclaration xd = new XDeclaration("1.0", "utf-8", "yes");
 
@@ -51,7 +47,7 @@ namespace Converters
                 new XElement("author",
                     new XElement("first-name", authorFN),
                     new XElement("last-name", authorLN)),
-                new XElement("book-title", title),
+                new XElement("book-title", project.Name),
                 new XElement("annotation", string.Empty),
                 new XElement("keywords", string.Empty),
                 new XElement("date",
@@ -85,7 +81,7 @@ namespace Converters
                 new XElement("title",
                     new XElement("p", $"{authorFN} {authorLN}"),
                     new XElement("empty-line"),
-                    new XElement("p", title)));
+                    new XElement("p", project.Name)));
 
             body = FillBodyWithChapters(body);
 
@@ -99,7 +95,7 @@ namespace Converters
                     body));
         }
 
-        public XElement FillBodyWithChapters(XElement body)
+        private XElement FillBodyWithChapters(XElement body)
         {
             foreach (var file in files)
             {
@@ -120,7 +116,7 @@ namespace Converters
             return body;
         }
 
-        public XElement[] ProcessHtml(string text)
+        private XElement[] ProcessHtml(string text)
         {
             Regex regex = new Regex(@"<div.*?>", RegexOptions.IgnoreCase);
 
@@ -157,8 +153,28 @@ namespace Converters
 
             XElement[] elements = Array.ConvertAll(textLines, x => XElement.Parse(x));
 
-            //return string.Join(string.Empty, textLines);
             return elements;
         }
+
+        public async Task CreateFB2Async()
+        {
+            await Task.Run(() => CreateFB2());
+        }
+
+        private void CreateFB2()
+        {
+            CreateXml();
+
+            string path = Path.Combine(Android.OS.Environment.ExternalStorageDirectory.AbsolutePath, $"{project.Name}.fb2");
+
+            int i = 1;
+            while (File.Exists(path))
+            {
+                string newFileName = $"{project.Name}({i++}).fb2";
+                path = Path.Combine(Android.OS.Environment.ExternalStorageDirectory.AbsolutePath, newFileName);
+            }
+            fb2.Save(path);
+        }
+
     }
 }

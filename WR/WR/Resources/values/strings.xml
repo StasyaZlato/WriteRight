@@ -7,7 +7,10 @@
     <string name="openProject">Существующие проекты</string>
     <string name="createProject">Создание проекта</string>
     <string name="editorTitle">Редактор</string>
+    <string name="formEditorTitle">Редактирование формы</string>
     <string name="info">Информация</string>
+    <string name="export">Экспорт</string>
+    
     <string name="alertCreatingProjectTitle">Ошибка создания проекта</string>
     <string name="alertCreatingSectionTitle">Ошибка создания директории</string>
     <string name="alertCreatingFileTitle">Ошибка создания файла</string>
@@ -17,15 +20,18 @@
 
     <string name="alertCreatingProjectMsgNoName">Не задано имя проекта</string>
     <string name="alertCreatingProjectMsgNoSections">Не выбран ни один базовый раздел</string>
+    
     <string name="alertNeutralBTN">Понятно</string>
     <string name="alertOkBtn">Хорошо</string>
     <string name="alertCancelBtn">Выбрать разделы</string>
+    
     <string-array name="Genres">
         <item>Нехудожественная литература</item>
         <item>Роман</item>
         <item>Рассказ</item>
         <item>Повесть</item>
     </string-array>
+    
     <string-array name="Theme">
         <item>Боевик</item>
         <item>Детектив</item>
@@ -39,17 +45,24 @@
         <item>Фанфик</item>
         <item>Фэнтези</item>
     </string-array>
+    
     <string-array name="LeftMenuItems">
+        <item>Главная</item>
         <item>Создать новый проект</item>
         <item>Открыть существующий проект</item>
         <item>Информация</item>
-        <item>Редактор (временное)</item>
     </string-array>
+    
     <color name="my_spinner_text_color">#263238</color>
+    
     <string name="ContextMenuDelete">Удалить раздел</string>
     <string name="ContextMenuRename">Переименовать раздел</string>
+    
     <string name="ContextMenuDeleteFile">Удалить файл</string>
     <string name="ContextMenuRenameFile">Переименовать файл</string>
+    
+    <string name="ContextMenuDeleteProject">Удалить проект</string>
+    <string name="ContextMenuRenameProject">Переименовать проект</string>
     
     <string-array name="templates">
         <item>Персонаж</item>
@@ -58,6 +71,7 @@
     <string-array name="formats">
         <item>fb2</item>
         <item>pdf</item>
-        <item>doc</item>
+        <item>docx</item>
+        <item>txt</item>
     </string-array>
 </resources>

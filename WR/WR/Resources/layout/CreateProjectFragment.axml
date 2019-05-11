@@ -96,44 +96,37 @@
         android:id="@+id/CheckBoxesLayout"
         android:splitMotionEvents="false"
         android:layout_alignParentTop="true">
-		<CheckBox
-			android:text="Текст"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:id="@+id/checkBoxText"
-            android:theme="@android:style/Theme.Material.Light"
-            android:textColor="@color/material_blue_grey_900"/>
-        <CheckBox
-            android:text="Черновик"
+    		<CheckBox
+    			android:text="Текст"
+    			android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:id="@+id/checkBoxText"
+                android:theme="@android:style/Theme.Material.Light"
+                android:textColor="@color/material_blue_grey_900"/>
+            <CheckBox
+                android:text="Черновик"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBoxDraft"
+                android:theme="@android:style/Theme.Material.Light"
+                android:textColor="@color/material_blue_grey_900"/>
+            <CheckBox
+                android:text="Информация"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBoxInfo"
+                android:theme="@android:style/Theme.Material.Light"
+                android:textColor="@color/material_blue_grey_900"/>
+        </LinearLayout>
+        <Button
+            android:id="@+id/AcceptProjectInfoBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/checkBoxDraft"
-            android:theme="@android:style/Theme.Material.Light"
-            android:textColor="@color/material_blue_grey_900"/>
-        <CheckBox
-            android:text="Информация"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/checkBoxInfo"
-            android:theme="@android:style/Theme.Material.Light"
-            android:textColor="@color/material_blue_grey_900"/>
-            </LinearLayout>
-	</LinearLayout>
-	<LinearLayout
-		android:orientation="horizontal"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:id="@+id/BtnsLayout"
-		android:splitMotionEvents="false"
-		android:layout_gravity="bottom"
-		android:layout_alignParentBottom="true"
-		android:layout_centerHorizontal="true"
-		android:layout_marginBottom="40dp">
-		<Button
-			android:id="@+id/AcceptProjectInfoBtn"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="  Создать  "
-			android:background="#005662"/>
+            android:text="  Создать  "
+            android:background="#005662"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:textColor="@color/material_grey_50"/>
 	</LinearLayout>
 </RelativeLayout>

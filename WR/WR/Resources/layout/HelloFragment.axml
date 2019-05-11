@@ -1,20 +1,66 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout 
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android" 
-    android:orientation="vertical" 
-    android:layout_width="match_parent" 
-    android:layout_height="match_parent"
-    android:id="@+id/HelloFragmentRL">
-    
-    <TextView
-        android:id="@+id/HelloFragmentTV"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/userInfoLL"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Добро пожаловать в приложение WriteRight"
-        android:textColor="@color/material_blue_grey_800"
-        android:layout_centerInParent="true"
-        android:textSize="10pt"
-        android:gravity="center"
-        android:paddingRight="5dp"
-        android:paddingLeft="5dp"/>
-</RelativeLayout>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView 
+            android:id="@+id/tvHelloUnknown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/material_blue_grey_900"
+            android:text="Добро пожаловать в приложение WriteRight! Пожалуйста, введите свои данные. В дальнейшем они будут автоматически добавляться при экспорте произведений."
+            android:padding="10dp"/>
+        <EditText
+            android:id="@+id/firstNameET"
+            android:hint="first name"
+            android:textColor="@color/material_blue_grey_900"
+            android:textColorHint="@color/material_blue_grey_800"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@android:style/Theme.Material.Light"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+        <EditText
+            android:id="@+id/lastNameET"
+            android:hint="last name"
+            android:textColor="@color/material_blue_grey_900"
+            android:textColorHint="@color/material_blue_grey_800"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@android:style/Theme.Material.Light"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+        <Button
+            android:id="@+id/acceptUserBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="#005662"
+            android:text="Ok"
+            android:textColor="#fff"/>
+    </LinearLayout>
+    <RelativeLayout 
+        android:orientation="vertical" 
+        android:layout_width="match_parent" 
+        android:layout_height="match_parent"
+        android:id="@+id/HelloFragmentRL"
+        android:visibility="gone">
+        
+        <TextView
+            android:id="@+id/HelloFragmentTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Добро пожаловать в приложение WriteRight"
+            android:textColor="@color/material_blue_grey_800"
+            android:layout_centerInParent="true"
+            android:textSize="10pt"
+            android:gravity="center"
+            android:paddingRight="5dp"
+            android:paddingLeft="5dp"/>
+    </RelativeLayout>
+</FrameLayout>

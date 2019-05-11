@@ -10,6 +10,7 @@ using iTextSharp.text.html.simpleparser;
 using ProjectStructure;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 //using XamiTextSharpLGPL.Droid;
 
 
@@ -17,28 +18,62 @@ namespace Converters
 {
     public class ConverterToPdf
     {
-        List<TextFile> files;
-        Project project;
+        private List<TextFile> files;
+        private Project project;
 
-        Document pdf;
-        PdfWriter pdfWriter;
-        Font regular, bold, italic, boldItalic, underline;
+        private Document pdf;
+        private PdfWriter pdfWriter;
+        private Font regular, bold;
 
         public ConverterToPdf(Project project, List<TextFile> files, BaseFont bf)
         {
             this.project = project;
             this.files = files;
-
-            //BaseFont bfTimes = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
-
+            
             BaseFont bfTimes = bf; 
 
             regular = new Font(bfTimes, 14, Font.NORMAL, Color.BLACK);
             bold = new Font(bfTimes, 14, Font.BOLD);
-            //italic = new Font(bfTimes, 14, Font.ITALIC);
-            //boldItalic = new Font(bfTimes, 14, Font.BOLDITALIC);
-            //underline = new Font(bfTimes, 14, Font.UNDERLINE);
+        }
 
+        private List<Chapter> AddChapters()
+        {
+            List<Chapter> chapters = new List<Chapter>();
+            int i = 1;
+            foreach (var file in files)
+            {
+                using (FileStream fs = new FileStream(file.PathToFile, FileMode.Open))
+                using (StreamReader sr = new StreamReader(fs))
+                {
+                    string text = sr.ReadToEnd();
+                    Regex regex = new Regex(@"<.*?>");
+
+                    text = text.Replace("&nbsp;", " ");
+
+                    Paragraph titleSection = new Paragraph(file.Name, bold);
+                    titleSection.Alignment = Element.ALIGN_CENTER;
+                    Chapter chapter = new Chapter(titleSection, i++);
+
+                    string[] paragraphs = text.Split("<br>");
+                    foreach (var par in paragraphs)
+                    {
+                        Paragraph paragraph = new Paragraph(regex.Replace(par, string.Empty), regular);
+                        chapter.Add(paragraph);
+                    }
+
+                    chapters.Add(chapter);
+                }
+            }
+            return chapters;
+        }
+
+        public async Task CreatePDFAsync()
+        {
+            await Task.Run(() => CreatePDF());
+        }
+
+        private void CreatePDF()
+        {
             string path = Path.Combine(Android.OS.Environment.ExternalStorageDirectory.AbsolutePath, $"{project.Name}.pdf");
 
             int i = 1;
@@ -56,11 +91,11 @@ namespace Converters
 
                 pdf.Open();
 
-                pdf.AddAuthor("Nastya Iva");
+                pdf.AddAuthor($"{project.user.FirstName} {project.user.LastName}");
                 pdf.AddTitle(project.Name);
                 pdf.AddCreator("WriteRight");
 
-                List<Chapter> chapters = FillBodyWithChapters();
+                List<Chapter> chapters = AddChapters();
 
                 foreach (var chapter in chapters)
                 {
@@ -69,35 +104,6 @@ namespace Converters
 
                 pdf.Close();
             }
-        }
-
-        public List<Chapter> FillBodyWithChapters()
-        {
-            List<Chapter> chapters = new List<Chapter>();
-            int i = 1;
-            foreach (var file in files)
-            {
-                using (FileStream fs = new FileStream(file.PathToFile, FileMode.Open))
-                using (StreamReader sr = new StreamReader(fs))
-                {
-                    string text = sr.ReadToEnd();
-                    Regex regex = new Regex(@"<.*?>");
-
-                    Paragraph titleSection = new Paragraph(file.Name, bold);
-                    titleSection.Alignment = Element.ALIGN_CENTER;
-                    Chapter chapter = new Chapter(titleSection, i++);
-
-                    string[] paragraphs = text.Split("<br>");
-                    foreach (var par in paragraphs)
-                    {
-                        Paragraph paragraph = new Paragraph(regex.Replace(par, string.Empty), regular);
-                        chapter.Add(paragraph);
-                    }
-
-                    chapters.Add(chapter);
-                }
-            }
-            return chapters;
         }
 
     }

@@ -55,6 +55,7 @@
     <Compile Include="FormProject.cs" />
     <Compile Include="TextProject.cs" />
     <Compile Include="TextFile.cs" />
+    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

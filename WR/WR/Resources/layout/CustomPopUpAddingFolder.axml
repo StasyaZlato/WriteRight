@@ -24,16 +24,16 @@
 			android:text="Новый раздел"
 			android:padding="10dp"
 			android:background="#005662"
-			android:textColor="#ffffffff"/>
-		<TextView
+			android:textColor="#ffffffff"
+			android:layout_marginRight="56.9dp" />
+		<ImageButton
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
 			android:id="@+id/TextViewClosePopUpNewFolder"
 			android:padding="10dp"
 			android:layout_gravity="end"
-			android:gravity="right"
-			android:textColor="#ffffffff"
-			android:text="X" />
+			android:src="@drawable/close_white"
+            android:background="#005662"/>
 	</LinearLayout>
 	<EditText
 		android:layout_width="match_parent"

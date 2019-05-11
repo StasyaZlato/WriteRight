@@ -12,6 +12,7 @@ using System;
 using SupportFragment = Android.Support.V4.App.Fragment;
 using System.Xml.Serialization;
 using System.IO;
+using Android.Views.InputMethods;
 
 namespace WR.Activities
 {
@@ -29,13 +30,20 @@ namespace WR.Activities
         Fragments.OpenExistingProjectFragment fragOpen;
         Fragments.InfoFragment fragInfo;
         Fragments.HelloFragment fragHello;
-        //Stack<SupportFragment> stackOfFragments = new Stack<SupportFragment>();
+
+        string userPath;
+
+        public FrameLayout leftDrawer;
+
+        public TextView firstName, lastName;
+
+        public TextView changeUser;
 
         protected override void OnCreate(Bundle savedInstanceState)
         { 
             base.OnCreate(savedInstanceState);
 
-
+            //this.Window.SetSoftInputMode(SoftInput.StateHidden);
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
@@ -43,6 +51,11 @@ namespace WR.Activities
             drawerLayout = FindViewById<DrawerLayout>(Resource.Id.MainDrawer);
             leftMenu = FindViewById<ListView>(Resource.Id.LeftMenyListItems);
             toolbar = FindViewById<SupportToolbar>(Resource.Id.toolbarMain);
+            FindViewById<ImageView>(Resource.Id.UserIcon);
+            firstName = FindViewById<TextView>(Resource.Id.firstName);
+            lastName = FindViewById<TextView>(Resource.Id.lastName);
+            leftDrawer = FindViewById<FrameLayout>(Resource.Id.LeftDrawer);
+            changeUser = FindViewById<TextView>(Resource.Id.changeUser);
             drawerToggle = new MyActionBarDrawerToggle(this, drawerLayout, Resource.String.openDrawer,
                 Resource.String.closeDrawer);
 
@@ -50,6 +63,19 @@ namespace WR.Activities
             fragOpen = new Fragments.OpenExistingProjectFragment();
             fragHello = new Fragments.HelloFragment();
             fragCreate = new Fragments.CreateProjectFragment();
+
+            userPath = System.IO.Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData), "user.xml");
+            if (File.Exists(userPath))
+            {
+                User user;
+                XmlSerializer xmlSerializer = new XmlSerializer(typeof(User));
+                using (FileStream fs = new FileStream(userPath, FileMode.Open))
+                {
+                    user = (User)xmlSerializer.Deserialize(fs);
+                }
+                firstName.Text = user.FirstName;
+                lastName.Text = user.LastName;
+            }
 
             SetSupportActionBar(toolbar);
 
@@ -87,10 +113,18 @@ namespace WR.Activities
                     case "info":
                         ShowFragment(fragInfo);
                         break;
+                    case "userCh":
+                        if (File.Exists(userPath))
+                        {
+                            File.Delete(userPath);
+                        }
+                        ShowFragment(fragHello);
+                        break;
                     default:
+                        ShowFragment(fragHello);
                         break;
                 }
-                drawerLayout.CloseDrawer(leftMenu);
+                drawerLayout.CloseDrawer(leftDrawer);
             }
 
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -106,22 +140,35 @@ namespace WR.Activities
             drawerLayout.DrawerClosed += DrawerLayout_DrawerClosed;
             fragCreate.ProjectIsCreated += FragCreate_ProjectIsCreated;
 
+            changeUser.Click += ChangeUser_Click;
         }
+
+        void ChangeUser_Click(object sender, EventArgs e)
+        {
+            if (File.Exists(userPath))
+            {
+                File.Delete(userPath);
+            }
+            fragHello.userInfoLL.Visibility = ViewStates.Visible;
+            fragHello.helloRL.Visibility = ViewStates.Gone;
+
+            ShowFragment(fragHello);
+
+            drawerLayout.CloseDrawer(leftDrawer);
+            firstName.Text = "First name";
+            lastName.Text = "Last name";
+        }
+
 
         private void FragCreate_ProjectIsCreated(object sender, CustomEventArgs.ProjectEventArgs e)
         {
             Project project = e.project;
             string dir = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments), project.Name);
 
-            //if (!Directory.Exists(dir))
-            //{
-            //    Directory.CreateDirectory(dir);
-            //}
-
             var pathToXML = Path.Combine(dir,  $"{project.Name}.xml");
 
 
-            XmlSerializer xml = new XmlSerializer(typeof(Project), new Type[] { typeof(FileOfProject) });
+            XmlSerializer xml = new XmlSerializer(typeof(Project), new Type[] { typeof(FileOfProject), typeof(User) });
 
             using (FileStream fs = new FileStream(pathToXML, FileMode.Create))
             {
@@ -163,23 +210,24 @@ namespace WR.Activities
             switch (itemSelected)
             {
                 case 0:
+                    currentTitleOfActionBar = Resource.String.closeDrawer;
+                    ShowFragment(fragHello);
+                    break;
+                case 1:
                     currentTitleOfActionBar = Resource.String.createProject;
                     ShowFragment(fragCreate);
                     break;
-                case 1:
+                case 2:
                     currentTitleOfActionBar = Resource.String.openProject;
+                    fragOpen.Refresh();
                     ShowFragment(fragOpen);
                     break;
-                case 2:
+                case 3:
                     currentTitleOfActionBar = Resource.String.info;
                     ShowFragment(fragInfo);
                     break;
-                case 3:
-                    Intent intent = new Intent(this, typeof(FormEditorActivity));
-                    StartActivity(intent);
-                    break;
             }
-            drawerLayout.CloseDrawer(leftMenu);
+            drawerLayout.CloseDrawer(leftDrawer);
         }
     }
 }

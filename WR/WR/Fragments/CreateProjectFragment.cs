@@ -78,9 +78,13 @@ namespace WR.Fragments
             int res = e.Position;
             switch (res)
             {
+                // мне нужно, чтобы порядок элементов строго сохранялся, но при этом 
+                // чтобы при выборе художественной литературы появлялась возможность
+                // выбрать жанр. С visibility реализовать это не вышло, так что использовала removeview
                 case 0:
                     mainLinearLayout.RemoveView(themeChoiceTextView);
                     mainLinearLayout.RemoveView(themeChoice);
+
                     theme = null;
                     break;
                 case 1:
@@ -88,6 +92,7 @@ namespace WR.Fragments
                 case 3:
                     mainLinearLayout.RemoveView(textView4);
                     mainLinearLayout.RemoveView(checkBoxLayout);
+                    mainLinearLayout.RemoveView(acceptBtn);
                     // здесь может возникнуть только один эксепшен, джавовский, "вид уже существует". Тогда просто игнорим
                     try
                     {
@@ -98,6 +103,7 @@ namespace WR.Fragments
 
                     mainLinearLayout.AddView(textView4);
                     mainLinearLayout.AddView(checkBoxLayout);
+                    mainLinearLayout.AddView(acceptBtn);
                     break;
             }
             genre = adapterGenre.GetItem(res).ToString();

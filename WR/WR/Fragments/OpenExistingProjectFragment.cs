@@ -21,8 +21,16 @@ namespace WR.Fragments
     {
         ListView listOfProjects;
         string path;
+        // context dialog for removing / renaming
+        Dialog dialog, dialogRename;
+
+        ImageButton closeBtnRename;
+        EditText renameProject;
+        Button acceptNewName;
 
         List<string> projects = new List<string>();
+
+        int listPosition;
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -39,10 +47,93 @@ namespace WR.Fragments
             listOfProjects = view.FindViewById<ListView>(Resource.Id.listViewProjects);
             listOfProjects.Adapter = new CustomViews.ProjectsListAdapter(projects);
 
+            RegisterForContextMenu(listOfProjects);
+
+            dialog = new Dialog(Context);
+
             listOfProjects.ItemClick += ListOfProjects_ItemClick;
 
             return view;
         }
+
+        public override void OnCreateContextMenu(IContextMenu menu, View v, IContextMenuContextMenuInfo menuInfo)
+        {
+            base.OnCreateContextMenu(menu, v, menuInfo);
+
+            menu.Add(Resource.String.ContextMenuRenameProject);
+            menu.Add(Resource.String.ContextMenuDeleteProject);
+
+        }
+
+        public override bool OnContextItemSelected(IMenuItem item)
+        {
+            var info = (AdapterView.AdapterContextMenuInfo)item.MenuInfo;
+             listPosition = info.Position;
+            string pathToProject = Path.Combine(path, projects[listPosition]);
+            switch (item.ToString())
+            {
+                case "Переименовать проект":
+                    ShowPopUpRename();
+                    break;
+                case "Удалить проект":
+                    Directory.Delete(pathToProject, true);
+                    Refresh();
+                    break;
+            }
+            return base.OnContextItemSelected(item);
+        }
+
+        private void ShowPopUpRename()
+        {
+            dialogRename = new Dialog(this.Activity);
+            // the exception appears if the dialog has been created earlier
+            try
+            {
+                dialogRename.RequestWindowFeature((int)WindowFeatures.NoTitle);
+            }
+            catch (Android.Util.AndroidRuntimeException) { }
+
+            dialogRename.SetContentView(Resource.Layout.CustomPopUpRenameFolder);
+            closeBtnRename = dialogRename.FindViewById<ImageButton>(Resource.Id.TextViewClosePopUpRename);
+            renameProject = dialogRename.FindViewById<EditText>(Resource.Id.RenameSectionTE);
+            acceptNewName = dialogRename.FindViewById<Button>(Resource.Id.AcceptNewName);
+
+            closeBtnRename.Click += (sender, e) =>
+            {
+                dialogRename.Dismiss();
+            };
+
+            acceptNewName.Click += AcceptNewName_Click;
+
+            dialogRename.Show();
+        }
+
+        void AcceptNewName_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(renameProject.Text))
+            {
+                Toast.MakeText(this.Activity, "Новое имя не указано!", ToastLength.Short).Show();
+            }
+            else if (Directory.Exists(Path.Combine(path, renameProject.Text)))
+            {
+                Toast.MakeText(this.Activity, "Проект с таким именем уже существует!", ToastLength.Short).Show();
+            }
+            else
+            {
+                string newPath = Path.Combine(path, renameProject.Text);
+                string PathToXml = Path.Combine(Path.Combine(path, projects[listPosition]), $"{projects[listPosition]}.xml"); 
+                string newPathToXml = Path.Combine(Path.Combine(path, projects[listPosition]), $"{renameProject.Text}.xml");
+                string pathToProject = Path.Combine(path, projects[listPosition]);
+
+                File.Move(PathToXml, newPathToXml);
+                Directory.Move(pathToProject, newPath);
+
+                dialogRename.Dismiss();
+
+                Refresh();
+            }
+        }
+
 
         void ListOfProjects_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
@@ -65,6 +156,13 @@ namespace WR.Fragments
                     projects.Add(name);
                 }
             });
+        }
+
+        public void Refresh()
+        {
+            projects.Clear();
+            GetProjects();
+            listOfProjects.Adapter = new CustomViews.ProjectsListAdapter(projects);
         }
     }
 }

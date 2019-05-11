@@ -17,10 +17,18 @@ using Android.Animation;
 using ProjectStructure;
 using Newtonsoft.Json;
 
+using NPOI.XWPF;
+using NPOI.XWPF.UserModel;
+using NPOI.XWPF.Extractor;
+
+using System.Threading.Tasks;
+
 namespace WR.Fragments
 {
     public class OpenedProjectFragment : Android.Support.V4.App.Fragment
     {
+        public event EventHandler FilePicked;
+
         static bool isFabOpened = false;
         FloatingActionButton fabMain, fabAddFile, fabAddFolder, fabAddForm;
         View fabMenu;
@@ -32,7 +40,7 @@ namespace WR.Fragments
         ImageButton backBtn;
 
         //elements of dialog
-        TextView closeBtn;
+        ImageButton closeBtn;
         EditText nameOfSection, nameOfFile;
         Button acceptNewFolder;
 
@@ -41,7 +49,7 @@ namespace WR.Fragments
         Section currentSection;
         public bool IsRoot = true;
 
-        TextView closeBtnRename;
+        ImageButton closeBtnRename;
         EditText renameSection;
         Button acceptNewName;
         string getNewName = null;
@@ -54,6 +62,7 @@ namespace WR.Fragments
 
         string dir;
 
+        string text;
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -100,9 +109,103 @@ namespace WR.Fragments
 
             ((Activities.OpenProjectActivity)this.Activity).SupportActionBar.Title = project.Name;
 
+            ((Activities.OpenProjectActivity)this.Activity).importBtn.Click += ImportBtn_Click;
+
+            FilePicked += OpenedProjectFragment_FilePicked;
+
             return view;
         }
 
+        void OpenedProjectFragment_FilePicked(object sender, EventArgs e)
+        {
+            //string name = Path.GetFileNameWithoutExtension(path);
+            string name = "импортированный файл";
+            string newName = name;
+
+            int i = 1;
+            while (currentSection.files.Exists(x => x.Name == newName))
+            {
+                newName = $"{name}{i++}";
+            }
+
+            TextFile file;
+            try
+            {
+                string pathToFile = System.IO.Path.Combine(
+                    System.IO.Path.Combine(
+                        System.Environment.GetFolderPath(
+                            System.Environment.SpecialFolder.MyDocuments),
+                        project.Name),
+                    $"{project.CurrentFile}.xml");
+
+                file = new TextFile(newName, pathToFile, project.CurrentFile++)
+                {
+                    PathInProject = currentSection.Path + newName,
+                    HtmlText = text
+                };
+
+                file.SaveToFile();
+
+                currentSection.AddFile(file);
+                CommitChanges();
+                filesListView.Adapter = new CustomViews.FilesListAdapter(currentSection.files);
+                Toast.MakeText(this.Activity, "Файл импортирован", ToastLength.Short).Show();
+            }
+            catch (IncorrectNameOfFileException)
+            {
+                Toast.MakeText(this.Context,
+                    Resource.String.alertCreatingFileTitleMsg, ToastLength.Short).Show();
+            }
+        }
+
+
+        void ImportBtn_Click(object sender, EventArgs e)
+        {
+            Intent intent = new Intent(Intent.ActionGetContent);
+            intent.SetType("text/plain");
+            intent.AddCategory(Intent.CategoryOpenable);
+            StartActivityForResult(Intent.CreateChooser(intent, "Select a file"), 0);
+        }
+
+        public override void OnActivityResult(int requestCode, int resultCode, Intent data)
+        {
+            base.OnActivityResult(requestCode, resultCode, data);
+
+            if (requestCode == 0)
+            {
+                if (resultCode == -1)
+                {
+                    string uri = data.DataString;
+                    if (!uri.EndsWith(".txt") && !uri.EndsWith(".docx"))
+                    {
+                        Toast.MakeText(this.Activity, "Возможен импорт только txt и docx файлов!", ToastLength.Short).Show();
+                        return;
+                    }
+                    else if (uri.EndsWith(".docx"))
+                    {
+                        Android.Net.Uri uris = Android.Net.Uri.FromParts(data.Data.Scheme, data.Data.SchemeSpecificPart, data.Data.Fragment);
+                        using (Stream input = Activity.ContentResolver.OpenInputStream(data.Data))
+                        {
+                            Toast.MakeText(this.Activity, "Подождите, пока файл обрабатывается...", ToastLength.Short).Show();
+                            XWPFDocument document = new XWPFDocument(input);
+                            XWPFWordExtractor extractor = new XWPFWordExtractor(document);
+                            text = extractor.Text;
+                            document.Close();
+                        }
+                    }
+                    else
+                    {
+                        Android.Net.Uri uris = Android.Net.Uri.FromParts(data.Data.Scheme, data.Data.SchemeSpecificPart, data.Data.Fragment);
+                        using (Stream input = Activity.ContentResolver.OpenInputStream(data.Data))
+                        using (StreamReader sw = new StreamReader(input))
+                        {
+                            text = sw.ReadToEnd();
+                        }
+                    }
+                    FilePicked?.Invoke(this, new EventArgs());
+                }
+            }
+        }
 
         void FilesListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
@@ -219,7 +322,7 @@ namespace WR.Fragments
 
             var pathToXML = Path.Combine(dir, $"{project.Name}.xml");
 
-            XmlSerializer xml = new XmlSerializer(typeof(Project), new Type[] { typeof(FileOfProject) });
+            XmlSerializer xml = new XmlSerializer(typeof(Project), new Type[] { typeof(FileOfProject) , typeof(User)});
 
             using (FileStream fs = new FileStream(pathToXML, FileMode.Create))
             {
@@ -284,7 +387,7 @@ namespace WR.Fragments
             catch (Android.Util.AndroidRuntimeException) { }
 
             dialog.SetContentView(Resource.Layout.CustomPopUpAddingFolder);
-            closeBtn = dialog.FindViewById<TextView>(Resource.Id.TextViewClosePopUpNewFolder);
+            closeBtn = dialog.FindViewById<ImageButton>(Resource.Id.TextViewClosePopUpNewFolder);
             nameOfSection = dialog.FindViewById<EditText>(Resource.Id.EditTextNameOfNewFolder);
             acceptNewFolder = dialog.FindViewById<Button>(Resource.Id.AcceptNewFolderBtn);
 
@@ -309,7 +412,7 @@ namespace WR.Fragments
             catch (Android.Util.AndroidRuntimeException) { }
 
             dialog.SetContentView(Resource.Layout.CustomPopUpAddingFile);
-            closeBtn = dialog.FindViewById<TextView>(Resource.Id.TextViewClosePopUpNewFile);
+            closeBtn = dialog.FindViewById<ImageButton>(Resource.Id.TextViewClosePopUpNewFile);
             nameOfFile = dialog.FindViewById<EditText>(Resource.Id.EditTextNameOfNewFile);
             acceptNewFile = dialog.FindViewById<Button>(Resource.Id.AcceptNewFileBtn);
 
@@ -334,7 +437,7 @@ namespace WR.Fragments
             catch (Android.Util.AndroidRuntimeException) { }
 
             dialog1.SetContentView(Resource.Layout.CustomPopUpRenameFolder);
-            closeBtnRename = dialog1.FindViewById<TextView>(Resource.Id.TextViewClosePopUpRename);
+            closeBtnRename = dialog1.FindViewById<ImageButton>(Resource.Id.TextViewClosePopUpRename);
             renameSection = dialog1.FindViewById<EditText>(Resource.Id.RenameSectionTE);
             acceptNewName = dialog1.FindViewById<Button>(Resource.Id.AcceptNewName);
 
@@ -370,8 +473,8 @@ namespace WR.Fragments
                     string pathToFile = System.IO.Path.Combine(
                         System.IO.Path.Combine(
                             System.Environment.GetFolderPath(
-                                System.Environment.SpecialFolder.MyDocuments), 
-                            project.Name), 
+                                System.Environment.SpecialFolder.MyDocuments),
+                            project.Name),
                         $"{project.CurrentFile}.xml");
 
                     if (type == 0)
@@ -389,7 +492,7 @@ namespace WR.Fragments
                 }
                 catch (IncorrectNameOfFileException)
                 {
-                    Toast.MakeText(this.Context, 
+                    Toast.MakeText(this.Context,
                         Resource.String.alertCreatingFileTitleMsg, ToastLength.Short).Show();
                 }
                 finally

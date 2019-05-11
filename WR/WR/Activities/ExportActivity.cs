@@ -35,6 +35,17 @@ namespace WR.Activities
 
             leftMenu.ItemClick -= LeftMenu_ItemClick;
             leftMenu.ItemClick += LeftMenu_ItemClick1;
+
+            changeUser.Click += ChangeUser_Click;
+
+            SupportActionBar.SetTitle(Resource.String.export);
+        }
+
+        void ChangeUser_Click(object sender, EventArgs e)
+        {
+            Intent intent = new Intent(this, typeof(MainActivity));
+            intent.PutExtra("frag", "userCh");
+            StartActivity(intent);
         }
 
         private void LeftMenu_ItemClick1(object sender, AdapterView.ItemClickEventArgs e)
@@ -44,17 +55,20 @@ namespace WR.Activities
             switch (itemSelected)
             {
                 case 0:
-                    intent.PutExtra("frag", "create");
+                    intent.PutExtra("frag", "hello");
                     break;
                 case 1:
-                    intent.PutExtra("frag", "open");
+                    intent.PutExtra("frag", "create");
                     break;
                 case 2:
+                    intent.PutExtra("frag", "open");
+                    break;
+                case 3:
                     intent.PutExtra("frag", "info");
                     break;
             }
             StartActivity(intent);
-            drawerLayout.CloseDrawer(leftMenu);
+            drawerLayout.CloseDrawer(leftDrawer);
         }
     }
 }

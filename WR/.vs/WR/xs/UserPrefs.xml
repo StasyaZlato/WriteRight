@@ -1,33 +1,30 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{6BEBADEA-CCD5-45BE-B01C-0EF57A1CA7BB}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="WR/Fragments/ExportFragment.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WR/Activities/MainActivity.cs">
     <Files>
-      <File FileName="WR/Resources/drawable/rounded_corner.xml" Line="9" Column="25" />
-      <File FileName="WR/Custom Views/ChosenFilesListAdapter.cs" Line="55" Column="6" />
-      <File FileName="WR/Custom Views/FilesToExportListAdapter.cs" Line="56" Column="1" />
-      <File FileName="WR/Fragments/ExportFragment.cs" Line="119" Column="14" />
+      <File FileName="WR/Activities/EditorActivity.cs" Line="44" Column="29" />
+      <File FileName="WR/Activities/ExportActivity.cs" Line="49" Column="10" />
+      <File FileName="WR/Activities/FormEditorActivity.cs" Line="46" Column="50" />
+      <File FileName="WR/Activities/MainActivity.cs" Line="120" Column="26" />
+      <File FileName="WR/Activities/OpenProjectActivity.cs" Line="57" Column="1" />
+      <File FileName="WR/Fragments/HelloFragment.cs" Line="29" Column="33" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Option id="ShowAllFiles" value="True" />
           <Node name="WR" expanded="True">
-            <Node name="Converters" expanded="True">
-              <Node name="References" expanded="True" />
-              <Node name="Packages" expanded="True" />
-            </Node>
+            <Node name="Converters" expanded="True" />
             <Node name="projectStructure" expanded="True">
-              <Node name="Packages" expanded="True" />
               <Node name="Properties" expanded="True" />
             </Node>
             <Node name="WR" expanded="True">
-              <Node name="Packages" expanded="True" />
-              <Node name="Activities" expanded="True" />
+              <Node name="Activities" expanded="True">
+                <Node name="MainActivity.cs" selected="True" />
+              </Node>
               <Node name="Assets" expanded="True" />
               <Node name="Custom Views" expanded="True" />
               <Node name="EventArgs" expanded="True" />
-              <Node name="Fragments" expanded="True">
-                <Node name="ExportFragment.cs" selected="True" />
-              </Node>
+              <Node name="Fragments" expanded="True" />
               <Node name="Properties" expanded="True" />
               <Node name="Resources" expanded="True">
                 <Node name="drawable" expanded="True" />
@@ -42,7 +39,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.WR AndroidDesignerPreferredTheme="Theme.AppCompat.Light" AndroidDesignerPreferredDevice="Nexus 6" PreferredExecutionTarget="Android.SelectDevice" />
+  <MonoDevelop.Ide.ItemProperties.WR AndroidDesignerPreferredTheme="Theme.AppCompat.Light" AndroidDesignerPreferredDevice="Nexus 6" PreferredExecutionTarget="Android.FANPB700A851" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

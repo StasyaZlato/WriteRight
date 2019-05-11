@@ -1,6 +1,15 @@
+ICSharpCode.SharpZipLib
 iTextSharpLGPL-MonoForAndroid
+NPOI
+NPOI.OOXML
+NPOI.OpenXml4Net
+NPOI.OpenXmlFormats
 projectStructure
+System.Configuration.ConfigurationManager
 System.Runtime
+System.Security.AccessControl
+System.Security.Permissions
+System.Security.Principal.Windows
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Lifecycle.Common
 Xamarin.Android.Arch.Lifecycle.Runtime
@@ -14,3 +23,5 @@ Xamarin.Android.Support.Media.Compat
 Xamarin.Android.Support.v7.AppCompat
 Xamarin.Android.Support.Vector.Drawable
 XamiTextSharpLGPL.Droid
+netstandard
+System.Drawing.Common

@@ -63,37 +63,49 @@ namespace WR.Fragments
             return view;
         }
 
-        void AcceptExportBtn_Click(object sender, EventArgs e)
+        async void AcceptExportBtn_Click(object sender, EventArgs e)
         {
             switch (formatSpinner.SelectedItemId)
             {
                 case 0:
                     // format = "fb2";
-                    ConverterToFB2Book converter = new ConverterToFB2Book(project, checkedFiles);
+                    await new ConverterToFB2Book(project, checkedFiles).CreateFB2Async();
                     Toast.MakeText(this.Context, "Сохранено в корневом каталоге", ToastLength.Short).Show();
                     break;
                 case 1:
                     // format = "pdf";
-                    string dir = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData), "times.ttf");
 
-                    if (!File.Exists(dir))
+                    // проблема itextsharp в том, что его внутренние шрифты не поддерживают 
+                    // русский язык. Вообще. Даже те, которые в обычных условиях такой разборчивостью
+                    // не страдают. Поэтому приходится подгружать свой шрифт и ставить русскую кодировку
+                    // уже ему. itextsharp требует путь к шрифту, поэтому просто забрать его из 
+                    // папки assets не выйдет, приходится копировать на устройство.
+                    string fontPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData), "times.ttf");
+
+                    if (!File.Exists(fontPath))
                     {
                         var input = Resources.Assets.Open("times.ttf");
-                        FileStream fs = new FileStream(dir, FileMode.Create);
+                        FileStream fs = new FileStream(fontPath, FileMode.Create);
                         input.CopyTo(fs);
                         fs.Close();
                         input.Close();
                     }
 
-                    BaseFont font = BaseFont.CreateFont(dir, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
-                    ConverterToPdf converterPDF = new ConverterToPdf(project, checkedFiles, font);
+                    BaseFont font = BaseFont.CreateFont(fontPath, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                    await new ConverterToPdf(project, checkedFiles, font).CreatePDFAsync();
                     Toast.MakeText(this.Context, "Сохранено в корневом каталоге", ToastLength.Short).Show();
                     break;
                 case 2:
-                    // format = "doc";
+                    // format = "docx";
+                    await new ConverterToDocX(project, checkedFiles).CreateDocXAsync();
+                    Toast.MakeText(this.Context, "Сохранено в корневом каталоге", ToastLength.Short).Show();
+                    break;
+                case 3:
+                    // format = "txt"
+                    await new ConverterToTxt(project, checkedFiles).CreateTxtAsync();
+                    Toast.MakeText(this.Context, "Сохранено в корневом каталоге", ToastLength.Short).Show();
                     break;
             }
-
         }
 
 
@@ -125,7 +137,7 @@ namespace WR.Fragments
 
         public void GetData(string xml)
         {
-            XmlSerializer xmlSerializer = new XmlSerializer(typeof(Project), new Type[] { typeof(FileOfProject) });
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(Project), new Type[] { typeof(FileOfProject), typeof(User) });
 
             using (FileStream fs = new FileStream(xml, FileMode.Open))
             {
