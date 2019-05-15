@@ -50,7 +50,6 @@ namespace ProjectStructure
                 string value = el.Attribute("value").Value;
 
                 fields.Add(new string[2] { name, value });
-
             }
         }
     }

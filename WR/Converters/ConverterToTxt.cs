@@ -9,14 +9,21 @@ namespace Converters
 {
     public class ConverterToTxt
     {
-        Project project;
-        List<TextFile> files;
+        private Project project;
+        private List<TextFile> files;
+        private List<string[]> fieldsOfGloss = null;
+
 
 
         public ConverterToTxt(Project project, List<TextFile> files)
         {
             this.project = project;
             this.files = files;
+        }
+
+        public ConverterToTxt(Project project, List<TextFile> files, FormFile gloss) : this(project, files)
+        {
+            fieldsOfGloss = gloss.fields;
         }
 
 
@@ -36,6 +43,14 @@ namespace Converters
                                 .Replace("&nbsp;", " ");
                     text = regex.Replace(text, string.Empty);
                     output = output + $"{i++}. {file.Name}\n" + text;
+                }
+            }
+            if (fieldsOfGloss != null)
+            {
+                output += "\nГлоссарий\n";
+                for (int j = 0; j < fieldsOfGloss.Count; j++)
+                {
+                    output += $"{fieldsOfGloss[j][0]} - {fieldsOfGloss[j][1]}\n";
                 }
             }
             return output;

@@ -24,7 +24,7 @@ namespace WR.Activities
         public ListView leftMenu;
         MyActionBarDrawerToggle drawerToggle;
         public DrawerLayout drawerLayout;
-        int currentTitleOfActionBar = Resource.String.closeDrawer;
+        public string currentTitleOfActionBar = "WriteRight";
         public SupportFragment currentFragment;
         Fragments.CreateProjectFragment fragCreate;
         Fragments.OpenExistingProjectFragment fragOpen;
@@ -193,7 +193,7 @@ namespace WR.Activities
 
         void DrawerLayout_DrawerClosed(object sender, DrawerLayout.DrawerClosedEventArgs e)
         {
-            SupportActionBar.SetTitle(currentTitleOfActionBar);
+            SupportActionBar.Title = currentTitleOfActionBar;
         }
 
 
@@ -210,20 +210,20 @@ namespace WR.Activities
             switch (itemSelected)
             {
                 case 0:
-                    currentTitleOfActionBar = Resource.String.closeDrawer;
+                    currentTitleOfActionBar = Resources.GetString(Resource.String.closeDrawer);
                     ShowFragment(fragHello);
                     break;
                 case 1:
-                    currentTitleOfActionBar = Resource.String.createProject;
+                    currentTitleOfActionBar = Resources.GetString(Resource.String.createProject);
                     ShowFragment(fragCreate);
                     break;
                 case 2:
-                    currentTitleOfActionBar = Resource.String.openProject;
+                    currentTitleOfActionBar = Resources.GetString(Resource.String.openProject);
                     fragOpen.Refresh();
                     ShowFragment(fragOpen);
                     break;
                 case 3:
-                    currentTitleOfActionBar = Resource.String.info;
+                    currentTitleOfActionBar = Resources.GetString(Resource.String.info);
                     ShowFragment(fragInfo);
                     break;
             }

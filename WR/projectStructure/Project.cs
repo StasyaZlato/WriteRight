@@ -11,6 +11,21 @@ namespace ProjectStructure
     {
         public string Genre { get; set; }
         public string Theme { get; set; }
+        
+        public bool GlossaryExists 
+        {
+            get
+            {
+                return files.Exists((obj) =>
+                {
+                    if (obj.Name == "Глоссарий" && obj is FormFile)
+                    {
+                        return true;
+                    }
+                    return false;
+                });
+            }
+        }
 
         public User user;
 
@@ -96,6 +111,31 @@ namespace ProjectStructure
             else
             {
                 user = new User("Nastya", "Iva");
+            }
+        }
+
+        public static Project GetData(string xml)
+        {
+            Project project;
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(Project), new Type[] { typeof(FileOfProject), typeof(User) });
+
+            using (FileStream fs = new FileStream(xml, FileMode.Open))
+            {
+                project = (Project)xmlSerializer.Deserialize(fs);
+            }
+            return project;
+        }
+
+
+        public void CommitChanges()
+        {
+            string pathToXml = System.IO.Path.Combine(System.IO.Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments), Name), $"{Name}.xml");
+
+            XmlSerializer xml = new XmlSerializer(typeof(Project), new Type[] { typeof(FileOfProject), typeof(User) });
+
+            using (FileStream fs = new FileStream(pathToXml, FileMode.Create))
+            {
+                xml.Serialize(fs, this);
             }
         }
     }

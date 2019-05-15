@@ -78,6 +78,10 @@ namespace ProjectStructure
             {
                 throw new IncorrectNameOfFileException($"Файл {name} уже существует в данном разделе");
             }
+            if (name == "Глоссарий" && type != "form")
+            {
+                throw new IncorrectNameOfFileException("Имя зарезервировано");
+            }
 
             if (type == "form")
             {
@@ -98,6 +102,10 @@ namespace ProjectStructure
             {
                 throw new IncorrectNameOfFileException($"Файл {file.Name} уже существует в данном разделе");
             }
+            if (file.Name == "Глоссарий" && file is TextFile)
+            {
+                throw new IncorrectNameOfFileException("Имя зарезервировано");
+            }
             file.PathInProject = this.Path + file.Name;
             files.Add(file);
         }
@@ -108,6 +116,10 @@ namespace ProjectStructure
             {
                 throw new IncorrectNameOfFileException($"Файл с именем {newName} " +
                     "уже существует в данной директории!");
+            }
+            if (newName == "Глоссарий" && files[id] is TextFile)
+            {
+                throw new IncorrectNameOfFileException("Имя зарезервировано");
             }
 
             files[id].Name = string.IsNullOrEmpty(newName) ? throw new IncorrectNameOfFileException("Имя не указано") : newName;

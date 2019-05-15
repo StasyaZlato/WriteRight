@@ -17,8 +17,9 @@ using Android.Animation;
 using ProjectStructure;
 using Newtonsoft.Json;
 
-using NPOI.XWPF;
+using NPOI.POIFS.FileSystem;
 using NPOI.XWPF.UserModel;
+using NPOI.XWPF;
 using NPOI.XWPF.Extractor;
 
 using System.Threading.Tasks;
@@ -113,6 +114,8 @@ namespace WR.Fragments
 
             FilePicked += OpenedProjectFragment_FilePicked;
 
+            ((Activities.OpenProjectActivity)this.Activity).SupportActionBar.Title = project.Path;
+
             return view;
         }
 
@@ -147,14 +150,14 @@ namespace WR.Fragments
                 file.SaveToFile();
 
                 currentSection.AddFile(file);
-                CommitChanges();
+                project.CommitChanges();
                 filesListView.Adapter = new CustomViews.FilesListAdapter(currentSection.files);
                 Toast.MakeText(this.Activity, "Файл импортирован", ToastLength.Short).Show();
             }
-            catch (IncorrectNameOfFileException)
+            catch (IncorrectNameOfFileException ex)
             {
                 Toast.MakeText(this.Context,
-                    Resource.String.alertCreatingFileTitleMsg, ToastLength.Short).Show();
+                    ex.Message, ToastLength.Short).Show();
             }
         }
 
@@ -261,7 +264,7 @@ namespace WR.Fragments
                 case "Удалить раздел":
                     currentSection.DeleteSection(listPosition);
                     foldersListView.Adapter = new CustomViews.FoldersListAdapter(currentSection.ChildSections);
-                    CommitChanges();
+                    project.CommitChanges();
                     break;
                 case "Переименовать файл":
                     ShowPopUpRename(1);
@@ -269,7 +272,7 @@ namespace WR.Fragments
                 case "Удалить файл":
                     currentSection.DeleteFile(listPosition);
                     filesListView.Adapter = new CustomViews.FilesListAdapter(currentSection.files);
-                    CommitChanges();
+                    project.CommitChanges();
                     break;
                 default:
                     break;
@@ -288,7 +291,7 @@ namespace WR.Fragments
                     currentSection.RenameSection(listPosition, getNewName);
                     foldersListView.Adapter = new CustomViews.FoldersListAdapter(currentSection.ChildSections);
                     dialog1.Dismiss();
-                    CommitChanges();
+                    project.CommitChanges();
                 }
                 catch (IncorrectNameOfSectionException ex)
                 {
@@ -308,7 +311,7 @@ namespace WR.Fragments
                     currentSection.RenameFile(listPosition, getNewName);
                     filesListView.Adapter = new CustomViews.FilesListAdapter(currentSection.files);
                     dialog1.Dismiss();
-                    CommitChanges();
+                    project.CommitChanges();
                 }
                 catch (IncorrectNameOfFileException ex)
                 {
@@ -317,18 +320,7 @@ namespace WR.Fragments
             }
         }
 
-        private void CommitChanges()
-        {
 
-            var pathToXML = Path.Combine(dir, $"{project.Name}.xml");
-
-            XmlSerializer xml = new XmlSerializer(typeof(Project), new Type[] { typeof(FileOfProject) , typeof(User)});
-
-            using (FileStream fs = new FileStream(pathToXML, FileMode.Create))
-            {
-                xml.Serialize(fs, project);
-            }
-        }
 
         private void BackBtnPressedHandler(object sender, EventArgs e)
         {
@@ -353,7 +345,7 @@ namespace WR.Fragments
                 }
                 currentSection = tempSection;
                 ((Activities.OpenProjectActivity)this.Activity).SupportActionBar.Title = currentSection.Path;
-                foldersListView.Adapter = new CustomViews.FoldersListAdapter(currentSection.ChildSections);
+                ((Activities.OpenProjectActivity)this.Activity).currentTitleOfActionBar = currentSection.Path; foldersListView.Adapter = new CustomViews.FoldersListAdapter(currentSection.ChildSections);
                 filesListView.Adapter = new CustomViews.FilesListAdapter(currentSection.files);
             }
             else
@@ -362,7 +354,6 @@ namespace WR.Fragments
                 Toast toast = Toast.MakeText(this.Activity, "Упс! Уже в корневом каталоге)", Android.Widget.ToastLength.Short);
                 toast.Show();
             }
-
         }
 
         private void FoldersListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
@@ -370,6 +361,8 @@ namespace WR.Fragments
             int id = e.Position;
             currentSection = currentSection.ChildSections[id];
             ((Activities.OpenProjectActivity)this.Activity).SupportActionBar.Title = currentSection.Path;
+            ((Activities.OpenProjectActivity)this.Activity).currentTitleOfActionBar = currentSection.Path;
+
             foldersListView.Adapter = new CustomViews.FoldersListAdapter(currentSection.ChildSections);
             filesListView.Adapter = new CustomViews.FilesListAdapter(currentSection.files);
 
@@ -463,10 +456,20 @@ namespace WR.Fragments
             dialog1.Show();
         }
 
+        private bool CheckInvalidFileName(string filename)
+        {
+            return filename.IndexOfAny(Path.GetInvalidFileNameChars()) >= 0;
+        }
+
         private void AcceptNewFile_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(nameOfFile.Text))
             {
+                if (CheckInvalidFileName(nameOfFile.Text))
+                {
+                    Toast.MakeText(this.Activity, "Название содержит недопустимые символы", ToastLength.Short);
+                    return;
+                }
                 FileOfProject file;
                 try
                 {
@@ -487,13 +490,13 @@ namespace WR.Fragments
                     }
                     file.PathInProject = currentSection.Path + nameOfFile.Text;
                     currentSection.AddFile(file);
-                    CommitChanges();
+                    project.CommitChanges();
                     dialog.Dismiss();
                 }
-                catch (IncorrectNameOfFileException)
+                catch (IncorrectNameOfFileException ex)
                 {
                     Toast.MakeText(this.Context,
-                        Resource.String.alertCreatingFileTitleMsg, ToastLength.Short).Show();
+                        ex.Message, ToastLength.Short).Show();
                 }
                 finally
                 {
@@ -509,14 +512,14 @@ namespace WR.Fragments
                 try
                 {
                     currentSection.AddSection(nameOfSection.Text);
-                    CommitChanges();
+                    project.CommitChanges();
                     CloseFabMenu();
                     dialog.Dismiss();
                 }
-                catch (IncorrectNameOfSectionException)
+                catch (IncorrectNameOfSectionException ex)
                 {
                     Toast.MakeText(this.Context,
-                        Resource.String.alertCreatingFolderTitleMsg, ToastLength.Short).Show();
+                        ex.Message, ToastLength.Short).Show();
                 }
             }
         }

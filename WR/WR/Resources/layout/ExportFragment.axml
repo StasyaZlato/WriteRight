@@ -31,6 +31,21 @@
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:clickable="true"/>
+    <CheckBox
+        android:id="@+id/glossaryCheckBox"
+        android:text="Добавить глоссарий автоматически?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/material_blue_grey_900"
+        android:theme="@android:style/Theme.Material.Light"
+        android:padding="10dp"/>
+    <TextView
+        android:id="@+id/glossaryTV"
+        android:text="Глоссарий в проекте отсутствует"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/material_blue_grey_900"
+        android:visibility="gone"/>
     <Button
         android:id="@+id/acceptExportDataBtn"
         android:text="Ок"

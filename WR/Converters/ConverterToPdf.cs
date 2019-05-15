@@ -25,6 +25,9 @@ namespace Converters
         private PdfWriter pdfWriter;
         private Font regular, bold;
 
+        private List<string[]> fieldsOfGloss = null;
+
+
         public ConverterToPdf(Project project, List<TextFile> files, BaseFont bf)
         {
             this.project = project;
@@ -34,6 +37,11 @@ namespace Converters
 
             regular = new Font(bfTimes, 14, Font.NORMAL, Color.BLACK);
             bold = new Font(bfTimes, 14, Font.BOLD);
+        }
+
+        public ConverterToPdf(Project project, List<TextFile> files, BaseFont bf, FormFile gloss) : this(project, files, bf)
+        {
+            fieldsOfGloss = gloss.fields;
         }
 
         private List<Chapter> AddChapters()
@@ -63,6 +71,19 @@ namespace Converters
 
                     chapters.Add(chapter);
                 }
+            }
+
+            if (fieldsOfGloss != null)
+            {
+                Paragraph titleGlos = new Paragraph("Глоссарий", bold);
+                titleGlos.Alignment = Element.ALIGN_CENTER;
+                Chapter chapter = new Chapter(titleGlos, i);
+                for (int j = 0; j < fieldsOfGloss.Count; j++)
+                {
+                    Paragraph par = new Paragraph($"{fieldsOfGloss[j][0]} - {fieldsOfGloss[j][1]}", regular);
+                    chapter.Add(par);
+                }
+                chapters.Add(chapter);
             }
             return chapters;
         }

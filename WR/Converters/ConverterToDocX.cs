@@ -15,11 +15,17 @@ namespace Converters
         private List<TextFile> files;
         private Project project;
         private XWPFDocument doc;
+        private List<string[]> fieldsOfGloss = null;
 
         public ConverterToDocX(Project project, List<TextFile> files)
         {
             this.project = project;
             this.files = files;
+        }
+
+        public ConverterToDocX(Project project, List<TextFile> files, FormFile gloss) : this(project, files)
+        {
+            fieldsOfGloss = gloss.fields;
         }
 
         private void AddChapters()
@@ -101,8 +107,35 @@ namespace Converters
 
                 AddChapters();
 
+                AddFields();
+
                 doc.Write(fs);
                 doc.Close();
+            }
+        }
+
+        private void AddFields()
+        {
+            if (fieldsOfGloss != null)
+            {
+                XWPFParagraph gp = doc.CreateParagraph();
+                gp.IsPageBreak = true;
+                gp.Alignment = ParagraphAlignment.CENTER;
+
+                XWPFRun title = gp.CreateRun();
+                title.SetText($"Глоссарий");
+                title.IsBold = true;
+                title.FontSize = 16;
+                
+                for (int i = 0; i < fieldsOfGloss.Count; i++)
+                {
+                    XWPFParagraph p = doc.CreateParagraph();
+                    p.Alignment = ParagraphAlignment.LEFT;
+
+                    XWPFRun r1 = p.CreateRun();
+                    r1.FontSize = 14;
+                    r1.SetText($"{fieldsOfGloss[i][0]} - {fieldsOfGloss[i][1]}");
+                }
             }
         }
     }

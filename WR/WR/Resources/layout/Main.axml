@@ -15,43 +15,38 @@
         android:background="#005662"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
-        <RelativeLayout
-            android:id="@+id/SaveBtnRL"
+        <ImageButton
+            android:id="@+id/SaveBtn"
+            android:background="#005662"
+            android:layout_gravity="end"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <ImageButton
-                android:id="@+id/SaveBtn"
-                android:background="#005662"
-                android:layout_alignParentEnd="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/content_save"
-                android:visibility="gone"/>
-        </RelativeLayout>
+            android:layout_height="wrap_content"
+            android:src="@drawable/content_save"
+            android:visibility="gone"/>
         
-        <RelativeLayout
+        <LinearLayout
             android:id="@+id/ExportImportRL"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-             <ImageButton
-                android:id="@+id/ExportBtn"
-                android:background="#005662"
-                android:layout_alignParentEnd="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/export"
-                android:padding="10dp"
-                android:visibility="gone"/>
-             <ImageButton
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:orientation="horizontal">
+            <ImageButton
                 android:id="@+id/ImportBtn"
                 android:background="#005662"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/importw"
-                android:layout_toLeftOf="@id/ExportBtn"
                 android:padding="10dp"
                 android:visibility="gone"/>
-        </RelativeLayout>
+             <ImageButton
+                android:id="@+id/ExportBtn"
+                android:background="#005662"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/export"
+                android:padding="10dp"
+                android:visibility="gone"/>
+        </LinearLayout>
     </android.support.v7.widget.Toolbar>
     
     <android.support.v4.widget.DrawerLayout

@@ -39,6 +39,7 @@ namespace WR.Activities
             changeUser.Click += ChangeUser_Click;
 
             SupportActionBar.SetTitle(Resource.String.export);
+            currentTitleOfActionBar = Resources.GetString(Resource.String.export);
         }
 
         void ChangeUser_Click(object sender, EventArgs e)

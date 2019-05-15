@@ -14,6 +14,8 @@ namespace Converters
         string genre, authorFN, authorLN;
         Project project;
         List<TextFile> files;
+        private List<string[]> fieldsOfGloss = null;
+
 
         XDocument fb2 = new XDocument();
 
@@ -32,6 +34,10 @@ namespace Converters
             {
                 genre = project.Theme;
             }
+        }
+        public ConverterToFB2Book(Project project, List<TextFile> files, FormFile gloss) : this(project, files)
+        {
+            fieldsOfGloss = gloss.fields;
         }
 
         private void CreateXml()
@@ -112,6 +118,18 @@ namespace Converters
                         new XElement("title", file.Name),
                         section));
                 }
+            }
+
+            if (fieldsOfGloss != null)
+            {
+                XElement[] glossary = new XElement[fieldsOfGloss.Count];
+                for (int i = 0; i < fieldsOfGloss.Count; i++)
+                {
+                    glossary[i] = new XElement("p", $"{fieldsOfGloss[i][0]} - {fieldsOfGloss[i][1]}");
+                }
+                body.Add(new XElement("section",
+                    new XElement("title", "Глоссарий"),
+                    glossary));
             }
             return body;
         }

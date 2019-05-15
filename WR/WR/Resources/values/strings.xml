@@ -64,6 +64,8 @@
     <string name="ContextMenuDeleteProject">Удалить проект</string>
     <string name="ContextMenuRenameProject">Переименовать проект</string>
     
+    <string name="ContextMenuAddToGlossary">Добавить в глоссарий</string>
+    
     <string-array name="templates">
         <item>Персонаж</item>
     </string-array>

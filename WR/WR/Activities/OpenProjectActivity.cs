@@ -35,7 +35,7 @@ namespace WR.Activities
             fragOpened = new Fragments.OpenedProjectFragment();
 
             xmlProjectPath = Intent.GetStringExtra("xml");
-            GetData(xmlProjectPath);
+            project = Project.GetData(xmlProjectPath);
 
             var transaction = SupportFragmentManager.BeginTransaction();
             transaction.Replace(Resource.Id.mainScreenFragmentsContainer, fragOpened);
@@ -96,17 +96,6 @@ namespace WR.Activities
             }
             StartActivity(intent);
             drawerLayout.CloseDrawer(leftDrawer);
-        }
-
-
-        public void GetData(string xml)
-        {
-            XmlSerializer xmlSerializer = new XmlSerializer(typeof(Project), new Type[] { typeof(FileOfProject), typeof(User) });
-
-            using (FileStream fs = new FileStream(xml, FileMode.Open))
-            {
-                project = (Project)xmlSerializer.Deserialize(fs);
-            }
         }
     }
 }

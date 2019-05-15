@@ -27,6 +27,8 @@ namespace WR.Fragments
         TextView templateTV;
         Dialog dialog;
 
+        Project project;
+
         public FormFile form;
 
         public override void OnCreate(Bundle savedInstanceState)
@@ -42,11 +44,18 @@ namespace WR.Fragments
 
             form.ReadFromFile();
 
+            string projectName = Path.GetFileName(Path.GetDirectoryName(form.PathToFile));
+            string projectXml = Path.Combine(Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments), projectName), $"{projectName}.xml");
+
+            project = Project.GetData(projectXml);
+
             listOfFields = view.FindViewById<ListView>(Resource.Id.listOfFields);
             listForRemoving = view.FindViewById<ListView>(Resource.Id.listOfFieldsRemove);
             fabAddField = view.FindViewById<FloatingActionButton>(Resource.Id.mainActionBtnAddField);
             fabRemoveFile = view.FindViewById<FloatingActionButton>(Resource.Id.mainActionBtnRemoveField);
             templateTV = view.FindViewById<TextView>(Resource.Id.OpenTemplateTV);
+
+            RegisterForContextMenu(listOfFields);
 
             if (form.fields.Count > 0)
             {
@@ -69,6 +78,62 @@ namespace WR.Fragments
             templateTV.Click += TemplateTV_Click;
 
             return view;
+        }
+
+        public override void OnCreateContextMenu(IContextMenu menu, View v, IContextMenuContextMenuInfo menuInfo)
+        {
+            base.OnCreateContextMenu(menu, v, menuInfo);
+
+            menu.Add(Resource.String.ContextMenuAddToGlossary);
+        }
+
+        public override bool OnContextItemSelected(IMenuItem item)
+        {
+            var info = (AdapterView.AdapterContextMenuInfo)item.MenuInfo;
+            int listPosition = info.Position;
+            switch (item.ToString())
+            {
+                case "Добавить в глоссарий":
+                    AddToGlossary(listPosition);
+                    Toast.MakeText(this.Activity, "Добавлено в глоссарий", ToastLength.Short).Show();
+                    break;
+                
+                default:
+                    break;
+            }
+            return base.OnContextItemSelected(item);
+        }
+
+        private void AddToGlossary(int listPosition)
+        {
+            FormFile gloss;
+            if (project.GlossaryExists)
+            {
+                Toast.MakeText(this.Activity, "Будет добавлено в существующий файл глоссария", ToastLength.Short).Show();
+                gloss = (FormFile)project.files[project.files.FindIndex((obj) =>
+                {
+                    if (obj.Name == "Глоссарий" && obj is FormFile)
+                    {
+                        return true;
+                    }
+                    return false;
+                })];
+                gloss.ReadFromFile();
+            }
+            else
+            {
+                string pathToFile = System.IO.Path.Combine(
+                    System.IO.Path.Combine(
+                        System.Environment.GetFolderPath(
+                            System.Environment.SpecialFolder.MyDocuments),
+                        project.Name),
+                    $"{project.CurrentFile}.xml");
+                gloss = new FormFile("Глоссарий", pathToFile, project.CurrentFile++);
+                project.AddFile(gloss);
+                project.CommitChanges();
+            }
+            gloss.fields.Add(form.fields[listPosition]);
+            gloss.SaveToFile();
         }
 
         void TemplateTV_Click(object sender, EventArgs e)

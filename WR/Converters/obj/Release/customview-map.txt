@@ -1,0 +1,8 @@
+resources;/Users/nastya_iva/CourseWork/WriteRight/WR/Converters/obj/Release/lp/1/jl/res/values/strings.xml
+resources;/Users/nastya_iva/CourseWork/WriteRight/WR/Converters/obj/Release/lp/24/jl/res/values/strings.xml
+resources;/Users/nastya_iva/CourseWork/WriteRight/WR/Converters/obj/Release/lp/6/jl/res/values/strings.xml
+resources;obj/Release/res/values/strings.xml
+string;/Users/nastya_iva/CourseWork/WriteRight/WR/Converters/obj/Release/lp/1/jl/res/values/strings.xml
+string;/Users/nastya_iva/CourseWork/WriteRight/WR/Converters/obj/Release/lp/24/jl/res/values/strings.xml
+string;/Users/nastya_iva/CourseWork/WriteRight/WR/Converters/obj/Release/lp/6/jl/res/values/strings.xml
+string;obj/Release/res/values/strings.xml

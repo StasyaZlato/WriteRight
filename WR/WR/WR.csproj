@@ -167,10 +167,10 @@
       <HintPath>..\packages\Xam.iTextSharpLGPL.0.1.0\lib\MonoAndroid10\XamiTextSharpLGPL.Droid.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>..\packages\SharpZipLib.1.0.0\lib\netstandard2.0\ICSharpCode.SharpZipLib.dll</HintPath>
+      <HintPath>..\packages\SharpZipLib.1.1.0\lib\netstandard2.0\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
     <Reference Include="System.Security.Principal.Windows">
-      <HintPath>..\packages\System.Security.Principal.Windows.4.5.0\lib\netstandard2.0\System.Security.Principal.Windows.dll</HintPath>
+      <HintPath>..\packages\System.Security.Principal.Windows.4.5.1\lib\netstandard2.0\System.Security.Principal.Windows.dll</HintPath>
     </Reference>
     <Reference Include="System.Security.AccessControl">
       <HintPath>..\packages\System.Security.AccessControl.4.5.0\lib\netstandard2.0\System.Security.AccessControl.dll</HintPath>
@@ -192,6 +192,10 @@
     </Reference>
     <Reference Include="NPOI.OpenXmlFormats">
       <HintPath>..\packages\NPOI.2.4.1\lib\netstandard2.0\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK-1.0" />
+    <Reference Include="System.Drawing.Common">
+      <HintPath>..\packages\System.Drawing.Common.4.5.1\lib\netstandard2.0\System.Drawing.Common.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

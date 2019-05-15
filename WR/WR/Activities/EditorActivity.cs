@@ -44,6 +44,7 @@ namespace WR.Activities
             changeUser.Click += ChangeUser_Click;
 
             SupportActionBar.SetTitle(Resource.String.editorTitle);
+            currentTitleOfActionBar = Resources.GetString(Resource.String.editorTitle);
         }
 
         void ChangeUser_Click(object sender, EventArgs e)
