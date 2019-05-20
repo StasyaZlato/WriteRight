@@ -1,31 +1,16 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Collections.Generic;
-using ProjectStructure;
-using System.Threading.Tasks;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using ProjectStructure;
 
 namespace Converters
 {
-    public class ConverterToTxt
+    public class ConverterToTxt : Converter
     {
-        private Project project;
-        private List<TextFile> files;
-        private List<string[]> fieldsOfGloss = null;
+        public ConverterToTxt(Project project, List<TextFile> files) : base(project, files) { }
 
-
-
-        public ConverterToTxt(Project project, List<TextFile> files)
-        {
-            this.project = project;
-            this.files = files;
-        }
-
-        public ConverterToTxt(Project project, List<TextFile> files, FormFile gloss) : this(project, files)
-        {
-            fieldsOfGloss = gloss.fields;
-        }
-
+        public ConverterToTxt(Project project, List<TextFile> files, FormFile gloss) : base(project, files, gloss) { }
 
         private string AddChapters()
         {
@@ -55,7 +40,6 @@ namespace Converters
             }
             return output;
         }
-
 
         public async Task CreateTxtAsync()
         {

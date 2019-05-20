@@ -1,19 +1,9 @@
-﻿using Android.App;
-using Android.Widget;
-using Android.OS;
-using SupportToolbar = Android.Support.V7.Widget.Toolbar;
-using Android.Support.V7.App;
-using Android.Support.V4.Widget;
-using Android.Views;
+﻿using System;
+using Android.App;
 using Android.Content;
-using System.Collections.Generic;
-using ProjectStructure;
-using System;
-using SupportFragment = Android.Support.V4.App.Fragment;
-using System.Xml.Serialization;
-using System.Xml.Linq;
-using System.IO;
-using Jp.Wasabeef;
+using Android.OS;
+using Android.Views;
+using Android.Widget;
 
 namespace WR.Activities
 {
@@ -21,9 +11,8 @@ namespace WR.Activities
         Theme = "@style/MainTheme", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class FormEditorActivity : MainActivity
     {
-        Fragments.FormEditorFragment formEditor;
+        private Fragments.FormEditorFragment formEditor;
         public ImageButton saveBtn;
-
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -84,8 +73,5 @@ namespace WR.Activities
             formEditor.form.SaveToFile();
             base.OnBackPressed();
         }
-
     }
-
 }
-

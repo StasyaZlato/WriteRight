@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WR", "WR\WR.csproj", "{6BEBADEA-CCD5-45BE-B01C-0EF57A1CA7BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "projectStructure", "projectStructure\projectStructure.csproj", "{5266E871-4D1D-4575-9D1B-25A54B36F150}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectStructure", "projectStructure\projectStructure.csproj", "{5266E871-4D1D-4575-9D1B-25A54B36F150}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Converters", "Converters\Converters.csproj", "{0601FCB7-F9D3-433B-8EBB-D08355E5DF30}"
 EndProject

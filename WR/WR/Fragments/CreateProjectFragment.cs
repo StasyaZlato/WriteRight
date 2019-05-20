@@ -1,35 +1,28 @@
-﻿using Android.App;
-using Android.Widget;
-using Android.OS;
-using Android.Support.V7.App;
-using Android.Support.V4.Widget;
-using Android.Views;
-using Android.Content;
-using System.Collections.Generic;
-using ProjectStructure;
-using System;
+﻿using System;
 using System.IO;
+using Android.OS;
+using Android.Views;
+using Android.Widget;
+using ProjectStructure;
 
 namespace WR.Fragments
 {
-    
     public class CreateProjectFragment : Android.Support.V4.App.Fragment
     {
         public event EventHandler<CustomEventArgs.ProjectEventArgs> ProjectIsCreated;
 
-        EditText nameOfProjectInput;
-        Spinner genreChoice, themeChoice;
-        TextView themeChoiceTextView, textView4;
-        ArrayAdapter adapterGenre;
-        ArrayAdapter adapterTheme;
-        LinearLayout mainLinearLayout, checkBoxLayout;
-        CheckBox checkBoxText, checkBoxDraft, checkBoxInfo;
-        Button acceptBtn;
-        Project project;
+        private EditText nameOfProjectInput;
+        private Spinner genreChoice, themeChoice;
+        private TextView themeChoiceTextView, textView4;
+        private ArrayAdapter adapterGenre;
+        private ArrayAdapter adapterTheme;
+        private LinearLayout mainLinearLayout, checkBoxLayout;
+        private CheckBox checkBoxText, checkBoxDraft, checkBoxInfo;
+        private Button acceptBtn;
+        private Project project;
 
-        string nameOfProject, genre, theme;
-        bool textSection, draftSection, infoSection;
-
+        private string nameOfProject, genre, theme;
+        private bool textSection, draftSection, infoSection;
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -56,7 +49,6 @@ namespace WR.Fragments
             mainLinearLayout.RemoveView(themeChoiceTextView);
             mainLinearLayout.RemoveView(themeChoice);
 
-
             nameOfProjectInput.TextChanged += NameOfProjectInput_TextChanged;
             genreChoice.ItemSelected += GenreChoice_ItemSelected;
             themeChoice.ItemSelected += ThemeChoice_ItemSelected;
@@ -71,7 +63,7 @@ namespace WR.Fragments
             return view;
         }
 
-        void GenreChoice_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        private void GenreChoice_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
         {
             Android.Graphics.Color color = new Android.Graphics.Color(38, 50, 56);
             ((TextView)e.Parent.GetChildAt(0)).SetTextColor(color);
@@ -109,37 +101,36 @@ namespace WR.Fragments
             genre = adapterGenre.GetItem(res).ToString();
         }
 
-        void ThemeChoice_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        private void ThemeChoice_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
         {
             Android.Graphics.Color color = new Android.Graphics.Color(38, 50, 56);
             ((TextView)e.Parent.GetChildAt(0)).SetTextColor(color);
             theme = adapterTheme.GetItem(e.Position).ToString();
         }
 
-
-        void NameOfProjectInput_TextChanged(object sender, Android.Text.TextChangedEventArgs e)
+        private void NameOfProjectInput_TextChanged(object sender, Android.Text.TextChangedEventArgs e)
         {
             nameOfProject = e.Text.ToString();
         }
 
-        void CheckBoxText_CheckedChange(object sender, CompoundButton.CheckedChangeEventArgs e)
+        private void CheckBoxText_CheckedChange(object sender, CompoundButton.CheckedChangeEventArgs e)
         {
             textSection = e.IsChecked;
         }
 
-        void CheckBoxDraft_CheckedChange(object sender, CompoundButton.CheckedChangeEventArgs e)
+        private void CheckBoxDraft_CheckedChange(object sender, CompoundButton.CheckedChangeEventArgs e)
         {
             draftSection = e.IsChecked;
         }
 
-        void CheckBoxInfo_CheckedChange(object sender, CompoundButton.CheckedChangeEventArgs e)
+        private void CheckBoxInfo_CheckedChange(object sender, CompoundButton.CheckedChangeEventArgs e)
         {
             infoSection = e.IsChecked;
         }
 
-        void AcceptBtn_Click(object sender, EventArgs e)
+        private void AcceptBtn_Click(object sender, EventArgs e)
         {
-            if (nameOfProject == null)
+            if (string.IsNullOrEmpty(nameOfProject))
             {
                 Toast toast = Toast.MakeText(this.Activity, Resource.String.alertCreatingProjectMsgNoName, ToastLength.Short);
                 toast.Show();
@@ -154,12 +145,21 @@ namespace WR.Fragments
             }
             else
             {
+                if (Section.CheckInvalidFileName(nameOfProject))
+                {
+                    Toast.MakeText(this.Activity, "Название содержит недопустимые символы", ToastLength.Short).Show();
+                    return;
+                }
+
                 string dir = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments), nameOfProject);
 
-                if (!Directory.Exists(dir))
+                if (Directory.Exists(dir))
                 {
-                    Directory.CreateDirectory(dir);
+                    Toast.MakeText(this.Activity, "Проект с таким названием уже существует", ToastLength.Short).Show();
+                    return;
                 }
+
+                Directory.CreateDirectory(dir);
                 project = new Project(nameOfProject, genre, theme, textSection, draftSection, infoSection);
 
                 Toast toast = Toast.MakeText(this.Activity, "Проект создан!", ToastLength.Short);
@@ -168,6 +168,5 @@ namespace WR.Fragments
                 ProjectIsCreated(this, new CustomEventArgs.ProjectEventArgs(project));
             }
         }
-
     }
 }

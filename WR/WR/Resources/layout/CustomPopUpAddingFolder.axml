@@ -42,26 +42,6 @@
 		android:hint="Название"
 		android:textColorHint="@color/material_grey_600"
 		android:textColor="@color/material_blue_grey_900"/>
-	<!--<RadioGroup
-		android:minWidth="25px"
-		android:minHeight="25px"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:id="@+id/FormOrFileRadioGroupFolder">
-		<RadioButton
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:checked="true"
-			android:text="Форма"
-			android:id="@+id/FormRadioBtnFolder"
-			android:textColor="@color/material_blue_grey_800" />
-		<RadioButton
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="Текст"
-			android:id="@+id/FileRadioBtnFolder"
-			android:textColor="@color/material_blue_grey_800" />
-	</RadioGroup>-->
 	<Button
 		android:text="Создать"
 		android:layout_width="wrap_content"
@@ -69,5 +49,5 @@
 		android:id="@+id/AcceptNewFolderBtn"
 		android:layout_gravity="left"
 		android:background="@color/material_grey_50"
-		android:textColor="#00838f" />
+		android:textColor="#00838f"/>
 </LinearLayout>

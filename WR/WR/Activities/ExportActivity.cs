@@ -1,14 +1,7 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿using System;
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Views;
 using Android.Widget;
 
 namespace WR.Activities
@@ -17,8 +10,7 @@ namespace WR.Activities
         Theme = "@style/MainTheme", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class ExportActivity : MainActivity
     {
-        Fragments.ExportFragment fragExport;
-        
+        private Fragments.ExportFragment fragExport;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -32,7 +24,6 @@ namespace WR.Activities
             currentFragment = fragExport;
             ShowFragment(fragExport);
 
-
             leftMenu.ItemClick -= LeftMenu_ItemClick;
             leftMenu.ItemClick += LeftMenu_ItemClick1;
 
@@ -42,7 +33,7 @@ namespace WR.Activities
             currentTitleOfActionBar = Resources.GetString(Resource.String.export);
         }
 
-        void ChangeUser_Click(object sender, EventArgs e)
+        private void ChangeUser_Click(object sender, EventArgs e)
         {
             Intent intent = new Intent(this, typeof(MainActivity));
             intent.PutExtra("frag", "userCh");

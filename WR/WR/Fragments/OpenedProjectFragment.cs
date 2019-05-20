@@ -1,28 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.IO;
-using System.Xml.Serialization;
-
+using Android.Animation;
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Util;
+using Android.Support.Design.Widget;
 using Android.Views;
 using Android.Widget;
-using Android.Support.Design.Widget;
-using Android.Animation;
-using ProjectStructure;
 using Newtonsoft.Json;
-
-using NPOI.POIFS.FileSystem;
-using NPOI.XWPF.UserModel;
-using NPOI.XWPF;
 using NPOI.XWPF.Extractor;
-
-using System.Threading.Tasks;
+using NPOI.XWPF.UserModel;
+using ProjectStructure;
 
 namespace WR.Fragments
 {
@@ -30,40 +18,38 @@ namespace WR.Fragments
     {
         public event EventHandler FilePicked;
 
-        static bool isFabOpened = false;
-        FloatingActionButton fabMain, fabAddFile, fabAddFolder, fabAddForm;
-        View fabMenu;
-        TextView fabText;
-        ListView foldersListView, filesListView;
-        Dialog dialog, dialog1;
-        View view;
+        private static bool isFabOpened = false;
+        private FloatingActionButton fabMain, fabAddFile, fabAddFolder, fabAddForm;
+        private View fabMenu;
+        private ListView foldersListView, filesListView;
+        private Dialog dialog, dialog1;
+        private View view;
 
-        ImageButton backBtn;
+        private ImageButton backBtn;
 
-        //elements of dialog
-        ImageButton closeBtn;
-        EditText nameOfSection, nameOfFile;
-        Button acceptNewFolder;
+        //элементы диалога
+        private ImageButton closeBtn;
+        private EditText nameOfSection, nameOfFile;
+        private Button acceptNewFolder;
 
-
-        Project project;
-        Section currentSection;
+        public Project project;
+        private Section currentSection;
         public bool IsRoot = true;
 
-        ImageButton closeBtnRename;
-        EditText renameSection;
-        Button acceptNewName;
-        string getNewName = null;
-        int listPosition;
+        private ImageButton closeBtnRename;
+        private EditText renameSection;
+        private Button acceptNewName;
+        private string getNewName = null;
+        private int listPosition;
 
-        Button acceptNewFile;
+        private Button acceptNewFile;
 
         // тип создаваемого файла
-        int type;
+        private int type;
 
-        string dir;
+        private string dir;
 
-        string text;
+        private string text;
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -79,7 +65,6 @@ namespace WR.Fragments
             fabAddFolder = view.FindViewById<FloatingActionButton>(Resource.Id.addSectionActionButton);
             fabAddForm = view.FindViewById<FloatingActionButton>(Resource.Id.addFormActionButton);
             fabMenu = view.FindViewById<View>(Resource.Id.bg_fabMenu);
-            fabText = view.FindViewById<TextView>(Resource.Id.textViewFAB);
             foldersListView = view.FindViewById<ListView>(Resource.Id.listOfFoldersMain);
             filesListView = view.FindViewById<ListView>(Resource.Id.listOfFilesMain);
             backBtn = view.FindViewById<ImageButton>(Resource.Id.backButtonNavigation);
@@ -119,7 +104,7 @@ namespace WR.Fragments
             return view;
         }
 
-        void OpenedProjectFragment_FilePicked(object sender, EventArgs e)
+        private void OpenedProjectFragment_FilePicked(object sender, EventArgs e)
         {
             //string name = Path.GetFileNameWithoutExtension(path);
             string name = "импортированный файл";
@@ -161,8 +146,7 @@ namespace WR.Fragments
             }
         }
 
-
-        void ImportBtn_Click(object sender, EventArgs e)
+        private void ImportBtn_Click(object sender, EventArgs e)
         {
             Intent intent = new Intent(Intent.ActionGetContent);
             intent.SetType("text/plain");
@@ -210,7 +194,7 @@ namespace WR.Fragments
             }
         }
 
-        void FilesListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        private void FilesListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             int id = e.Position;
             string fullpath = Path.Combine(dir, currentSection.files[id].NameOfFile);
@@ -234,7 +218,6 @@ namespace WR.Fragments
                 StartActivity(intent);
             }
         }
-
 
         public override void OnCreateContextMenu(IContextMenu menu, View v, IContextMenuContextMenuInfo menuInfo)
         {
@@ -280,7 +263,6 @@ namespace WR.Fragments
             return base.OnContextItemSelected(item);
         }
 
-
         private void AcceptNewNameFolder_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(renameSection.Text))
@@ -297,7 +279,6 @@ namespace WR.Fragments
                 {
                     Toast.MakeText(this.Activity, ex.Message, ToastLength.Short).Show();
                 }
-
             }
         }
 
@@ -319,8 +300,6 @@ namespace WR.Fragments
                 }
             }
         }
-
-
 
         private void BackBtnPressedHandler(object sender, EventArgs e)
         {
@@ -359,6 +338,8 @@ namespace WR.Fragments
         private void FoldersListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             int id = e.Position;
+            // путь обновляется на случай переименования проекта
+            currentSection.ChildSections[id].Path = currentSection.Path + currentSection.ChildSections[id].Name + "\\";
             currentSection = currentSection.ChildSections[id];
             ((Activities.OpenProjectActivity)this.Activity).SupportActionBar.Title = currentSection.Path;
             ((Activities.OpenProjectActivity)this.Activity).currentTitleOfActionBar = currentSection.Path;
@@ -368,7 +349,6 @@ namespace WR.Fragments
 
             IsRoot = false;
         }
-
 
         private void ShowPopUpFolder()
         {
@@ -456,20 +436,10 @@ namespace WR.Fragments
             dialog1.Show();
         }
 
-        private bool CheckInvalidFileName(string filename)
-        {
-            return filename.IndexOfAny(Path.GetInvalidFileNameChars()) >= 0;
-        }
-
         private void AcceptNewFile_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(nameOfFile.Text))
             {
-                if (CheckInvalidFileName(nameOfFile.Text))
-                {
-                    Toast.MakeText(this.Activity, "Название содержит недопустимые символы", ToastLength.Short);
-                    return;
-                }
                 FileOfProject file;
                 try
                 {
@@ -603,16 +573,14 @@ namespace WR.Fragments
 
         private class FabAnimatorListener : Java.Lang.Object, Animator.IAnimatorListener
         {
-            View[] viewsToHide;
+            private View[] viewsToHide;
 
             public FabAnimatorListener(params View[] views)
             {
                 viewsToHide = views;
             }
 
-            public void OnAnimationCancel(Animator animation)
-            {
-            }
+            public void OnAnimationCancel(Animator animation) { }
 
             public void OnAnimationEnd(Animator animation)
             {
@@ -625,13 +593,9 @@ namespace WR.Fragments
                 }
             }
 
-            public void OnAnimationRepeat(Animator animation)
-            {
-            }
+            public void OnAnimationRepeat(Animator animation) { }
 
-            public void OnAnimationStart(Animator animation)
-            {
-            }
+            public void OnAnimationStart(Animator animation) { }
         }
 
         public void Handle_OnOpenCreatedProject(object sender, CustomEventArgs.ProjectEventArgs e)
@@ -639,5 +603,4 @@ namespace WR.Fragments
             project = e.project;
         }
     }
-
 }

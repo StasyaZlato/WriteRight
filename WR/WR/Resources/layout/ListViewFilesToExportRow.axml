@@ -7,7 +7,6 @@
     android:minHeight="25px"  
     android:paddingBottom="4dp"
     android:clickable="false">
-    
     <ImageView  
         android:id="@+id/fileIcon"  
         android:layout_width="36dp"  
@@ -34,5 +33,4 @@
         android:visibility="visible"
         android:src="@drawable/checkbox_blank_outline"
         android:padding="10dp"/>
-   
 </RelativeLayout>   

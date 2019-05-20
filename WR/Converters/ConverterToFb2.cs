@@ -1,28 +1,21 @@
 ﻿using System;
-using ProjectStructure;
 using System.Collections.Generic;
 using System.IO;
-using System.Xml.Linq;
 using System.Text.RegularExpressions;
-
 using System.Threading.Tasks;
+using System.Xml.Linq;
+using ProjectStructure;
 
 namespace Converters
 {
-    public class ConverterToFB2Book
+    public class ConverterToFB2Book : Converter
     {
-        string genre, authorFN, authorLN;
-        Project project;
-        List<TextFile> files;
-        private List<string[]> fieldsOfGloss = null;
+        private string genre, authorFN, authorLN;
 
+        private XDocument fb2 = new XDocument();
 
-        XDocument fb2 = new XDocument();
-
-        public ConverterToFB2Book(Project project, List<TextFile> files)
+        public ConverterToFB2Book(Project project, List<TextFile> files) : base(project, files)
         {
-            this.project = project;
-            this.files = files;
             authorFN = project.user.FirstName;
             authorLN = project.user.LastName;
 
@@ -35,10 +28,8 @@ namespace Converters
                 genre = project.Theme;
             }
         }
-        public ConverterToFB2Book(Project project, List<TextFile> files, FormFile gloss) : this(project, files)
-        {
-            fieldsOfGloss = gloss.fields;
-        }
+
+        public ConverterToFB2Book(Project project, List<TextFile> files, FormFile gloss) : base(project, files, gloss) { }
 
         private void CreateXml()
         {
@@ -110,8 +101,6 @@ namespace Converters
                 {
                     string text = sr.ReadToEnd();
 
-                    //text = ProcessHtml(text);
-
                     XElement[] section = ProcessHtml(text);
 
                     body.Add(new XElement("section",
@@ -147,7 +136,6 @@ namespace Converters
             regex = new Regex(@"</h[123]>", RegexOptions.IgnoreCase);
             text = regex.Replace(text, "</subtitle>");
 
-
             text = text.Replace("<b>", "<strong>")
                         .Replace("</b>", "</strong>")
                         .Replace("<i>", "<emphasis>")
@@ -156,7 +144,6 @@ namespace Converters
                         .Replace("<u>", string.Empty)
                         .Replace("</u>", string.Empty)
                         .Replace("&nbsp;", " "); // подчеркивание отсутствует в fb2 :(
-
 
             string[] textLines = text.Split("<br>"); // "умный" редактор вместо абзацев расставляет переносы
 
@@ -193,6 +180,5 @@ namespace Converters
             }
             fb2.Save(path);
         }
-
     }
 }

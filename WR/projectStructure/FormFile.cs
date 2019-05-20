@@ -1,8 +1,7 @@
 ﻿using System;
-using System.IO;
+using System.Collections.Generic;
 using System.Xml.Linq;
 using System.Xml.Serialization;
-using System.Collections.Generic;
 
 namespace ProjectStructure
 {
@@ -12,15 +11,12 @@ namespace ProjectStructure
         [XmlIgnore]
         public List<string[]> fields = new List<string[]>();
 
-        public FormFile() : base()
-        {
-        }
+        public FormFile() : base() { }
 
         public FormFile(string name, string path, int num) : base(name, path, num)
         {
             SaveToFile();
         }
-
 
         public FormFile(string name, int num) : base(name, num) { }
 
@@ -31,10 +27,10 @@ namespace ProjectStructure
 
             foreach (var item in fields)
             {
-                    root.Add(new XElement(
-                    "field",
-                    new XAttribute("value", item[1]),
-                    new XAttribute("name", item[0])));
+                root.Add(new XElement(
+                "field",
+                new XAttribute("value", item[1]),
+                new XAttribute("name", item[0])));
             }
             doc.Add(root);
             doc.Save(PathToFile);

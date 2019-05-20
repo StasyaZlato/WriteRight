@@ -1,36 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.IO;
-
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Util;
 using Android.Views;
 using Android.Widget;
-using Android.Support.Design.Widget;
-using Android.Animation;
 using ProjectStructure;
 
 namespace WR.Fragments
 {
     public class OpenExistingProjectFragment : Android.Support.V4.App.Fragment
     {
-        ListView listOfProjects;
-        string path;
+        private ListView listOfProjects;
+        private string path;
+
         // context dialog for removing / renaming
-        Dialog dialog, dialogRename;
+        private Dialog dialogRename;
 
-        ImageButton closeBtnRename;
-        EditText renameProject;
-        Button acceptNewName;
+        private ImageButton closeBtnRename;
+        private EditText renameProject;
+        private Button acceptNewName;
 
-        List<string> projects = new List<string>();
+        private List<string> projects = new List<string>();
 
-        int listPosition;
+        private int listPosition;
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -49,8 +43,6 @@ namespace WR.Fragments
 
             RegisterForContextMenu(listOfProjects);
 
-            dialog = new Dialog(Context);
-
             listOfProjects.ItemClick += ListOfProjects_ItemClick;
 
             return view;
@@ -68,7 +60,7 @@ namespace WR.Fragments
         public override bool OnContextItemSelected(IMenuItem item)
         {
             var info = (AdapterView.AdapterContextMenuInfo)item.MenuInfo;
-             listPosition = info.Position;
+            listPosition = info.Position;
             string pathToProject = Path.Combine(path, projects[listPosition]);
             switch (item.ToString())
             {
@@ -108,7 +100,7 @@ namespace WR.Fragments
             dialogRename.Show();
         }
 
-        void AcceptNewName_Click(object sender, EventArgs e)
+        private void AcceptNewName_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(renameProject.Text))
             {
@@ -118,31 +110,40 @@ namespace WR.Fragments
             {
                 Toast.MakeText(this.Activity, "Проект с таким именем уже существует!", ToastLength.Short).Show();
             }
+            else if (Section.CheckInvalidFileName(renameProject.Text))
+            {
+                Toast.MakeText(this.Activity, "Новое имя содержит недопустимые символы", ToastLength.Short).Show();
+            }
             else
             {
                 string newPath = Path.Combine(path, renameProject.Text);
-                string PathToXml = Path.Combine(Path.Combine(path, projects[listPosition]), $"{projects[listPosition]}.xml"); 
+                string PathToXml = Path.Combine(Path.Combine(path, projects[listPosition]), $"{projects[listPosition]}.xml");
                 string newPathToXml = Path.Combine(Path.Combine(path, projects[listPosition]), $"{renameProject.Text}.xml");
                 string pathToProject = Path.Combine(path, projects[listPosition]);
 
                 File.Move(PathToXml, newPathToXml);
                 Directory.Move(pathToProject, newPath);
 
+                newPathToXml = Path.Combine(Path.Combine(path, renameProject.Text), $"{renameProject.Text}.xml");
+
+                Project project = Project.GetData(newPathToXml);
+                project.Name = renameProject.Text;
+                project.Path = renameProject.Text + "\\";
+                project.UpdatePaths();
+                project.CommitChanges();
                 dialogRename.Dismiss();
 
                 Refresh();
             }
         }
 
-
-        void ListOfProjects_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        private void ListOfProjects_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             string pathToXml = Path.Combine(path, Path.Combine(projects[e.Position], $"{projects[e.Position]}.xml"));
             Intent intent = new Intent(this.Activity, typeof(Activities.OpenProjectActivity));
             intent.PutExtra("xml", pathToXml);
             StartActivity(intent);
         }
-
 
         public void GetProjects()
         {

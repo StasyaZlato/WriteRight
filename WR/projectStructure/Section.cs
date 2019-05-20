@@ -1,17 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using Android.OS;
 using System.Xml.Serialization;
 
 namespace ProjectStructure
 {
     [Serializable]
     [XmlInclude(typeof(Project))]
-    public class Section 
+    public class Section
     {
-        [XmlElement("Text", typeof(TextProject))]
-        [XmlElement("Draft", typeof(DraftProject))]
-        [XmlElement("Forms", typeof(FormProject))]
         [XmlElement("Section", typeof(Section))]
         public List<Section> ChildSections = new List<Section>();
 
@@ -20,6 +16,7 @@ namespace ProjectStructure
         public List<FileOfProject> files = new List<FileOfProject>();
 
         public string Name { get; set; }
+
         public string Path { get; set; }
 
         public DateTime Created { get; set; }
@@ -33,6 +30,10 @@ namespace ProjectStructure
             Name = name;
             Path = Name + "\\";
             Created = DateTime.Now;
+            if (CheckInvalidFileName(name))
+            {
+                throw new IncorrectNameOfFileException("Название содержит недопустимые символы");
+            }
         }
 
         //конструктор для остальных каталогов, в качестве Sender родительский каталог
@@ -41,6 +42,27 @@ namespace ProjectStructure
             Name = name;
             Path = ((Section)sender).Path + Name + "\\";
             Created = DateTime.Now;
+            if (CheckInvalidFileName(name))
+            {
+                throw new IncorrectNameOfFileException("Название содержит недопустимые символы");
+            }
+        }
+
+        public void UpdatePaths()
+        {
+            if (ChildSections.Count > 0)
+            {
+                for (int i = 0; i < ChildSections.Count; i++)
+                {
+                    ChildSections[i].Path = Name + ChildSections[i].Name + "\\";
+                    ChildSections[i].UpdatePaths();
+                }
+            }
+
+            for (int i = 0; i < files.Count; i++)
+            {
+                files[i].PathInProject = Path + files[i].Name;
+            }
         }
 
         public void RenameSection(int id, string name)
@@ -52,7 +74,8 @@ namespace ProjectStructure
             }
 
             ChildSections[id].Name = string.IsNullOrEmpty(name) ? throw new IncorrectNameOfFileException("Имя не указано") : name;
-            ChildSections[id].Path = this.Path + name + "\\";
+            ChildSections[id].Path = this.Path + "\\" + name + "\\";
+            ChildSections[id].UpdatePaths();
         }
 
         public void AddSection(string name)
@@ -64,9 +87,8 @@ namespace ProjectStructure
             }
 
             ChildSections.Add(new Section(this, name));
-
         }
-        
+
         public void DeleteSection(int id)
         {
             ChildSections.RemoveAt(id);
@@ -121,7 +143,6 @@ namespace ProjectStructure
             {
                 throw new IncorrectNameOfFileException("Имя зарезервировано");
             }
-
             files[id].Name = string.IsNullOrEmpty(newName) ? throw new IncorrectNameOfFileException("Имя не указано") : newName;
             files[id].PathInProject = this.Path + newName;
         }
@@ -129,6 +150,12 @@ namespace ProjectStructure
         public void DeleteFile(int id)
         {
             files.RemoveAt(id);
+        }
+
+        public static bool CheckInvalidFileName(string filename)
+        {
+            char[] invalidC = new char[] { '/', '\\', '?', '%', '*', ':', '|', '"', '<', '>', '.' };
+            return filename.IndexOfAny(invalidC) >= 0;
         }
     }
 }

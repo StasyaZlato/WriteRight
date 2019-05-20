@@ -1,29 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿using System.Collections.Generic;
 using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Util;
 using Android.Views;
 using Android.Widget;
-using Android.Support.Design.Widget;
-using Android.Animation;
-using ProjectStructure;
-using Java.Lang;
 
 namespace WR.CustomViews
 {
     public class FormFieldsListAdapter : BaseAdapter<string[]>
     {
         public List<string[]> fields = new List<string[]>();
-        Activity activity;
+        private Activity activity;
         public bool changed;
-
-        //public event EventHandler<CustomEventArgs.FormListViewEventArgs> CollectionChanged;
 
         public FormFieldsListAdapter(Activity act, List<string[]> fields)
         {
@@ -55,9 +41,9 @@ namespace WR.CustomViews
 
                 holder = new ViewHolder()
                 {
-                    fieldNameTV = fieldNameTV,
-                    fieldInfoET = fieldInfoET,
-                    icon = icon,
+                    FieldNameET = fieldNameTV,
+                    FieldInfoET = fieldInfoET,
+                    Icon = icon,
                 };
 
                 view.Tag = holder;
@@ -69,22 +55,21 @@ namespace WR.CustomViews
 
             holder.Position = position;
 
-            holder.fieldNameTV.Text = item[0];
-            holder.fieldInfoET.Text = item[1];
+            holder.FieldNameET.Text = item[0];
+            holder.FieldInfoET.Text = item[1];
 
-
-            holder.fieldInfoET.FocusChange += (sender, e) =>
+            holder.FieldInfoET.FocusChange += (sender, e) =>
             {
-                if (!holder.fieldInfoET.HasFocus)
+                if (!holder.FieldInfoET.HasFocus)
                 {
                     fields[holder.Position][1] = ((EditText)sender).Text;
                     changed = true;
                 }
             };
 
-            holder.fieldNameTV.FocusChange += (sender, e) =>
+            holder.FieldNameET.FocusChange += (sender, e) =>
             {
-                if (!holder.fieldNameTV.HasFocus)
+                if (!holder.FieldNameET.HasFocus)
                 {
                     fields[holder.Position][0] = ((EditText)sender).Text;
                     changed = true;
@@ -93,18 +78,13 @@ namespace WR.CustomViews
 
             return view;
         }
+
+        public class ViewHolder : Java.Lang.Object
+        {
+            public EditText FieldNameET { get; set; }
+            public EditText FieldInfoET { get; set; }
+            public ImageView Icon { get; set; }
+            public int Position { get; set; }
+        }
     }
-
-
-
-    public class ViewHolder : Java.Lang.Object
-    {
-        public EditText fieldNameTV { get; set; }
-        public EditText fieldInfoET { get; set; }
-        public ImageView icon { get; set; }
-        public int Position { get; set; }
-    }
-
 }
-
-

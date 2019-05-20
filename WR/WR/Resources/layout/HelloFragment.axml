@@ -50,7 +50,6 @@
         android:layout_height="match_parent"
         android:id="@+id/HelloFragmentRL"
         android:visibility="gone">
-        
         <TextView
             android:id="@+id/HelloFragmentTV"
             android:layout_width="match_parent"

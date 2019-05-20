@@ -1,8 +1,8 @@
-resources;/Users/nastya_iva/CourseWork/WriteRight/WR/Converters/obj/Debug/lp/1/jl/res/values/strings.xml
+resources;/Users/nastya_iva/CourseWork/WriteRight/WR/Converters/obj/Debug/lp/0/jl/res/values/strings.xml
 resources;/Users/nastya_iva/CourseWork/WriteRight/WR/Converters/obj/Debug/lp/24/jl/res/values/strings.xml
-resources;/Users/nastya_iva/CourseWork/WriteRight/WR/Converters/obj/Debug/lp/6/jl/res/values/strings.xml
+resources;/Users/nastya_iva/CourseWork/WriteRight/WR/Converters/obj/Debug/lp/3/jl/res/values/strings.xml
 resources;obj/Debug/res/values/strings.xml
-string;/Users/nastya_iva/CourseWork/WriteRight/WR/Converters/obj/Debug/lp/1/jl/res/values/strings.xml
+string;/Users/nastya_iva/CourseWork/WriteRight/WR/Converters/obj/Debug/lp/0/jl/res/values/strings.xml
 string;/Users/nastya_iva/CourseWork/WriteRight/WR/Converters/obj/Debug/lp/24/jl/res/values/strings.xml
-string;/Users/nastya_iva/CourseWork/WriteRight/WR/Converters/obj/Debug/lp/6/jl/res/values/strings.xml
+string;/Users/nastya_iva/CourseWork/WriteRight/WR/Converters/obj/Debug/lp/3/jl/res/values/strings.xml
 string;obj/Debug/res/values/strings.xml

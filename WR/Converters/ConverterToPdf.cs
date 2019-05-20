@@ -1,39 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Xml.Linq;
-
-using iTextSharp;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
-using iTextSharp.text.html.simpleparser;
-
-using ProjectStructure;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-//using XamiTextSharpLGPL.Droid;
-
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using ProjectStructure;
 
 namespace Converters
 {
-    public class ConverterToPdf
+    public class ConverterToPdf : Converter
     {
-        private List<TextFile> files;
-        private Project project;
-
         private Document pdf;
         private PdfWriter pdfWriter;
         private Font regular, bold;
 
-        private List<string[]> fieldsOfGloss = null;
-
-
-        public ConverterToPdf(Project project, List<TextFile> files, BaseFont bf)
+        public ConverterToPdf(Project project, List<TextFile> files, BaseFont bf) : base(project, files)
         {
-            this.project = project;
-            this.files = files;
-            
-            BaseFont bfTimes = bf; 
+            BaseFont bfTimes = bf;
 
             regular = new Font(bfTimes, 14, Font.NORMAL, Color.BLACK);
             bold = new Font(bfTimes, 14, Font.BOLD);
@@ -68,7 +51,7 @@ namespace Converters
                         Paragraph paragraph = new Paragraph(regex.Replace(par, string.Empty), regular);
                         chapter.Add(paragraph);
                     }
-
+                   
                     chapters.Add(chapter);
                 }
             }
@@ -126,6 +109,5 @@ namespace Converters
                 pdf.Close();
             }
         }
-
     }
 }

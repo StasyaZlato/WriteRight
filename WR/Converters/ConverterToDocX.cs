@@ -1,32 +1,19 @@
-﻿using System;
-using NPOI.POIFS.FileSystem;
-using NPOI.XWPF.UserModel;
-using NPOI.XWPF;
+﻿using System.Collections.Generic;
 using System.IO;
-using ProjectStructure;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using NPOI.XWPF.UserModel;
+using ProjectStructure;
 
 namespace Converters
 {
-    public class ConverterToDocX
+    public class ConverterToDocX : Converter
     {
-        private List<TextFile> files;
-        private Project project;
         private XWPFDocument doc;
-        private List<string[]> fieldsOfGloss = null;
 
-        public ConverterToDocX(Project project, List<TextFile> files)
-        {
-            this.project = project;
-            this.files = files;
-        }
+        public ConverterToDocX(Project project, List<TextFile> files) : base(project, files) { }
 
-        public ConverterToDocX(Project project, List<TextFile> files, FormFile gloss) : this(project, files)
-        {
-            fieldsOfGloss = gloss.fields;
-        }
+        public ConverterToDocX(Project project, List<TextFile> files, FormFile gloss) : base(project, files, gloss) { }
 
         private void AddChapters()
         {
@@ -126,7 +113,7 @@ namespace Converters
                 title.SetText($"Глоссарий");
                 title.IsBold = true;
                 title.FontSize = 16;
-                
+
                 for (int i = 0; i < fieldsOfGloss.Count; i++)
                 {
                     XWPFParagraph p = doc.CreateParagraph();

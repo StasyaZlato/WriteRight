@@ -2,7 +2,6 @@
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/bin/Release/WR.pdb
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/bin/Release/com.willowness.wr.apk
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/bin/Release/com.willowness.wr-Signed.apk
-/Users/nastya_iva/CourseWork/WriteRight/WR/WR/bin/Release/Converters.pdb
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/bin/Release/ICSharpCode.SharpZipLib.pdb
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/bin/Release/Mono.Android.pdb
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/bin/Release/OpenTK-1.0.pdb
@@ -117,7 +116,6 @@
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/res/drawable/content_save.xml
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/res/layout/custompopupaddingfile.xml
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/res/drawable/table_plus.xml
-/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/res/layout/textfileslistview.xml
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/res/layout/listviewtextfilesrow.xml
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/res/xml/hero.xml
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/res/layout/formeditorfragment.xml
@@ -142,6 +140,7 @@
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/res/drawable/user_unknown.xml
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/res/drawable/user.xml
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/res/drawable/userpng.png
+/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/res/drawable/content_save_edit.xml
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/R.cs.flag
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/R.txt
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/uploadflags.txt
@@ -223,7 +222,6 @@
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/linksrc/System.Security.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/linksrc/Mono.Security.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/linksrc/WR.pdb
-/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/linksrc/Converters.pdb
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/linksrc/ICSharpCode.SharpZipLib.pdb
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/linksrc/Mono.Android.pdb
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/linksrc/OpenTK-1.0.pdb
@@ -231,7 +229,6 @@
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/linksrc/RichEditor.dll.mdb
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/link.flag
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/android/assets/Converters.dll
-/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/android/assets/Converters.pdb
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/android/assets/ICSharpCode.SharpZipLib.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/android/assets/ICSharpCode.SharpZipLib.pdb
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/android/assets/iTextSharpLGPL-MonoForAndroid.dll

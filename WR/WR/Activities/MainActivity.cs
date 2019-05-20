@@ -1,18 +1,16 @@
-﻿using Android.App;
-using Android.Widget;
-using Android.OS;
-using SupportToolbar = Android.Support.V7.Widget.Toolbar;
-using Android.Support.V7.App;
-using Android.Support.V4.Widget;
-using Android.Views;
-using Android.Content;
-using System.Collections.Generic;
-using ProjectStructure;
-using System;
-using SupportFragment = Android.Support.V4.App.Fragment;
-using System.Xml.Serialization;
+﻿using System;
 using System.IO;
-using Android.Views.InputMethods;
+using System.Xml.Serialization;
+using Android.App;
+using Android.Content;
+using Android.OS;
+using Android.Support.V4.Widget;
+using Android.Support.V7.App;
+using Android.Views;
+using Android.Widget;
+using ProjectStructure;
+using SupportFragment = Android.Support.V4.App.Fragment;
+using SupportToolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace WR.Activities
 {
@@ -22,16 +20,18 @@ namespace WR.Activities
     {
         public SupportToolbar toolbar;
         public ListView leftMenu;
-        MyActionBarDrawerToggle drawerToggle;
+        private MyActionBarDrawerToggle drawerToggle;
         public DrawerLayout drawerLayout;
+
         public string currentTitleOfActionBar = "WriteRight";
         public SupportFragment currentFragment;
-        Fragments.CreateProjectFragment fragCreate;
-        Fragments.OpenExistingProjectFragment fragOpen;
-        Fragments.InfoFragment fragInfo;
-        Fragments.HelloFragment fragHello;
 
-        string userPath;
+        private Fragments.CreateProjectFragment fragCreate;
+        private Fragments.OpenExistingProjectFragment fragOpen;
+        private Fragments.InfoFragment fragInfo;
+        private Fragments.HelloFragment fragHello;
+
+        private string userPath;
 
         public FrameLayout leftDrawer;
 
@@ -43,9 +43,6 @@ namespace WR.Activities
         { 
             base.OnCreate(savedInstanceState);
 
-            //this.Window.SetSoftInputMode(SoftInput.StateHidden);
-
-            // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
             drawerLayout = FindViewById<DrawerLayout>(Resource.Id.MainDrawer);
@@ -78,8 +75,6 @@ namespace WR.Activities
             }
 
             SetSupportActionBar(toolbar);
-
-            //drawerLayout.OpenDrawer(leftMenu);
 
             //добавляем фрагмент
             var transaction = SupportFragmentManager.BeginTransaction();
@@ -143,7 +138,7 @@ namespace WR.Activities
             changeUser.Click += ChangeUser_Click;
         }
 
-        void ChangeUser_Click(object sender, EventArgs e)
+        private void ChangeUser_Click(object sender, EventArgs e)
         {
             if (File.Exists(userPath))
             {
@@ -159,14 +154,12 @@ namespace WR.Activities
             lastName.Text = "Last name";
         }
 
-
         private void FragCreate_ProjectIsCreated(object sender, CustomEventArgs.ProjectEventArgs e)
         {
             Project project = e.project;
             string dir = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments), project.Name);
 
             var pathToXML = Path.Combine(dir,  $"{project.Name}.xml");
-
 
             XmlSerializer xml = new XmlSerializer(typeof(Project), new Type[] { typeof(FileOfProject), typeof(User) });
 
@@ -191,18 +184,16 @@ namespace WR.Activities
             currentFragment = fragment;
         }
 
-        void DrawerLayout_DrawerClosed(object sender, DrawerLayout.DrawerClosedEventArgs e)
+        private void DrawerLayout_DrawerClosed(object sender, DrawerLayout.DrawerClosedEventArgs e)
         {
             SupportActionBar.Title = currentTitleOfActionBar;
         }
-
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
             drawerToggle.OnOptionsItemSelected(item);
             return base.OnOptionsItemSelected(item);
         }
-
 
         public void LeftMenu_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
@@ -231,4 +222,3 @@ namespace WR.Activities
         }
     }
 }
-

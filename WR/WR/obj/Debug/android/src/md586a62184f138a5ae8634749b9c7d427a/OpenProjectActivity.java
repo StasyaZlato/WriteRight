@@ -11,6 +11,7 @@ public class OpenProjectActivity
 	static {
 		__md_methods = 
 			"n_onCreate:(Landroid/os/Bundle;)V:GetOnCreate_Landroid_os_Bundle_Handler\n" +
+			"n_onRestart:()V:GetOnRestartHandler\n" +
 			"";
 		mono.android.Runtime.register ("WR.Activities.OpenProjectActivity, WR", OpenProjectActivity.class, __md_methods);
 	}
@@ -30,6 +31,14 @@ public class OpenProjectActivity
 	}
 
 	private native void n_onCreate (android.os.Bundle p0);
+
+
+	public void onRestart ()
+	{
+		n_onRestart ();
+	}
+
+	private native void n_onRestart ();
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)

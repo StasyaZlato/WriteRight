@@ -1,20 +1,21 @@
-﻿using Android.OS;
-using Android.Views;
-using Android.Support.V4.App;
-using Android.Widget;
+﻿using System;
 using System.IO;
-using ProjectStructure;
 using System.Xml.Serialization;
+using Android.OS;
+using Android.Support.V4.App;
+using Android.Views;
+using Android.Widget;
+using ProjectStructure;
 
 namespace WR.Fragments
 {
     public class HelloFragment : Fragment
     {
-        EditText firstName, lastName;
-        Button accept;
+        private EditText firstName, lastName;
+        private Button accept;
         public LinearLayout userInfoLL;
         public RelativeLayout helloRL;
-        TextView helloTV;
+        private TextView helloTV;
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -46,13 +47,13 @@ namespace WR.Fragments
             }
 
             accept.Click += Accept_Click;
-            
+
             return view;
         }
 
-        void Accept_Click(object sender, System.EventArgs e)
+        private void Accept_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(firstName.Text)  && string.IsNullOrEmpty(lastName.Text))
+            if (string.IsNullOrEmpty(firstName.Text) && string.IsNullOrEmpty(lastName.Text))
             {
                 Toast.MakeText(this.Activity, "данные пользователя отсутствуют!", ToastLength.Short).Show();
             }
@@ -72,6 +73,5 @@ namespace WR.Fragments
                 ((Activities.MainActivity)this.Activity).lastName.Text = $"Last name: {user.LastName}";
             }
         }
-
     }
 }

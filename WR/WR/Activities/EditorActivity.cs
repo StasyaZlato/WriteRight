@@ -1,18 +1,9 @@
-﻿using Android.App;
-using Android.Widget;
-using Android.OS;
-using SupportToolbar = Android.Support.V7.Widget.Toolbar;
-using Android.Support.V7.App;
-using Android.Support.V4.Widget;
-using Android.Views;
+﻿using System;
+using Android.App;
 using Android.Content;
-using System.Collections.Generic;
-using ProjectStructure;
-using System;
-using SupportFragment = Android.Support.V4.App.Fragment;
-using System.Xml.Serialization;
-using System.IO;
-using Jp.Wasabeef;
+using Android.OS;
+using Android.Views;
+using Android.Widget;
 
 namespace WR.Activities
 {
@@ -20,7 +11,7 @@ namespace WR.Activities
         Theme = "@style/MainTheme", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class EditorActivity : MainActivity
     {
-        Fragments.EditorFragment editor;
+        private Fragments.EditorFragment editor;
         public ImageButton saveBtn;
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -31,7 +22,7 @@ namespace WR.Activities
             saveBtn.Visibility = ViewStates.Visible;
 
             editor = new Fragments.EditorFragment();
-            
+
             var transaction = SupportFragmentManager.BeginTransaction();
             transaction.Replace(Resource.Id.mainScreenFragmentsContainer, editor);
             transaction.Commit();
@@ -47,13 +38,12 @@ namespace WR.Activities
             currentTitleOfActionBar = Resources.GetString(Resource.String.editorTitle);
         }
 
-        void ChangeUser_Click(object sender, EventArgs e)
+        private void ChangeUser_Click(object sender, EventArgs e)
         {
             Intent intent = new Intent(this, typeof(MainActivity));
             intent.PutExtra("frag", "userCh");
             StartActivity(intent);
         }
-
 
         private void LeftMenu_ItemClick1(object sender, AdapterView.ItemClickEventArgs e)
         {
@@ -85,4 +75,3 @@ namespace WR.Activities
         }
     }
 }
-

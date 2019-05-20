@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Xml.Serialization;
 
 namespace ProjectStructure
 {
     [Serializable]
     public class User
     {
-
         public string FirstName { get; set; }
         public string LastName { get; set; }
 

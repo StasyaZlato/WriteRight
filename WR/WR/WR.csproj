@@ -197,6 +197,9 @@
     <Reference Include="System.Drawing.Common">
       <HintPath>..\packages\System.Drawing.Common.4.5.1\lib\netstandard2.0\System.Drawing.Common.dll</HintPath>
     </Reference>
+    <Reference Include="Converters">
+      <HintPath>Converters.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -214,11 +217,10 @@
     <Compile Include="Custom Views\ProjectsListAdapter.cs" />
     <Compile Include="Activities\EditorActivity.cs" />
     <Compile Include="Fragments\EditorFragment.cs" />
-    <Compile Include="Custom Views\TextFilesListAdapter.cs" />
+    <Compile Include="Custom Views\FilesListAdapter.cs" />
     <Compile Include="Activities\FormEditorActivity.cs" />
     <Compile Include="Custom Views\FormFieldsListAdapter.cs" />
     <Compile Include="Fragments\FormEditorFragment.cs" />
-    <Compile Include="EventArgs\FormListViewEventArgs.cs" />
     <Compile Include="Custom Views\FormFieldsRemovingListViewAdapter.cs" />
     <Compile Include="Activities\ExportActivity.cs" />
     <Compile Include="Fragments\ExportFragment.cs" />
@@ -275,7 +277,6 @@
     <AndroidResource Include="Resources\drawable\content_save.xml" />
     <AndroidResource Include="Resources\layout\CustomPopUpAddingFile.axml" />
     <AndroidResource Include="Resources\drawable\table_plus.xml" />
-    <AndroidResource Include="Resources\layout\TextFilesListView.axml" />
     <AndroidResource Include="Resources\layout\ListViewTextFilesRow.axml" />
     <AndroidResource Include="Resources\xml\hero.xml" />
     <AndroidResource Include="Resources\layout\FormEditorFragment.axml" />
@@ -300,6 +301,7 @@
     <AndroidResource Include="Resources\drawable\user_unknown.xml" />
     <AndroidResource Include="Resources\drawable\user.xml" />
     <AndroidResource Include="Resources\drawable\userpng.png" />
+    <AndroidResource Include="Resources\drawable\content_save_edit.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
@@ -317,10 +319,6 @@
     <ProjectReference Include="..\projectStructure\projectStructure.csproj">
       <Project>{5266E871-4D1D-4575-9D1B-25A54B36F150}</Project>
       <Name>projectStructure</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Converters\Converters.csproj">
-      <Project>{0601FCB7-F9D3-433B-8EBB-D08355E5DF30}</Project>
-      <Name>Converters</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

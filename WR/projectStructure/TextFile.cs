@@ -10,16 +10,14 @@ namespace ProjectStructure
         [XmlIgnore]
         public string HtmlText { get; set; }
 
-        public TextFile()
-        {
-        }
+        public TextFile() { }
 
-        public TextFile(string name, string path, int num) : base(name, path, num) 
+        public TextFile(string name, string path, int num) : base(name, path, num)
         {
             SaveToFile();
         }
 
-        public TextFile(string name, int num) : base(name, num) 
+        public TextFile(string name, int num) : base(name, num)
         {
             SaveToFile();
         }

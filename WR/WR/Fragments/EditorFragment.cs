@@ -1,26 +1,17 @@
-﻿using Android.App;
-using Android.Widget;
-using Android.OS;
-using Android.Support.V7.App;
-using Android.Support.V4.Widget;
-using Android.Views;
-using Android.Content;
-using System.Collections.Generic;
-using ProjectStructure;
-using System;
-using Jp.Wasabeef;
+﻿using System;
 using System.IO;
-
+using Android.OS;
+using Android.Views;
+using Android.Widget;
+using Jp.Wasabeef;
 
 namespace WR.Fragments
 {
-
     public class EditorFragment : Android.Support.V4.App.Fragment
     {
-        RichEditor editor;
+        private RichEditor editor;
 
-        string path, text;
-
+        private string path, text;
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -107,7 +98,7 @@ namespace WR.Fragments
             return view;
         }
 
-        void SaveBtn_Click(object sender, EventArgs e)
+        private void SaveBtn_Click(object sender, EventArgs e)
         {
             SaveText();
 
@@ -124,9 +115,6 @@ namespace WR.Fragments
             {
                 sw.Write(text);
             }
-
         }
-
     }
-
 }

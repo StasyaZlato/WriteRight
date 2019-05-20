@@ -1,26 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿using System.Collections.Generic;
 using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Util;
 using Android.Views;
 using Android.Widget;
-using Android.Support.Design.Widget;
-using Android.Animation;
-using ProjectStructure;
-using Java.Lang;
 
 namespace WR.CustomViews
 {
     public class FormFieldsRemovingListAdapter : BaseAdapter<string[]>
     {
         public List<string[]> fields = new List<string[]>();
-        Activity activity;
+        private Activity activity;
 
         public FormFieldsRemovingListAdapter(Activity act, List<string[]> fields)
         {
@@ -52,9 +40,9 @@ namespace WR.CustomViews
 
                 holder = new ViewHolderRemoving()
                 {
-                    fieldNameTV = fieldNameTV,
-                    fieldInfoET = fieldInfoET,
-                    icon = icon,
+                    FieldNameTV = fieldNameTV,
+                    FieldInfoTV = fieldInfoET,
+                    Icon = icon,
                 };
 
                 view.Tag = holder;
@@ -64,23 +52,17 @@ namespace WR.CustomViews
                 holder = (ViewHolderRemoving)view.Tag;
             }
 
-            holder.fieldNameTV.Text = item[0];
-            holder.fieldInfoET.Text = item[1];
+            holder.FieldNameTV.Text = item[0];
+            holder.FieldInfoTV.Text = item[1];
 
             return view;
         }
 
+        public class ViewHolderRemoving : Java.Lang.Object
+        {
+            public TextView FieldNameTV { get; set; }
+            public TextView FieldInfoTV { get; set; }
+            public ImageView Icon { get; set; }
+        }
     }
-
-
-
-    public class ViewHolderRemoving : Java.Lang.Object
-    {
-        public TextView fieldNameTV { get; set; }
-        public TextView fieldInfoET { get; set; }
-        public ImageView icon { get; set; }
-    }
-
 }
-
-

@@ -11,11 +11,13 @@
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/NPOI.OOXML.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/NPOI.OpenXml4Net.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/NPOI.OpenXmlFormats.dll
+/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/OpenTK-1.0.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/projectStructure.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/RichEditor.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/System.Configuration.ConfigurationManager.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/System.Core.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/System.dll
+/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/System.Drawing.Common.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/System.IO.Compression.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/System.Net.Http.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/System.Security.AccessControl.dll
@@ -68,7 +70,6 @@
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/System.Runtime.Serialization.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/System.ServiceModel.Internals.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/System.Web.Services.dll
-/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/System.Drawing.Common.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/System.Text.Encoding.CodePages.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/System.Security.Cryptography.ProtectedData.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/System.Security.dll

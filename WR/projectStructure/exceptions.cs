@@ -2,8 +2,7 @@
 
 namespace ProjectStructure
 {
-
-    [System.Serializable]
+    [Serializable]
     public class IncorrectNameOfSectionException : Exception
     {
         public IncorrectNameOfSectionException() { }
@@ -16,7 +15,7 @@ namespace ProjectStructure
             System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }
 
-    [System.Serializable]
+    [Serializable]
     public class IncorrectNameOfFileException : Exception
     {
         public IncorrectNameOfFileException() { }

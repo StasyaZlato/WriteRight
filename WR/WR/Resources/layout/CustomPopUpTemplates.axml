@@ -14,7 +14,8 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:id="@+id/TabBarPopUpLinearLayout"
-		android:background="#005662">
+		android:background="#005662"
+        android:layout_marginBottom="1dp">
 		<TextView
 			android:layout_width="249.7dp"
 			android:layout_height="match_parent"
@@ -40,4 +41,10 @@
         android:layout_height="wrap_content"
         android:entries="@array/templates"
         android:theme="@android:style/Theme.Material.Light"/>
+    <ListView
+        android:id="@+id/listViewCustomsTemplates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@android:style/Theme.Material.Light"
+        android:visibility="gone"/>
 </LinearLayout>

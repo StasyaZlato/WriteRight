@@ -1,36 +1,31 @@
-﻿using Android.App;
-using Android.Widget;
-using Android.OS;
-using Android.Support.V7.App;
-using Android.Support.V4.Widget;
-using Android.Views;
-using Android.Content;
-using System.Collections.Generic;
-using ProjectStructure;
-using System;
-using Jp.Wasabeef;
+﻿using System;
 using System.IO;
-using Android.Support.Design.Widget;
 using System.Xml.Linq;
+using Android.App;
+using Android.OS;
+using Android.Support.Design.Widget;
+using Android.Views;
+using Android.Widget;
 using Newtonsoft.Json;
+using ProjectStructure;
 
 namespace WR.Fragments
 {
-
     public class FormEditorFragment : Android.Support.V4.App.Fragment
     {
-        ListView listOfFields, listForRemoving;
-        FloatingActionButton fabAddField, fabRemoveFile;
-        //List<string[]> fieldsOfForm = new List<string[]>();
-        CustomViews.FormFieldsListAdapter adapter;
-        CustomViews.FormFieldsRemovingListAdapter adapterRemoving;
-        TextView templateTV;
-        Dialog dialog;
+        private ListView listOfFields, listForRemoving;
+        private FloatingActionButton fabAddField, fabRemoveFile;
+        private CustomViews.FormFieldsListAdapter adapter;
+        private CustomViews.FormFieldsRemovingListAdapter adapterRemoving;
+        private TextView templateTV;
+        private Dialog dialog;
 
-        Project project;
+        private ListView templates;
+
+        private Project project;
 
         public FormFile form;
-
+        
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -97,7 +92,7 @@ namespace WR.Fragments
                     AddToGlossary(listPosition);
                     Toast.MakeText(this.Activity, "Добавлено в глоссарий", ToastLength.Short).Show();
                     break;
-                
+
                 default:
                     break;
             }
@@ -136,7 +131,7 @@ namespace WR.Fragments
             gloss.SaveToFile();
         }
 
-        void TemplateTV_Click(object sender, EventArgs e)
+        private void TemplateTV_Click(object sender, EventArgs e)
         {
             ShowPopUpTemplates();
         }
@@ -153,19 +148,19 @@ namespace WR.Fragments
 
             dialog.SetContentView(Resource.Layout.CustomPopUpTemplates);
             ImageButton closeBtn = dialog.FindViewById<ImageButton>(Resource.Id.closePopUp);
-            ListView templates = dialog.FindViewById<ListView>(Resource.Id.listViewTemplates);
+            templates = dialog.FindViewById<ListView>(Resource.Id.listViewTemplates);
 
             closeBtn.Click += (sender, e) =>
             {
                 dialog.Dismiss();
             };
 
-            templates.ItemClick += Templates_ItemClick; ;
+            templates.ItemClick += Templates_ItemClick;
 
             dialog.Show();
         }
 
-        void Templates_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        private void Templates_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             switch (e.Position)
             {
@@ -185,8 +180,7 @@ namespace WR.Fragments
             }
         }
 
-
-        void ListForRemoving_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        private void ListForRemoving_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             int position = e.Position;
             form.fields.RemoveAt(position);
@@ -203,8 +197,7 @@ namespace WR.Fragments
             }
         }
 
-
-        void FabRemoveFile_Click(object sender, EventArgs e)
+        private void FabRemoveFile_Click(object sender, EventArgs e)
         {
             if (adapter.changed)
             {
@@ -226,7 +219,7 @@ namespace WR.Fragments
             fabRemoveFile.Click += FabRemoveFile_Click1;
         }
 
-        void FabRemoveFile_Click1(object sender, EventArgs e)
+        private void FabRemoveFile_Click1(object sender, EventArgs e)
         {
             listOfFields.Visibility = ViewStates.Visible;
             listForRemoving.Visibility = ViewStates.Gone;
@@ -237,8 +230,7 @@ namespace WR.Fragments
             fabRemoveFile.Click += FabRemoveFile_Click;
         }
 
-
-        void FabAddField_Click(object sender, EventArgs e)
+        private void FabAddField_Click(object sender, EventArgs e)
         {
             form.fields.Add(new string[2]);
             adapter = new CustomViews.FormFieldsListAdapter(this.Activity, form.fields);
@@ -249,8 +241,7 @@ namespace WR.Fragments
             }
         }
 
-
-        void SaveBtn_Click(object sender, EventArgs e)
+        private void SaveBtn_Click(object sender, EventArgs e)
         {
             form.SaveToFile();
             Toast.MakeText(this.Activity, "Файл сохранен", ToastLength.Short).Show();

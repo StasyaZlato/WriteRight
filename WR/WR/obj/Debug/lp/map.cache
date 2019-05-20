@@ -9,6 +9,7 @@ NPOI.OpenXmlFormats
 projectStructure
 RichEditor
 System.Configuration.ConfigurationManager
+System.Drawing.Common
 System.Runtime
 System.Security.AccessControl
 System.Security.Permissions

@@ -40,7 +40,6 @@ ImageView;obj/Release/res/layout/listviewforprojectrows.xml
 ImageView;obj/Release/res/layout/listviewremovingfieldrow.xml
 ImageView;obj/Release/res/layout/listviewtextfilesrow.xml
 ImageView;obj/Release/res/layout/main.xml
-ImageView;obj/Release/res/layout/textfileslistview.xml
 item;obj/Release/res/values/strings.xml
 item;obj/Release/res/values/style.xml
 jp.wasabeef.richeditor.RichEditor;obj/Release/res/layout/editorfragment.xml
@@ -68,6 +67,7 @@ path;obj/Release/res/drawable/checkbox_blank_outline.xml
 path;obj/Release/res/drawable/close.xml
 path;obj/Release/res/drawable/close_white.xml
 path;obj/Release/res/drawable/content_save.xml
+path;obj/Release/res/drawable/content_save_edit.xml
 path;obj/Release/res/drawable/delete.xml
 path;obj/Release/res/drawable/export.xml
 path;obj/Release/res/drawable/file_document.xml
@@ -108,10 +108,6 @@ RelativeLayout;obj/Release/res/layout/listviewforprojectrows.xml
 RelativeLayout;obj/Release/res/layout/listviewremovingfieldrow.xml
 RelativeLayout;obj/Release/res/layout/listviewtextfilesrow.xml
 RelativeLayout;obj/Release/res/layout/openexistingprojectfragment.xml
-RelativeLayout;obj/Release/res/layout/textfileslistview.xml
-resources;/Users/nastya_iva/CourseWork/WriteRight/WR/Converters/obj/Release/lp/1/jl/res/values/strings.xml
-resources;/Users/nastya_iva/CourseWork/WriteRight/WR/Converters/obj/Release/lp/24/jl/res/values/strings.xml
-resources;/Users/nastya_iva/CourseWork/WriteRight/WR/Converters/obj/Release/lp/6/jl/res/values/strings.xml
 resources;/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/lp/0/jl/res/values/strings.xml
 resources;/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/lp/2/jl/res/values/strings.xml
 resources;/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/lp/51/jl/res/values/strings.xml
@@ -124,9 +120,6 @@ size;obj/Release/res/drawable/rounded_corner.xml
 solid;obj/Release/res/drawable/rounded_corner.xml
 Spinner;obj/Release/res/layout/createprojectfragment.xml
 Spinner;obj/Release/res/layout/exportfragment.xml
-string;/Users/nastya_iva/CourseWork/WriteRight/WR/Converters/obj/Release/lp/1/jl/res/values/strings.xml
-string;/Users/nastya_iva/CourseWork/WriteRight/WR/Converters/obj/Release/lp/24/jl/res/values/strings.xml
-string;/Users/nastya_iva/CourseWork/WriteRight/WR/Converters/obj/Release/lp/6/jl/res/values/strings.xml
 string;/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/lp/0/jl/res/values/strings.xml
 string;/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/lp/2/jl/res/values/strings.xml
 string;/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/lp/51/jl/res/values/strings.xml
@@ -152,7 +145,6 @@ TextView;obj/Release/res/layout/listviewremovingfieldrow.xml
 TextView;obj/Release/res/layout/listviewtextfilesrow.xml
 TextView;obj/Release/res/layout/main.xml
 TextView;obj/Release/res/layout/projectopenedfragment.xml
-TextView;obj/Release/res/layout/textfileslistview.xml
 vector;obj/Release/res/drawable/application_import.xml
 vector;obj/Release/res/drawable/check.xml
 vector;obj/Release/res/drawable/check_box_outline.xml
@@ -160,6 +152,7 @@ vector;obj/Release/res/drawable/checkbox_blank_outline.xml
 vector;obj/Release/res/drawable/close.xml
 vector;obj/Release/res/drawable/close_white.xml
 vector;obj/Release/res/drawable/content_save.xml
+vector;obj/Release/res/drawable/content_save_edit.xml
 vector;obj/Release/res/drawable/delete.xml
 vector;obj/Release/res/drawable/export.xml
 vector;obj/Release/res/drawable/file_document.xml

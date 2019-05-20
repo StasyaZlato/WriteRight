@@ -2,17 +2,16 @@
 using System.Xml.Serialization;
 using System.IO;
 
-
-
 namespace ProjectStructure
 {
     [Serializable]
     public class Project : Section
     {
         public string Genre { get; set; }
+
         public string Theme { get; set; }
-        
-        public bool GlossaryExists 
+
+        public bool GlossaryExists
         {
             get
             {
@@ -29,7 +28,7 @@ namespace ProjectStructure
 
         public User user;
 
-        int curFile;
+        private int curFile;
 
         public int CurrentFile
         {
@@ -46,7 +45,6 @@ namespace ProjectStructure
                 }
             }
         }
-
 
         public Project() { }
 
@@ -83,7 +81,7 @@ namespace ProjectStructure
                 ChildSections.Add(new Section(this, "Информация"));
             }
 
-            TextFile synopsis = new TextFile("Синопсис",PathToFile, 0)
+            TextFile synopsis = new TextFile("Синопсис", PathToFile, 0)
             {
                 PathInProject = Path + "Синопсис",
             };
@@ -125,7 +123,6 @@ namespace ProjectStructure
             }
             return project;
         }
-
 
         public void CommitChanges()
         {

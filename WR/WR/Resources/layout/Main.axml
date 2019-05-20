@@ -6,7 +6,6 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-    
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbarMain"
         android:layout_width="match_parent"
@@ -23,7 +22,6 @@
             android:layout_height="wrap_content"
             android:src="@drawable/content_save"
             android:visibility="gone"/>
-        
         <LinearLayout
             android:id="@+id/ExportImportRL"
             android:layout_width="wrap_content"
@@ -48,7 +46,6 @@
                 android:visibility="gone"/>
         </LinearLayout>
     </android.support.v7.widget.Toolbar>
-    
     <android.support.v4.widget.DrawerLayout
         android:id="@+id/MainDrawer"
         android:layout_width="match_parent"
@@ -83,7 +80,6 @@
                         android:layout_height="wrap_content"
                         android:background="#005662"
                         android:layout_gravity="center_horizontal"/>
-                        
                     <TextView
                         android:id="@+id/firstName"
                         android:text="First Name"
@@ -124,7 +120,4 @@
             </LinearLayout>
         </FrameLayout>
     </android.support.v4.widget.DrawerLayout>
-        
-        
-        
 </LinearLayout>

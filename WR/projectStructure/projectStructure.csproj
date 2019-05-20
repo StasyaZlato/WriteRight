@@ -48,12 +48,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Project.cs" />
     <Compile Include="Section.cs" />
-    <Compile Include="DraftProject.cs" />
     <Compile Include="Exceptions.cs" />
     <Compile Include="FileOfProject.cs" />
     <Compile Include="FormFile.cs" />
-    <Compile Include="FormProject.cs" />
-    <Compile Include="TextProject.cs" />
     <Compile Include="TextFile.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>

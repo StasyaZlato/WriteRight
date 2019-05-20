@@ -5,18 +5,10 @@
     android:layout_width="match_parent" 
     android:layout_height="match_parent"
     android:id="@+id/OpenExistingProjectFragmentRL">
-    
-    <!--<TextView
-        android:id="@+id/OpenExistingProjectFragmentTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="OpenProject"
-        android:textColor="@android:color/black"
-        android:layout_centerInParent="true"/>-->
     <ListView
-    android:id="@+id/listViewProjects"
-    android:theme="@android:style/Theme.Material.Light"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:choiceMode="singleChoice"/>
+        android:id="@+id/listViewProjects"
+        android:theme="@android:style/Theme.Material.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:choiceMode="singleChoice"/>
 </RelativeLayout>

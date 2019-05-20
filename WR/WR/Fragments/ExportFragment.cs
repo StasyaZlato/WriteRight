@@ -1,44 +1,34 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content;
+using System.IO;
 using Android.OS;
-using Android.Runtime;
-using Android.Util;
 using Android.Views;
 using Android.Widget;
-using System.Xml.Serialization;
-using System.IO;
-using ProjectStructure;
 using Converters;
-
-using iTextSharp;
-using iTextSharp.text;
 using iTextSharp.text.pdf;
+using ProjectStructure;
 
 namespace WR.Fragments
 {
     public class ExportFragment : Android.Support.V4.App.Fragment
     {
-        string path;
-        Project project;
-        View view;
-        Spinner formatSpinner;
-        ListView filesForExportListView;
-        Button acceptExportBtn;
-        List<TextFile> files = new List<TextFile>();
-        List<TextFile> checkedFiles = new List<TextFile>();
+        private string path;
+        private Project project;
 
-        CheckBox glossaryCB;
-        TextView glossaryTV;
-        bool glossary;
+        private View view;
+        private Spinner formatSpinner;
+        private ListView filesForExportListView;
+        private Button acceptExportBtn;
 
-        FormFile gloss;
-        // string format;
+        private List<TextFile> files = new List<TextFile>();
+        private List<TextFile> checkedFiles = new List<TextFile>();
+
+        private CheckBox glossaryCB;
+        private TextView glossaryTV;
+
+        private bool glossary;
+
+        private FormFile gloss = null;
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -46,7 +36,6 @@ namespace WR.Fragments
 
             path = this.Activity.Intent.GetStringExtra("path");
             project = Project.GetData(path);
-
         }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -94,101 +83,52 @@ namespace WR.Fragments
             return view;
         }
 
-        async void AcceptExportBtn_Click(object sender, EventArgs e)
+        private async void AcceptExportBtn_Click(object sender, EventArgs e)
         {
-            if (!glossary)
+            switch (formatSpinner.SelectedItemId)
             {
-                switch (formatSpinner.SelectedItemId)
-                {
-                    case 0:
-                        // format = "fb2";
-                        await new ConverterToFB2Book(project, checkedFiles).CreateFB2Async();
-                        Toast.MakeText(this.Context, "Сохранено в корневом каталоге", ToastLength.Short).Show();
-                        break;
-                    case 1:
-                        // format = "pdf";
+                case 0:
+                    // format = "fb2";
+                    await new ConverterToFB2Book(project, checkedFiles, gloss).CreateFB2Async();
+                    Toast.MakeText(this.Context, "Сохранено в корневом каталоге", ToastLength.Short).Show();
+                    break;
+                case 1:
+                    // format = "pdf";
 
-                        // проблема itextsharp в том, что его внутренние шрифты не поддерживают 
-                        // русский язык. Вообще. Даже те, которые в обычных условиях такой разборчивостью
-                        // не страдают. Поэтому приходится подгружать свой шрифт и ставить русскую кодировку
-                        // уже ему. itextsharp требует путь к шрифту, поэтому просто забрать его из 
-                        // папки assets не выйдет, приходится копировать на устройство.
-                        string fontPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData), "times.ttf");
+                    // проблема itextsharp в том, что его внутренние шрифты не поддерживают 
+                    // русский язык. Вообще. Даже те, которые в обычных условиях такой разборчивостью
+                    // не страдают. Поэтому приходится подгружать свой шрифт и ставить русскую кодировку
+                    // уже ему. itextsharp требует путь к шрифту, поэтому просто забрать его из 
+                    // папки assets не выйдет, приходится копировать на устройство.
+                    string fontPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData), "times.ttf");
 
-                        if (!File.Exists(fontPath))
-                        {
-                            var input = Resources.Assets.Open("times.ttf");
-                            FileStream fs = new FileStream(fontPath, FileMode.Create);
-                            input.CopyTo(fs);
-                            fs.Close();
-                            input.Close();
-                        }
+                    if (!File.Exists(fontPath))
+                    {
+                        var input = Resources.Assets.Open("times.ttf");
+                        FileStream fs = new FileStream(fontPath, FileMode.Create);
+                        input.CopyTo(fs);
+                        fs.Close();
+                        input.Close();
+                    }
 
-                        BaseFont font = BaseFont.CreateFont(fontPath, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
-                        await new ConverterToPdf(project, checkedFiles, font).CreatePDFAsync();
-                        Toast.MakeText(this.Context, "Сохранено в корневом каталоге", ToastLength.Short).Show();
-                        break;
-                    case 2:
-                        // format = "docx";
-                        await new ConverterToDocX(project, checkedFiles).CreateDocXAsync();
-                        Toast.MakeText(this.Context, "Сохранено в корневом каталоге", ToastLength.Short).Show();
-                        break;
-                    case 3:
-                        // format = "txt"
-                        await new ConverterToTxt(project, checkedFiles).CreateTxtAsync();
-                        Toast.MakeText(this.Context, "Сохранено в корневом каталоге", ToastLength.Short).Show();
-                        break;
-                }
+                    BaseFont font = BaseFont.CreateFont(fontPath, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                    await new ConverterToPdf(project, checkedFiles, font, gloss).CreatePDFAsync();
+                    Toast.MakeText(this.Context, "Сохранено в корневом каталоге", ToastLength.Short).Show();
+                    break;
+                case 2:
+                    // format = "docx";
+                    await new ConverterToDocX(project, checkedFiles, gloss).CreateDocXAsync();
+                    Toast.MakeText(this.Context, "Сохранено в корневом каталоге", ToastLength.Short).Show();
+                    break;
+                case 3:
+                    // format = "txt"
+                    await new ConverterToTxt(project, checkedFiles, gloss).CreateTxtAsync();
+                    Toast.MakeText(this.Context, "Сохранено в корневом каталоге", ToastLength.Short).Show();
+                    break;
             }
-            else
-            {
-                switch (formatSpinner.SelectedItemId)
-                {
-                    case 0:
-                        // format = "fb2";
-                        await new ConverterToFB2Book(project, checkedFiles, gloss).CreateFB2Async();
-                        Toast.MakeText(this.Context, "Сохранено в корневом каталоге", ToastLength.Short).Show();
-                        break;
-                    case 1:
-                        // format = "pdf";
-
-                        // проблема itextsharp в том, что его внутренние шрифты не поддерживают 
-                        // русский язык. Вообще. Даже те, которые в обычных условиях такой разборчивостью
-                        // не страдают. Поэтому приходится подгружать свой шрифт и ставить русскую кодировку
-                        // уже ему. itextsharp требует путь к шрифту, поэтому просто забрать его из 
-                        // папки assets не выйдет, приходится копировать на устройство.
-                        string fontPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData), "times.ttf");
-
-                        if (!File.Exists(fontPath))
-                        {
-                            var input = Resources.Assets.Open("times.ttf");
-                            FileStream fs = new FileStream(fontPath, FileMode.Create);
-                            input.CopyTo(fs);
-                            fs.Close();
-                            input.Close();
-                        }
-
-                        BaseFont font = BaseFont.CreateFont(fontPath, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
-                        await new ConverterToPdf(project, checkedFiles, font, gloss).CreatePDFAsync();
-                        Toast.MakeText(this.Context, "Сохранено в корневом каталоге", ToastLength.Short).Show();
-                        break;
-                    case 2:
-                        // format = "docx";
-                        await new ConverterToDocX(project, checkedFiles, gloss).CreateDocXAsync();
-                        Toast.MakeText(this.Context, "Сохранено в корневом каталоге", ToastLength.Short).Show();
-                        break;
-                    case 3:
-                        // format = "txt"
-                        await new ConverterToTxt(project, checkedFiles, gloss).CreateTxtAsync();
-                        Toast.MakeText(this.Context, "Сохранено в корневом каталоге", ToastLength.Short).Show();
-                        break;
-                }
-            }
-
         }
 
-
-        void FilesForExportListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        private void FilesForExportListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             ImageView checkFile = e.View.FindViewById<ImageView>(Resource.Id.CheckBoxFileForExport);
             if (!checkedFiles.Exists((obj) =>
@@ -212,9 +152,6 @@ namespace WR.Fragments
             ListView chosen = view.FindViewById<ListView>(Resource.Id.testLV);
             chosen.Adapter = new CustomViews.ChosenFilesListAdapter(checkedFiles);
         }
-
-
-
 
         public void GetAllFiles(ProjectStructure.Section section)
         {

@@ -122,6 +122,7 @@ class MonoPackageManager_Resources {
 		"projectStructure.dll",
 		"RichEditor.dll",
 		"System.Configuration.ConfigurationManager.dll",
+		"System.Drawing.Common.dll",
 		"System.Security.AccessControl.dll",
 		"System.Security.Permissions.dll",
 		"System.Security.Principal.Windows.dll",

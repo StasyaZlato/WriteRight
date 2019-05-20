@@ -1,30 +1,20 @@
-﻿using Android.App;
-using Android.Widget;
-using Android.OS;
-using SupportToolbar = Android.Support.V7.Widget.Toolbar;
-using Android.Support.V7.App;
-using Android.Support.V4.Widget;
-using Android.Views;
+﻿using System;
+using Android.App;
 using Android.Content;
-using System.Collections.Generic;
+using Android.OS;
+using Android.Views;
+using Android.Widget;
 using ProjectStructure;
-using System;
-using SupportFragment = Android.Support.V4.App.Fragment;
-using System.IO;
-using System.Xml.Serialization;
 
 namespace WR.Activities
 {
     [Activity(Label = "OpenProjectActivity", Theme = "@style/MainTheme", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class OpenProjectActivity : MainActivity
     {
-        Fragments.OpenedProjectFragment fragOpened;
-        //SupportFragment previousFragment;
-        Project project;
-        //Project project;
+        private Fragments.OpenedProjectFragment fragOpened;
+        private Project project;
         public ImageButton exportBtn, importBtn;
-        string xmlProjectPath;
-
+        private string xmlProjectPath;
 
         public event EventHandler<CustomEventArgs.ProjectEventArgs> OnProjectCreated;
 
@@ -61,21 +51,21 @@ namespace WR.Activities
             changeUser.Click += ChangeUser_Click;
         }
 
-        void ChangeUser_Click(object sender, EventArgs e)
+        private void ChangeUser_Click(object sender, EventArgs e)
         {
             Intent intent = new Intent(this, typeof(MainActivity));
             intent.PutExtra("frag", "userCh");
             StartActivity(intent);
         }
 
-        void ExportBtn_Click(object sender, EventArgs e)
+        private void ExportBtn_Click(object sender, EventArgs e)
         {
             Intent intent = new Intent(this, typeof(ExportActivity));
             intent.PutExtra("path", xmlProjectPath);
             StartActivity(intent);
         }
 
-        void LeftMenu_ItemClick1(object sender, AdapterView.ItemClickEventArgs e)
+        private void LeftMenu_ItemClick1(object sender, AdapterView.ItemClickEventArgs e)
         {
             int itemSelected = e.Position;
             Intent intent = new Intent(this, typeof(MainActivity));
@@ -96,6 +86,13 @@ namespace WR.Activities
             }
             StartActivity(intent);
             drawerLayout.CloseDrawer(leftDrawer);
+        }
+
+        protected override void OnRestart()
+        {
+            project = Project.GetData(xmlProjectPath);
+            OnProjectCreated?.Invoke(this, new CustomEventArgs.ProjectEventArgs(project));
+            base.OnRestart();
         }
     }
 }

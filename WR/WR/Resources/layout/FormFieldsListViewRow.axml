@@ -3,7 +3,7 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content">
-        <ImageView
+    <ImageView
         android:id="@+id/formFieldIcon"
         android:layout_width="24dp"
         android:layout_height="24dp"
@@ -11,19 +11,19 @@
         android:src="@drawable/gamepad_circle"
         android:clickable="false"
         android:layout_centerVertical="true"/>
-		<EditText
-			android:id="@+id/nameOfFieldTV"
-			android:text="Name"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:textColor="@color/material_blue_grey_900"
-			android:textSize="20dp"
-			android:gravity="left"
-			android:clickable="false"
-			android:layout_toRightOf="@id/formFieldIcon"
-			android:background="@android:color/transparent"
-			android:hint="Введите название поля"
-            android:textColorHint="@color/material_grey_600"/>
+	<EditText
+		android:id="@+id/nameOfFieldTV"
+		android:text="Name"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textColor="@color/material_blue_grey_900"
+		android:textSize="20dp"
+		android:gravity="left"
+		android:clickable="false"
+		android:layout_toRightOf="@id/formFieldIcon"
+		android:background="@android:color/transparent"
+		android:hint="Введите название поля"
+        android:textColorHint="@color/material_grey_600"/>
 	<EditText
 		android:id="@+id/FieldInfoET"
 		android:hint="не указано"

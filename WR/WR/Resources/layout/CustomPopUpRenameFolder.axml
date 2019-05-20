@@ -25,7 +25,7 @@
 			android:padding="10dp"
 			android:background="#005662"
 			android:textColor="#ffffffff"
-			android:layout_marginRight="60.6dp" />
+			android:layout_marginRight="60.6dp"/>
         <ImageButton 
             android:layout_width="match_parent" 
             android:layout_height="match_parent" 
@@ -49,5 +49,5 @@
         android:id="@+id/AcceptNewName" 
         android:layout_gravity="left"   
         android:background="@color/material_grey_50" 
-        android:textColor="#00838f" />
+        android:textColor="#00838f"/>
 </LinearLayout>

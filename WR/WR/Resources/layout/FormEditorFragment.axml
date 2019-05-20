@@ -26,20 +26,20 @@
             android:visibility="gone"/>
     </LinearLayout>
     <TextView
-            android:id="@+id/OpenTemplateTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Нажмите, чтобы воспользоваться шаблоном"
-            android:clickable="true"
-            android:layout_gravity="center"
-            android:textColor="@color/material_grey_600"/>
+        android:id="@+id/OpenTemplateTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Нажмите, чтобы воспользоваться шаблоном"
+        android:clickable="true"
+        android:layout_gravity="center"
+        android:textColor="@color/material_grey_600"/>
     <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="bottom|right"
-            android:layout_marginBottom="@dimen/fab_margin"
-            app:layout_dodgeInsetEdges="bottom">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="@dimen/fab_margin"
+        app:layout_dodgeInsetEdges="bottom">
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/mainActionBtnAddField"
             android:layout_width="wrap_content"
@@ -58,5 +58,5 @@
             android:background="#ff5722"
             android:layout_marginRight="@dimen/fab_margin"
             android:layout_marginBottom="@dimen/fab_margin"/>
-        </LinearLayout>
-    </android.support.design.widget.CoordinatorLayout>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
