@@ -5,7 +5,6 @@
 /Users/nastya_iva/CourseWork/WriteRight/WR/projectStructure/obj/Debug/MonoAndroid,Version=v8.1.AssemblyAttributes.cs
 /Users/nastya_iva/CourseWork/WriteRight/WR/projectStructure/obj/Debug/build.props
 /Users/nastya_iva/CourseWork/WriteRight/WR/projectStructure/obj/Debug/adb.props
-/Users/nastya_iva/CourseWork/WriteRight/WR/projectStructure/obj/Debug/projectStructure.csprojAssemblyReference.cache
 /Users/nastya_iva/CourseWork/WriteRight/WR/projectStructure/obj/Debug/libraryimports.cache.stamp
 /Users/nastya_iva/CourseWork/WriteRight/WR/projectStructure/obj/Debug/resourcepaths.cache
 /Users/nastya_iva/CourseWork/WriteRight/WR/projectStructure/obj/Debug/res.flag

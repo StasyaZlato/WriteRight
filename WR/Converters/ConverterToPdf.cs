@@ -24,7 +24,6 @@ namespace Converters
 
         public ConverterToPdf(Project project, List<TextFile> files, BaseFont bf, FormFile gloss) : this(project, files, bf)
         {
-            fieldsOfGloss = gloss.fields;
         }
 
         private List<Chapter> AddChapters()
@@ -76,7 +75,7 @@ namespace Converters
             await Task.Run(() => CreatePDF());
         }
 
-        private void CreatePDF()
+        public void CreatePDF()
         {
             string path = Path.Combine(Android.OS.Environment.ExternalStorageDirectory.AbsolutePath, $"{project.Name}.pdf");
 

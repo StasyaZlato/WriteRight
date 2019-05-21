@@ -85,47 +85,56 @@ namespace WR.Fragments
 
         private async void AcceptExportBtn_Click(object sender, EventArgs e)
         {
-            switch (formatSpinner.SelectedItemId)
+            try
             {
-                case 0:
-                    // format = "fb2";
-                    await new ConverterToFB2Book(project, checkedFiles, gloss).CreateFB2Async();
-                    Toast.MakeText(this.Context, "Сохранено в корневом каталоге", ToastLength.Short).Show();
-                    break;
-                case 1:
-                    // format = "pdf";
+                switch (formatSpinner.SelectedItemId)
+                {
+                    case 0:
+                        // format = "fb2";
+                        await new ConverterToFB2Book(project, checkedFiles, gloss).CreateFB2Async();
+                        Toast.MakeText(this.Context, "Сохранено в корневом каталоге", ToastLength.Short).Show();
+                        break;
+                    case 1:
+                        // format = "pdf";
 
-                    // проблема itextsharp в том, что его внутренние шрифты не поддерживают 
-                    // русский язык. Вообще. Даже те, которые в обычных условиях такой разборчивостью
-                    // не страдают. Поэтому приходится подгружать свой шрифт и ставить русскую кодировку
-                    // уже ему. itextsharp требует путь к шрифту, поэтому просто забрать его из 
-                    // папки assets не выйдет, приходится копировать на устройство.
-                    string fontPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData), "times.ttf");
+                        // проблема itextsharp в том, что его внутренние шрифты не поддерживают 
+                        // русский язык. Вообще. Даже те, которые в обычных условиях такой разборчивостью
+                        // не страдают. Поэтому приходится подгружать свой шрифт и ставить русскую кодировку
+                        // уже ему. itextsharp требует путь к шрифту, поэтому просто забрать его из 
+                        // папки assets не выйдет, приходится копировать на устройство.
+                        string fontPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData), "times.ttf");
 
-                    if (!File.Exists(fontPath))
-                    {
-                        var input = Resources.Assets.Open("times.ttf");
-                        FileStream fs = new FileStream(fontPath, FileMode.Create);
-                        input.CopyTo(fs);
-                        fs.Close();
-                        input.Close();
-                    }
+                        if (!File.Exists(fontPath))
+                        {
+                            var input = Resources.Assets.Open("times.ttf");
+                            FileStream fs = new FileStream(fontPath, FileMode.Create);
+                            input.CopyTo(fs);
+                            fs.Close();
+                            input.Close();
+                        }
 
-                    BaseFont font = BaseFont.CreateFont(fontPath, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
-                    await new ConverterToPdf(project, checkedFiles, font, gloss).CreatePDFAsync();
-                    Toast.MakeText(this.Context, "Сохранено в корневом каталоге", ToastLength.Short).Show();
-                    break;
-                case 2:
-                    // format = "docx";
-                    await new ConverterToDocX(project, checkedFiles, gloss).CreateDocXAsync();
-                    Toast.MakeText(this.Context, "Сохранено в корневом каталоге", ToastLength.Short).Show();
-                    break;
-                case 3:
-                    // format = "txt"
-                    await new ConverterToTxt(project, checkedFiles, gloss).CreateTxtAsync();
-                    Toast.MakeText(this.Context, "Сохранено в корневом каталоге", ToastLength.Short).Show();
-                    break;
+                        BaseFont font = BaseFont.CreateFont(fontPath, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                        await new ConverterToPdf(project, checkedFiles, font, gloss).CreatePDFAsync();
+
+                        Toast.MakeText(this.Context, "Сохранено в корневом каталоге", ToastLength.Short).Show();
+                        break;
+                    case 2:
+                        // format = "docx";
+                        await new ConverterToDocX(project, checkedFiles, gloss).CreateDocXAsync();
+                        Toast.MakeText(this.Context, "Сохранено в корневом каталоге", ToastLength.Short).Show();
+                        break;
+                    case 3:
+                        // format = "txt"
+                        await new ConverterToTxt(project, checkedFiles, gloss).CreateTxtAsync();
+                        Toast.MakeText(this.Context, "Сохранено в корневом каталоге", ToastLength.Short).Show();
+                        break;
+                }
             }
+            catch (UnauthorizedAccessException)
+            {
+                Toast.MakeText(this.Context, "Кажется, ваше устройство не хочет давать доступ к памяти:(", ToastLength.Short).Show();
+            }
+
         }
 
         private void FilesForExportListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)

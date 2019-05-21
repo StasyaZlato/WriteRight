@@ -5,15 +5,155 @@
     android:layout_width="match_parent" 
     android:layout_height="match_parent"
     android:id="@+id/InfoFragmentRL">
-    <TextView
-        android:id="@+id/InfoFragmentTV"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/material_blue_grey_800"
-        android:textAlignment="textStart"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
-        android:paddingTop="5dp"
-        android:textSize="8pt"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pretium libero. Pellentesque eget ante scelerisque lorem ultricies finibus euismod nec purus. Sed vitae odio ac erat tempus blandit a venenatis nunc. Duis molestie, enim id sollicitudin semper, nulla nisi cursus nisi, id iaculis ex nunc a metus. Etiam varius ullamcorper neque vitae dignissim. Suspendisse ex orci, molestie et ornare lobortis, bibendum et lacus. Sed eu mi sagittis nibh ornare porta finibus eget diam. Cras tincidunt ac sem a malesuada. Curabitur sagittis velit enim, id fringilla libero pharetra eget. Aenean varius purus ex, vel rutrum quam cursus sit amet."/>
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:scrollbars="vertical">
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Приложение для писателей WriteRight"
+			android:textSize="22sp"
+			android:textStyle="bold"
+			android:textColor="#005662"
+			android:layout_marginLeft="10dp"
+			android:layout_marginTop="10dp" />
+		<View
+			android:background="#005662"
+			android:layout_width = "match_parent"
+			android:layout_height="1dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Курсовая работа."
+            android:textColor="@color/material_blue_grey_950"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Факультет компьютерных наук"
+            android:textColor="@color/material_blue_grey_950"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Департамент программной инженерии"
+            android:textColor="@color/material_blue_grey_950"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Золотухина Анастасия, группа 181"
+            android:textColor="@color/material_blue_grey_950"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Научный руководитель: Максименкова О.В."
+            android:textColor="@color/material_blue_grey_950"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"/>
+        <View
+            android:background="#005662"
+            android:layout_width = "match_parent"
+            android:layout_height="1dp"/>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Приложение предназначено для написания художественных текстов в виде проектов с произвольной структурой."
+			android:textColor="@color/material_blue_grey_950"
+			android:layout_marginLeft="10dp"
+			android:layout_marginTop="10dp" />
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Немного терминологии"
+			android:textSize="22sp"
+			android:textStyle="bold"
+			android:textColor="#005662"
+			android:layout_marginLeft="10dp"
+			android:layout_marginTop="10dp" />
+		<View
+			android:background="#005662"
+			android:layout_width = "match_parent"
+			android:layout_height="1dp"/>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Форма - файл с информацией о каком-то объекте. Информация разбита на логические части - поля формы. Например, для формы Персонаж это могут быть имя, фамилия, цвет волос, цвет глаз и т.д."
+			android:textColor="@color/material_blue_grey_950"
+			android:layout_marginLeft="10dp"
+			android:layout_marginTop="10dp" />
+		<View
+			android:background="#005662"
+			android:layout_width = "match_parent"
+			android:layout_height="1dp"/>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Текст - обычный текстовый файл. Один текстовый файл в приложении условно соответствует одной главе текста."
+			android:textColor="@color/material_blue_grey_950"
+			android:layout_marginLeft="10dp"
+			android:layout_marginTop="10dp" />
+		<View
+			android:background="#005662"
+			android:layout_width = "match_parent"
+			android:layout_height="1dp"/>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Проект - целиком произведение, включая все этапы его создания: предварительный сбор информации, черновые заметки, полный текст произведения."
+			android:textColor="@color/material_blue_grey_950"
+			android:layout_marginLeft="10dp"
+			android:layout_marginTop="10dp" />
+		<View
+			android:background="#005662"
+			android:layout_width = "match_parent"
+			android:layout_height="1dp"/>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Раздел - условная часть проекта, содержащая какой-то определенный тип информации. Напримр, раздел с главами произведения, или раздел с перечнем всех персонажей и их характеристик."
+			android:textColor="@color/material_blue_grey_950"
+			android:layout_marginLeft="10dp"
+			android:layout_marginTop="10dp" />
+		<View
+			android:background="#005662"
+			android:layout_width = "match_parent"
+			android:layout_height="1dp"/>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Текст - раздел с текстом произведения."
+			android:textColor="@color/material_blue_grey_950"
+			android:layout_marginLeft="10dp"
+			android:layout_marginTop="10dp" />
+		<View
+			android:background="#005662"
+			android:layout_width = "match_parent"
+			android:layout_height="1dp"/>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Черновик - раздел с черновыми заметками о произведении."
+			android:textColor="@color/material_blue_grey_950"
+			android:layout_marginLeft="10dp"
+			android:layout_marginTop="10dp" />
+		<View
+			android:background="#005662"
+			android:layout_width = "match_parent"
+			android:layout_height="1dp"/>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Информация - раздел для предварительной работы над текстом. Сюда стоит включить проработку персонажей, сбор информации о каких-то явлениях, термины, культурные особенности и т.д."
+			android:textColor="@color/material_blue_grey_950"
+			android:layout_marginLeft="10dp"
+			android:layout_marginTop="10dp" />
+	</LinearLayout>
 </RelativeLayout>

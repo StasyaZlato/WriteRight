@@ -52,6 +52,7 @@ LinearLayout;obj/Release/res/layout/editorfragment.xml
 LinearLayout;obj/Release/res/layout/exportfragment.xml
 LinearLayout;obj/Release/res/layout/formeditorfragment.xml
 LinearLayout;obj/Release/res/layout/hellofragment.xml
+LinearLayout;obj/Release/res/layout/infofragment.xml
 LinearLayout;obj/Release/res/layout/main.xml
 LinearLayout;obj/Release/res/layout/projectopenedfragment.xml
 ListView;obj/Release/res/layout/custompopuptemplates.xml
@@ -108,6 +109,9 @@ RelativeLayout;obj/Release/res/layout/listviewforprojectrows.xml
 RelativeLayout;obj/Release/res/layout/listviewremovingfieldrow.xml
 RelativeLayout;obj/Release/res/layout/listviewtextfilesrow.xml
 RelativeLayout;obj/Release/res/layout/openexistingprojectfragment.xml
+resources;/Users/nastya_iva/CourseWork/WriteRight/WR/Converters/obj/Release/lp/1/jl/res/values/strings.xml
+resources;/Users/nastya_iva/CourseWork/WriteRight/WR/Converters/obj/Release/lp/24/jl/res/values/strings.xml
+resources;/Users/nastya_iva/CourseWork/WriteRight/WR/Converters/obj/Release/lp/6/jl/res/values/strings.xml
 resources;/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/lp/0/jl/res/values/strings.xml
 resources;/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/lp/2/jl/res/values/strings.xml
 resources;/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/lp/51/jl/res/values/strings.xml
@@ -120,6 +124,9 @@ size;obj/Release/res/drawable/rounded_corner.xml
 solid;obj/Release/res/drawable/rounded_corner.xml
 Spinner;obj/Release/res/layout/createprojectfragment.xml
 Spinner;obj/Release/res/layout/exportfragment.xml
+string;/Users/nastya_iva/CourseWork/WriteRight/WR/Converters/obj/Release/lp/1/jl/res/values/strings.xml
+string;/Users/nastya_iva/CourseWork/WriteRight/WR/Converters/obj/Release/lp/24/jl/res/values/strings.xml
+string;/Users/nastya_iva/CourseWork/WriteRight/WR/Converters/obj/Release/lp/6/jl/res/values/strings.xml
 string;/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/lp/0/jl/res/values/strings.xml
 string;/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/lp/2/jl/res/values/strings.xml
 string;/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Release/lp/51/jl/res/values/strings.xml
@@ -182,4 +189,5 @@ vector;obj/Release/res/drawable/undo.xml
 vector;obj/Release/res/drawable/undo_variant.xml
 vector;obj/Release/res/drawable/user.xml
 vector;obj/Release/res/drawable/user_unknown.xml
+View;obj/Release/res/layout/infofragment.xml
 View;obj/Release/res/layout/projectopenedfragment.xml

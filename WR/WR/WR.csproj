@@ -197,9 +197,6 @@
     <Reference Include="System.Drawing.Common">
       <HintPath>..\packages\System.Drawing.Common.4.5.1\lib\netstandard2.0\System.Drawing.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Converters">
-      <HintPath>Converters.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -319,6 +316,10 @@
     <ProjectReference Include="..\projectStructure\projectStructure.csproj">
       <Project>{5266E871-4D1D-4575-9D1B-25A54B36F150}</Project>
       <Name>projectStructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Converters\Converters.csproj">
+      <Project>{0601FCB7-F9D3-433B-8EBB-D08355E5DF30}</Project>
+      <Name>Converters</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

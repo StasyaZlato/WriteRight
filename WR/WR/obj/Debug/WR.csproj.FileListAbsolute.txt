@@ -2,6 +2,7 @@
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/bin/Debug/WR.pdb
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/bin/Debug/com.willowness.wr.apk
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/bin/Debug/com.willowness.wr-Signed.apk
+/Users/nastya_iva/CourseWork/WriteRight/WR/WR/bin/Debug/Converters.pdb
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/bin/Debug/ICSharpCode.SharpZipLib.pdb
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/bin/Debug/Mono.Android.pdb
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/bin/Debug/OpenTK-1.0.pdb
@@ -222,6 +223,7 @@
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/linksrc/System.Security.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/linksrc/Mono.Security.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/linksrc/WR.pdb
+/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/linksrc/Converters.pdb
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/linksrc/ICSharpCode.SharpZipLib.pdb
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/linksrc/Mono.Android.pdb
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/linksrc/OpenTK-1.0.pdb
@@ -229,6 +231,7 @@
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/linksrc/RichEditor.dll.mdb
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/link.flag
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/Converters.dll
+/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/Converters.pdb
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/ICSharpCode.SharpZipLib.dll
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/ICSharpCode.SharpZipLib.pdb
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/iTextSharpLGPL-MonoForAndroid.dll
@@ -319,3 +322,4 @@
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/machine.config
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/stamp/_CompileToDalvik.stamp
 /Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/stamp/_GeneratePackageManagerJava.stamp
+/Users/nastya_iva/CourseWork/WriteRight/WR/WR/obj/Debug/android/assets/System.Runtime.dll

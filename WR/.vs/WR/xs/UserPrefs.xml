@@ -1,19 +1,8 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{6BEBADEA-CCD5-45BE-B01C-0EF57A1CA7BB}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="WR/Fragments/HelloFragment.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="WR/Fragments/CreateProjectFragment.cs" Line="139" Column="1" />
-      <File FileName="WR/Fragments/OpenedProjectFragment.cs" Line="105" Column="10" />
-      <File FileName="projectStructure/Project.cs" Line="133" Column="1" />
-      <File FileName="projectStructure/Section.cs" Line="51" Column="26" />
-      <File FileName="projectStructure/FileOfProject.cs" Line="30" Column="27" />
-      <File FileName="WR/Fragments/OpenExistingProjectFragment.cs" Line="21" Column="44" />
-      <File FileName="WR/Fragments/ExportFragment.cs" Line="93" Column="21" />
-      <File FileName="WR/Fragments/FormEditorFragment.cs" Line="247" Column="13" />
-      <File FileName="WR/Activities/FormEditorActivity.cs" Line="73" Column="42" />
-      <File FileName="WR/Activities/OpenProjectActivity.cs" Line="94" Column="91" />
-      <File FileName="WR/Resources/values/strings.xml" Line="19" Column="60" />
-      <File FileName="WR/Fragments/EditorFragment.cs" Line="105" Column="71" />
-      <File FileName="WR/Fragments/HelloFragment.cs" Line="58" Column="17" />
+      <File FileName="WR/Fragments/FormEditorFragment.cs" Line="101" Column="1" />
+      <File FileName="WR/Fragments/ExportFragment.cs" Line="135" Column="105" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -24,9 +13,12 @@
             <Node name="WR" expanded="True">
               <Node name="References" expanded="True" />
               <Node name="Activities" expanded="True" />
+              <Node name="Assets" expanded="True" />
+              <Node name="Custom Views" expanded="True" />
               <Node name="Fragments" expanded="True">
-                <Node name="HelloFragment.cs" selected="True" />
+                <Node name="ExportFragment.cs" selected="True" />
               </Node>
+              <Node name="Properties" expanded="True" />
               <Node name="Resources" expanded="True">
                 <Node name="drawable" expanded="True" />
                 <Node name="layout" expanded="True" />
@@ -40,9 +32,11 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
-  <MonoDevelop.Ide.ItemProperties.WR AndroidDesignerPreferredTheme="Theme.AppCompat.Light" AndroidDesignerPreferredDevice="Nexus 6" PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
+  <MonoDevelop.Ide.ItemProperties.WR AndroidDesignerPreferredTheme="Theme.AppCompat.Light" AndroidDesignerPreferredDevice="Nexus 6" PreferredExecutionTarget="Android.FANPB700A851" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/nastya_iva/CourseWork/WriteRight/WR/Converters/ConverterToPdf.cs" relfile="Converters/ConverterToPdf.cs" line="13" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
